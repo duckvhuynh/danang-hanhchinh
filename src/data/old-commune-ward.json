@@ -1,0 +1,290 @@
+[
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Thọ Tây",
+    "location": {
+      "lat": 16.000157729148874,
+      "lng":  108.18361693322647
+    },
+    "address": "11 đường Cầu Đỏ Túy Loan",
+    "procedures_2024": 2010,
+    "procedures_6months_2025": 992,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Thọ Đông",
+    "location": {
+      "lat": 16.010578954421465,
+      "lng": 108.1944645841313
+    },
+    "address": "92 Nguyễn Nhàn",
+    "procedures_2024": 6545,
+    "procedures_6months_2025": 7632,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa An",
+    "location": {
+      "lat": 16.04944298279118,
+      "lng": 108.17977882452386
+    },
+    "address": "01 Hòa An 6",
+    "procedures_2024": 7603,
+    "procedures_6months_2025": 3793,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Khuê Trung",
+    "location": {
+      "lat": 16.0216276041407,
+      "lng": 108.212270637731
+    },
+    "address": "128 Cách Mạng Tháng Tám",
+    "procedures_2024": 6176,
+    "procedures_6months_2025": 2588,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Phát",
+    "location": {
+      "lat": 16.025448022544722,
+      "lng": 108.18817456265973
+    },
+    "address": "916 Tôn Đản",
+    "procedures_2024": 3971,
+    "procedures_6months_2025": 2297,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Xuân",
+    "location": {
+      "lat": 15.995705076937789,
+      "lng": 108.21141998102371
+    },
+    "address": "111 Hoàng Ngân",
+    "procedures_2024": 11142,
+    "procedures_6months_2025": 10648,
+    "old_commune_ward": "Cẩm Lệ"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Khánh Nam",
+    "location": {
+      "lat": 16.063536703351012,
+      "lng": 108.1573659706464
+    },
+    "address": "483 Tôn Đức Thắng",
+    "procedures_2024": 4798,
+    "procedures_6months_2025": 3008,
+    "old_commune_ward": "Liên Chiểu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Khánh Bắc",
+    "location": {
+      "lat": 16.076467079275318,
+      "lng": 108.14556482711018
+    },
+    "address": "68 Lạc Long Quân",
+    "procedures_2024": 4903,
+    "procedures_6months_2025": 2233,
+    "old_commune_ward": "Liên Chiểu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Minh",
+    "location": {
+      "lat": 16.057280659138932,
+      "lng": 108.16629431788596
+    },
+    "address": "341 Tôn Đức Thắng",
+    "procedures_2024": 11457,
+    "procedures_6months_2025": 4844,
+    "old_commune_ward": "Liên Chiểu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Hiệp Bắc",
+    "location": {
+      "lat": 16.127806356443113,
+      "lng": 108.12107465607741
+    },
+    "address": "20 Nguyễn Phước Chu",
+    "procedures_2024": 3104,
+    "procedures_6months_2025": 1339,
+    "old_commune_ward": "Liên Chiểu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Hiệp Nam",
+    "location": {
+      "lat": 16.106978030875325,
+      "lng": 108.12643398530781
+    },
+    "address": "Lô 1 - 2 Nguyễn Tất Thành",
+    "procedures_2024": 4932,
+    "procedures_6months_2025": 2121,
+    "old_commune_ward": "Liên Chiểu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND Phường An Hải Bắc",
+    "location": {
+      "lat": 16.0768196149011,
+      "lng": 108.231013350723
+    },
+    "address": "868 Ngô Quyền",
+    "procedures_2024": 2818,
+    "procedures_6months_2025": 2634,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường An Hải Nam",
+    "location": {
+      "lat": 16.06407818429551,
+      "lng": 108.23164465087753
+    },
+    "address": "45 Mai Hắc Đế",
+    "procedures_2024": 5524000,
+    "procedures_6months_2025": 2137,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Mân Thái",
+    "location": {
+      "lat": 16.088969008997,
+      "lng": 108.247930007055
+    },
+    "address": "69 Trương Định",
+    "procedures_2024": 1883,
+    "procedures_6months_2025": 1439,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thọ Quang",
+    "location": {
+      "lat": 16.1011671835079,
+      "lng": 108.249401794754
+    },
+    "address": "6 Nguyễn Phan Vinh",
+    "procedures_2024": 18304,
+    "procedures_6months_2025": 12556,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Nại Hiên Đông",
+    "location": {
+      "lat": 16.0883449763059,
+      "lng": 108.231224035844
+    },
+    "address": "117 Vân Đồn",
+    "procedures_2024": 11544,
+    "procedures_6months_2025": 6153,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Phước Mỹ",
+    "location": {
+      "lat": 16.0649122223973,
+      "lng": 108.24248032768
+    },
+    "address": "289 Nguyễn Công Trứ",
+    "procedures_2024": 4847,
+    "procedures_6months_2025": 2180,
+    "old_commune_ward": "Sơn Trà"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường An Khê",
+    "location": {
+      "lat": 16.050924975425,
+      "lng": 108.182641016319
+    },
+    "address": "235 Trường Chinh",
+    "procedures_2024": 9179,
+    "procedures_6months_2025": 6899,
+    "old_commune_ward": "Thanh Khê"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thanh Khê Đông",
+    "location": {
+      "lat": 16.06877993125407,
+      "lng": 108.18337592364509
+    },
+    "address": "856 Trần Cao Vân",
+    "procedures_2024": 11607,
+    "procedures_6months_2025": 2824,
+    "old_commune_ward": "Thanh Khê"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thanh Khê Tây",
+    "location": {
+      "lat": 16.077127949740987,
+      "lng": 108.17143585246774
+    },
+    "address": "300 Dũng Sỹ Thanh Khê",
+    "procedures_2024": 8111,
+    "procedures_6months_2025": 4848,
+    "old_commune_ward": "Thanh Khê"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Xuân Hà",
+    "location": {
+      "lat": 16.07111833240369,
+      "lng": 108.19228404479409
+    },
+    "address": "495 Trần Cao Vân",
+    "procedures_2024": 18723,
+    "procedures_6months_2025": 8357,
+    "old_commune_ward": "Thanh Khê"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND Phường Chính Gián",
+    "location": {
+      "lat": 16.0658430028706,
+      "lng": 108.200890012085
+    },
+    "address": "92 Điện Biên Phủ",
+    "procedures_2024": 7486,
+    "procedures_6months_2025": 490000,
+    "old_commune_ward": "Thanh Khê"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thạc Gián",
+    "location": {
+      "lat": 16.066022801661443,
+      "lng": 108.21081656407388
+    },
+    "address": "331 Hùng Vương",
+    "procedures_2024": 12755,
+    "procedures_6months_2025": 4717,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND Phường Bình Thuận",
+    "location": {
+      "lat": 16.055823024362326,
+      "lng": 108.22024399414659
+    },
+    "address": "165 Trưng Nữ Vương",
+    "procedures_2024": 1791,
+    "procedures_6months_2025": 4350,
+    "old_commune_ward": "Hải Châu"
+  }
+]

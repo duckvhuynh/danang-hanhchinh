@@ -1,0 +1,266 @@
+[
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND quận Thanh Khê",
+    "location": {
+      "lat": 16.070928887732336,
+      "lng": 108.19103833447134
+    },
+    "address": "503 Trần Cao Vân",
+    "procedures_2024": 8436,
+    "procedures_6months_2025": 5119
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND quận Hải Châu",
+    "location": {
+      "lat": 16.0356949735432,
+      "lng": 108.213800992816
+    },
+    "address": "183A Phan Đăng Lưu",
+    "procedures_2024": 16869,
+    "procedures_6months_2025": 7010
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND quận Sơn Trà",
+    "location": {
+      "lat": 16.0606633845781,
+      "lng": 108.23284487007209
+    },
+    "address": "2 Đông Giang",
+    "procedures_2024": 14723,
+    "procedures_6months_2025": 13978
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND Cẩm Lệ",
+    "location": {
+      "lat": 16.0178115974903,
+      "lng": 108.20417401863
+    },
+    "address": "40 Ông Ích Đường",
+    "procedures_2024": 20623,
+    "procedures_6months_2025": 16705
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND quận Liên Chiểu",
+    "location": {
+      "lat": 16.072550392239908,
+      "lng": 108.15793966288848
+    },
+    "address": "168 Nguyễn Sinh Sắc",
+    "procedures_2024": 18930,
+    "procedures_6months_2025": 10409
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND Quận Ngũ Hành Sơn",
+    "location": {
+      "lat": 16.0163699928671,
+      "lng": 108.253840003162
+    },
+    "address": "486 Lê Văn Hiến",
+    "procedures_2024": 14897,
+    "procedures_6months_2025": 8660
+  },
+  {
+    "region": "Đà Nẵng",
+    "name": "UBND huyện Hòa Vang",
+    "location": {
+      "lat": 15.988543526298812,
+      "lng": 108.13909704338377
+    },
+    "address": "Thôn Dương Lâm 2",
+    "procedures_2024": 8385,
+    "procedures_6months_2025": 5361
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Nam Trà My",
+    "location": {
+      "lat": 15.332826976737305,
+      "lng": 108.21726366530719
+    },
+    "address": "Thôn Dương Hòa, xã Trà Sơn, huyện Bắc Trà My",
+    "procedures_2024": 636000,
+    "procedures_6months_2025": 401000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Quế Sơn",
+    "location": {
+      "lat": 15.673601271524381,
+      "lng": 108.22016303099531
+    },
+    "address": "02 Tôn Đức Thắng, TT. ĐôngPhú, huyện Quế Sơn",
+    "procedures_2024": 2257,
+    "procedures_6months_2025": 2678
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Thành phố Tam Kỳ",
+    "location": {
+      "lat": 15.570725881387519,
+      "lng": 108.47327144780851
+    },
+    "address": "70 Hùng Vương, TP. Tam Kỳ",
+    "procedures_2024": 5907,
+    "procedures_6months_2025": 4154
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Bắc Trà My",
+    "location": {
+      "lat": 15.33302216064061,
+      "lng": 108.21727144556485
+    },
+    "address": "thị trấn Trà My, huyện Bắc Trà My",
+    "procedures_2024": 1849,
+    "procedures_6months_2025": 1025
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Tây Giang",
+    "location": {
+      "lat": 15.885059817709282,
+      "lng": 107.49284815318018
+    },
+    "address": "Thôn Agrồng, xã Atiêng, huyện Tây Giang",
+    "procedures_2024": 264000,
+    "procedures_6months_2025": 213000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Tiên Phước",
+    "location": {
+      "lat": 15.48843171804258,
+      "lng": 108.30724895404363
+    },
+    "address": "81 Huỳnh Thúc Kháng, huyện Tiên Phước",
+    "procedures_2024": 4236,
+    "procedures_6months_2025": 1621
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Nam Giang",
+    "location": {
+      "lat": 15.748629579929858,
+      "lng": 107.84095926054576
+    },
+    "address": "khối phố Mực, Thị trấn Thạnh Mỹ, Huyện Nam Giang",
+    "procedures_2024": 395000,
+    "procedures_6months_2025": 273000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Phước Sơn",
+    "location": {
+      "lat": 15.444275674252124,
+      "lng": 107.79312662162639
+    },
+    "address": "Hồ Chí Minh, TT. Khâm Đức, Phước Sơn,",
+    "procedures_2024": 1061,
+    "procedures_6months_2025": 155000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Núi Thành",
+    "location": {
+      "lat": 15.432241778801142,
+      "lng": 108.66039000382595
+    },
+    "address": "01 đường Nguyễn Văn Linh, thị trấn Núi Thành, huyện Núi Thành",
+    "procedures_2024": 7876,
+    "procedures_6months_2025": 4875
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Hiệp Đức",
+    "location": {
+      "lat": 15.582372361986906,
+      "lng": 108.1143883836797
+    },
+    "address": "Khối phố An Trung- thị trấn Tân An- huyện Hiệp Đức",
+    "procedures_2024": 1696,
+    "procedures_6months_2025": 876000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Duy Xuyên",
+    "location": {
+      "lat": 15.827909936732574,
+      "lng": 108.25816552020257
+    },
+    "address": "đường Hùng Vương, TT. Nam Phước, huyện Duy Xuyên",
+    "procedures_2024": 2367,
+    "procedures_6months_2025": 2196
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Thị xã Điện Bàn",
+    "location": {
+      "lat": 15.88892682006032,
+      "lng": 108.25510762216298
+    },
+    "address": "22 Hoàng Diệu, thị trấn Vĩnh Điện, Điện Bàn",
+    "procedures_2024": 4196,
+    "procedures_6months_2025": 3765
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Thành phố Hội An",
+    "location": {
+      "lat": 15.879221187673759,
+      "lng": 108.33292492541423
+    },
+    "address": "09-11 Trần Hưng Đạo, TP Hội An",
+    "procedures_2024": 13446,
+    "procedures_6months_2025": 4297
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Đại Lộc",
+    "location": {
+      "lat": 15.882942170812628,
+      "lng": 108.11524091849408
+    },
+    "address": "15 Hùng Vương, TT. ái Nghĩa, huyện Đại Lộc",
+    "procedures_2024": 2216,
+    "procedures_6months_2025": 2289
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Đông Giang",
+    "location": {
+      "lat": 15.920450042728413,
+      "lng": 107.64791350678817
+    },
+    "address": "Thị trấn PRao, Thị trấn P Rao, Huyện Đông Giang",
+    "procedures_2024": 779000,
+    "procedures_6months_2025": 240000
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Thăng Bình",
+    "location": {
+      "lat": 15.738328344390606,
+      "lng": 108.35069852238419
+    },
+    "address": "282 Tiểu La, thị trấn Hà Lam, huyện Thăng Bình",
+    "procedures_2024": 3709,
+    "procedures_6months_2025": 4671
+  },
+  {
+    "region": "Quảng Nam",
+    "name": "Huyện Phú Ninh",
+    "location": {
+      "lat": 15.555350489789424,
+      "lng": 108.41183510212242
+    },
+    "address": "Thị trấn Phú Thịnh - huyện Phú Ninh",
+    "procedures_2024": 1676,
+    "procedures_6months_2025": 1231
+  }
+]
