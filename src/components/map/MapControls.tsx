@@ -92,7 +92,7 @@ export function MapControls({
       <div
         className={`
           bg-white backdrop-blur-md rounded-xl shadow-lg transition-all duration-300 ease-in-out
-          border border-gray-200 overflow-hidden
+          border border-gray-200 flex flex-col
           ${expanded
             ? 'opacity-100 shadow-md'
             : 'opacity-95 shadow-sm'
@@ -101,48 +101,46 @@ export function MapControls({
         style={{
           maxHeight: expanded ? 'calc(100vh - 2rem)' : '3rem',
           minWidth: isMobile ? '280px' : '300px',
+          width: isMobile ? '280px' : '300px',
         }}
       >
-        {/* Scrollable Content Container */}
-        <div className={`
-          ${expanded ? 'overflow-y-auto' : 'overflow-hidden'}
-          ${expanded ? 'max-h-full' : 'max-h-12'}
-        `}>
-          <div className={`
-            flex flex-col
-            ${expanded ? 'p-3' : 'p-2'}
-          `}>
-            {/* Header with toggle button */}
-            <div
-              className="flex items-center justify-between cursor-pointer mb-3"
-              onClick={() => setExpanded(!expanded)}
-            >
-              <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full">
-                  <Layers className="w-3.5 h-3.5 text-blue-700" />
-                </div>
-                <div>
-                  <span className="text-sm font-medium">Điều khiển bản đồ</span>
-                  {!expanded && (
-                    <div className="text-xs text-gray-500">
-                      {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Ẩn tất cả'}
-                    </div>
-                  )}
-                </div>
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="h-6 w-6 p-0 rounded-full"
-              >
-                <ChevronUp
-                  className={`w-4 h-4 transition-transform duration-300 ${expanded ? 'rotate-180' : 'rotate-0'}`}
-                />
-              </Button>
+        {/* Header - Fixed at top */}
+        <div
+          className={`
+            flex items-center justify-between cursor-pointer flex-shrink-0
+            ${expanded ? 'p-3 pb-0' : 'p-2'}
+          `}
+          onClick={() => setExpanded(!expanded)}
+        >
+          <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full">
+              <Layers className="w-3.5 h-3.5 text-blue-700" />
             </div>
+            <div>
+              <span className="text-sm font-medium">Điều khiển bản đồ</span>
+              {!expanded && (
+                <div className="text-xs text-gray-500">
+                  {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Ẩn tất cả'}
+                </div>
+              )}
+            </div>
+          </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 w-6 p-0 rounded-full"
+          >
+            <ChevronUp
+              className={`w-4 h-4 transition-transform duration-300 ${expanded ? 'rotate-180' : 'rotate-0'}`}
+            />
+          </Button>
+        </div>
 
-            {/* Controls (visible when expanded) */}
-            {expanded && (
+        {/* Scrollable Content Container */}
+        {expanded && (
+          <div className="flex-1 overflow-y-auto overflow-x-hidden">
+            <div className="p-3 pt-3">
+              {/* Controls (visible when expanded) */}
               <div className="space-y-4">
                 {/* Location Button */}
                 <div className="relative">
@@ -484,9 +482,9 @@ export function MapControls({
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
