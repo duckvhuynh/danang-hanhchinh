@@ -12,6 +12,7 @@ import { MapControls } from "./map/MapControls";
 import { PolygonOverlay } from "./map/PolygonOverlay";
 import { UserLocationMarker } from "./map/UserLocationMarker";
 import { OfficeMarkers } from "./map/OfficeMarkers";
+import { AdministrativeOffices } from "./map/AdministrativeOffices";
 import { SelectedWardInfo } from "./map/SelectedWardInfo";
 import { MapHeader, MapFooter } from "./map/MapInfo";
 import WardLabelsOverlay from "./map/WardLabelsOverlay";
@@ -21,6 +22,11 @@ import { danangPolygons, isPointInPolygon as isPointInPolygonUtil } from "../dat
 import type { PolygonData } from "../data/polygon-utils";
 import { offices } from "../data/office-utils";
 import { getWholeDanangPolygon, getWholeDanangBounds } from "../data/whole-danang-utils";
+import { 
+  allAdministrativeOffices, 
+  getOfficesByLayer, 
+  type AdministrativeOffice 
+} from "../data/administrative-offices";
 
 // Da Nang coordinates
 const DA_NANG_CENTER = { lat: 15.733009, lng: 108.060244 };
@@ -38,6 +44,12 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [selectedWard, setSelectedWard] = useState<PolygonData | null>(null);
   const [showPolygons, setShowPolygons] = useState(true);
   const [showOffices, setShowOffices] = useState(false);
+
+  // Administrative offices state
+  const [showLayerA, setShowLayerA] = useState(false);
+  const [showLayerB, setShowLayerB] = useState(false);
+  const [showLayerC, setShowLayerC] = useState(false);
+  const [showCircles, setShowCircles] = useState(true);
 
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
@@ -172,6 +184,23 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     setSelectedWard(null);
   };
 
+  // Helper function to get visible administrative offices
+  const getVisibleAdministrativeOffices = useCallback(() => {
+    const visibleOffices: AdministrativeOffice[] = [];
+    
+    if (showLayerA) {
+      visibleOffices.push(...getOfficesByLayer('A'));
+    }
+    if (showLayerB) {
+      visibleOffices.push(...getOfficesByLayer('B'));
+    }
+    if (showLayerC) {
+      visibleOffices.push(...getOfficesByLayer('C'));
+    }
+    
+    return visibleOffices;
+  }, [showLayerA, showLayerB, showLayerC]);
+
   if (isMapLoading) {
     return <LoadingScreen message="Đang tải dữ liệu bản đồ..." />;
   }
@@ -259,6 +288,14 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   userLocation={userLocation}
                 />
 
+                {/* Administrative offices with service coverage circles */}
+                <AdministrativeOffices
+                  offices={getVisibleAdministrativeOffices()}
+                  visible={true}
+                  showCircles={showCircles}
+                  userLocation={userLocation}
+                />
+
                 {/* User location marker */}
                 {userLocation && (
                   <UserLocationMarker position={userLocation} />
@@ -279,6 +316,14 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleOffices={setShowOffices}
                 onGetUserLocation={handleGetUserLocation}
                 isLocating={isLocating}
+                showLayerA={showLayerA}
+                showLayerB={showLayerB}
+                showLayerC={showLayerC}
+                showCircles={showCircles}
+                onToggleLayerA={setShowLayerA}
+                onToggleLayerB={setShowLayerB}
+                onToggleLayerC={setShowLayerC}
+                onToggleCircles={setShowCircles}
               />
 
               {/* Selected Ward Info Card/Drawer */}

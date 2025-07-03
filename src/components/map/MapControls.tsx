@@ -4,6 +4,7 @@ import { Label } from "../ui/label";
 import { Layers, Building2, Loader2, LocateIcon, ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
+import { AdministrativeControls } from "./AdministrativeControls";
 
 interface MapControlsProps {
   showPolygons: boolean;
@@ -12,6 +13,15 @@ interface MapControlsProps {
   onToggleOffices: (show: boolean) => void;
   onGetUserLocation: () => void;
   isLocating: boolean;
+  // Administrative controls
+  showLayerA: boolean;
+  showLayerB: boolean;
+  showLayerC: boolean;
+  showCircles: boolean;
+  onToggleLayerA: (show: boolean) => void;
+  onToggleLayerB: (show: boolean) => void;
+  onToggleLayerC: (show: boolean) => void;
+  onToggleCircles: (show: boolean) => void;
 }
 
 export function MapControls({
@@ -21,6 +31,14 @@ export function MapControls({
   onToggleOffices,
   onGetUserLocation,
   isLocating,
+  showLayerA,
+  showLayerB,
+  showLayerC,
+  showCircles,
+  onToggleLayerA,
+  onToggleLayerB,
+  onToggleLayerC,
+  onToggleCircles,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -31,7 +49,19 @@ export function MapControls({
   }, [isMobile]);
 
   return (
-    <div className="fixed md:absolute top-4 right-4 z-10 flex flex-col items-end">
+    <div className="fixed md:absolute top-4 right-4 z-10 flex flex-col items-end gap-3">
+      {/* Administrative Controls */}
+      <AdministrativeControls
+        showLayerA={showLayerA}
+        showLayerB={showLayerB}
+        showLayerC={showLayerC}
+        showCircles={showCircles}
+        onToggleLayerA={onToggleLayerA}
+        onToggleLayerB={onToggleLayerB}
+        onToggleLayerC={onToggleLayerC}
+        onToggleCircles={onToggleCircles}
+      />
+      
       {/* Control panel - Enhanced with better visual design */}
       <div
         className={`
