@@ -20,7 +20,7 @@ interface ZoomAwareMapProps {
         west: number;
     };
     useDefaultZoom?: boolean; // Optional prop to control initial zoom behavior
-    mapTypeId?: "roadmap" | "satellite"; // Map type prop
+    mapTypeId?: "roadmap" | "satellite" | "styled"; // Map type prop
 }
 
 export function ZoomAwareMap({
@@ -35,19 +35,23 @@ export function ZoomAwareMap({
     onZoomChange,
     initialBounds,
     useDefaultZoom = false, // Default to false if not provided
-    mapTypeId = "roadmap", // Default to roadmap if not provided
+    mapTypeId = "styled", // Default to styled if not provided
 }: ZoomAwareMapProps) {
+    // Determine actual map type and map ID based on mapTypeId
+    const actualMapTypeId = mapTypeId === "styled" ? "roadmap" : mapTypeId;
+    const actualMapId = mapTypeId === "styled" ? mapId : "8edea94d65887b5c3e5d4cec";
+
     return (
         <Map
             id={id}
             defaultCenter={defaultCenter}
             defaultZoom={defaultZoom}
-            mapId={mapId}
+            mapId={actualMapId}
             onClick={onClick}
             className={className}
             gestureHandling={'greedy'}
             disableDefaultUI={disableDefaultUI}
-            mapTypeId={mapTypeId}
+            mapTypeId={actualMapTypeId}
             restriction={{
                 latLngBounds: {
                     north: 23.5,   // Top of Northern Vietnam

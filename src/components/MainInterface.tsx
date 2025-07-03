@@ -59,7 +59,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
 
   // Map type state
-  const [mapType, setMapType] = useState<"roadmap" | "satellite">("roadmap");
+  const [mapType, setMapType] = useState<"roadmap" | "satellite" | "styled">("styled");
 
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries

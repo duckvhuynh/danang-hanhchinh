@@ -34,8 +34,8 @@ interface MapControlsProps {
   neutralPolygonMode: boolean;
   onToggleNeutralPolygonMode: (enabled: boolean) => void;
   // Map type
-  mapType: "roadmap" | "satellite";
-  onMapTypeChange: (type: "roadmap" | "satellite") => void;
+  mapType: "roadmap" | "satellite" | "styled";
+  onMapTypeChange: (type: "roadmap" | "satellite" | "styled") => void;
 }
 
 export function MapControls({
@@ -193,15 +193,16 @@ export function MapControls({
                       <div className="flex-1">
                         <p className="text-xs md:text-sm font-medium text-blue-900">Loại bản đồ</p>
                         {(!isMobile || (isMobile && expanded)) && (
-                          <p className="text-xs text-blue-700 md:text-xs text-[10px]">Mặc định hoặc vệ tinh</p>
+                          <p className="text-xs text-blue-700 md:text-xs text-[10px]">Bản đồ Google khác nhau</p>
                         )}
                       </div>
                     </Label>
                     <Select value={mapType} onValueChange={onMapTypeChange}>
-                      <SelectTrigger className="w-[110px] md:w-[130px] h-8 text-xs">
+                      <SelectTrigger className="w-[120px] md:w-[140px] h-8 text-xs">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
+                        <SelectItem value="styled">Có phong cách</SelectItem>
                         <SelectItem value="roadmap">Mặc định</SelectItem>
                         <SelectItem value="satellite">Vệ tinh</SelectItem>
                       </SelectContent>
