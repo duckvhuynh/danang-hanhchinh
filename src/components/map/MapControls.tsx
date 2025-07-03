@@ -452,9 +452,9 @@ export function MapControls({
                   </div>
                 </div>
 
-                {/* <div className="h-px bg-gray-200 w-full"></div>
+                <div className="h-px bg-gray-200 w-full"></div>
                 <div className="space-y-2">
-                  <h3 className="text-sm font-medium text-gray-900">Điểm phục vụ</h3>
+                  <h3 className="text-sm font-medium text-gray-900">Điểm phục vụ HCC</h3>
                   <div className="p-2 bg-emerald-50 rounded-lg border border-emerald-100">
                     <div className="flex items-center justify-between">
                       <Label
@@ -477,7 +477,7 @@ export function MapControls({
                       />
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
