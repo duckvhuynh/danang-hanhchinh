@@ -58,6 +58,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   // Polygon color mode state
   const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
 
+  // Map type state
+  const [mapType, setMapType] = useState<"roadmap" | "satellite">("roadmap");
+
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
   const [wholeDanangPolygon] = useState<PolygonData>(getWholeDanangPolygon());
@@ -265,6 +268,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onZoomChange={setZoomLevel}
                 initialBounds={danangBounds}
                 useDefaultZoom={true} // Use default zoom level to ensure boundaries are shown
+                mapTypeId={mapType}
               >
                 {/* Whole city polygon (shown when zoom < ZOOM_THRESHOLD) - non-interactive */}
                 {zoomLevel < ZOOM_THRESHOLD && (
@@ -353,6 +357,8 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onLayerCRadiusChange={setLayerCRadius}
                 neutralPolygonMode={neutralPolygonMode}
                 onToggleNeutralPolygonMode={setNeutralPolygonMode}
+                mapType={mapType}
+                onMapTypeChange={setMapType}
               />
 
               {/* Selected Ward Info Card/Drawer */}

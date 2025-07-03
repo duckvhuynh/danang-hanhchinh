@@ -1,7 +1,8 @@
 import { Button } from "../ui/button";
 import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
-import { Layers, Building2, Loader2, LocateIcon, ChevronUp, Palette } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import { Layers, Building2, Loader2, LocateIcon, ChevronUp, Palette, Map } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { AdministrativeControls } from "./AdministrativeControls";
@@ -32,6 +33,9 @@ interface MapControlsProps {
   // Neutral polygon mode
   neutralPolygonMode: boolean;
   onToggleNeutralPolygonMode: (enabled: boolean) => void;
+  // Map type
+  mapType: "roadmap" | "satellite";
+  onMapTypeChange: (type: "roadmap" | "satellite") => void;
 }
 
 export function MapControls({
@@ -57,6 +61,8 @@ export function MapControls({
   onLayerCRadiusChange,
   neutralPolygonMode,
   onToggleNeutralPolygonMode,
+  mapType,
+  onMapTypeChange,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -177,6 +183,32 @@ export function MapControls({
 
               {/* Toggle Controls - Simplified for mobile */}
               <div className="space-y-2 md:space-y-3">
+                {/* Map Type Selector */}
+                <div className="p-1.5 md:p-2 bg-blue-50 rounded-lg border border-blue-100 transition-all hover:bg-blue-100/70">
+                  <div className="flex items-center justify-between">
+                    <Label className="flex items-center gap-2 flex-1">
+                      <div className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-blue-100 rounded-full">
+                        <Map className="w-4 h-4 text-blue-700" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs md:text-sm font-medium text-blue-900">Loại bản đồ</p>
+                        {(!isMobile || (isMobile && expanded)) && (
+                          <p className="text-xs text-blue-700 md:text-xs text-[10px]">Mặc định hoặc vệ tinh</p>
+                        )}
+                      </div>
+                    </Label>
+                    <Select value={mapType} onValueChange={onMapTypeChange}>
+                      <SelectTrigger className="w-[110px] md:w-[130px] h-8 text-xs">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="roadmap">Mặc định</SelectItem>
+                        <SelectItem value="satellite">Vệ tinh</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
                 <div className="p-1.5 md:p-2 bg-indigo-50 rounded-lg border border-indigo-100 transition-all hover:bg-indigo-100/70">
                   <div className="flex items-center justify-between group">
                     <Label

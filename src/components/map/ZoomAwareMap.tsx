@@ -20,6 +20,7 @@ interface ZoomAwareMapProps {
         west: number;
     };
     useDefaultZoom?: boolean; // Optional prop to control initial zoom behavior
+    mapTypeId?: "roadmap" | "satellite"; // Map type prop
 }
 
 export function ZoomAwareMap({
@@ -34,6 +35,7 @@ export function ZoomAwareMap({
     onZoomChange,
     initialBounds,
     useDefaultZoom = false, // Default to false if not provided
+    mapTypeId = "roadmap", // Default to roadmap if not provided
 }: ZoomAwareMapProps) {
     return (
         <Map
@@ -45,6 +47,7 @@ export function ZoomAwareMap({
             className={className}
             gestureHandling={'greedy'}
             disableDefaultUI={disableDefaultUI}
+            mapTypeId={mapTypeId}
             restriction={{
                 latLngBounds: {
                     north: 23.5,   // Top of Northern Vietnam
