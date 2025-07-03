@@ -84,7 +84,7 @@ export function MapControls({
     setExpanded(!isMobile);
   }, [isMobile]);
 
-  const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
+  // const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
 
   return (
     <div className="fixed md:absolute top-4 right-4 z-10 flex flex-col items-end">
@@ -118,11 +118,11 @@ export function MapControls({
             </div>
             <div>
               <span className="text-sm font-medium">Điều khiển bản đồ</span>
-              {!expanded && (
+              {/* {!expanded && (
                 <div className="text-xs text-gray-500">
                   {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Ẩn tất cả'}
                 </div>
-              )}
+              )} */}
             </div>
           </div>
           <Button
