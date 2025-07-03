@@ -193,8 +193,8 @@ export function MapControls({
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="styled">Đặc biệt</SelectItem>
-                          <SelectItem value="roadmap">Mặc định</SelectItem>
+                          <SelectItem value="styled">Mặc định</SelectItem>
+                          <SelectItem value="roadmap">Màu sắc</SelectItem>
                           <SelectItem value="satellite">Vệ tinh</SelectItem>
                         </SelectContent>
                       </Select>
@@ -276,7 +276,7 @@ export function MapControls({
                           <CircleIcon className="w-3 h-3 text-gray-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-gray-900">Vùng phủ sóng</p>
+                          <p className="text-sm font-medium text-gray-900">Vùng tiếp cận</p>
                           <p className="text-xs text-gray-600">Bán kính phục vụ</p>
                         </div>
                       </Label>
@@ -301,7 +301,7 @@ export function MapControls({
                         </div>
                         <div>
                           <p className="text-sm font-medium text-red-900">Lớp A - {layerARadius}km</p>
-                          <p className="text-xs text-red-700">{layerConfigurations.A.count} trụ sở cấp huyện</p>
+                          <p className="text-xs text-red-700">{layerConfigurations.A.count} Quận/Huyện cũ</p>
                         </div>
                       </Label>
                       <Switch
@@ -345,7 +345,7 @@ export function MapControls({
                         </div>
                         <div>
                           <p className="text-sm font-medium text-blue-900">Lớp B - {layerBRadius}km</p>
-                          <p className="text-xs text-blue-700">{layerConfigurations.B.count} trung tâm xã/phường</p>
+                          <p className="text-xs text-blue-700">{layerConfigurations.B.count} Phường/Xã hiện tại</p>
                         </div>
                       </Label>
                       <Switch
@@ -389,7 +389,7 @@ export function MapControls({
                         </div>
                         <div>
                           <p className="text-sm font-medium text-green-900">Lớp C - {layerCRadius}km</p>
-                          <p className="text-xs text-green-700">{layerConfigurations.C.count} trung tâm đặc biệt</p>
+                          <p className="text-xs text-green-700">{layerConfigurations.C.count} Phường/Xã cũ</p>
                         </div>
                       </Label>
                       <Switch
@@ -452,10 +452,7 @@ export function MapControls({
                   </div>
                 </div>
 
-                {/* Divider */}
-                <div className="h-px bg-gray-200 w-full"></div>
-
-                {/* Office Markers */}
+                {/* <div className="h-px bg-gray-200 w-full"></div>
                 <div className="space-y-2">
                   <h3 className="text-sm font-medium text-gray-900">Điểm phục vụ</h3>
                   <div className="p-2 bg-emerald-50 rounded-lg border border-emerald-100">
@@ -480,7 +477,7 @@ export function MapControls({
                       />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

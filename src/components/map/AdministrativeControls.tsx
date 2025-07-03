@@ -130,7 +130,7 @@ export function AdministrativeControls({
                       Lớp A - {layerARadius}km
                     </p>
                     <p className="text-xs text-red-700">
-                      {layerConfigurations.A.count} trụ sở cấp huyện
+                      {layerConfigurations.A.count} Quận/Huyện cũ
                     </p>
                   </div>
                 </Label>
@@ -180,7 +180,7 @@ export function AdministrativeControls({
                       Lớp B - {layerBRadius}km
                     </p>
                     <p className="text-xs text-blue-700">
-                      {layerConfigurations.B.count} trung tâm xã/phường
+                      {layerConfigurations.B.count} Phường/Xã hiện tại
                     </p>
                   </div>
                 </Label>
@@ -230,7 +230,7 @@ export function AdministrativeControls({
                       Lớp C - {layerCRadius}km
                     </p>
                     <p className="text-xs text-green-700">
-                      {layerConfigurations.C.count} trụ sở cũ
+                      {layerConfigurations.C.count} Phường/Xã cũ
                     </p>
                   </div>
                 </Label>
