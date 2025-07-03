@@ -55,6 +55,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [layerBRadius, setLayerBRadius] = useState(5); // Default 5km
   const [layerCRadius, setLayerCRadius] = useState(5); // Default 5km
 
+  // Polygon color mode state
+  const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
+
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
   const [wholeDanangPolygon] = useState<PolygonData>(getWholeDanangPolygon());
@@ -273,6 +276,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                     onUnselectWard={clearSelectedWard}
                     interactive={false} // Make the whole city polygon non-interactive
                     zoomThreshold={ZOOM_THRESHOLD}
+                    neutralMode={neutralPolygonMode}
                   />
                 )}
 
@@ -285,6 +289,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                     onPolygonClick={handlePolygonClick}
                     onUnselectWard={clearSelectedWard}
                     zoomThreshold={ZOOM_THRESHOLD}
+                    neutralMode={neutralPolygonMode}
                   />
                 )}
 
@@ -346,6 +351,8 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onLayerARadiusChange={setLayerARadius}
                 onLayerBRadiusChange={setLayerBRadius}
                 onLayerCRadiusChange={setLayerCRadius}
+                neutralPolygonMode={neutralPolygonMode}
+                onToggleNeutralPolygonMode={setNeutralPolygonMode}
               />
 
               {/* Selected Ward Info Card/Drawer */}

@@ -20,6 +20,7 @@ interface PolygonOverlayProps {
   onUnselectWard?: () => void; // New prop to unselect the current ward
   interactive?: boolean; // New prop to control if the polygon is clickable and hoverable
   zoomThreshold?: number; // Threshold below which the ward is unselected
+  neutralMode?: boolean; // New prop to control neutral color mode
 }
 
 // Selected polygon colors (gold/yellow)
@@ -28,8 +29,14 @@ const SELECTED_COLORS = {
   fill: "#FFD700",
 };
 
+// Neutral mode colors (gray)
+const NEUTRAL_COLORS = {
+  stroke: "#6B7280",
+  fill: "#9CA3AF",
+};
+
 export function PolygonOverlay(
-  { polygons, visible, selectedPolygon, onPolygonClick, onUnselectWard, interactive = true, zoomThreshold = 9.5 }: PolygonOverlayProps
+  { polygons, visible, selectedPolygon, onPolygonClick, onUnselectWard, interactive = true, zoomThreshold = 9.5, neutralMode = false }: PolygonOverlayProps
 ) {
   const map = useMap();
   const isMobile = useIsMobile();
@@ -181,18 +188,37 @@ export function PolygonOverlay(
       const createPolygon = (path: Array<{ lat: number; lng: number }>) => {
         if (!path || path.length === 0) return null;
 
-        // Determine colors based on selection state and district
-        const districtColors = getWardColor(polygonData.ward);
-        const strokeColor = isSelected ? SELECTED_COLORS.stroke : districtColors.stroke;
-        const fillColor = isSelected ? SELECTED_COLORS.fill : districtColors.fill;
-        const fillOpacity = isSelected ? 0.4 : 0.12;
+        // Determine colors based on selection state, neutral mode, and district
+        let strokeColor: string;
+        let fillColor: string;
+        let fillOpacity: number;
+        let strokeOpacity: number;
+        
+        if (isSelected) {
+          strokeColor = SELECTED_COLORS.stroke;
+          fillColor = SELECTED_COLORS.fill;
+          fillOpacity = 0.4;
+          strokeOpacity = 0.8;
+        } else if (neutralMode) {
+          strokeColor = NEUTRAL_COLORS.stroke;
+          fillColor = NEUTRAL_COLORS.fill;
+          fillOpacity = 0.08; // Lower opacity for neutral mode
+          strokeOpacity = 0.5; // Lower stroke opacity for neutral mode
+        } else {
+          const districtColors = getWardColor(polygonData.ward);
+          strokeColor = districtColors.stroke;
+          fillColor = districtColors.fill;
+          fillOpacity = 0.12;
+          strokeOpacity = 0.8;
+        }
+        
         const strokeWeight = isSelected ? 2.5 : 1.5;
         const zIndex = isSelected ? 3 : 1;
 
         const polygon = new google.maps.Polygon({
           paths: path,
           strokeColor,
-          strokeOpacity: 0.8,
+          strokeOpacity,
           strokeWeight,
           fillColor,
           fillOpacity,
@@ -316,7 +342,7 @@ export function PolygonOverlay(
       setHoveredWard(null);
       setOverlayPosition(null);
     };
-  }, [map, polygons, visible, selectedPolygon, onPolygonClick, interactive, isMobile]);
+  }, [map, polygons, visible, selectedPolygon, onPolygonClick, interactive, isMobile, neutralMode]);
 
   return (
     <>
@@ -329,7 +355,9 @@ export function PolygonOverlay(
           color={
             selectedPolygon?.ward === hoveredWard.ward
               ? SELECTED_COLORS.fill
-              : getWardColor(hoveredWard.ward).fill
+              : neutralMode
+                ? NEUTRAL_COLORS.fill
+                : getWardColor(hoveredWard.ward).fill
           }
           visible={true}
         />

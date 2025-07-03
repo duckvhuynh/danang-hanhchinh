@@ -1,7 +1,7 @@
 import { Button } from "../ui/button";
 import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
-import { Layers, Building2, Loader2, LocateIcon, ChevronUp } from "lucide-react";
+import { Layers, Building2, Loader2, LocateIcon, ChevronUp, Palette } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { AdministrativeControls } from "./AdministrativeControls";
@@ -29,6 +29,9 @@ interface MapControlsProps {
   onLayerARadiusChange: (radius: number) => void;
   onLayerBRadiusChange: (radius: number) => void;
   onLayerCRadiusChange: (radius: number) => void;
+  // Neutral polygon mode
+  neutralPolygonMode: boolean;
+  onToggleNeutralPolygonMode: (enabled: boolean) => void;
 }
 
 export function MapControls({
@@ -52,6 +55,8 @@ export function MapControls({
   onLayerARadiusChange,
   onLayerBRadiusChange,
   onLayerCRadiusChange,
+  neutralPolygonMode,
+  onToggleNeutralPolygonMode,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -196,6 +201,34 @@ export function MapControls({
                     />
                   </div>
                 </div>
+
+                {/* Neutral Polygon Mode Control */}
+                {showPolygons && (
+                  <div className="p-1.5 md:p-2 bg-gray-50 rounded-lg border border-gray-100 transition-all hover:bg-gray-100/70">
+                    <div className="flex items-center justify-between group">
+                      <Label
+                        htmlFor="neutral-polygon-mode"
+                        className="flex-1 flex items-center gap-2 cursor-pointer"
+                      >
+                        <div className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center bg-gray-100 rounded-full">
+                          <Palette className="w-4 h-4 text-gray-700" />
+                        </div>
+                        <div>
+                          <p className={`text-xs md:text-sm font-medium text-gray-900 ${isMobile ? "mr-2" : ""}`}>Chế độ trung tính</p>
+                          {(!isMobile || (isMobile && expanded)) && (
+                            <p className="text-xs text-gray-700 md:text-xs text-[10px]">Màu ranh giới đồng nhất</p>
+                          )}
+                        </div>
+                      </Label>
+                      <Switch
+                        id="neutral-polygon-mode"
+                        checked={neutralPolygonMode}
+                        onCheckedChange={onToggleNeutralPolygonMode}
+                        className="data-[state=checked]:bg-gray-600"
+                      />
+                    </div>
+                  </div>
+                )}
 
                 <div className="p-1.5 md:p-2 bg-emerald-50 rounded-lg border border-emerald-100 transition-all hover:bg-emerald-100/70">
                   <div className="flex items-center justify-between group">
