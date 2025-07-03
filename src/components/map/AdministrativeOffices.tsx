@@ -92,7 +92,7 @@ export function AdministrativeOffices({
             center={office.location}
             radius={office.radius * 1000} // Convert km to meters
             fillColor={colors.fillColor}
-            fillOpacity={0.1}
+            fillOpacity={0.3}
             strokeColor={colors.strokeColor}
             strokeOpacity={0.4}
             strokeWeight={1.5}

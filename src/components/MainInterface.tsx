@@ -23,7 +23,6 @@ import type { PolygonData } from "../data/polygon-utils";
 import { offices } from "../data/office-utils";
 import { getWholeDanangPolygon, getWholeDanangBounds } from "../data/whole-danang-utils";
 import { 
-  allAdministrativeOffices, 
   getOfficesByLayer, 
   type AdministrativeOffice 
 } from "../data/administrative-offices";
@@ -50,6 +49,11 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [showLayerB, setShowLayerB] = useState(false);
   const [showLayerC, setShowLayerC] = useState(false);
   const [showCircles, setShowCircles] = useState(true);
+
+  // Radius state for each layer
+  const [layerARadius, setLayerARadius] = useState(7); // Default 7km
+  const [layerBRadius, setLayerBRadius] = useState(5); // Default 5km
+  const [layerCRadius, setLayerCRadius] = useState(5); // Default 5km
 
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
@@ -189,17 +193,29 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     const visibleOffices: AdministrativeOffice[] = [];
     
     if (showLayerA) {
-      visibleOffices.push(...getOfficesByLayer('A'));
+      const layerAOffices = getOfficesByLayer('A').map(office => ({
+        ...office,
+        radius: layerARadius
+      }));
+      visibleOffices.push(...layerAOffices);
     }
     if (showLayerB) {
-      visibleOffices.push(...getOfficesByLayer('B'));
+      const layerBOffices = getOfficesByLayer('B').map(office => ({
+        ...office,
+        radius: layerBRadius
+      }));
+      visibleOffices.push(...layerBOffices);
     }
     if (showLayerC) {
-      visibleOffices.push(...getOfficesByLayer('C'));
+      const layerCOffices = getOfficesByLayer('C').map(office => ({
+        ...office,
+        radius: layerCRadius
+      }));
+      visibleOffices.push(...layerCOffices);
     }
     
     return visibleOffices;
-  }, [showLayerA, showLayerB, showLayerC]);
+  }, [showLayerA, showLayerB, showLayerC, layerARadius, layerBRadius, layerCRadius]);
 
   if (isMapLoading) {
     return <LoadingScreen message="Đang tải dữ liệu bản đồ..." />;
@@ -324,6 +340,12 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleLayerB={setShowLayerB}
                 onToggleLayerC={setShowLayerC}
                 onToggleCircles={setShowCircles}
+                layerARadius={layerARadius}
+                layerBRadius={layerBRadius}
+                layerCRadius={layerCRadius}
+                onLayerARadiusChange={setLayerARadius}
+                onLayerBRadiusChange={setLayerBRadius}
+                onLayerCRadiusChange={setLayerCRadius}
               />
 
               {/* Selected Ward Info Card/Drawer */}

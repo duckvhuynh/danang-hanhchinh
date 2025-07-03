@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
+import { Input } from "../ui/input";
 import { 
   Building2, 
   Circle as CircleIcon, 
@@ -10,7 +11,6 @@ import {
   EyeOff 
 } from "lucide-react";
 import { useState } from "react";
-import { useIsMobile } from "../../hooks/use-mobile";
 import { layerConfigurations } from "../../data/administrative-offices";
 
 interface AdministrativeControlsProps {
@@ -22,6 +22,13 @@ interface AdministrativeControlsProps {
   onToggleLayerB: (show: boolean) => void;
   onToggleLayerC: (show: boolean) => void;
   onToggleCircles: (show: boolean) => void;
+  // Radius controls
+  layerARadius: number;
+  layerBRadius: number;
+  layerCRadius: number;
+  onLayerARadiusChange: (radius: number) => void;
+  onLayerBRadiusChange: (radius: number) => void;
+  onLayerCRadiusChange: (radius: number) => void;
 }
 
 export function AdministrativeControls({
@@ -33,11 +40,14 @@ export function AdministrativeControls({
   onToggleLayerB,
   onToggleLayerC,
   onToggleCircles,
+  layerARadius,
+  layerBRadius,
+  layerCRadius,
+  onLayerARadiusChange,
+  onLayerBRadiusChange,
+  onLayerCRadiusChange,
 }: AdministrativeControlsProps) {
   const [expanded, setExpanded] = useState(false);
-  const isMobile = useIsMobile();
-
-  const allLayersVisible = showLayerA || showLayerB || showLayerC;
   const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
 
   return (
@@ -117,7 +127,7 @@ export function AdministrativeControls({
                   </div>
                   <div>
                     <p className="text-sm font-medium text-red-900">
-                      Lớp A - {layerConfigurations.A.radius}km
+                      Lớp A - {layerARadius}km
                     </p>
                     <p className="text-xs text-red-700">
                       {layerConfigurations.A.count} trụ sở cấp huyện
@@ -131,6 +141,28 @@ export function AdministrativeControls({
                   className="data-[state=checked]:bg-red-600"
                 />
               </div>
+              
+              {/* Layer A Radius Control */}
+              {showLayerA && (
+                <div className="mt-2 px-2">
+                  <Label htmlFor="layer-a-radius" className="text-xs text-red-700">
+                    Bán kính phục vụ (km):
+                  </Label>
+                  <div className="flex items-center gap-2 mt-1">
+                    <Input
+                      id="layer-a-radius"
+                      type="number"
+                      min="1"
+                      max="20"
+                      step="0.5"
+                      value={layerARadius}
+                      onChange={(e) => onLayerARadiusChange(Number(e.target.value))}
+                      className="w-16 h-7 text-xs"
+                    />
+                    <span className="text-xs text-red-600">km</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Layer B Controls */}
@@ -145,7 +177,7 @@ export function AdministrativeControls({
                   </div>
                   <div>
                     <p className="text-sm font-medium text-blue-900">
-                      Lớp B - {layerConfigurations.B.radius}km
+                      Lớp B - {layerBRadius}km
                     </p>
                     <p className="text-xs text-blue-700">
                       {layerConfigurations.B.count} trung tâm xã/phường
@@ -159,6 +191,28 @@ export function AdministrativeControls({
                   className="data-[state=checked]:bg-blue-600"
                 />
               </div>
+              
+              {/* Layer B Radius Control */}
+              {showLayerB && (
+                <div className="mt-2 px-2">
+                  <Label htmlFor="layer-b-radius" className="text-xs text-blue-700">
+                    Bán kính phục vụ (km):
+                  </Label>
+                  <div className="flex items-center gap-2 mt-1">
+                    <Input
+                      id="layer-b-radius"
+                      type="number"
+                      min="1"
+                      max="20"
+                      step="0.5"
+                      value={layerBRadius}
+                      onChange={(e) => onLayerBRadiusChange(Number(e.target.value))}
+                      className="w-16 h-7 text-xs"
+                    />
+                    <span className="text-xs text-blue-600">km</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Layer C Controls */}
@@ -173,7 +227,7 @@ export function AdministrativeControls({
                   </div>
                   <div>
                     <p className="text-sm font-medium text-green-900">
-                      Lớp C - {layerConfigurations.C.radius}km
+                      Lớp C - {layerCRadius}km
                     </p>
                     <p className="text-xs text-green-700">
                       {layerConfigurations.C.count} trụ sở cũ
@@ -187,6 +241,28 @@ export function AdministrativeControls({
                   className="data-[state=checked]:bg-green-600"
                 />
               </div>
+              
+              {/* Layer C Radius Control */}
+              {showLayerC && (
+                <div className="mt-2 px-2">
+                  <Label htmlFor="layer-c-radius" className="text-xs text-green-700">
+                    Bán kính phục vụ (km):
+                  </Label>
+                  <div className="flex items-center gap-2 mt-1">
+                    <Input
+                      id="layer-c-radius"
+                      type="number"
+                      min="1"
+                      max="20"
+                      step="0.5"
+                      value={layerCRadius}
+                      onChange={(e) => onLayerCRadiusChange(Number(e.target.value))}
+                      className="w-16 h-7 text-xs"
+                    />
+                    <span className="text-xs text-green-600">km</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Quick Actions */}

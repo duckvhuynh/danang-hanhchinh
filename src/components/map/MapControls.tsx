@@ -22,6 +22,13 @@ interface MapControlsProps {
   onToggleLayerB: (show: boolean) => void;
   onToggleLayerC: (show: boolean) => void;
   onToggleCircles: (show: boolean) => void;
+  // Radius controls
+  layerARadius: number;
+  layerBRadius: number;
+  layerCRadius: number;
+  onLayerARadiusChange: (radius: number) => void;
+  onLayerBRadiusChange: (radius: number) => void;
+  onLayerCRadiusChange: (radius: number) => void;
 }
 
 export function MapControls({
@@ -39,6 +46,12 @@ export function MapControls({
   onToggleLayerB,
   onToggleLayerC,
   onToggleCircles,
+  layerARadius,
+  layerBRadius,
+  layerCRadius,
+  onLayerARadiusChange,
+  onLayerBRadiusChange,
+  onLayerCRadiusChange,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -60,6 +73,12 @@ export function MapControls({
         onToggleLayerB={onToggleLayerB}
         onToggleLayerC={onToggleLayerC}
         onToggleCircles={onToggleCircles}
+        layerARadius={layerARadius}
+        layerBRadius={layerBRadius}
+        layerCRadius={layerCRadius}
+        onLayerARadiusChange={onLayerARadiusChange}
+        onLayerBRadiusChange={onLayerBRadiusChange}
+        onLayerCRadiusChange={onLayerCRadiusChange}
       />
       
       {/* Control panel - Enhanced with better visual design */}
