@@ -11,8 +11,8 @@ import { AppSidebar } from "./AppSidebar";
 import { MapControls } from "./map/MapControls";
 import { PolygonOverlay } from "./map/PolygonOverlay";
 import { UserLocationMarker } from "./map/UserLocationMarker";
-import { OfficeMarkers } from "./map/OfficeMarkers";
 import { AdministrativeOffices } from "./map/AdministrativeOffices";
+import { CoverageOverlapPanel } from "./map/CoverageOverlapPanel";
 import { SelectedWardInfo } from "./map/SelectedWardInfo";
 import { MapHeader, MapFooter } from "./map/MapInfo";
 import WardLabelsOverlay from "./map/WardLabelsOverlay";
@@ -20,7 +20,6 @@ import { LoadingScreen } from "./LoadingScreen";
 import { toast } from "sonner";
 import { danangPolygons, isPointInPolygon as isPointInPolygonUtil } from "../data/polygon-utils";
 import type { PolygonData } from "../data/polygon-utils";
-import { offices } from "../data/office-utils";
 import { getWholeDanangPolygon, getWholeDanangBounds } from "../data/whole-danang-utils";
 import { 
   getOfficesByLayer, 
@@ -305,20 +304,13 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   zoomThreshold={10} // Fixed value of 11 to ensure consistent behavior
                 />
 
-                {/* Office markers (only visible at higher zoom levels) */}
-                <OfficeMarkers
-                  offices={offices}
-                  visible={showOffices && zoomLevel >= ZOOM_THRESHOLD}
-                  selectedWard={selectedWard}
-                  userLocation={userLocation}
-                />
-
                 {/* Administrative offices with service coverage circles */}
                 <AdministrativeOffices
                   offices={getVisibleAdministrativeOffices()}
                   visible={true}
                   showCircles={showCircles}
                   userLocation={userLocation}
+                  polygons={danangPolygons as PolygonData[]}
                 />
 
                 {/* User location marker */}
@@ -359,6 +351,17 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleNeutralPolygonMode={setNeutralPolygonMode}
                 mapType={mapType}
                 onMapTypeChange={setMapType}
+              />
+
+              {/* Coverage Overlap Panel */}
+              <CoverageOverlapPanel
+                offices={getVisibleAdministrativeOffices()}
+                polygons={danangPolygons as PolygonData[]}
+                visible={showLayerA || showLayerB || showLayerC}
+                onOverlapClick={(overlap) => {
+                  // Center the map on the overlap center (could be enhanced)
+                  console.log("Overlap clicked:", overlap);
+                }}
               />
 
               {/* Selected Ward Info Card/Drawer */}

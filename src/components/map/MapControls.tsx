@@ -84,7 +84,7 @@ export function MapControls({
     setExpanded(!isMobile);
   }, [isMobile]);
 
-  // const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
+  const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
 
   return (
     <div className="fixed md:absolute top-4 right-4 z-10 flex flex-col items-end">
@@ -106,29 +106,26 @@ export function MapControls({
       >
         {/* Header - Fixed at top */}
         <div
-          className={`
-            flex items-center justify-between cursor-pointer flex-shrink-0
-            ${expanded ? 'p-3 pb-0' : 'p-2'}
-          `}
+          className="flex items-center justify-between cursor-pointer flex-shrink-0 p-3 border-b border-gray-100"
           onClick={() => setExpanded(!expanded)}
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-1 min-w-0">
             <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full">
               <Layers className="w-3.5 h-3.5 text-blue-700" />
             </div>
-            <div>
-              <span className="text-sm font-medium">Điều khiển bản đồ</span>
-              {/* {!expanded && (
-                <div className="text-xs text-gray-500">
-                  {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Ẩn tất cả'}
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-medium truncate">Điều khiển bản đồ</div>
+              {!expanded && (
+                <div className="text-xs text-gray-500 truncate">
+                  {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Tùy chỉnh'}
                 </div>
-              )} */}
+              )}
             </div>
           </div>
           <Button
             variant="ghost"
             size="sm"
-            className="h-6 w-6 p-0 rounded-full"
+            className="h-6 w-6 p-0 rounded-full flex-shrink-0"
           >
             <ChevronUp
               className={`w-4 h-4 transition-transform duration-300 ${expanded ? 'rotate-180' : 'rotate-0'}`}

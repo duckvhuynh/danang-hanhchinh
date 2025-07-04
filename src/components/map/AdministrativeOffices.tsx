@@ -1,15 +1,19 @@
 import { AdvancedMarker, Pin, InfoWindow } from "@vis.gl/react-google-maps";
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { MapPin, Phone, Navigation, Building2, FileText } from "lucide-react";
+import { Badge } from "../ui/badge";
+import { MapPin, Phone, Navigation, Building2, FileText, Target } from "lucide-react";
 import { Circle } from "../geometry/circle";
 import type { AdministrativeOffice } from "../../data/administrative-offices";
+import type { PolygonData } from "../../data/polygon-utils";
+import { getCoveredAreas, doCirclesOverlap } from "../../utils/coverage-analysis";
 
 interface AdministrativeOfficesProps {
     offices: AdministrativeOffice[];
     visible: boolean;
     showCircles: boolean;
     userLocation?: { lat: number; lng: number } | null;
+    polygons?: PolygonData[]; // Added for coverage analysis
     onOfficeClick?: (office: AdministrativeOffice) => void;
 }
 
@@ -18,6 +22,7 @@ export function AdministrativeOffices({
     visible,
     showCircles,
     userLocation,
+    polygons = [],
     onOfficeClick
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
@@ -197,6 +202,91 @@ export function AdministrativeOffices({
                                             </div>
                                         )}
                                     </div>
+                                </div>
+                            )}
+
+                            {/* Coverage Analysis */}
+                            {polygons.length > 0 && (
+                                <div className="pt-1">
+                                    <div className="text-xs text-gray-500 mb-2 flex items-center gap-1">
+                                        <Target className="w-3 h-3" />
+                                        Phân tích vùng phủ:
+                                    </div>
+                                    {(() => {
+                                        const coveredAreas = getCoveredAreas(selectedOffice, polygons);
+                                        const overlappingOffices = offices.filter(office => 
+                                            office.id !== selectedOffice.id && 
+                                            doCirclesOverlap(
+                                                selectedOffice.location, 
+                                                selectedOffice.radius,
+                                                office.location,
+                                                office.radius
+                                            )
+                                        );
+                                        
+                                        return (
+                                            <div className="space-y-2">
+                                                {/* Covered areas */}
+                                                <div className="bg-blue-50 rounded-lg p-2">
+                                                    <div className="text-xs text-blue-600 font-medium mb-1">
+                                                        Khu vực được phủ ({coveredAreas.length})
+                                                    </div>
+                                                    <div className="flex flex-wrap gap-1">
+                                                        {coveredAreas.slice(0, 3).map(area => (
+                                                            <Badge
+                                                                key={area}
+                                                                variant="secondary"
+                                                                className="text-xs h-5"
+                                                            >
+                                                                {area}
+                                                            </Badge>
+                                                        ))}
+                                                        {coveredAreas.length > 3 && (
+                                                            <Badge variant="secondary" className="text-xs h-5">
+                                                                +{coveredAreas.length - 3}
+                                                            </Badge>
+                                                        )}
+                                                        {coveredAreas.length === 0 && (
+                                                            <span className="text-xs text-gray-500">
+                                                                Không phủ khu vực nào
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                                
+                                                {/* Overlapping offices */}
+                                                {overlappingOffices.length > 0 && (
+                                                    <div className="bg-orange-50 rounded-lg p-2">
+                                                        <div className="text-xs text-orange-600 font-medium mb-1">
+                                                            Chồng lấp với ({overlappingOffices.length})
+                                                        </div>
+                                                        <div className="space-y-1">
+                                                            {overlappingOffices.slice(0, 2).map(office => (
+                                                                <div key={office.id} className="flex items-center gap-1">
+                                                                    <div
+                                                                        className="w-2 h-2 rounded-full"
+                                                                        style={{ 
+                                                                            backgroundColor: office.layer === 'A' ? '#DC2626' : 
+                                                                                           office.layer === 'B' ? '#2563EB' : '#059669'
+                                                                        }}
+                                                                    />
+                                                                    <span className="text-xs truncate">
+                                                                        Lớp {office.layer} - {office.name.length > 20 ? 
+                                                                            office.name.substring(0, 20) + '...' : office.name}
+                                                                    </span>
+                                                                </div>
+                                                            ))}
+                                                            {overlappingOffices.length > 2 && (
+                                                                <div className="text-xs text-orange-600">
+                                                                    +{overlappingOffices.length - 2} khác
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })()}
                                 </div>
                             )}
 
