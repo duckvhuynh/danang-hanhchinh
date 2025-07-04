@@ -73,6 +73,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [layerBSuburbanRadius, setLayerBSuburbanRadius] = useState(8); // Layer B suburban radius (default 8km)
   const [layerCRadius, setLayerCRadius] = useState(5); // Default 5km
 
+  // Fill opacity state
+  const [fillOpacity, setFillOpacity] = useState(0.3); // Default 30% opacity
+
   // Layer B within Layer A control state
   const [hideLayerBWithinA, setHideLayerBWithinA] = useState(false); // Option to hide/dim Layer B within Layer A
   const [useManagementRadiusForHiding, setUseManagementRadiusForHiding] = useState(false); // Use management vs reception radius
@@ -799,6 +802,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   onOfficeEdit={handleOfficeEdit}
                   hideLayerBWithinA={hideLayerBWithinA}
                   useManagementRadiusForHiding={useManagementRadiusForHiding}
+                  fillOpacity={fillOpacity}
                 />
 
                 {/* User location marker */}
@@ -908,6 +912,8 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onDownloadLayerAsExcel={handleDownloadLayerAsExcel}
                 onDownloadAllLayersAsJSON={handleDownloadAllLayersAsJSON}
                 onDownloadAllLayersAsExcel={handleDownloadAllLayersAsExcel}
+                fillOpacity={fillOpacity}
+                onFillOpacityChange={setFillOpacity}
               />
 
               {/* Selected Ward Info Card/Drawer */}

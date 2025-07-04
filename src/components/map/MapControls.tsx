@@ -3,6 +3,7 @@ import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import { Slider } from "../ui/slider";
 import { 
   Layers, 
   Building2, 
@@ -79,6 +80,9 @@ interface MapControlsProps {
   onDownloadLayerAsExcel?: (layer: 'A' | 'B' | 'C') => void;
   onDownloadAllLayersAsJSON?: () => void;
   onDownloadAllLayersAsExcel?: () => void;
+  // Fill opacity control
+  fillOpacity?: number;
+  onFillOpacityChange?: (opacity: number) => void;
 }
 
 export function MapControls({
@@ -126,6 +130,8 @@ export function MapControls({
   onDownloadLayerAsExcel,
   onDownloadAllLayersAsJSON,
   onDownloadAllLayersAsExcel,
+  fillOpacity = 0.3,
+  onFillOpacityChange,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -340,6 +346,29 @@ export function MapControls({
                     </div>
                   </div>
 
+                  {/* Fill Opacity Control */}
+                  {showCircles && (
+                    <div className="p-2 bg-gray-50 rounded-lg border border-gray-100">
+                      <div className="space-y-2">
+                        <Label className="text-xs text-gray-700 font-medium">
+                          Độ trong suốt: {Math.round(fillOpacity * 100)}%
+                        </Label>
+                        <Slider
+                          value={[fillOpacity]}
+                          onValueChange={(value) => onFillOpacityChange?.(value[0])}
+                          min={0.1}
+                          max={1}
+                          step={0.1}
+                          className="w-full"
+                        />
+                        <div className="flex justify-between text-xs text-gray-500">
+                          <span>10%</span>
+                          <span>100%</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Layer A Controls */}
                   <div className="p-2 bg-red-50 rounded-lg border border-red-100">
                     <div className="flex items-center justify-between">
@@ -365,11 +394,11 @@ export function MapControls({
                     {showLayerA && (
                       <div className="mt-2 px-2 space-y-2">
                         {/* Reception Radius */}
-                        <div>
-                          <Label htmlFor="layer-a-reception-radius" className="text-xs text-red-700">
-                            Bán kính tiếp nhận (km):
+                        <div className="flex items-center justify-between">
+                          <Label htmlFor="layer-a-reception-radius" className="text-xs text-orange-700">
+                            Bán kính tiếp nhận:
                           </Label>
-                          <div className="flex items-center gap-2 mt-1">
+                          <div className="flex items-center gap-2">
                             <Input
                               id="layer-a-reception-radius"
                               type="number"
@@ -380,16 +409,16 @@ export function MapControls({
                               onChange={(e) => onLayerAReceptionRadiusChange(Number(e.target.value))}
                               className="w-16 h-7 text-xs"
                             />
-                            <span className="text-xs text-red-600">km</span>
+                            <span className="text-xs text-orange-600">km</span>
                           </div>
                         </div>
                         
                         {/* Management Radius */}
-                        <div>
+                        <div className="flex items-center justify-between">
                           <Label htmlFor="layer-a-management-radius" className="text-xs text-red-700">
-                            Bán kính quản lý (km):
+                            Bán kính quản lý:
                           </Label>
-                          <div className="flex items-center gap-2 mt-1">
+                          <div className="flex items-center gap-2">
                             <Input
                               id="layer-a-management-radius"
                               type="number"
@@ -418,7 +447,7 @@ export function MapControls({
                           <Building2 className="w-3 h-3 text-blue-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-blue-900">Lớp B - Đô thị: {layerBUrbanRadius}km, Miền núi: {layerBSuburbanRadius}km</p>
+                          <p className="text-sm font-medium text-blue-900">Lớp B - Đô thị: {layerBUrbanRadius}km, Ngoại ô: {layerBSuburbanRadius}km</p>
                           <p className="text-xs text-blue-700">{layerConfigurations.B.count} {layerConfigurations.B.description}</p>
                         </div>
                       </Label>
@@ -432,11 +461,11 @@ export function MapControls({
                     {showLayerB && (
                       <div className="mt-2 px-2 space-y-2">
                         {/* Urban radius control */}
-                        <div>
+                        <div className="flex items-center justify-between">
                           <Label htmlFor="layer-b-urban-radius" className="text-xs text-blue-700">
-                            Bán kính đô thị (km):
+                            Bán kính đô thị:
                           </Label>
-                          <div className="flex items-center gap-2 mt-1">
+                          <div className="flex items-center gap-2">
                             <Input
                               id="layer-b-urban-radius"
                               type="number"
@@ -452,11 +481,11 @@ export function MapControls({
                         </div>
                         
                         {/* Suburban radius control */}
-                        <div>
+                        <div className="flex items-center justify-between">
                           <Label htmlFor="layer-b-suburban-radius" className="text-xs text-blue-700">
-                            Bán kính ngoại ô (km):
+                            Bán kính ngoại ô:
                           </Label>
-                          <div className="flex items-center gap-2 mt-1">
+                          <div className="flex items-center gap-2">
                             <Input
                               id="layer-b-suburban-radius"
                               type="number"
@@ -544,21 +573,23 @@ export function MapControls({
                     </div>
                     {showLayerC && (
                       <div className="mt-2 px-2">
-                        <Label htmlFor="layer-c-radius" className="text-xs text-green-700">
-                          Bán kính phục vụ (km):
-                        </Label>
-                        <div className="flex items-center gap-2 mt-1">
-                          <Input
-                            id="layer-c-radius"
-                            type="number"
-                            min="1"
-                            max="20"
-                            step="0.5"
-                            value={layerCRadius}
-                            onChange={(e) => onLayerCRadiusChange(Number(e.target.value))}
-                            className="w-16 h-7 text-xs"
-                          />
-                          <span className="text-xs text-green-600">km</span>
+                        <div className="flex items-center justify-between">
+                          <Label htmlFor="layer-c-radius" className="text-xs text-green-700">
+                            Bán kính phục vụ:
+                          </Label>
+                          <div className="flex items-center gap-2">
+                            <Input
+                              id="layer-c-radius"
+                              type="number"
+                              min="1"
+                              max="20"
+                              step="0.5"
+                              value={layerCRadius}
+                              onChange={(e) => onLayerCRadiusChange(Number(e.target.value))}
+                              className="w-16 h-7 text-xs"
+                            />
+                            <span className="text-xs text-green-600">km</span>
+                          </div>
                         </div>
                       </div>
                     )}

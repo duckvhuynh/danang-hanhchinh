@@ -24,6 +24,8 @@ interface AdministrativeOfficesProps {
     // Layer B within Layer A controls
     hideLayerBWithinA?: boolean;
     useManagementRadiusForHiding?: boolean;
+    // Fill opacity control
+    fillOpacity?: number;
 }
 
 export function AdministrativeOffices({
@@ -42,6 +44,7 @@ export function AdministrativeOffices({
     onOfficeEdit,
     hideLayerBWithinA = false,
     useManagementRadiusForHiding = false,
+    fillOpacity = 0.3,
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
     const [editingOffice, setEditingOffice] = useState<AdministrativeOffice | null>(null);
@@ -119,12 +122,18 @@ export function AdministrativeOffices({
         }
     };
 
-    // Get circle colors based on layer
-    const getCircleColors = (layer: 'A' | 'B' | 'C') => {
+    // Get circle colors based on layer and circle type
+    const getCircleColors = (layer: 'A' | 'B' | 'C', circleType?: 'management' | 'reception') => {
         const baseColors = {
             'A': {
-                fillColor: '#EF4444',   // strong red
-                strokeColor: '#B91C1C', // dark red
+                management: {
+                    fillColor: '#EF4444',   // strong red for management circle
+                    strokeColor: '#B91C1C', // dark red for management circle
+                },
+                reception: {
+                    fillColor: '#F97316',   // orange for reception circle
+                    strokeColor: '#EA580C', // dark orange for reception circle
+                }
             },
             'B': {
                 fillColor: '#3B82F6',   // vibrant blue
@@ -136,24 +145,31 @@ export function AdministrativeOffices({
             },
         };
 
-        const colors = baseColors[layer] || {
-            fillColor: '#9CA3AF',   // neutral gray (still visible)
-            strokeColor: '#4B5563', // darker gray
-        };
+        let colors;
+        if (layer === 'A' && circleType) {
+            colors = baseColors[layer][circleType];
+        } else if (layer !== 'A') {
+            colors = baseColors[layer];
+        } else {
+            colors = {
+                fillColor: '#9CA3AF',   // neutral gray (fallback)
+                strokeColor: '#4B5563', // darker gray (fallback)
+            };
+        }
 
         // Dim colors when direction mode is active
         if (directionMode) {
             return {
                 fillColor: colors.fillColor,
                 strokeColor: colors.strokeColor,
-                fillOpacity: 0.15, // Much more transparent
+                fillOpacity: fillOpacity * 0.5, // Half of the base opacity when dimmed
                 strokeOpacity: 0.1,
             };
         }
 
         return {
             ...colors,
-            fillOpacity: 0.4,
+            fillOpacity: fillOpacity,
             strokeOpacity: 0.2,
         };
     };
@@ -227,10 +243,12 @@ export function AdministrativeOffices({
         <>
             {/* Service coverage circles */}
             {showCircles && processedOffices.visibleOffices.map((office) => {
-                const colors = getCircleColors(office.layer);
                 
                 if (office.layer === 'A') {
                     // Layer A (Chi nhánh) has dual circles: management and reception
+                    const managementColors = getCircleColors(office.layer, 'management');
+                    const receptionColors = getCircleColors(office.layer, 'reception');
+                    
                     return (
                         <div key={`circle-${office.id}`}>
                             {/* Management Circle (Outer, larger) */}
@@ -238,9 +256,9 @@ export function AdministrativeOffices({
                                 key={`management-circle-${office.id}`}
                                 center={office.location}
                                 radius={(office.managementRadius || 15) * 1000} // Convert km to meters
-                                fillColor={colors.fillColor}
-                                fillOpacity={directionMode ? 0.1 : 0.2} // More transparent for outer circle
-                                strokeColor={colors.strokeColor}
+                                fillColor={managementColors.fillColor}
+                                fillOpacity={directionMode ? fillOpacity * 0.3 : fillOpacity * 0.7} // More transparent for outer circle
+                                strokeColor={managementColors.strokeColor}
                                 strokeOpacity={directionMode ? 0.1 : 0.3}
                                 strokeWeight={directionMode ? 1 : 2}
                                 clickable={false}
@@ -251,10 +269,10 @@ export function AdministrativeOffices({
                                 key={`reception-circle-${office.id}`}
                                 center={office.location}
                                 radius={(office.receptionRadius || 5) * 1000} // Convert km to meters
-                                fillColor={colors.fillColor}
-                                fillOpacity={colors.fillOpacity} // Normal opacity for inner circle
-                                strokeColor={colors.strokeColor}
-                                strokeOpacity={colors.strokeOpacity}
+                                fillColor={receptionColors.fillColor}
+                                fillOpacity={receptionColors.fillOpacity} // Use dynamic opacity from getCircleColors
+                                strokeColor={receptionColors.strokeColor}
+                                strokeOpacity={receptionColors.strokeOpacity}
                                 strokeWeight={directionMode ? 1 : 1.5}
                                 clickable={false}
                                 zIndex={directionMode ? 2 : 5}
@@ -263,6 +281,7 @@ export function AdministrativeOffices({
                     );
                 } else {
                     // Layer B and C have single circles
+                    const colors = getCircleColors(office.layer);
                     return (
                         <Circle
                             key={`circle-${office.id}`}
