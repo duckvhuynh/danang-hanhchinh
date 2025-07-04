@@ -55,20 +55,6 @@ export const layerBOffices: AdministrativeOffice[] = administrativeInfoData.comm
 
 // Layer C: All former xã (excluding those already in A/B) - 5km radius
 export const layerCOffices: AdministrativeOffice[] = oldCommuneWardData
-  .filter(office => {
-    // Exclude offices that are already in Layer A or B
-    const isInLayerA = layerAOffices.some(layerA => 
-      layerA.name === office.name || 
-      layerA.location.lat === office.location.lat && layerA.location.lng === office.location.lng
-    );
-    
-    const isInLayerB = layerBOffices.some(layerB => 
-      Math.abs(layerB.location.lat - office.location.lat) < 0.001 && 
-      Math.abs(layerB.location.lng - office.location.lng) < 0.001
-    );
-    
-    return !isInLayerA && !isInLayerB;
-  })
   .map((office, index) => ({
     id: `layer-c-${index}`,
     name: office.name,

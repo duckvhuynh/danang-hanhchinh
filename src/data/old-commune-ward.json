@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Thọ Tây",
     "location": {
@@ -12,6 +13,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 2,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Thọ Đông",
     "location": {
@@ -24,6 +26,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 3,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa An",
     "location": {
@@ -36,6 +39,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 4,
     "region": "Đà Nẵng",
     "name": "UBND phường Khuê Trung",
     "location": {
@@ -48,6 +52,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 5,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Phát",
     "location": {
@@ -60,6 +65,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 6,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Xuân",
     "location": {
@@ -72,6 +78,7 @@
     "old_commune_ward": "Cẩm Lệ"
   },
   {
+    "id": 7,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Khánh Nam",
     "location": {
@@ -84,6 +91,7 @@
     "old_commune_ward": "Liên Chiểu"
   },
   {
+    "id": 8,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Khánh Bắc",
     "location": {
@@ -96,6 +104,7 @@
     "old_commune_ward": "Liên Chiểu"
   },
   {
+    "id": 9,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Minh",
     "location": {
@@ -108,6 +117,7 @@
     "old_commune_ward": "Liên Chiểu"
   },
   {
+    "id": 10,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Hiệp Bắc",
     "location": {
@@ -120,6 +130,7 @@
     "old_commune_ward": "Liên Chiểu"
   },
   {
+    "id": 11,
     "region": "Đà Nẵng",
     "name": "UBND phường Hòa Hiệp Nam",
     "location": {
@@ -132,6 +143,7 @@
     "old_commune_ward": "Liên Chiểu"
   },
   {
+    "id": 12,
     "region": "Đà Nẵng",
     "name": "UBND Phường An Hải Bắc",
     "location": {
@@ -144,6 +156,7 @@
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 13,
     "region": "Đà Nẵng",
     "name": "UBND phường An Hải Nam",
     "location": {
@@ -151,11 +164,12 @@
       "lng": 108.23164465087753
     },
     "address": "45 Mai Hắc Đế",
-    "procedures_2024": 5524000,
+    "procedures_2024": 5524,
     "procedures_6months_2025": 2137,
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 14,
     "region": "Đà Nẵng",
     "name": "UBND phường Mân Thái",
     "location": {
@@ -168,6 +182,7 @@
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 15,
     "region": "Đà Nẵng",
     "name": "UBND phường Thọ Quang",
     "location": {
@@ -180,6 +195,7 @@
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 16,
     "region": "Đà Nẵng",
     "name": "UBND phường Nại Hiên Đông",
     "location": {
@@ -192,6 +208,7 @@
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 17,
     "region": "Đà Nẵng",
     "name": "UBND phường Phước Mỹ",
     "location": {
@@ -204,6 +221,7 @@
     "old_commune_ward": "Sơn Trà"
   },
   {
+    "id": 18,
     "region": "Đà Nẵng",
     "name": "UBND phường An Khê",
     "location": {
@@ -216,6 +234,7 @@
     "old_commune_ward": "Thanh Khê"
   },
   {
+    "id": 19,
     "region": "Đà Nẵng",
     "name": "UBND phường Thanh Khê Đông",
     "location": {
@@ -228,6 +247,7 @@
     "old_commune_ward": "Thanh Khê"
   },
   {
+    "id": 20,
     "region": "Đà Nẵng",
     "name": "UBND phường Thanh Khê Tây",
     "location": {
@@ -240,6 +260,7 @@
     "old_commune_ward": "Thanh Khê"
   },
   {
+    "id": 21,
     "region": "Đà Nẵng",
     "name": "UBND phường Xuân Hà",
     "location": {
@@ -252,6 +273,7 @@
     "old_commune_ward": "Thanh Khê"
   },
   {
+    "id": 22,
     "region": "Đà Nẵng",
     "name": "UBND Phường Chính Gián",
     "location": {
@@ -260,10 +282,11 @@
     },
     "address": "92 Điện Biên Phủ",
     "procedures_2024": 7486,
-    "procedures_6months_2025": 490000,
+    "procedures_6months_2025": 490,
     "old_commune_ward": "Thanh Khê"
   },
   {
+    "id": 23,
     "region": "Đà Nẵng",
     "name": "UBND phường Thạc Gián",
     "location": {
@@ -276,6 +299,7 @@
     "old_commune_ward": "Hải Châu"
   },
   {
+    "id": 24,
     "region": "Đà Nẵng",
     "name": "UBND Phường Bình Thuận",
     "location": {
@@ -286,5 +310,3333 @@
     "procedures_2024": 1791,
     "procedures_6months_2025": 4350,
     "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 25,
+    "region": "Đà Nẵng",
+    "name": "UBND Phường Phước Ninh",
+    "location": {
+      "lat": 16.06372834024789,
+      "lng": 108.22247219553093
+    },
+    "address": "15 Lê Hồng Phong",
+    "procedures_2024": 18777,
+    "procedures_6months_2025": 8898,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 26,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thuận Phước",
+    "location": {
+      "lat": 16.08138124630982,
+      "lng": 108.21899428785099
+    },
+    "address": "88 Đống Đa",
+    "procedures_2024": 7018,
+    "procedures_6months_2025": 3793,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 27,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thạch Thang",
+    "location": {
+      "lat": 16.073963795387215,
+      "lng": 108.21550189589404
+    },
+    "address": "136 Quang Trung",
+    "procedures_2024": 5103,
+    "procedures_6months_2025": 6274,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 28,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Thanh Bình",
+    "location": {
+      "lat": 16.076792194593644,
+      "lng": 108.2120709465767
+    },
+    "address": "76 Ông Ích Khiêm",
+    "procedures_2024": 5955,
+    "procedures_6months_2025": 1620,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 29,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hải Châu",
+    "location": {
+      "lat": 16.067180085849596,
+      "lng": 108.21925963074538
+    },
+    "address": "CS1: K48/46 Phan Chu Trinh\nCS2: 38 Triệu Nữ Vương",
+    "procedures_2024": 14142,
+    "procedures_6months_2025": 5364,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 30,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Thuận Tây",
+    "location": {
+      "lat": 16.041941280367876,
+      "lng": 108.20953753432737
+    },
+    "address": "28 Nguyễn Khoái",
+    "procedures_2024": 5718,
+    "procedures_6months_2025": 3137,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 31,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Cường Bắc",
+    "location": {
+      "lat": 16.038501989096403,
+      "lng": 108.22202498093247
+    },
+    "address": "388 Núi Thành",
+    "procedures_2024": 4668,
+    "procedures_6months_2025": 4301,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 32,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Cường Nam",
+    "location": {
+      "lat": 16.028228038921952,
+      "lng": 108.22179498150945
+    },
+    "address": "672 Núi Thành",
+    "procedures_2024": 5302,
+    "procedures_6months_2025": 2969,
+    "old_commune_ward": "Hải Châu"
+  },
+  {
+    "id": 33,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Hòa Hải",
+    "location": {
+      "lat": 15.999053986743093,
+      "lng": 108.26583702117205
+    },
+    "address": "2 Hoàng Bình Chính",
+    "procedures_2024": 8869,
+    "procedures_6months_2025": 4717,
+    "old_commune_ward": "Ngũ Hành Sơn"
+  },
+  {
+    "id": 34,
+    "region": "Đà Nẵng",
+    "name": "UBND Phường Hoà Quý",
+    "location": {
+      "lat": 15.985579993575811,
+      "lng": 108.24057698249817
+    },
+    "address": "423 Mai Đăng Chơn",
+    "procedures_2024": 5700,
+    "procedures_6months_2025": 1136,
+    "old_commune_ward": "Ngũ Hành Sơn"
+  },
+  {
+    "id": 35,
+    "region": "Đà Nẵng",
+    "name": "UBND Phường Khuê Mỹ",
+    "location": {
+      "lat": 16.024263478657687,
+      "lng": 108.24771668116179
+    },
+    "address": "42 K20",
+    "procedures_2024": 1501,
+    "procedures_6months_2025": 457,
+    "old_commune_ward": "Ngũ Hành Sơn"
+  },
+  {
+    "id": 36,
+    "region": "Đà Nẵng",
+    "name": "UBND phường Mỹ An",
+    "location": {
+      "lat": 16.0388946611322,
+      "lng": 108.242257785031
+    },
+    "address": "382 Ngũ Hành Sơn",
+    "procedures_2024": 7753,
+    "procedures_6months_2025": 5567,
+    "old_commune_ward": "Ngũ Hành Sơn"
+  },
+  {
+    "id": 37,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Khương",
+    "location": {
+      "lat": 15.960965130756609,
+      "lng": 108.13975063204553
+    },
+    "address": "QL14B",
+    "procedures_2024": 1434,
+    "procedures_6months_2025": 734,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 38,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Châu",
+    "location": {
+      "lat": 15.985721494747226,
+      "lng": 108.20171443953356
+    },
+    "address": "Quốc lộ 1A, thôn Quang Châu",
+    "procedures_2024": 9994,
+    "procedures_6months_2025": 5016,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 39,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Bắc",
+    "location": {
+      "lat": 16.126651748664855,
+      "lng": 108.05508224019003
+    },
+    "address": "Hòa Bắc",
+    "procedures_2024": 522,
+    "procedures_6months_2025": 771,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 40,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Ninh",
+    "location": {
+      "lat": 20.2935808,
+      "lng": 105.9334294
+    },
+    "address": "Thôn Sơn Phước",
+    "procedures_2024": 965,
+    "procedures_6months_2025": 580,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 41,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Liên",
+    "location": {
+      "lat": 16.096346005797386,
+      "lng": 108.0958670284599
+    },
+    "address": "đường 601",
+    "procedures_2024": 8167,
+    "procedures_6months_2025": 5143,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 42,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Phong",
+    "location": {
+      "lat": 15.987167714179119,
+      "lng": 108.1412476534432
+    },
+    "address": "QL14B",
+    "procedures_2024": 8374,
+    "procedures_6months_2025": 4064,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 43,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Phú",
+    "location": {
+      "lat": 15.985359968617558,
+      "lng": 108.07428304105997
+    },
+    "address": "Hoà Phú, Buôn Ma Thuột, Đắk Lắk",
+    "procedures_2024": 1436,
+    "procedures_6months_2025": 885,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 44,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Phước",
+    "location": {
+      "lat": 15.958654973655939,
+      "lng": 108.2150629721582
+    },
+    "address": "đường QL1A",
+    "procedures_2024": 5623,
+    "procedures_6months_2025": 2776,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 45,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Sơn",
+    "location": {
+      "lat": 16.068343995139003,
+      "lng": 108.10670399107039
+    },
+    "address": "đường 602",
+    "procedures_2024": 11463,
+    "procedures_6months_2025": 6433,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 46,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hòa Tiến",
+    "location": {
+      "lat": 15.970227501504118,
+      "lng": 108.18188920099401
+    },
+    "address": "đường 605",
+    "procedures_2024": 8213,
+    "procedures_6months_2025": 5218,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 47,
+    "region": "Đà Nẵng",
+    "name": "UBND xã Hoà Nhơn",
+    "location": {
+      "lat": 16.00582571137964,
+      "lng": 108.13544883499469
+    },
+    "address": "đường Dương Sơn",
+    "procedures_2024": 4731,
+    "procedures_6months_2025": 2597,
+    "old_commune_ward": "Hòa Vang"
+  },
+  {
+    "id": 48,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Quang",
+    "location": {
+      "lat": 19.1585154,
+      "lng": 104.6770642
+    },
+    "address": "Xã Tam Quang, Huyện Núi Thành",
+    "procedures_2024": 458,
+    "procedures_6months_2025": 352,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 49,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Nghĩa",
+    "location": {
+      "lat": 21.4104325,
+      "lng": 104.8156822
+    },
+    "address": "Nghĩa Tâm, Văn Chấn, Yên Bái",
+    "procedures_2024": 455,
+    "procedures_6months_2025": 283,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 50,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Hiệp",
+    "location": {
+      "lat": 10.4214874,
+      "lng": 106.3063544
+    },
+    "address": "Tam Hiệp, Châu Thành, Tiền Giang",
+    "procedures_2024": 510,
+    "procedures_6months_2025": 460,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 51,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Giang",
+    "location": {
+      "lat": 21.2275394,
+      "lng": 105.9451216
+    },
+    "address": "Tam Giang, Yên Phong, Bắc Ninh",
+    "procedures_2024": 1883,
+    "procedures_6months_2025": 176,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 52,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Núi Thành",
+    "location": {
+      "lat": 15.432214073217217,
+      "lng": 108.66040041292437
+    },
+    "address": "TT. Núi Thành, Núi Thành",
+    "procedures_2024": 520,
+    "procedures_6months_2025": 399,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 53,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Mỹ Đông",
+    "location": {
+      "lat": 15.4108078,
+      "lng": 108.6132362
+    },
+    "address": "Tam Mỹ Tây, Núi Thành",
+    "procedures_2024": 1812,
+    "procedures_6months_2025": 167,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 54,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Mỹ Tây",
+    "location": {
+      "lat": 15.410782935949392,
+      "lng": 108.61324130507327
+    },
+    "address": "Tam Mỹ Tây, Núi Thành",
+    "procedures_2024": 453,
+    "procedures_6months_2025": 174,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 55,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Trà",
+    "location": {
+      "lat": 15.3513902,
+      "lng": 108.5106987
+    },
+    "address": "Tam Trà, Núi Thành",
+    "procedures_2024": 503,
+    "procedures_6months_2025": 56,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 56,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Hòa",
+    "location": {
+      "lat": 15.50596,
+      "lng": 108.6089
+    },
+    "address": "Tam Hoà, Núi Thành",
+    "procedures_2024": 295,
+    "procedures_6months_2025": 118,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 57,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Anh Bắc",
+    "location": {
+      "lat": 15.51922,
+      "lng": 108.5598
+    },
+    "address": "Tam Anh Nam, Núi Thành",
+    "procedures_2024": 124,
+    "procedures_6months_2025": 216,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 58,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Anh Nam",
+    "location": {
+      "lat": 15.484405042199336,
+      "lng": 108.58341425074717
+    },
+    "address": "Tam Anh Nam, Núi Thành",
+    "procedures_2024": 1136,
+    "procedures_6months_2025": 195,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 59,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Sơn",
+    "location": {
+      "lat": 21.1446421,
+      "lng": 105.9746519
+    },
+    "address": "Thôn, Tam Sơn, Bắc Ninh",
+    "procedures_2024": 1088,
+    "procedures_6months_2025": 84,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 60,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Thạnh",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 914,
+    "procedures_6months_2025": 106,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 61,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Xuân I",
+    "location": {
+      "lat": 15.5400394,
+      "lng": 108.5077307
+    },
+    "address": "Tam Xuân I, Núi Thành",
+    "procedures_2024": 1068,
+    "procedures_6months_2025": 372,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 62,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Xuân II",
+    "location": {
+      "lat": 15.53392689605803,
+      "lng": 108.53884891386126
+    },
+    "address": "Tam Xuân 2, Núi Thành",
+    "procedures_2024": 264,
+    "procedures_6months_2025": 304,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 63,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Tiến",
+    "location": {
+      "lat": 21.5153013,
+      "lng": 106.093903
+    },
+    "address": "Xã, Tam Tiến, Yên Thế, Bắc Giang",
+    "procedures_2024": 270,
+    "procedures_6months_2025": 815,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 64,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Hải",
+    "location": {
+      "lat": 15.485983420110013,
+      "lng": 108.66955497147902
+    },
+    "address": "Thôn Tân Lập, xã Tam Hải, huyện Núi Thành",
+    "procedures_2024": 1083,
+    "procedures_6months_2025": 306,
+    "old_commune_ward": "huyện Núi Thành"
+  },
+  {
+    "id": 65,
+    "region": "Quảng Nam",
+    "name": "UBND Phường An Mỹ",
+    "location": {
+      "lat": 15.567580985691722,
+      "lng": 108.48285446356462
+    },
+    "address": "02 Phạm Ngũ Lão, Phường An Mỹ, Tam Kỳ",
+    "procedures_2024": 464,
+    "procedures_6months_2025": 404,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 66,
+    "region": "Quảng Nam",
+    "name": "UBND Phường An Xuân",
+    "location": {
+      "lat": 15.563150902530168,
+      "lng": 108.48902288519122
+    },
+    "address": "UBND phường Hòa Xuân, 111 Hoàng Ngân, Hoà Xuân, Cẩm Lệ",
+    "procedures_2024": 460,
+    "procedures_6months_2025": 310,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 67,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Trường Xuân",
+    "location": {
+      "lat": 15.549604321491948,
+      "lng": 108.47780952749689
+    },
+    "address": "Trường Xuân, Tp. Tam Kỳ",
+    "procedures_2024": 508,
+    "procedures_6months_2025": 269,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 68,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Thanh",
+    "location": {
+      "lat": 15.606542619361104,
+      "lng": 108.53691461851284
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 213,
+    "procedures_6months_2025": 126,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 69,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Phú",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 280,
+    "procedures_6months_2025": 242,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 70,
+    "region": "Quảng Nam",
+    "name": "UBND Phường An Phú",
+    "location": {
+      "lat": 15.577899745788356,
+      "lng": 108.50677436139655
+    },
+    "address": "số 1 đường Đ. Lương Định Của, P. Bình An, Thủ Đức",
+    "procedures_2024": 579,
+    "procedures_6months_2025": 348,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 71,
+    "region": "Quảng Nam",
+    "name": "UBND Phường An Sơn",
+    "location": {
+      "lat": 15.5579752,
+      "lng": 108.49586
+    },
+    "address": "Khối phố 6, Tp. Tam Kỳ",
+    "procedures_2024": 512,
+    "procedures_6months_2025": 306,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 72,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Hòa Hương",
+    "location": {
+      "lat": 15.5598824,
+      "lng": 108.5022157
+    },
+    "address": "757 Phan Châu Trinh, Phường Hoà Hương, Tam Kỳ",
+    "procedures_2024": 210,
+    "procedures_6months_2025": 125,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 73,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Ngọc",
+    "location": {
+      "lat": 15.542066028400765,
+      "lng": 108.45830816015628
+    },
+    "address": "Tam Thái, Phú Ninh",
+    "procedures_2024": 299,
+    "procedures_6months_2025": 257,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 74,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Tân Thanh",
+    "location": {
+      "lat": 9.1938353,
+      "lng": 105.1838277
+    },
+    "address": "Lý Thường Kiệt, Tân Thành, Cà Mau",
+    "procedures_2024": 479,
+    "procedures_6months_2025": 335,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 75,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Hòa Thuận",
+    "location": {
+      "lat": 16.0419646,
+      "lng": 108.2096742
+    },
+    "address": "28 Nguyễn Khoái, Hoà Cường Bắc, Hải Châu",
+    "procedures_2024": 290,
+    "procedures_6months_2025": 243,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 76,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Thăng",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thôn Vĩnh Bình- Xã tam Thăng - Thành phố Tam Kỳ",
+    "procedures_2024": 543,
+    "procedures_6months_2025": 287,
+    "old_commune_ward": "TP Tam Kỳ"
+  },
+  {
+    "id": 77,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam An",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 946,
+    "procedures_6months_2025": 156,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 78,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Thành",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 519,
+    "procedures_6months_2025": 195,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 79,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Phước",
+    "location": {
+      "lat": 15.569716929240787,
+      "lng": 108.40655664209989
+    },
+    "address": "QL51, Tam Phước, Biên Hòa, Đồng Nai",
+    "procedures_2024": 410,
+    "procedures_6months_2025": 188,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 80,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Lộc",
+    "location": {
+      "lat": 15.5681849,
+      "lng": 108.3445469
+    },
+    "address": "Tam Lộc, Phú Ninh",
+    "procedures_2024": 500,
+    "procedures_6months_2025": 104,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 81,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Phú Thịnh",
+    "location": {
+      "lat": 15.54779127568345,
+      "lng": 108.40819789812976
+    },
+    "address": "Tam Phước, Phú Ninh",
+    "procedures_2024": 719,
+    "procedures_6months_2025": 230,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 82,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Đàn",
+    "location": {
+      "lat": 15.6063646,
+      "lng": 108.53669
+    },
+    "address": "Thanh Niên, Tam Thanh, Tam Kỳ",
+    "procedures_2024": 530,
+    "procedures_6months_2025": 317,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 83,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Thái",
+    "location": {
+      "lat": 15.542601,
+      "lng": 108.4454089
+    },
+    "address": "xã Tam Thái - huyện Phú Ninh",
+    "procedures_2024": 493,
+    "procedures_6months_2025": 246,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 84,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Dân",
+    "location": {
+      "lat": 15.523347530336125,
+      "lng": 108.41931453749511
+    },
+    "address": "Thôn Cây Sanh, xã Tam Dân, huyện Phú Ninh",
+    "procedures_2024": 641,
+    "procedures_6months_2025": 430,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 85,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Đại",
+    "location": {
+      "lat": 15.5078121,
+      "lng": 108.4572788
+    },
+    "address": "Thôn Trung Đàn, Xã Tam Đại, Huyện Phú Ninh",
+    "procedures_2024": 460,
+    "procedures_6months_2025": 165,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 86,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tam Lãnh",
+    "location": {
+      "lat": 15.4719868,
+      "lng": 108.4157357
+    },
+    "address": "Tam Lãnh, Phú Ninh",
+    "procedures_2024": 798,
+    "procedures_6months_2025": 225,
+    "old_commune_ward": "huyện Phú Ninh"
+  },
+  {
+    "id": 87,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Tiên Kỳ",
+    "location": {
+      "lat": 15.52225,
+      "lng": 108.0
+    },
+    "address": "Bình An, Tiên Kỳ, Huyện Tiên Phước",
+    "procedures_2024": 469,
+    "procedures_6months_2025": 541,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 88,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Mỹ",
+    "location": {
+      "lat": 15.50459,
+      "lng": 108.31957
+    },
+    "address": "Xã Tiên Mỹ - Huyện Tiên Phước",
+    "procedures_2024": 472,
+    "procedures_6months_2025": 275,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 89,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Phong",
+    "location": {
+      "lat": 15.521496,
+      "lng": 108.356856
+    },
+    "address": "Xã Tiên Phong - Huyện Tiên Phước",
+    "procedures_2024": 450,
+    "procedures_6months_2025": 527,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 90,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Thọ",
+    "location": {
+      "lat": 15.48744,
+      "lng": 108.36501
+    },
+    "address": "Thọ Tiến, Triệu Sơn, Thanh Hóa",
+    "procedures_2024": 503,
+    "procedures_6months_2025": 348,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 91,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Lập",
+    "location": {
+      "lat": 15.428394,
+      "lng": 108.357199
+    },
+    "address": "Tiên Lập, Tiên Phước",
+    "procedures_2024": 1335,
+    "procedures_6months_2025": 256,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 92,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Lộc",
+    "location": {
+      "lat": 15.468538,
+      "lng": 108.343069
+    },
+    "address": "Xã Tiên Lộc, Huyện Tiên Phước",
+    "procedures_2024": 925,
+    "procedures_6months_2025": 322,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 93,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên An",
+    "location": {
+      "lat": 15.425807,
+      "lng": 108.318179
+    },
+    "address": "Thôn 3, Tiên An, Tiên Phước",
+    "procedures_2024": 416,
+    "procedures_6months_2025": 207,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 94,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Cảnh",
+    "location": {
+      "lat": 15.462264213806263,
+      "lng": 108.29563861483412
+    },
+    "address": "Tiên Cảnh, Tiên Phước",
+    "procedures_2024": 683,
+    "procedures_6months_2025": 603,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 95,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Sơn",
+    "location": {
+      "lat": 15.574598,
+      "lng": 108.278713
+    },
+    "address": "Tiên Sơn, Việt Yên, Bắc Giang",
+    "procedures_2024": 350,
+    "procedures_6months_2025": 179,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 96,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Hà",
+    "location": {
+      "lat": 15.555417479976787,
+      "lng": 108.29608431672396
+    },
+    "address": "Tiên Hà, Tiên Phước",
+    "procedures_2024": 1018,
+    "procedures_6months_2025": 246,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 97,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Châu",
+    "location": {
+      "lat": 15.510239,
+      "lng": 108.29308
+    },
+    "address": "Tiên Châu, Tiên Phước",
+    "procedures_2024": 607,
+    "procedures_6months_2025": 289,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 98,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Hiệp",
+    "location": {
+      "lat": 15.424566,
+      "lng": 108.261994
+    },
+    "address": "Tiên Hiệp, Tiên Phước",
+    "procedures_2024": 2628,
+    "procedures_6months_2025": 549,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 99,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Lãnh",
+    "location": {
+      "lat": 15.458448,
+      "lng": 108.172035
+    },
+    "address": "Tiên Ngọc, Tiên Phước",
+    "procedures_2024": 1175,
+    "procedures_6months_2025": 277,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 100,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tiên Ngọc",
+    "location": {
+      "lat": 15.446572,
+      "lng": 108.205904
+    },
+    "address": "Tiên Ngọc, Tiên Phước",
+    "procedures_2024": 1203,
+    "procedures_6months_2025": 176,
+    "old_commune_ward": "huyện Tiên Phước"
+  },
+  {
+    "id": 101,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Đông",
+    "location": {
+      "lat": 15.374509741293194,
+      "lng": 108.32165493471419
+    },
+    "address": "Đông Trà, Tiền Hải, Thái Bình",
+    "procedures_2024": 572,
+    "procedures_6months_2025": 231,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 102,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Nú",
+    "location": {
+      "lat": 15.3229281,
+      "lng": 108.3268407
+    },
+    "address": "Trà Nú, Bắc Trà My",
+    "procedures_2024": 466,
+    "procedures_6months_2025": 142,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 103,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Kót",
+    "location": {
+      "lat": 15.3684365,
+      "lng": 108.1479597
+    },
+    "address": "Trà Đốc, Bắc Trà My",
+    "procedures_2024": 306,
+    "procedures_6months_2025": 72,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 104,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Giáp",
+    "location": {
+      "lat": 15.2224271,
+      "lng": 108.2543147
+    },
+    "address": "Trà Giáp, Bắc Trà My",
+    "procedures_2024": 481,
+    "procedures_6months_2025": 259,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 105,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Ka",
+    "location": {
+      "lat": 15.2224271,
+      "lng": 108.2543147
+    },
+    "address": "Trà Giáp, Bắc Trà My",
+    "procedures_2024": 387,
+    "procedures_6months_2025": 80,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 106,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Giác",
+    "location": {
+      "lat": 15.2224271,
+      "lng": 108.2543147
+    },
+    "address": "Trà Giáp, Bắc Trà My",
+    "procedures_2024": 165,
+    "procedures_6months_2025": 25,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 107,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Tân",
+    "location": {
+      "lat": 15.318760255618098,
+      "lng": 108.16475947471234
+    },
+    "address": "Trà Tân, Bắc Trà My",
+    "procedures_2024": 476,
+    "procedures_6months_2025": 387,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 108,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Bui",
+    "location": {
+      "lat": 15.1734506,
+      "lng": 108.5836968
+    },
+    "address": "Trà Bùi, Trà Bồng",
+    "procedures_2024": 1050,
+    "procedures_6months_2025": 214,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 109,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Đốc",
+    "location": {
+      "lat": 15.368551081372805,
+      "lng": 108.14802978377038
+    },
+    "address": "Trà Đốc, Bắc Trà My",
+    "procedures_2024": 867,
+    "procedures_6months_2025": 109,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 110,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Trà My",
+    "location": {
+      "lat": 15.3330865,
+      "lng": 108.217277
+    },
+    "address": "TT. Trà My, Bắc Trà My",
+    "procedures_2024": 2570,
+    "procedures_6months_2025": 1277,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 111,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Sơn",
+    "location": {
+      "lat": 15.2587928,
+      "lng": 108.497885
+    },
+    "address": "ĐT622, Trà Sơn, Trà Bồng",
+    "procedures_2024": 483,
+    "procedures_6months_2025": 254,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 112,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Giang",
+    "location": {
+      "lat": 20.4851577,
+      "lng": 106.4623827
+    },
+    "address": "Trà Giang, Kiến Xương, Thái Bình",
+    "procedures_2024": 817,
+    "procedures_6months_2025": 316,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 113,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Dương",
+    "location": {
+      "lat": 15.3783017,
+      "lng": 108.2736969
+    },
+    "address": "thôn 3, Trà Dương, Bắc Trà My",
+    "procedures_2024": 852,
+    "procedures_6months_2025": 322,
+    "old_commune_ward": "Huyện Bắc Trà My"
+  },
+  {
+    "id": 114,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Mai",
+    "location": {
+      "lat": 15.1488,
+      "lng": 108.11348
+    },
+    "address": "Trà Mai, Nam Trà My",
+    "procedures_2024": 452,
+    "procedures_6months_2025": 193,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 115,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Don",
+    "location": {
+      "lat": 15.2112684,
+      "lng": 108.0361555
+    },
+    "address": "Trà Dơn, Nam Trà My",
+    "procedures_2024": 416,
+    "procedures_6months_2025": 164,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 116,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Cang",
+    "location": {
+      "lat": 15.1070953,
+      "lng": 108.0717219
+    },
+    "address": "Trà Cang, Nam Trà My",
+    "procedures_2024": 640,
+    "procedures_6months_2025": 250,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 117,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Tập",
+    "location": {
+      "lat": 15.152621207527295,
+      "lng": 108.09918905043016
+    },
+    "address": "Trà Tập, Nam Trà My",
+    "procedures_2024": 544,
+    "procedures_6months_2025": 336,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 118,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Vinh",
+    "location": {
+      "lat": 9.937453999999999,
+      "lng": 106.3405524
+    },
+    "address": "52A Lê Lợi, Phường 4, Trà Vinh",
+    "procedures_2024": 928,
+    "procedures_6months_2025": 147,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 119,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Vân",
+    "location": {
+      "lat": 15.11292733901125,
+      "lng": 108.18001700322145
+    },
+    "address": "Trà Vân, Nam Trà My",
+    "procedures_2024": 196,
+    "procedures_6months_2025": 317,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 120,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Nam",
+    "location": {
+      "lat": 15.0382991,
+      "lng": 108.0698476
+    },
+    "address": "Trà Nam, Nam Trà My",
+    "procedures_2024": 268,
+    "procedures_6months_2025": 123,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 121,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Linh",
+    "location": {
+      "lat": 15.03532512429612,
+      "lng": 108.01849502765695
+    },
+    "address": "Trà linh, Nam Trà My",
+    "procedures_2024": 452,
+    "procedures_6months_2025": 88,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 122,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Leng",
+    "location": {
+      "lat": 15.2728557,
+      "lng": 108.0143686
+    },
+    "address": "Trà Leng, Nam Trà My",
+    "procedures_2024": 621,
+    "procedures_6months_2025": 121,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 123,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Trà Dơn",
+    "location": {
+      "lat": 15.243729426034212,
+      "lng": 108.08595175136442
+    },
+    "address": "Thôn 1, Xã Trà Mai, Nam Trà My",
+    "procedures_2024": 569,
+    "procedures_6months_2025": 102,
+    "old_commune_ward": "Huyện Nam Trà My"
+  },
+  {
+    "id": 124,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Hà Lam",
+    "location": {
+      "lat": 15.7385935,
+      "lng": 108.3505986
+    },
+    "address": "QL14E, TT. Hà Lam, Thăng Bình",
+    "procedures_2024": 250,
+    "procedures_6months_2025": 409,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 125,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Nguyên",
+    "location": {
+      "lat": 15.3418399,
+      "lng": 108.7359465
+    },
+    "address": "Bình Nguyên, Bình Sơn",
+    "procedures_2024": 208,
+    "procedures_6months_2025": 230,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 126,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Quý",
+    "location": {
+      "lat": 15.7043106,
+      "lng": 108.3424832
+    },
+    "address": "Bình Quý, Thăng Bình",
+    "procedures_2024": 461,
+    "procedures_6months_2025": 68,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 127,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Phục",
+    "location": {
+      "lat": 15.7661006,
+      "lng": 108.3633338
+    },
+    "address": "Bình Phục, Thăng Bình",
+    "procedures_2024": 212,
+    "procedures_6months_2025": 216,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 128,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Triều",
+    "location": {
+      "lat": 15.7371838,
+      "lng": 108.4098014
+    },
+    "address": "Bình Triều, Thăng Bình",
+    "procedures_2024": 770,
+    "procedures_6months_2025": 233,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 129,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Giang",
+    "location": {
+      "lat": 10.2824983,
+      "lng": 104.7785995
+    },
+    "address": "Bình Giang, Hòn Đất, Kiên Giang",
+    "procedures_2024": 327,
+    "procedures_6months_2025": 280,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 130,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Đào",
+    "location": {
+      "lat": 15.7575137,
+      "lng": 108.4178801
+    },
+    "address": "Tổ 8, Phước Long, Bình Đào, Thăng Bình",
+    "procedures_2024": 222,
+    "procedures_6months_2025": 215,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 131,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Minh",
+    "location": {
+      "lat": 11.3496187,
+      "lng": 106.093871
+    },
+    "address": "UBND xã Bình Minh, 504 Đ. Trần Văn Trà, Bình Minh, Tây Ninh",
+    "procedures_2024": 170,
+    "procedures_6months_2025": 470,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 132,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Dương",
+    "location": {
+      "lat": 15.804736030609336,
+      "lng": 108.38080436587575
+    },
+    "address": "Bình Dương, Bình Sơn",
+    "procedures_2024": 855,
+    "procedures_6months_2025": 153,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 133,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Nam",
+    "location": {
+      "lat": 15.7575137,
+      "lng": 108.4178801
+    },
+    "address": "Tổ 8, Phước Long, Bình Đào, Thăng Bình",
+    "procedures_2024": 445,
+    "procedures_6months_2025": 140,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 134,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Hải",
+    "location": {
+      "lat": 15.7128549,
+      "lng": 108.4543705
+    },
+    "address": "Unnamed Road, Thăng Bình",
+    "procedures_2024": 298,
+    "procedures_6months_2025": 141,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 135,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Sa",
+    "location": {
+      "lat": 15.699951216704525,
+      "lng": 108.44363385440343
+    },
+    "address": "Bình Sa, Thăng Bình",
+    "procedures_2024": 283,
+    "procedures_6months_2025": 176,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 136,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình An",
+    "location": {
+      "lat": 15.3217354,
+      "lng": 108.6405864
+    },
+    "address": "Bình An, Bình Sơn",
+    "procedures_2024": 364,
+    "procedures_6months_2025": 151,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 137,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Trung",
+    "location": {
+      "lat": 15.676028095573287,
+      "lng": 108.40792884147693
+    },
+    "address": "Thôn Kế Xuyên 2, xã Bình Trung",
+    "procedures_2024": 927,
+    "procedures_6months_2025": 343,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 138,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Tú",
+    "location": {
+      "lat": 15.6931289,
+      "lng": 108.3979331
+    },
+    "address": "Bình Tú, Thăng Bình",
+    "procedures_2024": 531,
+    "procedures_6months_2025": 393,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 139,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Phú",
+    "location": {
+      "lat": 15.2591924,
+      "lng": 108.8752055
+    },
+    "address": "thôn Lý Trường xã Bình Phú",
+    "procedures_2024": 560,
+    "procedures_6months_2025": 240,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 140,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Quế",
+    "location": {
+      "lat": 15.5616956,
+      "lng": 108.0874924
+    },
+    "address": "QL14E, Quế Bình, Hiệp Đức",
+    "procedures_2024": 670,
+    "procedures_6months_2025": 124,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 141,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Lãnh",
+    "location": {
+      "lat": 15.7575137,
+      "lng": 108.4178801
+    },
+    "address": "Tổ 8, Phước Long, Bình Đào, Thăng Bình",
+    "procedures_2024": 1035,
+    "procedures_6months_2025": 171,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 142,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Trị",
+    "location": {
+      "lat": 15.656788667446094,
+      "lng": 108.27774622059412
+    },
+    "address": "Thôn Châu Lâm xã Bình Trị",
+    "procedures_2024": 368,
+    "procedures_6months_2025": 102,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 143,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Định",
+    "location": {
+      "lat": 20.318897,
+      "lng": 106.4587969
+    },
+    "address": "Thôn Đồng Dương",
+    "procedures_2024": 1361,
+    "procedures_6months_2025": 176,
+    "old_commune_ward": "huyện Thăng Bình"
+  },
+  {
+    "id": 144,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Mỹ",
+    "location": {
+      "lat": 15.7375891,
+      "lng": 108.2879418
+    },
+    "address": "Thôn An Phú, xã Quế Mỹ",
+    "procedures_2024": 842,
+    "procedures_6months_2025": 130,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 145,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Hiệp",
+    "location": {
+      "lat": 15.7199148,
+      "lng": 108.2388148
+    },
+    "address": "Thôn Trung Hạ, xã Quế Hiệp",
+    "procedures_2024": 740,
+    "procedures_6months_2025": 172,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 146,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Thuận",
+    "location": {
+      "lat": 15.7109561,
+      "lng": 108.2678118
+    },
+    "address": "Thôn Phước Dương, xã Quế Thuận",
+    "procedures_2024": 405,
+    "procedures_6months_2025": 152,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 147,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Châu",
+    "location": {
+      "lat": 15.6824966,
+      "lng": 108.2482052
+    },
+    "address": "Thôn Phú Đa, xã Quế Châu",
+    "procedures_2024": 118,
+    "procedures_6months_2025": 116,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 148,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Minh",
+    "location": {
+      "lat": 15.6510662,
+      "lng": 108.2318208
+    },
+    "address": "Quế Minh, Quế Sơn",
+    "procedures_2024": 415,
+    "procedures_6months_2025": 218,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 149,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Đông Phú",
+    "location": {
+      "lat": 15.672327,
+      "lng": 108.2232177
+    },
+    "address": "Tôn Đức Thắng, TT. ĐôngPhú, Quế Sơn",
+    "procedures_2024": 129,
+    "procedures_6months_2025": 122,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 150,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế An",
+    "location": {
+      "lat": 15.6801438,
+      "lng": 108.1926473
+    },
+    "address": "Quế Long, Quế Sơn",
+    "procedures_2024": 140,
+    "procedures_6months_2025": 299,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 151,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Long",
+    "location": {
+      "lat": 15.6801438,
+      "lng": 108.1926473
+    },
+    "address": "Quế Long, Quế Sơn",
+    "procedures_2024": 989,
+    "procedures_6months_2025": 123,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 152,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Phong",
+    "location": {
+      "lat": 15.6520098,
+      "lng": 108.154726
+    },
+    "address": "Quế Phong, Quế Sơn",
+    "procedures_2024": 594,
+    "procedures_6months_2025": 251,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 153,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Xuân 1",
+    "location": {
+      "lat": 15.8182272,
+      "lng": 108.2881709
+    },
+    "address": "Quế Xuân 1, Tp. Hội An",
+    "procedures_2024": 596,
+    "procedures_6months_2025": 216,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 154,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Xuân 2",
+    "location": {
+      "lat": 15.7975169,
+      "lng": 108.2892456
+    },
+    "address": "Quế Xuân 2, Quế Sơn",
+    "procedures_2024": 549,
+    "procedures_6months_2025": 198,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 155,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Phú",
+    "location": {
+      "lat": 15.794641546555374,
+      "lng": 108.3148808518791
+    },
+    "address": "Quế Phú, Quế Sơn",
+    "procedures_2024": 777,
+    "procedures_6months_2025": 130,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 156,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Hương An",
+    "location": {
+      "lat": 15.7739377,
+      "lng": 108.3345982
+    },
+    "address": "Hương An, Quế Sơn",
+    "procedures_2024": 126,
+    "procedures_6months_2025": 265,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 157,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Trung Phước",
+    "location": {
+      "lat": 15.706375,
+      "lng": 108.107229
+    },
+    "address": "TT Trung Phước, huyện Quế Sơn",
+    "procedures_2024": 44,
+    "procedures_6months_2025": 276,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 158,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Lộc",
+    "location": {
+      "lat": 15.715975,
+      "lng": 108.060538
+    },
+    "address": "xã Quế Lộc, huyện Quế Sơn",
+    "procedures_2024": 317,
+    "procedures_6months_2025": 311,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 159,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Lâm",
+    "location": {
+      "lat": 15.6417786,
+      "lng": 107.9982243
+    },
+    "address": "Quế Lâm, Nông Sơn",
+    "procedures_2024": 456,
+    "procedures_6months_2025": 71,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 160,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Ninh",
+    "location": {
+      "lat": 15.681014555837343,
+      "lng": 108.00073197356568
+    },
+    "address": "Ninh Phước, Ninh Hòa, Khánh Hòa",
+    "procedures_2024": 477,
+    "procedures_6months_2025": 47,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 161,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Ninh Phước",
+    "location": {
+      "lat": 12.433013,
+      "lng": 109.2840454
+    },
+    "address": "Ninh Phước, Ninh Hòa, Khánh Hòa",
+    "procedures_2024": 582,
+    "procedures_6months_2025": 85,
+    "old_commune_ward": "huyện Quế Sơn"
+  },
+  {
+    "id": 162,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Thành",
+    "location": {
+      "lat": 15.8281869,
+      "lng": 108.3176474
+    },
+    "address": "UBND xã Duy Thành, Duy Thành, Duy Xuyên",
+    "procedures_2024": 533,
+    "procedures_6months_2025": 255,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 163,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Nghĩa",
+    "location": {
+      "lat": 15.830314408267247,
+      "lng": 108.27177834258336
+    },
+    "address": "Uỷ Ban Nhân Dân Xã Duy Nghĩa, DH6, Duy Thành - Duy Nghĩa, Duy Nghĩa, Duy Xuyên",
+    "procedures_2024": 902,
+    "procedures_6months_2025": 310,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 164,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Hải",
+    "location": {
+      "lat": 15.8622627,
+      "lng": 108.3979331
+    },
+    "address": "Duy Hải, Duy Xuyên",
+    "procedures_2024": 637,
+    "procedures_6months_2025": 326,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 165,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Phước",
+    "location": {
+      "lat": 15.8279123,
+      "lng": 108.2581917
+    },
+    "address": "Đ. Hùng Vương, TT. Nam Phước, Duy Xuyên",
+    "procedures_2024": 1693,
+    "procedures_6months_2025": 600,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 166,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Vinh",
+    "location": {
+      "lat": 15.8279123,
+      "lng": 108.2581917
+    },
+    "address": "Đ. Hùng Vương, TT. Nam Phước, Duy Xuyên",
+    "procedures_2024": 1057,
+    "procedures_6months_2025": 337,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 167,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Nam Phước",
+    "location": {
+      "lat": 15.830314408267247,
+      "lng": 108.27177834258336
+    },
+    "address": "Nguyễn Hoàng, Duy Phước, Duy Xuyên",
+    "procedures_2024": 2189,
+    "procedures_6months_2025": 1304,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 168,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Trung",
+    "location": {
+      "lat": 15.803640295222573,
+      "lng": 108.25581376482826
+    },
+    "address": "Duy Trung, Duy Xuyên",
+    "procedures_2024": 679,
+    "procedures_6months_2025": 564,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 169,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Sơn",
+    "location": {
+      "lat": 15.808163,
+      "lng": 108.2179536
+    },
+    "address": "Thôn Phú Nham Đông, Duy Xuyên",
+    "procedures_2024": 1295,
+    "procedures_6months_2025": 842,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 170,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Trinh",
+    "location": {
+      "lat": 15.8279123,
+      "lng": 108.2581917
+    },
+    "address": "Đ. Hùng Vương, TT. Nam Phước, Duy Xuyên",
+    "procedures_2024": 414,
+    "procedures_6months_2025": 328,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 171,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Châu",
+    "location": {
+      "lat": 15.8264192,
+      "lng": 108.1606557
+    },
+    "address": "Duy Châu, Duy Xuyên",
+    "procedures_2024": 1045,
+    "procedures_6months_2025": 432,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 172,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Hoà",
+    "location": {
+      "lat": 15.829513048640429,
+      "lng": 108.12433036489787
+    },
+    "address": "ĐT610, Duy Hoà, Duy Xuyên",
+    "procedures_2024": 737,
+    "procedures_6months_2025": 424,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 173,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Phú,",
+    "location": {
+      "lat": 15.8295606,
+      "lng": 108.1243005
+    },
+    "address": "ĐT610, Duy Hoà, Duy Xuyên",
+    "procedures_2024": 1069,
+    "procedures_6months_2025": 193,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 174,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Duy Tân",
+    "location": {
+      "lat": 15.8295606,
+      "lng": 108.1243005
+    },
+    "address": "ĐT610, Duy Hoà, Duy Xuyên",
+    "procedures_2024": 375,
+    "procedures_6months_2025": 323,
+    "old_commune_ward": "huyện Duy Xuyên"
+  },
+  {
+    "id": 175,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Phương",
+    "location": {
+      "lat": 15.9031209,
+      "lng": 108.237896
+    },
+    "address": "Điện An, Điện Bàn",
+    "procedures_2024": 459,
+    "procedures_6months_2025": 232,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 176,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Minh",
+    "location": {
+      "lat": 15.8889404,
+      "lng": 108.2552007
+    },
+    "address": "22 Hoàng Diệu, TT. Vĩnh Điện, Điện Bàn",
+    "procedures_2024": 360,
+    "procedures_6months_2025": 278,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 177,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Vĩnh Điện",
+    "location": {
+      "lat": 15.889027,
+      "lng": 108.255055
+    },
+    "address": "22 Hoàng Diệu, khối 3, phường Điện Bàn",
+    "procedures_2024": 707,
+    "procedures_6months_2025": 85,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 178,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Nam Đông",
+    "location": {
+      "lat": 15.9128873,
+      "lng": 108.2699195
+    },
+    "address": "845 Trần Thủ Độ, Điện Nam Trung, Điện Bàn",
+    "procedures_2024": 569,
+    "procedures_6months_2025": 180,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 179,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Nam Trung",
+    "location": {
+      "lat": 15.91291147372988,
+      "lng": 108.26995846784983
+    },
+    "address": "845 Trần Thủ Độ, Điện Nam Trung, Điện Bàn",
+    "procedures_2024": 514,
+    "procedures_6months_2025": 147,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 180,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Dương",
+    "location": {
+      "lat": 15.9228487,
+      "lng": 108.3019746
+    },
+    "address": "229 Lạc Long Quân, Điện Dương, Điện Bàn",
+    "procedures_2024": 531,
+    "procedures_6months_2025": 292,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 181,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Ngọc",
+    "location": {
+      "lat": 15.955365,
+      "lng": 108.246677
+    },
+    "address": "Điện Ngọc, Điện Bàn",
+    "procedures_2024": 1006,
+    "procedures_6months_2025": 276,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 182,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Nam Bắc",
+    "location": {
+      "lat": 15.9031209,
+      "lng": 108.237896
+    },
+    "address": "Điện An, Điện Bàn",
+    "procedures_2024": 188,
+    "procedures_6months_2025": 107,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 183,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện An",
+    "location": {
+      "lat": 15.902955926867204,
+      "lng": 108.23788591147446
+    },
+    "address": "Điện An, Điện Bàn",
+    "procedures_2024": 831,
+    "procedures_6months_2025": 271,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 184,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Thắng Nam",
+    "location": {
+      "lat": 15.9029936,
+      "lng": 108.2378528
+    },
+    "address": "Điện An, Điện Bàn",
+    "procedures_2024": 295,
+    "procedures_6months_2025": 96,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 185,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Thắng Trung",
+    "location": {
+      "lat": 15.9316511,
+      "lng": 108.2169934
+    },
+    "address": "Điện Thắng Trung, Điện Bàn",
+    "procedures_2024": 185,
+    "procedures_6months_2025": 139,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 186,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Hoà",
+    "location": {
+      "lat": 15.934104147256866,
+      "lng": 108.19669603889739
+    },
+    "address": "UBND xã Điện Hòa, Điện Hoà, Điện Bàn",
+    "procedures_2024": 849,
+    "procedures_6months_2025": 307,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 187,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Điện Thắng Bắc",
+    "location": {
+      "lat": 15.9367831,
+      "lng": 108.2229243
+    },
+    "address": "xóm Rừng, Điện Bàn",
+    "procedures_2024": 357,
+    "procedures_6months_2025": 118,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 188,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Tiến",
+    "location": {
+      "lat": 15.9280645,
+      "lng": 108.1606557
+    },
+    "address": "Điện Tiến, Điện Bàn",
+    "procedures_2024": 597,
+    "procedures_6months_2025": 225,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 189,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Hồng",
+    "location": {
+      "lat": 15.888659,
+      "lng": 108.149975
+    },
+    "address": "Thôn Lạc Thành Đông, xã Điện Bàn Tây",
+    "procedures_2024": 799,
+    "procedures_6months_2025": 354,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 190,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Thọ",
+    "location": {
+      "lat": 15.888495,
+      "lng": 108.180027
+    },
+    "address": "Thôn Phong Thử 1, xã Điện Bàn Tây",
+    "procedures_2024": 473,
+    "procedures_6months_2025": 337,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 191,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Phước",
+    "location": {
+      "lat": 15.875580931615403,
+      "lng": 108.20409750579134
+    },
+    "address": "Thôn Nông Sơn 2, xã Điện Bàn Tây",
+    "procedures_2024": 339,
+    "procedures_6months_2025": 166,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 192,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Phong",
+    "location": {
+      "lat": 15.8889404,
+      "lng": 108.2552007
+    },
+    "address": "22 Hoàng Diệu, TT. Vĩnh Điện, Điện Bàn",
+    "procedures_2024": 565,
+    "procedures_6months_2025": 330,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 193,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Trung",
+    "location": {
+      "lat": 15.839702994651379,
+      "lng": 108.20824877144676
+    },
+    "address": "22 Hoàng Diệu, TT. Vĩnh Điện, Điện Bàn",
+    "procedures_2024": 262,
+    "procedures_6months_2025": 139,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 194,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Điện Quang",
+    "location": {
+      "lat": 15.8889404,
+      "lng": 108.2552007
+    },
+    "address": "22 Hoàng Diệu, TT. Vĩnh Điện, Điện Bàn",
+    "procedures_2024": 546,
+    "procedures_6months_2025": 383,
+    "old_commune_ward": "Điện Bàn"
+  },
+  {
+    "id": 195,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Minh An",
+    "location": {
+      "lat": 15.8806873,
+      "lng": 108.3312488
+    },
+    "address": "52 Đ. Phan Chu Trinh, Phường Minh An, Hội An",
+    "procedures_2024": 1700,
+    "procedures_6months_2025": 652,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 196,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Cẩm Phô",
+    "location": {
+      "lat": 15.880159,
+      "lng": 108.325723
+    },
+    "address": "82 Trần Hưng Đạo, Phường Minh An, Hội An",
+    "procedures_2024": 2677,
+    "procedures_6months_2025": 1535,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 197,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Sơn Phong",
+    "location": {
+      "lat": 15.8782202,
+      "lng": 108.3272902
+    },
+    "address": "Old Town, Minh An, Tp. Hội An",
+    "procedures_2024": 518,
+    "procedures_6months_2025": 110,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 198,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Cẩm Nam",
+    "location": {
+      "lat": 15.8791659,
+      "lng": 108.3325247
+    },
+    "address": "9 Trần Hưng Đạo, Sơn Phong, Hội An",
+    "procedures_2024": 1531,
+    "procedures_6months_2025": 414,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 199,
+    "region": "Quảng Nam",
+    "name": "Xã Cẩm Kim",
+    "location": {
+      "lat": 15.8623813,
+      "lng": 108.3234697
+    },
+    "address": "Cẩm Kim, Tp. Hội An",
+    "procedures_2024": 670,
+    "procedures_6months_2025": 76,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 200,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Cẩm Châu",
+    "location": {
+      "lat": 15.880725189133944,
+      "lng": 108.34256049272628
+    },
+    "address": "265 Cửa Đại, Cẩm Châu, Hội An",
+    "procedures_2024": 2751,
+    "procedures_6months_2025": 1155,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 201,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Cửa Đại",
+    "location": {
+      "lat": 15.8881612,
+      "lng": 108.3797119
+    },
+    "address": "Âu Cơ, Cửa Đại, Hội An",
+    "procedures_2024": 1990,
+    "procedures_6months_2025": 483,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 202,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Cẩm Thanh",
+    "location": {
+      "lat": 18.273539,
+      "lng": 105.947457
+    },
+    "address": "Cẩm Thành, Cẩm Xuyên, Hà Tĩnh",
+    "procedures_2024": 1126,
+    "procedures_6months_2025": 357,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 203,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Cẩm Hà",
+    "location": {
+      "lat": 15.9010099,
+      "lng": 108.3222537
+    },
+    "address": "Cẩm Hà, Hội An",
+    "procedures_2024": 596,
+    "procedures_6months_2025": 191,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 204,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Thanh Hà",
+    "location": {
+      "lat": 16.0614718,
+      "lng": 108.191375
+    },
+    "address": "212 Hà Huy Tập, Thanh Khê Đông, Thanh Khê",
+    "procedures_2024": 613,
+    "procedures_6months_2025": 188,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 205,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Tân An",
+    "location": {
+      "lat": 15.890099,
+      "lng": 108.3223857
+    },
+    "address": "5 Phan Thành Tài, Tân An, Hội An",
+    "procedures_2024": 1343,
+    "procedures_6months_2025": 703,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 206,
+    "region": "Quảng Nam",
+    "name": "UBND Phường Cẩm An",
+    "location": {
+      "lat": 15.8791659,
+      "lng": 108.3325247
+    },
+    "address": "9 Trần Hưng Đạo, Sơn Phong, Hội An",
+    "procedures_2024": 1525,
+    "procedures_6months_2025": 710,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 207,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tân Hiệp",
+    "location": {
+      "lat": 15.958202558482517,
+      "lng": 108.5061879830367
+    },
+    "address": "Ấp 2, Thạnh Hóa, Long An",
+    "procedures_2024": 842,
+    "procedures_6months_2025": 413,
+    "old_commune_ward": "TP Hội An"
+  },
+  {
+    "id": 208,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Ái Nghĩa",
+    "location": {
+      "lat": 15.8849272,
+      "lng": 108.1111426
+    },
+    "address": "QL14B, TT. ái Nghĩa, Đại Lộc",
+    "procedures_2024": 2741,
+    "procedures_6months_2025": 954,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 209,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Hiệp",
+    "location": {
+      "lat": 15.9208658,
+      "lng": 108.1132212
+    },
+    "address": "Đại Hiệp, Đại Lộc",
+    "procedures_2024": 722,
+    "procedures_6months_2025": 224,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 210,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Hòa",
+    "location": {
+      "lat": 15.862441,
+      "lng": 108.1369252
+    },
+    "address": "Đại Hoà, Đại Lộc",
+    "procedures_2024": 823,
+    "procedures_6months_2025": 265,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 211,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại An",
+    "location": {
+      "lat": 15.8551878,
+      "lng": 108.1213246
+    },
+    "address": "Đỗ Đăng Tuyển, Đại An, Đại Lộc",
+    "procedures_2024": 662,
+    "procedures_6months_2025": 267,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 212,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Nghĩa",
+    "location": {
+      "lat": 15.8849272,
+      "lng": 108.1111426
+    },
+    "address": "QL14B, TT. ái Nghĩa, Đại Lộc",
+    "procedures_2024": 1170,
+    "procedures_6months_2025": 475,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 213,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Đồng",
+    "location": {
+      "lat": 15.851396579737175,
+      "lng": 108.01023710386515
+    },
+    "address": "Thôn Thanh Phúc Xã Đại Đồng, Thanh Chương, Nghệ An",
+    "procedures_2024": 1372,
+    "procedures_6months_2025": 450,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 214,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Hồng",
+    "location": {
+      "lat": 15.8220769,
+      "lng": 107.9472579
+    },
+    "address": "Đại Hồng, Đại Lộc",
+    "procedures_2024": 433,
+    "procedures_6months_2025": 421,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 215,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Quang",
+    "location": {
+      "lat": 15.8535556,
+      "lng": 108.0663173
+    },
+    "address": "Đại Minh, Đại Lộc",
+    "procedures_2024": 1293,
+    "procedures_6months_2025": 356,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 216,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Lãnh",
+    "location": {
+      "lat": 15.846108896133215,
+      "lng": 107.93307214189929
+    },
+    "address": "Đại Lãnh, Vạn Ninh, Khánh Hòa",
+    "procedures_2024": 461,
+    "procedures_6months_2025": 193,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 217,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Hưng",
+    "location": {
+      "lat": 15.8897897,
+      "lng": 107.8820831
+    },
+    "address": "Đại Hưng, Đại Lộc",
+    "procedures_2024": 530,
+    "procedures_6months_2025": 255,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 218,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Sơn",
+    "location": {
+      "lat": 18.8437181,
+      "lng": 105.4618117
+    },
+    "address": "Đại Sơn, Đô Lương, Nghệ An",
+    "procedures_2024": 288,
+    "procedures_6months_2025": 115,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 219,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Phong",
+    "location": {
+      "lat": 15.8581721,
+      "lng": 108.0539382
+    },
+    "address": "Đại Phong, Đại Lộc",
+    "procedures_2024": 780,
+    "procedures_6months_2025": 206,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 220,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Minh",
+    "location": {
+      "lat": 15.85354658978577,
+      "lng": 108.06647437989412
+    },
+    "address": "Đại Minh, Đại Lộc",
+    "procedures_2024": 594,
+    "procedures_6months_2025": 180,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 221,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Cường",
+    "location": {
+      "lat": 15.8541715,
+      "lng": 108.0911827
+    },
+    "address": "Thôn Ô Gia, Đại Lộc",
+    "procedures_2024": 485,
+    "procedures_6months_2025": 184,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 222,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Tân",
+    "location": {
+      "lat": 15.8226608,
+      "lng": 108.0543249
+    },
+    "address": "Đại Tân, Đại Lộc",
+    "procedures_2024": 424,
+    "procedures_6months_2025": 209,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 223,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Thắng",
+    "location": {
+      "lat": 15.826422309720398,
+      "lng": 108.0756520588899
+    },
+    "address": "Đại Thắng, Vụ Bản, Nam Định",
+    "procedures_2024": 564,
+    "procedures_6months_2025": 255,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 224,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Chánh",
+    "location": {
+      "lat": 15.7995831,
+      "lng": 108.0124469
+    },
+    "address": "Đại Chánh, Đại Lộc",
+    "procedures_2024": 311,
+    "procedures_6months_2025": 168,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 225,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đại Thạnh",
+    "location": {
+      "lat": 15.7820381,
+      "lng": 108.0342879
+    },
+    "address": "Đại Thạnh, Đại Lộc",
+    "procedures_2024": 880,
+    "procedures_6months_2025": 181,
+    "old_commune_ward": "huyện Đại Lộc"
+  },
+  {
+    "id": 226,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Thạnh Mỹ",
+    "location": {
+      "lat": 15.747273513775294,
+      "lng": 107.83629012741793
+    },
+    "address": "TT. Thạnh Mỹ, Nam Giang",
+    "procedures_2024": 155,
+    "procedures_6months_2025": 399,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 227,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Cà Dy",
+    "location": {
+      "lat": 15.671699,
+      "lng": 107.7873095
+    },
+    "address": "Cà Dy, Nam Giang",
+    "procedures_2024": 308,
+    "procedures_6months_2025": 645,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 228,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tà Bhinh",
+    "location": {
+      "lat": 15.690398726159335,
+      "lng": 107.76606686426656
+    },
+    "address": "Tà B'Hing, Nam Giang",
+    "procedures_2024": 413,
+    "procedures_6months_2025": 122,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 229,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tà Pơơ",
+    "location": {
+      "lat": 15.6343749,
+      "lng": 107.6925674
+    },
+    "address": "ALiêng, Tà BHing, Nam Giang",
+    "procedures_2024": 363,
+    "procedures_6months_2025": 432,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 230,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Zuôih",
+    "location": {
+      "lat": 15.7365791,
+      "lng": 107.5505152
+    },
+    "address": "Zuôih, Nam Giang",
+    "procedures_2024": 978,
+    "procedures_6months_2025": 172,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 231,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Chà Vàl",
+    "location": {
+      "lat": 15.62024251417955,
+      "lng": 107.50833094998362
+    },
+    "address": "Chà Vàl, Nam Giang",
+    "procedures_2024": 1561,
+    "procedures_6months_2025": 135,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 232,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đắc Prìng",
+    "location": {
+      "lat": 15.588864,
+      "lng": 107.5373874
+    },
+    "address": "La Dêê, Nam Giang",
+    "procedures_2024": 1565,
+    "procedures_6months_2025": 504,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 233,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đắc Pre",
+    "location": {
+      "lat": 15.588707366600682,
+      "lng": 107.5373987440672
+    },
+    "address": "La Dêê, Nam Giang",
+    "procedures_2024": 396,
+    "procedures_6months_2025": 63,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 234,
+    "region": "Quảng Nam",
+    "name": "UBND Xã La Dêê",
+    "location": {
+      "lat": 15.598376786934226,
+      "lng": 107.45397868309362
+    },
+    "address": "Đăk Ôôc, Nam Giang",
+    "procedures_2024": 428,
+    "procedures_6months_2025": 75,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 235,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Đắc Tôi",
+    "location": {
+      "lat": 14.2914306,
+      "lng": 108.828762
+    },
+    "address": "Bok Tới, Hoài Ân",
+    "procedures_2024": 198,
+    "procedures_6months_2025": 72,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 236,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Chơ Chun",
+    "location": {
+      "lat": 15.6287155,
+      "lng": 107.3675934
+    },
+    "address": "La Êê, Nam Giang",
+    "procedures_2024": 1864,
+    "procedures_6months_2025": 173,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 237,
+    "region": "Quảng Nam",
+    "name": "UBND Xã La Êê",
+    "location": {
+      "lat": 15.673991,
+      "lng": 107.346596
+    },
+    "address": "La Êê, Nam Giang",
+    "procedures_2024": 330,
+    "procedures_6months_2025": 82,
+    "old_commune_ward": "Nam Giang"
+  },
+  {
+    "id": 238,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tư",
+    "location": {
+      "lat": 16.0163759,
+      "lng": 108.2537865
+    },
+    "address": "486 Đ. Lê Văn Hiến, Khuê Mỹ, Ngũ Hành Sơn",
+    "procedures_2024": 174,
+    "procedures_6months_2025": 71,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 239,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Ba",
+    "location": {
+      "lat": 15.957796636959332,
+      "lng": 107.9254658894496
+    },
+    "address": "Hoà Nhơn, Hòa Vang",
+    "procedures_2024": 508,
+    "procedures_6months_2025": 144,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 240,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Sông Kôn",
+    "location": {
+      "lat": 15.9560256,
+      "lng": 107.7997117
+    },
+    "address": "Sông Kôn, Đông Giang",
+    "procedures_2024": 362,
+    "procedures_6months_2025": 280,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 241,
+    "region": "Quảng Nam",
+    "name": "UBND Xã A Ting",
+    "location": {
+      "lat": 15.9966483,
+      "lng": 107.8228459
+    },
+    "address": "A Ting, Đông Giang",
+    "procedures_2024": 888,
+    "procedures_6months_2025": 132,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 242,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Jơ Ngây",
+    "location": {
+      "lat": 15.956110137694877,
+      "lng": 107.79972376125863
+    },
+    "address": "Jơ Ngây, Đông Giang",
+    "procedures_2024": 362,
+    "procedures_6months_2025": 280,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 243,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Prao",
+    "location": {
+      "lat": 15.920847083296035,
+      "lng": 107.65230595101153
+    },
+    "address": "TT. P Rao, Đông Giang",
+    "procedures_2024": 519,
+    "procedures_6months_2025": 106,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 244,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tà Lu,",
+    "location": {
+      "lat": 15.9654024,
+      "lng": 107.6570475
+    },
+    "address": "Tà Lu, Đông Giang",
+    "procedures_2024": 703,
+    "procedures_6months_2025": 74,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 245,
+    "region": "Quảng Nam",
+    "name": "UBND Xã A Rooi,",
+    "location": {
+      "lat": 15.8726386,
+      "lng": 107.6156133
+    },
+    "address": "xã Arooi, Đông Giang",
+    "procedures_2024": 218,
+    "procedures_6months_2025": 36,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 246,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Zà Hung",
+    "location": {
+      "lat": 15.8943076,
+      "lng": 107.6431192
+    },
+    "address": "Rao Nam, P, Za Hung, Đông Giang",
+    "procedures_2024": 180,
+    "procedures_6months_2025": 28,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 247,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Kà Dăng",
+    "location": {
+      "lat": 15.8855069,
+      "lng": 107.7991545
+    },
+    "address": "Ka Dăng, Đông Giang",
+    "procedures_2024": 552,
+    "procedures_6months_2025": 70,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 248,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Mà Cooih",
+    "location": {
+      "lat": 15.84431375174836,
+      "lng": 107.69105179302223
+    },
+    "address": "Ma Cooih, Đông Giang",
+    "procedures_2024": 531,
+    "procedures_6months_2025": 263,
+    "old_commune_ward": "huyện Đông Giang"
+  },
+  {
+    "id": 249,
+    "region": "Quảng Nam",
+    "name": "UBND Xã AVương",
+    "location": {
+      "lat": 15.927805,
+      "lng": 107.532429
+    },
+    "address": "Thôn Azứt, xã Avương",
+    "procedures_2024": 186,
+    "procedures_6months_2025": 94,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 250,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bhalêê",
+    "location": {
+      "lat": 15.942703,
+      "lng": 107.568047
+    },
+    "address": "Thôn Azứt, xã Avương",
+    "procedures_2024": 36,
+    "procedures_6months_2025": 102,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 251,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Attêng",
+    "location": {
+      "lat": 15.903920981247767,
+      "lng": 107.49359571355818
+    },
+    "address": "Thôn Agrồng, xã Atiêng",
+    "procedures_2024": 69,
+    "procedures_6months_2025": 208,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 252,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Dang",
+    "location": {
+      "lat": 15.88514,
+      "lng": 107.49292
+    },
+    "address": "Thôn Ađâu, xã Dang, huyện Tây Giang",
+    "procedures_2024": 100,
+    "procedures_6months_2025": 64,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 253,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Anông",
+    "location": {
+      "lat": 15.88514,
+      "lng": 107.49293
+    },
+    "address": "xã Anông, huyện Tây Giang",
+    "procedures_2024": 129,
+    "procedures_6months_2025": 19,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 254,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Lăng",
+    "location": {
+      "lat": 15.88514,
+      "lng": 107.49294
+    },
+    "address": "xã Lăng, huyện Tây Giang",
+    "procedures_2024": 47,
+    "procedures_6months_2025": 51,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 255,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Ch'ơm",
+    "location": {
+      "lat": 15.8174492,
+      "lng": 107.2548183
+    },
+    "address": "Ch'ơm, Tây Giang",
+    "procedures_2024": 57,
+    "procedures_6months_2025": 28,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 256,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Gari",
+    "location": {
+      "lat": 15.8852628,
+      "lng": 107.4890302
+    },
+    "address": "Xã Gari, Huyện Tây Giang, A Tiêng, Tây Giang",
+    "procedures_2024": 100,
+    "procedures_6months_2025": 61,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 257,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Tr'hy",
+    "location": {
+      "lat": 15.812917,
+      "lng": 107.3671099
+    },
+    "address": "Thôn Voòng, Tây Giang",
+    "procedures_2024": 1274,
+    "procedures_6months_2025": 38,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 258,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Axan",
+    "location": {
+      "lat": 15.833832744053154,
+      "lng": 107.30664719236195
+    },
+    "address": "Ba Xa, Ba Tơ",
+    "procedures_2024": 143,
+    "procedures_6months_2025": 83,
+    "old_commune_ward": "huyện Tây Giang"
+  },
+  {
+    "id": 259,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Tân",
+    "location": {
+      "lat": 21.1685567,
+      "lng": 106.1906171
+    },
+    "address": "Quế Tân, Quế Võ, Bắc Ninh",
+    "procedures_2024": 109,
+    "procedures_6months_2025": 53,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 260,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Tân Bình",
+    "location": {
+      "lat": 21.6971777,
+      "lng": 105.2320814
+    },
+    "address": "TT. Tân Bình, Yên Sơn, Tuyên Quang",
+    "procedures_2024": 287,
+    "procedures_6months_2025": 107,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 261,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Lưu",
+    "location": {
+      "lat": 15.5207177,
+      "lng": 108.1072924
+    },
+    "address": "Quế Lưu, Hiệp Đức",
+    "procedures_2024": 580,
+    "procedures_6months_2025": 101,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 262,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Thăng Phước",
+    "location": {
+      "lat": 15.5372464,
+      "lng": 108.1784455
+    },
+    "address": "Thăng Phước, Hiệp Đức",
+    "procedures_2024": 1161,
+    "procedures_6months_2025": 51,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 263,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Sơn",
+    "location": {
+      "lat": 21.5084477,
+      "lng": 105.806795
+    },
+    "address": "Bình Sơn, Sông Công, Thái Nguyên",
+    "procedures_2024": 217,
+    "procedures_6months_2025": 47,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 264,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Quế Thọ",
+    "location": {
+      "lat": 15.6068987,
+      "lng": 108.154726
+    },
+    "address": "Quế Thọ, Hiệp Đức",
+    "procedures_2024": 160,
+    "procedures_6months_2025": 589,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 265,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Bình Lâm",
+    "location": {
+      "lat": 15.613617190332926,
+      "lng": 108.21890001550553
+    },
+    "address": "Bình Lâm, Hiệp Đức",
+    "procedures_2024": 728,
+    "procedures_6months_2025": 157,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 266,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Trà",
+    "location": {
+      "lat": 15.5411002,
+      "lng": 108.0423458
+    },
+    "address": "Sông Trà, Hiệp Đức",
+    "procedures_2024": 41,
+    "procedures_6months_2025": 114,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 267,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Sông Trà",
+    "location": {
+      "lat": 15.54098434861613,
+      "lng": 108.04231216701973
+    },
+    "address": "Sông Trà, Hiệp Đức",
+    "procedures_2024": 572,
+    "procedures_6months_2025": 141,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 268,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Gia",
+    "location": {
+      "lat": 15.9587006,
+      "lng": 108.215154
+    },
+    "address": "QL1A, Hoà Phước, Hòa Vang",
+    "procedures_2024": 168,
+    "procedures_6months_2025": 124,
+    "old_commune_ward": "Huyện Hiệp Đức"
+  },
+  {
+    "id": 269,
+    "region": "Quảng Nam",
+    "name": "UBND Thị trấn Khâm Đức",
+    "location": {
+      "lat": 15.4441349,
+      "lng": 107.793175
+    },
+    "address": "TT. Khâm Đức, Phước Sơn",
+    "procedures_2024": 670,
+    "procedures_6months_2025": 231,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 270,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Xuân",
+    "location": {
+      "lat": 15.536171,
+      "lng": 107.7873095
+    },
+    "address": "Phước Xuân, Phước Sơn",
+    "procedures_2024": 429,
+    "procedures_6months_2025": 44,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 271,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Đức",
+    "location": {
+      "lat": 15.4600898,
+      "lng": 107.7517775
+    },
+    "address": "Phước Đức, Phước Sơn",
+    "procedures_2024": 901,
+    "procedures_6months_2025": 151,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 272,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Năng",
+    "location": {
+      "lat": 15.400637626375408,
+      "lng": 107.76180651925868
+    },
+    "address": "thôn 2, Phước Sơn",
+    "procedures_2024": 66,
+    "procedures_6months_2025": 240,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 273,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Mỹ",
+    "location": {
+      "lat": 13.7291566,
+      "lng": 109.1302391
+    },
+    "address": "Thanh Long, Tuy Phước",
+    "procedures_2024": 53,
+    "procedures_6months_2025": 38,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 274,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Chánh",
+    "location": {
+      "lat": 15.3671015451681,
+      "lng": 107.81909252911731
+    },
+    "address": "Phước Chánh, Phước Sơn",
+    "procedures_2024": 554,
+    "procedures_6months_2025": 21,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 275,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Công",
+    "location": {
+      "lat": 15.9587006,
+      "lng": 108.215154
+    },
+    "address": "QL1A, Hoà Phước, Hòa Vang",
+    "procedures_2024": 397,
+    "procedures_6months_2025": 121,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 276,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Thành",
+    "location": {
+      "lat": 15.286059621395788,
+      "lng": 107.89138346049837
+    },
+    "address": "Thôn 4B, xã Phước Thành, huyện Phước Sơn",
+    "procedures_2024": 36,
+    "procedures_6months_2025": 39,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 277,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Lộc",
+    "location": {
+      "lat": 13.8517764,
+      "lng": 109.1452263
+    },
+    "address": "Phước Lộc, Tuy Phước",
+    "procedures_2024": 447,
+    "procedures_6months_2025": 196,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 278,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Kim",
+    "location": {
+      "lat": 15.2860744,
+      "lng": 107.8913131
+    },
+    "address": "Thôn Luông A, Xã Phước Kim, Huyện Phước Sơn",
+    "procedures_2024": 246,
+    "procedures_6months_2025": 18,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 279,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Hiệp",
+    "location": {
+      "lat": 15.462765065945758,
+      "lng": 107.9382401314879
+    },
+    "address": "Thôn 1, Xã Phước Hiệp, Huyện Phước Sơn",
+    "procedures_2024": 246,
+    "procedures_6months_2025": 18,
+    "old_commune_ward": "Huyện Phước Sơn"
+  },
+  {
+    "id": 280,
+    "region": "Quảng Nam",
+    "name": "UBND Xã Phước Hòa",
+    "location": {
+      "lat": 15.9587006,
+      "lng": 108.215154
+    },
+    "address": "Thôn 1, Xã Phước Hoà, Huyện Phước Sơn",
+    "procedures_2024": 0,
+    "procedures_6months_2025": 0,
+    "old_commune_ward": "Huyện Phước Sơn"
   }
 ]
