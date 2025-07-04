@@ -36,6 +36,12 @@ import {
   DialogTitle 
 } from "./ui/dialog";
 import { Button } from "./ui/button";
+import {
+  downloadAsJSON,
+  downloadAsExcel,
+  downloadAllLayersAsExcel,
+  generateFilename
+} from "../utils/download-utils";
 
 // Da Nang coordinates
 const DA_NANG_CENTER = { lat: 15.733009, lng: 108.060244 };
@@ -538,6 +544,84 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     }
   }, [directionMode]);
 
+  // Download handlers for edit mode
+  const handleDownloadLayerAsJSON = useCallback((layer: 'A' | 'B' | 'C') => {
+    const layerData = getVisibleAdministrativeOffices().filter(office => office.layer === layer);
+    const filename = generateFilename(`danang_tru_so_lop_${layer}`);
+    downloadAsJSON(layerData, filename);
+    
+    toast.success(`Đã xuất dữ liệu lớp ${layer}`, {
+      description: `Đã tải xuống ${layerData.length} trụ sở định dạng JSON`
+    });
+  }, [getVisibleAdministrativeOffices]);
+
+  const handleDownloadLayerAsExcel = useCallback((layer: 'A' | 'B' | 'C') => {
+    const layerData = getVisibleAdministrativeOffices().filter(office => office.layer === layer);
+    const filename = generateFilename(`danang_tru_so_lop_${layer}`);
+    const sheetName = `Lớp ${layer}`;
+    downloadAsExcel(layerData, filename, sheetName);
+    
+    toast.success(`Đã xuất dữ liệu lớp ${layer}`, {
+      description: `Đã tải xuống ${layerData.length} trụ sở định dạng Excel`
+    });
+  }, [getVisibleAdministrativeOffices]);
+
+  const handleDownloadAllLayersAsExcel = useCallback(() => {
+    const allVisibleOffices = getVisibleAdministrativeOffices();
+    const layerAData = allVisibleOffices.filter(office => office.layer === 'A');
+    const layerBData = allVisibleOffices.filter(office => office.layer === 'B');
+    const layerCData = allVisibleOffices.filter(office => office.layer === 'C');
+    
+    const filename = generateFilename('danang_tat_ca_tru_so');
+    downloadAllLayersAsExcel(
+      layerAData,
+      layerBData,
+      layerCData,
+      customOffices,
+      editedOffices,
+      deletedOfficeIds,
+      filename
+    );
+    
+    const totalCount = layerAData.length + layerBData.length + layerCData.length + customOffices.length;
+    toast.success('Đã xuất tất cả dữ liệu', {
+      description: `Đã tải xuống ${totalCount} trụ sở từ tất cả các lớp`
+    });
+  }, [getVisibleAdministrativeOffices, customOffices, editedOffices, deletedOfficeIds]);
+
+  const handleDownloadAllLayersAsJSON = useCallback(() => {
+    const allVisibleOffices = getVisibleAdministrativeOffices();
+    const exportData = {
+      metadata: {
+        exportDate: new Date().toISOString(),
+        totalOffices: allVisibleOffices.length,
+        layers: {
+          A: allVisibleOffices.filter(office => office.layer === 'A').length,
+          B: allVisibleOffices.filter(office => office.layer === 'B').length,
+          C: allVisibleOffices.filter(office => office.layer === 'C').length,
+        },
+        customOffices: customOffices.length,
+        editedOffices: editedOffices.size,
+        deletedOffices: deletedOfficeIds.size,
+      },
+      data: {
+        layerA: allVisibleOffices.filter(office => office.layer === 'A'),
+        layerB: allVisibleOffices.filter(office => office.layer === 'B'),
+        layerC: allVisibleOffices.filter(office => office.layer === 'C'),
+        customOffices: customOffices,
+        editedOfficeIds: Array.from(editedOffices.keys()),
+        deletedOfficeIds: Array.from(deletedOfficeIds),
+      },
+    };
+    
+    const filename = generateFilename('danang_tat_ca_tru_so');
+    downloadAsJSON(exportData, filename);
+    
+    toast.success('Đã xuất tất cả dữ liệu', {
+      description: `Đã tải xuống ${allVisibleOffices.length} trụ sở định dạng JSON`
+    });
+  }, [getVisibleAdministrativeOffices, customOffices, editedOffices, deletedOfficeIds]);
+
   if (isMapLoading) {
     return <LoadingScreen message="Đang tải dữ liệu bản đồ..." />;
   }
@@ -746,6 +830,10 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleEditMode={setEditMode}
                 selectedLayerForAdd={selectedLayerForAdd}
                 onSelectedLayerForAddChange={setSelectedLayerForAdd}
+                onDownloadLayerAsJSON={handleDownloadLayerAsJSON}
+                onDownloadLayerAsExcel={handleDownloadLayerAsExcel}
+                onDownloadAllLayersAsJSON={handleDownloadAllLayersAsJSON}
+                onDownloadAllLayersAsExcel={handleDownloadAllLayersAsExcel}
               />
 
               {/* Selected Ward Info Card/Drawer */}

@@ -17,7 +17,10 @@ import {
   Navigation,
   LineSquiggle,
   ChevronsLeftRightEllipsis,
-  Edit3
+  Edit3,
+  Download,
+  FileText,
+  FileSpreadsheet
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -61,6 +64,11 @@ interface MapControlsProps {
   onToggleEditMode?: (enabled: boolean) => void;
   selectedLayerForAdd?: 'A' | 'B' | 'C';
   onSelectedLayerForAddChange?: (layer: 'A' | 'B' | 'C') => void;
+  // Download handlers
+  onDownloadLayerAsJSON?: (layer: 'A' | 'B' | 'C') => void;
+  onDownloadLayerAsExcel?: (layer: 'A' | 'B' | 'C') => void;
+  onDownloadAllLayersAsJSON?: () => void;
+  onDownloadAllLayersAsExcel?: () => void;
 }
 
 export function MapControls({
@@ -95,6 +103,10 @@ export function MapControls({
   onToggleEditMode,
   selectedLayerForAdd = 'B',
   onSelectedLayerForAddChange,
+  onDownloadLayerAsJSON,
+  onDownloadLayerAsExcel,
+  onDownloadAllLayersAsJSON,
+  onDownloadAllLayersAsExcel,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -618,6 +630,134 @@ export function MapControls({
                             <li>• <strong>Xóa:</strong> Click vào marker và chọn nút xóa</li>
                             <li>• <strong>Chỉnh sửa:</strong> Click vào marker để sửa thông tin</li>
                           </ul>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Download Section */}
+                    {editMode && onDownloadLayerAsJSON && onDownloadLayerAsExcel && onDownloadAllLayersAsJSON && onDownloadAllLayersAsExcel && (
+                      <div className="p-2 bg-green-50 rounded-lg border border-green-100">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 flex items-center justify-center bg-green-100 rounded-full">
+                              <Download className="w-2.5 h-2.5 text-green-700" />
+                            </div>
+                            <p className="text-xs font-medium text-green-800">Xuất dữ liệu</p>
+                          </div>
+
+                          {/* Download All Layers */}
+                          <div className="space-y-1">
+                            <p className="text-xs font-medium text-green-700">Tất cả lớp:</p>
+                            <div className="grid grid-cols-2 gap-1">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                className="h-7 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                onClick={() => onDownloadAllLayersAsJSON()}
+                              >
+                                <FileText className="w-3 h-3 mr-1" />
+                                JSON
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                className="h-7 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                onClick={() => onDownloadAllLayersAsExcel()}
+                              >
+                                <FileSpreadsheet className="w-3 h-3 mr-1" />
+                                Excel
+                              </Button>
+                            </div>
+                          </div>
+
+                          {/* Individual Layer Downloads */}
+                          <div className="space-y-1">
+                            <p className="text-xs font-medium text-green-700">Từng lớp:</p>
+                            
+                            {/* Layer A Downloads */}
+                            <div className="space-y-1">
+                              <div className="flex items-center gap-1">
+                                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span className="text-xs text-gray-600">Lớp A:</span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1 pl-3">
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-red-50 border-red-200 text-red-700"
+                                  onClick={() => onDownloadLayerAsJSON('A')}
+                                >
+                                  <FileText className="w-2.5 h-2.5 mr-1" />
+                                  JSON
+                                </Button>
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-red-50 border-red-200 text-red-700"
+                                  onClick={() => onDownloadLayerAsExcel('A')}
+                                >
+                                  <FileSpreadsheet className="w-2.5 h-2.5 mr-1" />
+                                  Excel
+                                </Button>
+                              </div>
+                            </div>
+
+                            {/* Layer B Downloads */}
+                            <div className="space-y-1">
+                              <div className="flex items-center gap-1">
+                                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span className="text-xs text-gray-600">Lớp B:</span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1 pl-3">
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-blue-50 border-blue-200 text-blue-700"
+                                  onClick={() => onDownloadLayerAsJSON('B')}
+                                >
+                                  <FileText className="w-2.5 h-2.5 mr-1" />
+                                  JSON
+                                </Button>
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-blue-50 border-blue-200 text-blue-700"
+                                  onClick={() => onDownloadLayerAsExcel('B')}
+                                >
+                                  <FileSpreadsheet className="w-2.5 h-2.5 mr-1" />
+                                  Excel
+                                </Button>
+                              </div>
+                            </div>
+
+                            {/* Layer C Downloads */}
+                            <div className="space-y-1">
+                              <div className="flex items-center gap-1">
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span className="text-xs text-gray-600">Lớp C:</span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1 pl-3">
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                  onClick={() => onDownloadLayerAsJSON('C')}
+                                >
+                                  <FileText className="w-2.5 h-2.5 mr-1" />
+                                  JSON
+                                </Button>
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  className="h-6 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                  onClick={() => onDownloadLayerAsExcel('C')}
+                                >
+                                  <FileSpreadsheet className="w-2.5 h-2.5 mr-1" />
+                                  Excel
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     )}
