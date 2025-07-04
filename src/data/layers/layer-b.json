@@ -1,0 +1,702 @@
+[
+  {
+    "name": "Xã Hòa Vang",
+    "type": "suburban",
+    "address": "Quốc lộ 14B, thôn Dương Lâm 1, xã Hòa Vang (Trụ sở TTHC huyện Hòa Vang cũ)",
+    "phone": "0053234450",
+    "location": {
+      "lat": 15.988536819404482,
+      "lng": 108.13917753912484
+    }
+  },
+  {
+    "name": "Xã Hòa Tiến",
+    "type": "suburban",
+    "address": "Thôn Phú Sơn Tây (Quốc lộ 14B), xã Hòa Tiến (Trụ sở xã Hòa Khương cũ)",
+    "phone": "0050067890",
+    "location": {
+      "lat": 15.960965130756607,
+      "lng": 108.13975063204552
+    }
+  },
+  {
+    "name": "Xã Bà Nà",
+    "type": "suburban",
+    "address": "Đường ĐH 2, thôn Thạch Nham Tây, xã Bà Nà (Trụ sở xã Hòa Nhơn cũ)",
+    "phone": "0460002340",
+    "location": {
+      "lat": 16.00582571137964,
+      "lng": 108.13544883499468
+    }
+  },
+  {
+    "name": "Xã Núi Thành",
+    "type": "urban",
+    "address": "Khối 3, Thị Trấn Núi Thành, xã Núi Thành (Trụ sở Thị trấn Núi Thành cũ)",
+    "phone": "0059811950",
+    "location": {
+      "lat": 15.433650671430884,
+      "lng": 108.65543591141436
+    }
+  },
+  {
+    "name": "Xã Tam Mỹ",
+    "type": "suburban",
+    "address": "Thôn Tịnh Sơn, xã Tam Mỹ (Trụ sở Xã Tam Mỹ Tây cũ)",
+    "phone": "0820907040",
+    "location": {
+      "lat": 15.410755616178111,
+      "lng": 108.61324796446748
+    }
+  },
+  {
+    "name": "Xã Tam Anh",
+    "type": "suburban",
+    "address": "Thôn Nam Định, xã Tam Anh (Trụ sở Xã Tam Anh Nam cũ)",
+    "phone": "0735510720",
+    "location": {
+      "lat": 15.484405042199336,
+      "lng": 108.58341425074715
+    }
+  },
+  {
+    "name": "Xã Đức Phú",
+    "type": "suburban",
+    "address": "Thôn Thuận Yên Đông, xã Đức Phú (Trụ sở Xã Tam Sơn cũ)",
+    "phone": "0140205380",
+    "location": {
+      "lat": 15.439909723335512,
+      "lng": 108.47175464977262
+    }
+  },
+  {
+    "name": "Xã Tam Xuân",
+    "type": "suburban",
+    "address": "Thôn Phú Khê, xã Tam Xuân (Trụ sở Xã Tam Xuân II cũ)",
+    "phone": "0889517760",
+    "location": {
+      "lat": 15.53392689605803,
+      "lng": 108.53884891386126
+    }
+  },
+  {
+    "name": "Xã Tam Hải",
+    "type": "suburban",
+    "address": "thôn Tân Lập, xã Tam Hải (Trụ sở Xã Tam Hải cũ)",
+    "phone": "0666044550",
+    "location": {
+      "lat": 15.485983420110012,
+      "lng": 108.66955497147902
+    }
+  },
+  {
+    "name": "Xã Tây Hồ",
+    "type": "suburban",
+    "address": "Thôn Cẩm Khê, xã Tây Hồ (Trụ sở Xã Tam Phước cũ)",
+    "phone": "0134306560",
+    "location": {
+      "lat": 15.569716929240789,
+      "lng": 108.40655664209989
+    }
+  },
+  {
+    "name": "Xã Chiên Dàn",
+    "type": "urban",
+    "address": "Số 01 đường Hà Đông, xã Chiên Đàn (Trụ sở Thị trấn Phú Thịnh cũ)",
+    "phone": "0113238880",
+    "location": {
+      "lat": 15.54779127568345,
+      "lng": 108.40819789812976
+    }
+  },
+  {
+    "name": "Xã Phú Ninh",
+    "type": "suburban",
+    "address": "Thôn Cây Sanh, xã Phú Ninh (Trụ sở Xã Tam Dân cũ)",
+    "phone": "0187937540",
+    "location": {
+      "lat": 15.523347530336125,
+      "lng": 108.41931453749513
+    }
+  },
+  {
+    "name": "Xã Lãnh Ngọc",
+    "type": "suburban",
+    "address": "ĐT 616, thôn 4, xã Lãnh Ngọc (Trụ sở Xã Tiên Hiệp cũ)",
+    "phone": "0837163530",
+    "location": {
+      "lat": 15.424539038263376,
+      "lng": 108.2620353720792
+    }
+  },
+  {
+    "name": "Xã Tiên Phước",
+    "type": "urban",
+    "address": "81 Huỳnh Thúc Kháng, xã Tiên Phước (Trụ sở TTHC huyện Tiên Phước cũ)",
+    "phone": "0054449980",
+    "location": {
+      "lat": 15.488458243568976,
+      "lng": 108.30725863827963
+    }
+  },
+  {
+    "name": "Xã Thạnh Bình",
+    "type": "suburban",
+    "address": "QL40B, xã Thạnh Bình (Trụ sở Xã Tiên Cảnh cũ)",
+    "phone": "0352020650",
+    "location": {
+      "lat": 15.462264213806264,
+      "lng": 108.29563861483412
+    }
+  },
+  {
+    "name": "Xã Sơn Cẩm Hà",
+    "type": "suburban",
+    "address": "Thôn Cẩm Tây, xã Sơn Cẩm Hà (trụ sở xã Tiên Cẩm cũ trước 01/2025)",
+    "phone": "0034264560",
+    "location": {
+      "lat": 15.555417479976787,
+      "lng": 108.29608431672396
+    }
+  },
+  {
+    "name": "Xã Trà Liên",
+    "type": "suburban",
+    "address": "Thôn Định Yên, xã Trà Liên (Trụ sở Xã Trà Đông cũ)",
+    "phone": "0680789590",
+    "location": {
+      "lat": 15.374509741293194,
+      "lng": 108.3216549347142
+    }
+  },
+  {
+    "name": "Xã Trà Giáp",
+    "type": "suburban",
+    "address": "Thôn 2, xã Trà Giáp (Trụ sở Xã Trà Giáp cũ)",
+    "phone": "0846734440",
+    "location": {
+      "lat": 15.222508506635211,
+      "lng": 108.25434989836646
+    }
+  },
+  {
+    "name": "Xã Trà Tân",
+    "type": "suburban",
+    "address": "Thôn 1, Xã Trà Tân (Trụ sở Xã Trà Tân cũ)",
+    "phone": "0856013880",
+    "location": {
+      "lat": 15.318760255618098,
+      "lng": 108.16475947471234
+    }
+  },
+  {
+    "name": "Xã Trà Đốc",
+    "type": "suburban",
+    "address": "Thôn 2, xã Trà Đốc (Trụ sở Xã Trà Đốc cũ)",
+    "phone": "0140219210",
+    "location": {
+      "lat": 15.368551081372804,
+      "lng": 108.14802978377038
+    }
+  },
+  {
+    "name": "Xã Trà My",
+    "type": "suburban",
+    "address": "Thôn Dương Hoà, xã Trà My (Trụ sở TTHC huyện Bắc Trà My cũ)",
+    "phone": "0030868200",
+    "location": {
+      "lat": 15.332826976737303,
+      "lng": 108.2172636653072
+    }
+  },
+  {
+    "name": "Xã Nam Trà My",
+    "type": "suburban",
+    "address": "Thôn 1, Xã Nam Trà My (Trụ sở huyện Nam Trà My cũ)",
+    "phone": "0140833080",
+    "location": {
+      "lat": 15.132267453208849,
+      "lng": 108.13273538505577
+    }
+  },
+  {
+    "name": "Xã Trà Tập",
+    "type": "suburban",
+    "address": "Thôn 1, Xã Trà Tập (Trụ sở Xã Trà Tập cũ)",
+    "phone": "0140125090",
+    "location": {
+      "lat": 15.152621207527297,
+      "lng": 108.09918905043016
+    }
+  },
+  {
+    "name": "Xã Trà Vân",
+    "type": "suburban",
+    "address": "Thôn 1, Xã Trà Vân (Trụ sở Xã Trà Vân cũ)",
+    "phone": "0798898910",
+    "location": {
+      "lat": 15.11292733901125,
+      "lng": 108.18001700322144
+    }
+  },
+  {
+    "name": "Xã Trà Linh",
+    "type": "suburban",
+    "address": "Thôn 3, Xã Trà Linh (Trụ sở Xã Trà Linh cũ)",
+    "phone": "0872435650",
+    "location": {
+      "lat": 15.03532512429612,
+      "lng": 108.01849502765695
+    }
+  },
+  {
+    "name": "Xã Trà Leng",
+    "type": "suburban",
+    "address": "Thôn 2, Xã Trà Leng (Trụ sở Xã Trà Dơn cũ)",
+    "phone": "0861000600",
+    "location": {
+      "lat": 15.243729426034212,
+      "lng": 108.08595175136442
+    }
+  },
+  {
+    "name": "Xã Thăng Bình",
+    "type": "urban",
+    "address": "Số 37 đường Nguyễn Thuật, xã Thăng Bình",
+    "phone": "0057663690",
+    "location": {
+      "lat": 15.737578684773364,
+      "lng": 108.35184234927826
+    }
+  },
+  {
+    "name": "Xã Thăng An",
+    "type": "suburban",
+    "address": "Thôn Nam Hà, xã Thăng An (Trụ sở Xã Bình Dương cũ)",
+    "phone": "0059147400",
+    "location": {
+      "lat": 15.804736030609336,
+      "lng": 108.38080436587576
+    }
+  },
+  {
+    "name": "Xã Thăng Trường",
+    "type": "suburban",
+    "address": "Thôn Bình Trúc, xã Thăng Trường (Trụ sở Xã Bình Sa cũ)",
+    "phone": "0058595790",
+    "location": {
+      "lat": 15.699951216704523,
+      "lng": 108.44363385440344
+    }
+  },
+  {
+    "name": "Xã Thăng Điền",
+    "type": "suburban",
+    "address": "Thôn Kế Xuyên 2, xã Thăng Điền (Trụ sở Xã Bình Trung cũ)",
+    "phone": "0830652820",
+    "location": {
+      "lat": 15.676028095573288,
+      "lng": 108.40792884147692
+    }
+  },
+  {
+    "name": "Xã Thăng Phú",
+    "type": "suburban",
+    "address": "Thôn Tú Trà, xã Thăng Phú (Trụ sở Xã Bình chánh cũ)",
+    "phone": "0749125550",
+    "location": {
+      "lat": 15.664831969424924,
+      "lng": 108.35513431843616
+    }
+  },
+  {
+    "name": "Xã Đồng Dương",
+    "type": "suburban",
+    "address": "Thôn Châu Lâm, xã Đồng Dương (Trụ sở Xã Bình Trị cũ)",
+    "phone": "0770348850",
+    "location": {
+      "lat": 15.656788667446094,
+      "lng": 108.27774622059412
+    }
+  },
+  {
+    "name": "Xã Quế Sơn Trung",
+    "type": "suburban",
+    "address": "Thôn Phước Dương, xã Quế Sơn Trung (Trụ sở Xã Quế Thuận cũ)",
+    "phone": "0770344420",
+    "location": {
+      "lat": 15.710809928609857,
+      "lng": 108.26796790294996
+    }
+  },
+  {
+    "name": "Xã Quế Sơn",
+    "type": "urban",
+    "address": "Số 02 đường Trưng Nữ Vương, xã Quế Sơn",
+    "phone": "0612000970",
+    "location": {
+      "lat": 15.674543140487495,
+      "lng": 108.21932999396752
+    }
+  },
+  {
+    "name": "Xã Xuân Phú",
+    "type": "suburban",
+    "address": "Thôn Mộc Bài, xã Xuân Phú (Trụ sở Xã Quế Phú cũ)",
+    "phone": "0821004440",
+    "location": {
+      "lat": 15.794641546555374,
+      "lng": 108.3148808518791
+    }
+  },
+  {
+    "name": "Xã Nông Sơn",
+    "type": "suburban",
+    "address": "Thôn Trung Hạ, xã Nông Sơn (Trụ sở Thị trấn Trung Phước cũ)",
+    "phone": "0129091210",
+    "location": {
+      "lat": 15.717836170300568,
+      "lng": 108.05898241050264
+    }
+  },
+  {
+    "name": "Xã Quế Phước",
+    "type": "suburban",
+    "address": "Thôn Bình Yên, xã Quế Phước (Trụ sở Xã Phước Ninh cũ)",
+    "phone": "0457797570",
+    "location": {
+      "lat": 15.681014555837343,
+      "lng": 108.00073197356568
+    }
+  },
+  {
+    "name": "Xã Duy Nghĩa",
+    "type": "suburban",
+    "address": "Thôn Thuận An, Xã Duy Nghĩa (Trụ sở xã Duy Nghĩa cũ)",
+    "phone": "0859215130",
+    "location": {
+      "lat": 15.855391652640762,
+      "lng": 108.37435341575932
+    }
+  },
+  {
+    "name": "Xã Nam Phước",
+    "type": "urban",
+    "address": "429 Hùng Vương, xã Nam Phước (Trụ sở thị trấn Nam Phước cũ)",
+    "phone": "0052424580",
+    "location": {
+      "lat": 15.830314408267247,
+      "lng": 108.27177834258336
+    }
+  },
+  {
+    "name": "Xã Duy Xuyên",
+    "type": "suburban",
+    "address": "Thôn An Hoà, Xã Duy Xuyên (Trụ sở xã Duy Trung cũ)\\",
+    "phone": "0056299790",
+    "location": {
+      "lat": 15.803640295222571,
+      "lng": 108.25581376482826
+    }
+  },
+  {
+    "name": "Xã Thu Bồn",
+    "type": "suburban",
+    "address": "Thôn Phú Lạc, xã Thu Bồn (Trụ sở Xã Duy Hòa cũ)",
+    "phone": "0353477780",
+    "location": {
+      "lat": 15.829513048640427,
+      "lng": 108.12433036489789
+    }
+  },
+  {
+    "name": "Xã Điện Bàn Tây",
+    "type": "urban",
+    "address": "Thôn Phong Thử 1, xã Điện Bàn Tây (Trụ sở xã Điện Thọ cũ)",
+    "phone": "0198000900",
+    "location": {
+      "lat": 15.888438266363474,
+      "lng": 108.17991830388264
+    }
+  },
+  {
+    "name": "Xã Gò Nổi",
+    "type": "suburban",
+    "address": "Thôn Đông Lãnh, xã Gò Nổi (Trụ sở xã Điện Trung cũ)",
+    "phone": "0050307030",
+    "location": {
+      "lat": 15.83970299465138,
+      "lng": 108.20824877144676
+    }
+  },
+  {
+    "name": "Xã Tân Hiệp",
+    "type": "suburban",
+    "address": "Thôn Bãi Làng, Xã Tân Hiệp (Trụ sở xã Tân Hiệp cũ)",
+    "phone": "0819220290",
+    "location": {
+      "lat": 15.958202558482515,
+      "lng": 108.5061879830367
+    }
+  },
+  {
+    "name": "Xã Đại Lộc",
+    "type": "urban",
+    "address": "Số 11 Hùng Vương, xã Đại Lộc",
+    "phone": "0064222130",
+    "location": {
+      "lat": 15.88303229069894,
+      "lng": 108.11475807815329
+    }
+  },
+  {
+    "name": "Xã Hà Nha",
+    "type": "suburban",
+    "address": "Thôn Hà Nha, xã Hà Nha (Trụ sở xã Đại Đồng cũ)",
+    "phone": "0052345560",
+    "location": {
+      "lat": 15.851396579737177,
+      "lng": 108.01023710386517
+    }
+  },
+  {
+    "name": "Xã Thượng Đức",
+    "type": "suburban",
+    "address": "Thôn Tân Hà, xã Thượng Đức (Trụ sở Xã Đại Lãnh cũ)",
+    "phone": "0674657770",
+    "location": {
+      "lat": 15.846108896133217,
+      "lng": 107.93307214189927
+    }
+  },
+  {
+    "name": "Xã Vu Gia",
+    "type": "suburban",
+    "address": "Thôn Lâm Yên, xã Vu Gia (Trụ sở Xã Đại Minh cũ)",
+    "phone": "0834089340",
+    "location": {
+      "lat": 15.85354658978577,
+      "lng": 108.06647437989412
+    }
+  },
+  {
+    "name": "Xã Phú Thuận",
+    "type": "suburban",
+    "address": "Số 204 đường ĐH4 thôn Phú An, xã Phú Thuận (Trụ sở Xã Đại Thắng cũ)",
+    "phone": "0051521820",
+    "location": {
+      "lat": 15.826422309720398,
+      "lng": 108.0756520588899
+    }
+  },
+  {
+    "name": "Xã Thạnh Mỹ",
+    "type": "suburban",
+    "address": "Thôn Mực, xã Thạnh Mỹ (Trụ sở thị trấn Thạnh Mỹ cũ)",
+    "phone": "0053448380",
+    "location": {
+      "lat": 15.747273513775294,
+      "lng": 107.83629012741793
+    }
+  },
+  {
+    "name": "Xã Bến Giằng",
+    "type": "suburban",
+    "address": "Thôn Bến Giằng, Xã Bến Giằng (Trụ sở xã Tà Bhing cũ)",
+    "phone": "0197692720",
+    "location": {
+      "lat": 15.690398726159335,
+      "lng": 107.76606686426656
+    }
+  },
+  {
+    "name": "Xã Nam Giang",
+    "type": "suburban",
+    "address": "Thôn A Bát, xã Chà Vàl (Trụ sở xã Chà Vài cũ)",
+    "phone": "0835191210",
+    "location": {
+      "lat": 15.62024251417955,
+      "lng": 107.50833094998362
+    }
+  },
+  {
+    "name": "Xã Đắc Pring",
+    "type": "suburban",
+    "address": "Thôn 56B, xã Đắc Pring (Trụ sở xã Đắc Pre cũ)",
+    "phone": "0762919200",
+    "location": {
+      "lat": 15.588707366600682,
+      "lng": 107.5373987440672
+    }
+  },
+  {
+    "name": "Xã La Dêê",
+    "type": "suburban",
+    "address": "Thôn Đắc Ốc, xã La Dêê (Trụ sở xã La Dêê cũ)",
+    "phone": "0961130070",
+    "location": {
+      "lat": 15.598376786934226,
+      "lng": 107.45397868309362
+    }
+  },
+  {
+    "name": "Xã La Êê",
+    "type": "suburban",
+    "address": "Thôn Pà Ooi, xã La Êê (Trụ sở xã La Êê cũ)",
+    "phone": "0651341350",
+    "location": {
+      "lat": 15.673991,
+      "lng": 107.346596
+    }
+  },
+  {
+    "name": "Xã Sông Vàng",
+    "type": "suburban",
+    "address": "Thôn Ban Mai, Xã Sông Vàng (Trụ sở Xã Ba cũ)",
+    "phone": "0746313760",
+    "location": {
+      "lat": 15.957796636959332,
+      "lng": 107.9254658894496
+    }
+  },
+  {
+    "name": "Xã Sông Kôn",
+    "type": "suburban",
+    "address": "Thôn Ra Lang, xã Sông Kôn (Trụ sở Xã Jơ Ngây cũ)",
+    "phone": "0150113230",
+    "location": {
+      "lat": 15.956110137694877,
+      "lng": 107.79972376125863
+    }
+  },
+  {
+    "name": "Xã Đông Giang",
+    "type": "suburban",
+    "address": "Thôn Ngã Ba, Xã Đông Giang (Trụ sở Thị trấn Prao cũ)",
+    "phone": "0761936850",
+    "location": {
+      "lat": 15.920847083296035,
+      "lng": 107.65230595101151
+    }
+  },
+  {
+    "name": "Xã Bến Hiên",
+    "type": "suburban",
+    "address": "Thôn AXờ, xã Bến Hiên (Trụ sở Xã Mà Cooih cũ)",
+    "phone": "0877756190",
+    "location": {
+      "lat": 15.84431375174836,
+      "lng": 107.69105179302224
+    }
+  },
+  {
+    "name": "Xã AVương",
+    "type": "suburban",
+    "address": "Thôn Azứt, xã Avương (Trụ sở xã Bhalêê cũ)",
+    "phone": "0760100090",
+    "location": {
+      "lat": 15.928021392179351,
+      "lng": 107.53251732435376
+    }
+  },
+  {
+    "name": "Xã Tây Giang",
+    "type": "suburban",
+    "address": "Thôn Agrồng, xã Tây Giang (Trụ sở xã Attêng cũ)",
+    "phone": "0791941990",
+    "location": {
+      "lat": 15.903920981247769,
+      "lng": 107.49359571355818
+    }
+  },
+  {
+    "name": "Xã Hùng Sơn",
+    "type": "suburban",
+    "address": "Thôn Arâng, xã Hùng Sơn (Trụ sở Xã Axan cũ)",
+    "phone": "0814611190",
+    "location": {
+      "lat": 15.833832744053154,
+      "lng": 107.30664719236196
+    }
+  },
+  {
+    "name": "Xã Hiệp Đức",
+    "type": "urban",
+    "address": "Số 125 đường Hùng Vương, xã Hiệp Đức (Trụ sở TTHC huyện Hiệp Đức cũ)",
+    "phone": "0833569220",
+    "location": {
+      "lat": 15.582333801890185,
+      "lng": 108.11435501652196
+    }
+  },
+  {
+    "name": "Xã Việt An",
+    "type": "suburban",
+    "address": "Thôn Việt An, xã Việt An (Trụ sở Xã Bình Lâm cũ)",
+    "phone": "0827771250",
+    "location": {
+      "lat": 15.613617190332926,
+      "lng": 108.21890001550553
+    }
+  },
+  {
+    "name": "Xã Phước Trà",
+    "type": "suburban",
+    "address": "Thôn Trà Sơn, xã Phước Trà (Trụ sở Xã Sông Trà cũ)",
+    "phone": "0837476010",
+    "location": {
+      "lat": 15.54098434861613,
+      "lng": 108.04231216701972
+    }
+  },
+  {
+    "name": "Xã Khâm Đức",
+    "type": "suburban",
+    "address": "Số 48 đường Hồ Chí Minh, xã Khâm Đức (Trụ sở huyện Phước Sơn cũ)",
+    "phone": "0418188580",
+    "location": {
+      "lat": 15.4442867614234,
+      "lng": 107.79315758456325
+    }
+  },
+  {
+    "name": "Xã Phước Năng",
+    "type": "suburban",
+    "address": "Thôn 2, xã Phước Năng (Trụ sở Xã Phước Năng cũ)",
+    "phone": "0774404050",
+    "location": {
+      "lat": 15.400637626375408,
+      "lng": 107.76180651925868
+    }
+  },
+  {
+    "name": "Xã Phước Chánh",
+    "type": "suburban",
+    "address": "Thôn 3, xã Phước Chánh (Trụ sở Xã Phước Chánh cũ)",
+    "phone": "0052343130",
+    "location": {
+      "lat": 15.3671015451681,
+      "lng": 107.81909252911731
+    }
+  },
+  {
+    "name": "Xã Phước Thành",
+    "type": "suburban",
+    "address": "Thôn 2, xã Phước Thành (Trụ sở Xã Phước Thành cũ)",
+    "phone": "0140099330",
+    "location": {
+      "lat": 15.286059621395788,
+      "lng": 107.89138346049836
+    }
+  },
+  {
+    "name": "Xã Phước Hiệp",
+    "type": "suburban",
+    "address": "Thôn 1, xã Phước Hiệp (Trụ sở Xã Phước Hiệp cũ)",
+    "phone": "0054952290",
+    "location": {
+      "lat": 15.462765065945758,
+      "lng": 107.9382401314879
+    }
+  }
+]

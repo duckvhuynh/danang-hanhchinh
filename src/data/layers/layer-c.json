@@ -1,0 +1,3500 @@
+[
+  {
+    "name": "Bưu Cục An Khê",
+    "address": "Số 237, Đường Trường Chinh, Phường An Khê, Thanh Khê, Đà Nẵng",
+    "phone": "02363722321",
+    "location": {
+      "lat": 16.05072259,
+      "lng": 108.18278309
+    },
+    "postid": "554960",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Đống Đa",
+    "address": "Số 40, Đường Lê Lợi, Phường Thạch Thang, Hải Châu, Đà Nẵng",
+    "phone": "02363898215",
+    "location": {
+      "lat": 16.07866112,
+      "lng": 108.21930208
+    },
+    "postid": "551290",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Cường",
+    "address": "Số 305, Đường Núi Thành, Phường Hòa Cường Bắc, Hải Châu, Đà Nẵng",
+    "phone": "02363620085",
+    "location": {
+      "lat": 16.04239924,
+      "lng": 108.2216721
+    },
+    "postid": "553000",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Cường Nam",
+    "address": "Số 50, Đường Xô Viết Nghệ Tĩnh, Phường Hoà Cường Nam, Hải Châu, Đà Nẵng",
+    "phone": "02363737555",
+    "location": {
+      "lat": 16.03191621,
+      "lng": 108.21369746
+    },
+    "postid": "552530",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Mỹ",
+    "address": "Số 390, Đường Tôn Đức Thắng, Phường Hoà Minh, Liên Chiểu, Đà Nẵng",
+    "phone": "02363764066",
+    "location": {
+      "lat": 16.05848039,
+      "lng": 108.16574561
+    },
+    "postid": "555950",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hùng Vương",
+    "address": "Số 45, Đường Yên Báy, Phường Hải Châu 1, Hải Châu, Đà Nẵng",
+    "phone": "02363849038",
+    "location": {
+      "lat": 16.06866924,
+      "lng": 108.22282253
+    },
+    "postid": "551050",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Mân Thái",
+    "address": "Số 424, Đường Ngô Quyền, Phường Mân Thái, Sơn Trà, Đà Nẵng",
+    "phone": "02363911108",
+    "location": {
+      "lat": 16.086851566033,
+      "lng": 108.24048904462
+    },
+    "postid": "553570",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Ngô Gia Tự",
+    "address": "Số 58, Đường Ngô Gia Tự, Phường Hải Châu 2, Hải Châu, Đà Nẵng",
+    "phone": "02363868349",
+    "location": {
+      "lat": 16.06771943,
+      "lng": 108.2176176
+    },
+    "postid": "551780",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Ngô Quyền",
+    "address": "Số 924, Đường Ngô Quyền, Phường An Hải Tây, Sơn Trà, Đà Nẵng",
+    "phone": "02363932636",
+    "location": {
+      "lat": 16.06687764,
+      "lng": 108.23250228
+    },
+    "postid": "553920",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Ngũ Hành Sơn",
+    "address": "Số 376, Đường Ngũ Hành Sơn, Phường Mỹ An, Ngũ Hành Sơn, Đà Nẵng",
+    "phone": "02363950666",
+    "location": {
+      "lat": 16.03950718,
+      "lng": 108.24211721
+    },
+    "postid": "556920",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Nguyễn Hữu Thọ",
+    "address": "Số 171, Đường Nguyễn Hữu Thọ, Phường Hoà̀ Thuận Tây, Hải Châu, Đà Nẵng",
+    "phone": "02363944158",
+    "location": {
+      "lat": 16.04533062,
+      "lng": 108.2100048
+    },
+    "postid": "552190",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Ông Ích Khiêm",
+    "address": "Số 48, Đường Ông Ích Khiêm, Phường Thanh Bình, Hải Châu, Đà Nẵng",
+    "phone": "02363531964",
+    "location": {
+      "lat": 16.07787552,
+      "lng": 108.21192165
+    },
+    "postid": "551580",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Quang Trung",
+    "address": "Số 96, Đường Quang Trung, Phường Thạch Thang, Hải Châu, Đà Nẵng",
+    "phone": "02363898216",
+    "location": {
+      "lat": 16.07458145,
+      "lng": 108.21838162
+    },
+    "postid": "551300",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Sông Hàn",
+    "address": "Số 64, Đường Bạch Đằng, Phường Hải Châu 1, Hải Châu, Đà Nẵng",
+    "phone": "02363849053",
+    "location": {
+      "lat": 16.07149776,
+      "lng": 108.22500228
+    },
+    "postid": "551020",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Sơn Thủy",
+    "address": "Số 676, Đường Lê Văn Hiến, Phường Hoà Hải, Ngũ Hành Sơn, Đà Nẵng",
+    "phone": "02363969767",
+    "location": {
+      "lat": 16.00507763,
+      "lng": 108.25930533
+    },
+    "postid": "556810",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Tiếp Thị 2",
+    "address": "Số 138A, Đường Nguyễn Lương Bằng, Phường Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng",
+    "phone": "02363734276",
+    "location": {
+      "lat": 16.07694854,
+      "lng": 108.14868438
+    },
+    "postid": "555816",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục TMĐT Đà Nẵng",
+    "address": "Số 68C, Đường Đỗ Quang, Phường Vĩnh Trung, Thanh Khê, Đà Nẵng",
+    "phone": null,
+    "location": {
+      "lat": 16.05963417,
+      "lng": 108.21193365
+    },
+    "postid": "555333",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Thanh Khê",
+    "address": "Số 377, Đường Nguyễn Văn Linh, Phường Thạc Gián, Thanh Khê, Đà Nẵng",
+    "phone": "02363656746",
+    "location": {
+      "lat": 16.0588975,
+      "lng": 108.20713519
+    },
+    "postid": "555110",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Thọ Quang",
+    "address": "Số 1, Đường Ngô Quyền, Phường Thọ Quang, Sơn Trà, Đà Nẵng",
+    "phone": "02363921488",
+    "location": {
+      "lat": 16.10157322,
+      "lng": 108.24760964
+    },
+    "postid": "553690",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Trung tâm Đà Nẵng",
+    "address": "Số 01, Đường Lê Duẩn, Phường Hải Châu 1, Hải Châu, Đà Nẵng",
+    "phone": "02363832299",
+    "location": {
+      "lat": 16.05972998,
+      "lng": 108.2115343
+    },
+    "postid": "551000",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Trung tâm KTVC",
+    "address": "Số 271, Đường Nguyễn Văn Linh, Phường Vĩnh Trung, Thanh Khê, Đà Nẵng",
+    "phone": null,
+    "location": {
+      "lat": 16.078720134571,
+      "lng": 108.21871369276
+    },
+    "postid": "554330",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Trưng Nữ Vương",
+    "address": "Số 436, Đường Trưng Nữ Vương, Phường Hòa Thuận Đông, Hải Châu, Đà Nẵng",
+    "phone": "02363633821",
+    "location": {
+      "lat": 16.05377208,
+      "lng": 108.21917775
+    },
+    "postid": "552200",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Xuân Hòa",
+    "address": "Số 416, Đường Điện Biên Phủ, Phường Thanh Khê Đông, Thanh Khê, Đà Nẵng",
+    "phone": "02363721964",
+    "location": {
+      "lat": 16.06608871,
+      "lng": 108.18929184
+    },
+    "postid": "554840",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Bắc",
+    "address": "Thôn Phò Nam, Xã Hoà Bắc, Hoà Vang, Đà Nẵng",
+    "phone": "02363770267",
+    "location": {
+      "lat": 16.13006711,
+      "lng": 108.05001312
+    },
+    "postid": "556560",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Châu",
+    "address": "Thôn Phong Nam, Xã Hoà Châu, Hoà Vang, Đà Nẵng",
+    "phone": "02363670666",
+    "location": {
+      "lat": 15.98701428,
+      "lng": 108.19500017
+    },
+    "postid": "556690",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Khương",
+    "address": "Thôn Phú Sơn Tây, Xã Hoà Khương, Hoà Vang, Đà Nẵng",
+    "phone": "02363784019",
+    "location": {
+      "lat": 15.96101694,
+      "lng": 108.13940786
+    },
+    "postid": "556650",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Liên",
+    "address": "Thôn Quan Nam I, Xã Hoà Liên, Hoà Vang, Đà Nẵng",
+    "phone": "02363730856",
+    "location": {
+      "lat": 16.09682623,
+      "lng": 108.09578788
+    },
+    "postid": "556540",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Ninh",
+    "address": "Thôn Sơn Phước, Xã Hoà Ninh, Hoà Vang, Đà Nẵng",
+    "phone": "02363791006",
+    "location": {
+      "lat": 16.0543155,
+      "lng": 108.08152244
+    },
+    "postid": "556521",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Nhơn",
+    "address": "Thôn Thái Lai, Xã Hoà Nhơn, Hoà Vang, Đà Nẵng",
+    "phone": "02363780555",
+    "location": {
+      "lat": 16.00817232,
+      "lng": 108.12638684
+    },
+    "postid": "556580",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Phú",
+    "address": "Thôn Hội Phước, Xã Hoà Phú, Hoà Vang, Đà Nẵng",
+    "phone": "02363780222",
+    "location": {
+      "lat": 15.98503356,
+      "lng": 108.07424536
+    },
+    "postid": "556610",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Phước",
+    "address": "Thôn Nhơn Thọ 1, Xã Hoà Phước , Hoà Vang, Đà Nẵng",
+    "phone": "02363670600",
+    "location": {
+      "lat": 15.95821614,
+      "lng": 108.21549504
+    },
+    "postid": "556711",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Hòa Sơn",
+    "address": "Thôn Xuân Phú, Xã Hoà Sơn, Hoà Vang, Đà Nẵng",
+    "phone": "02363793202",
+    "location": {
+      "lat": 16.05426019,
+      "lng": 108.08142566
+    },
+    "postid": "556501",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục BĐ VHX Hòa Tiến",
+    "address": "Thôn Dương Sơn, Xã Hoà Tiến, Hoà Vang, Đà Nẵng",
+    "phone": "02363798779",
+    "location": {
+      "lat": 15.97048625,
+      "lng": 108.18213476
+    },
+    "postid": "556671",
+    "province": "Đà Nẵng"
+  },
+  {
+    "name": "Bưu Cục Quế Thuận",
+    "address": "Thôn 6, Xã Quế Thuận, Quế Sơn, Quảng Nam",
+    "phone": "0359365197",
+    "location": {
+      "lat": 1569535379.0,
+      "lng": 10825873232.0
+    },
+    "postid": "563190",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Phong",
+    "address": "Thôn Tân Phong, Xã Quế Phong, Quế Sơn, Quảng Nam",
+    "phone": "0944343965",
+    "location": {
+      "lat": 156560997.0,
+      "lng": 1081775423.0
+    },
+    "postid": "563200",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Ninh",
+    "address": "Thôn 1 (thôn Khánh Bình), Xã Quế Ninh, Nông Sơn, Quảng Nam",
+    "phone": "02353654151",
+    "location": {
+      "lat": 1569495605.0,
+      "lng": 10803059942.0
+    },
+    "postid": "563220",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Phước",
+    "address": "Thôn Phú Gia 1, Xã Quế Phước, Nông Sơn, Quảng Nam",
+    "phone": "02353654152",
+    "location": {
+      "lat": 1566441778.0,
+      "lng": 10800010915.0
+    },
+    "postid": "563230",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế An",
+    "address": "Thôn Thắng Đông 1, Xã Quế An, Quế Sơn, Quảng Nam",
+    "phone": "0935531849",
+    "location": {
+      "lat": 1564853574.0,
+      "lng": 1082091199.0
+    },
+    "postid": "563250",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Minh",
+    "address": "Thôn Đại Lộc, Xã Quế Minh, Quế Sơn, Quảng Nam",
+    "phone": "0961087456",
+    "location": {
+      "lat": 1564952636.0,
+      "lng": 10823363219.0
+    },
+    "postid": "563270",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hiệp Đức",
+    "address": "Khu phố An Bắc, Thị Trấn Tân An, Hiệp Đức, Quảng Nam",
+    "phone": "02353883210",
+    "location": {
+      "lat": 1558263437.0,
+      "lng": 10811504982.0
+    },
+    "postid": "563400",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Sơn",
+    "address": "Thôn 2, Xã Bình Sơn, Hiệp Đức, Quảng Nam",
+    "phone": "02353895918",
+    "location": {
+      "lat": 1556512975.0,
+      "lng": 10820170592.0
+    },
+    "postid": "563410",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Việt An",
+    "address": "Thôn Nhì Đông, Xã Bình Lâm, Hiệp Đức, Quảng Nam",
+    "phone": "02353895289",
+    "location": {
+      "lat": 1561768072.0,
+      "lng": 1082210803.0
+    },
+    "postid": "563420",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Lâm",
+    "address": "Thôn Hương Phố, Xã Bình Lâm, Hiệp Đức, Quảng Nam",
+    "phone": "02353895055",
+    "location": {
+      "lat": 156003142.0,
+      "lng": 10823337972.0
+    },
+    "postid": "563421",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Thọ",
+    "address": "Thôn Phú Bình, Xã Quế Thọ, Hiệp Đức, Quảng Nam",
+    "phone": "0913667857",
+    "location": {
+      "lat": 1560703104.0,
+      "lng": 10815468408.0
+    },
+    "postid": "563440",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hiệp Thuận",
+    "address": "Thôn 2, Xã Hiệp Thuận, Hiệp Đức, Quảng Nam",
+    "phone": "0906488635",
+    "location": {
+      "lat": 155867017.0,
+      "lng": 10810089613.0
+    },
+    "postid": "563450",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hiệp Hòa",
+    "address": "Thôn 3, Xã Hiệp Hoà, Hiệp Đức, Quảng Nam",
+    "phone": "02353883111",
+    "location": {
+      "lat": 1559267751.0,
+      "lng": 10802819419.0
+    },
+    "postid": "563460",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Bình",
+    "address": "Thôn 2, Xã Quế Bình, Hiệp Đức, Quảng Nam",
+    "phone": "0253883109",
+    "location": {
+      "lat": 1555155871.0,
+      "lng": 10807763985.0
+    },
+    "postid": "563470",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Lưu",
+    "address": "Thôn 2, Xã Quế Lưu, Hiệp Đức, Quảng Nam",
+    "phone": "02353883030",
+    "location": {
+      "lat": 1555852619.0,
+      "lng": 10811103771.0
+    },
+    "postid": "563480",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Gia",
+    "address": "Thôn 3, Xã Phước Gia, Hiệp Đức, Quảng Nam",
+    "phone": "02353684700",
+    "location": {
+      "lat": 1546304291.0,
+      "lng": 10814377662.0
+    },
+    "postid": "563490",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Trà",
+    "address": "Thôn 5, Xã Phước Trà, Hiệp Đức, Quảng Nam",
+    "phone": "02353683505",
+    "location": {
+      "lat": 1545742813.0,
+      "lng": 10805989142.0
+    },
+    "postid": "563500",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thăng Phước",
+    "address": "Thôn 2, Xã Thăng Phước, Hiệp Đức, Quảng Nam",
+    "phone": "02353883033",
+    "location": {
+      "lat": 1556910375.0,
+      "lng": 10814984732.0
+    },
+    "postid": "563510",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Sông Trà",
+    "address": "Thôn 3, Xã Sông Trà, Hiệp Đức, Quảng Nam",
+    "phone": "0399442268",
+    "location": {
+      "lat": 1552690531.0,
+      "lng": 10804278486.0
+    },
+    "postid": "563520",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hiệp Đức",
+    "address": "Khu phố An Bắc, Thị Trấn Tân An, Hiệp Đức, Quảng Nam",
+    "phone": "02353883210",
+    "location": {
+      "lat": 1558264898.0,
+      "lng": 10811502137.0
+    },
+    "postid": "563530",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bắc Trà My",
+    "address": "Khối Đồng Bàu, Thị Trấn Trà My, Bắc Trà My, Quảng Nam",
+    "phone": "02353882336",
+    "location": {
+      "lat": 153366138.0,
+      "lng": 1082241293.0
+    },
+    "postid": "563600",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bắc Trà My",
+    "address": "Tổ dân phố Trung Thị, Thị Trấn Trà My, Bắc Trà My, Quảng Nam",
+    "phone": "02353879999",
+    "location": {
+      "lat": 1533972161.0,
+      "lng": 10822202072.0
+    },
+    "postid": "563610",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Giang",
+    "address": "Thôn 1, Xã Trà Giang, Bắc Trà My, Quảng Nam",
+    "phone": "0339232712",
+    "location": {
+      "lat": 1533313703.0,
+      "lng": 10823798536.0
+    },
+    "postid": "563626",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Nú",
+    "address": "Thôn 2, Xã Trà Nú, Bắc Trà My, Quảng Nam",
+    "phone": "01697074446",
+    "location": {
+      "lat": 153562516.0,
+      "lng": 10832416831.0
+    },
+    "postid": "563634",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Kót",
+    "address": "Thôn 2, Xã Trà Kót, Bắc Trà My, Quảng Nam",
+    "phone": "02353879676",
+    "location": {
+      "lat": 1535652034.0,
+      "lng": 10838280623.0
+    },
+    "postid": "563644",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Đông",
+    "address": "Thôn 7, Xã Trà Đông, Bắc Trà My, Quảng Nam",
+    "phone": "0978663835",
+    "location": {
+      "lat": 1537482085.0,
+      "lng": 10832587547.0
+    },
+    "postid": "563650",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Dương",
+    "address": "Thôn 2, Xã Trà Dương, Bắc Trà My, Quảng Nam",
+    "phone": "01692335786",
+    "location": {
+      "lat": 1536932652.0,
+      "lng": 10825053036.0
+    },
+    "postid": "563660",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Tân",
+    "address": "Thôn 1, Xã Trà Tân, Bắc Trà My, Quảng Nam",
+    "phone": "01642110108",
+    "location": {
+      "lat": 1533158499.0,
+      "lng": 10816520034.0
+    },
+    "postid": "563670",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Đốc",
+    "address": "Thôn 1, Xã Trà Đốc, Bắc Trà My, Quảng Nam",
+    "phone": "01693475971",
+    "location": {
+      "lat": 1538784161.0,
+      "lng": 10813881397.0
+    },
+    "postid": "563685",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Bui",
+    "address": "Thôn 2, Xã Trà Bui, Bắc Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1.53362731723407e+16,
+      "lng": 1.08023955349344e+16
+    },
+    "postid": "563696",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Bui",
+    "address": "Thôn 4, Xã Trà Bui, Bắc Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1536632838.0,
+      "lng": 10805020585.0
+    },
+    "postid": "563697",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Giác",
+    "address": "Thôn 1a, Xã Trà Giác, Bắc Trà My, Quảng Nam",
+    "phone": "0961750646",
+    "location": {
+      "lat": 1524043833.0,
+      "lng": 108180035.0
+    },
+    "postid": "563700",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Giáp",
+    "address": "Thôn 1, Xã Trà Giáp, Bắc Trà My, Quảng Nam",
+    "phone": "01694758589",
+    "location": {
+      "lat": 1522258787.0,
+      "lng": 10825305376.0
+    },
+    "postid": "563710",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Ka",
+    "address": "Thôn 2, Xã Trà Ka, Bắc Trà My, Quảng Nam",
+    "phone": "01664163601",
+    "location": {
+      "lat": 1520357947.0,
+      "lng": 10827643201.0
+    },
+    "postid": "563720",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Sơn",
+    "address": "Thôn Tân Hiệp, Xã Trà Sơn, Bắc Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 152653691343873.0,
+      "lng": 108491902553605.0
+    },
+    "postid": "563765",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục HCC Bắc Trà My",
+    "address": "Thôn Dương Hòa, Xã Trà Sơn, Bắc Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1533209074.0,
+      "lng": 10821750986.0
+    },
+    "postid": "563769",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hội An",
+    "address": "Số 06, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
+    "phone": "02353861635",
+    "location": {
+      "lat": 158799436.0,
+      "lng": 10833164334.0
+    },
+    "postid": "563800",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phường Sơn Phong",
+    "address": "Đường Nguyễn Duy Hiệu, Phường Sơn Phong, Hội An, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 15877982.0,
+      "lng": 108334682.0
+    },
+    "postid": "563815",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cẩm Châu",
+    "address": "Khối Thanh Tây (10 tổ), Phường Cẩm Châu, Hội An, Quảng Nam",
+    "phone": "02353923111",
+    "location": {
+      "lat": 158896456.0,
+      "lng": 10835772345.0
+    },
+    "postid": "563820",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hội An",
+    "address": "Số 06, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
+    "phone": "02353861229",
+    "location": {
+      "lat": 1588002874.0,
+      "lng": 10833188205.0
+    },
+    "postid": "563830",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã Cẩm Thanh",
+    "address": "Thôn 6 (6 tổ dân cư), Xã Cẩm Thanh, Hội An, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 15886578.0,
+      "lng": 108362441.0
+    },
+    "postid": "563849",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cẩm An",
+    "address": "Khối An Tân (9 tổ), Phường Cẩm An, Hội An, Quảng Nam",
+    "phone": "02353927555",
+    "location": {
+      "lat": 159117872.0,
+      "lng": 10834008056.0
+    },
+    "postid": "563860",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phường Cẩm Hà",
+    "address": "Thôn Đồng Nà, Xã Cẩm Hà, Hội An, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 159007361074799.0,
+      "lng": 108322384361644.0
+    },
+    "postid": "563898",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục phường Cẩm Phô",
+    "address": "Đường Trần Hưng Đạo, Phường Cẩm Phô, Hội An, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1587913611.0,
+      "lng": 10832316085.0
+    },
+    "postid": "563959",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thanh Hà",
+    "address": "Khối phố 8 (tổ 41-49), Phường Thanh Hà, Hội An, Quảng Nam",
+    "phone": "02353922222",
+    "location": {
+      "lat": 1589975328.0,
+      "lng": 10829378126.0
+    },
+    "postid": "563981",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trần Hưng Đạo",
+    "address": "Số 47/8, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
+    "phone": "02353861405",
+    "location": {
+      "lat": 1587950761.0,
+      "lng": 10832924682.0
+    },
+    "postid": "564025",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cẩm Kim",
+    "address": "Thôn Trung Hà (tổ 9 đến 12), Xã Cẩm Kim, Hội An, Quảng Nam",
+    "phone": "02353863444",
+    "location": {
+      "lat": 1586380472.0,
+      "lng": 10832425654.0
+    },
+    "postid": "564030",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cẩm Nam",
+    "address": "Khối Châu Trung (10 tổ), Phường Cẩm Nam, Hội An, Quảng Nam",
+    "phone": "02353864222",
+    "location": {
+      "lat": 1587256104.0,
+      "lng": 10833838761.0
+    },
+    "postid": "564040",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tân Hiệp",
+    "address": "Thôn Cấm (tổ 1-3), Xã Tân Hiệp, Hội An, Quảng Nam",
+    "phone": "0945584343",
+    "location": {
+      "lat": 159593885227974.0,
+      "lng": 108504365534848.0
+    },
+    "postid": "564050",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cửa Đại",
+    "address": "Khối Phước Tân (7 tổ), Phường Cửa Đại, Hội An, Quảng Nam",
+    "phone": "02353927066",
+    "location": {
+      "lat": 158968151.0,
+      "lng": 10836497781.0
+    },
+    "postid": "564060",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KHL Hội An",
+    "address": "Số 6, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
+    "phone": "02353501679",
+    "location": {
+      "lat": 1588001842.0,
+      "lng": 10833173962.0
+    },
+    "postid": "564070",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Bàn",
+    "address": "Số 189, Đường Trần Nhân Tông, Thị Trấn Vĩnh Điện, Điện Bàn, Quảng Nam",
+    "phone": "02353867436",
+    "location": {
+      "lat": 1588914228.0,
+      "lng": 10824919998.0
+    },
+    "postid": "564200",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Phương",
+    "address": "Thôn Thanh Chiêm 1, Xã Điện Phương, Điện Bàn, Quảng Nam",
+    "phone": "02353867941",
+    "location": {
+      "lat": 1586830709.0,
+      "lng": 10826306611.0
+    },
+    "postid": "564220",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Bàn",
+    "address": "Khối 3, Thị Trấn Vĩnh Điện, Điện Bàn, Quảng Nam",
+    "phone": "02353868678",
+    "location": {
+      "lat": 158910818502896.0,
+      "lng": 108254239716365.0
+    },
+    "postid": "564230",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Nam Đông",
+    "address": "Thôn 7 B, Xã Điện Nam Đông, Điện Bàn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 159002099.0,
+      "lng": 1082912766.0
+    },
+    "postid": "564250",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Dương",
+    "address": "Thôn Hà My Trung, Xã Điện Dương, Điện Bàn, Quảng Nam",
+    "phone": "0943773577",
+    "location": {
+      "lat": 1592339589.0,
+      "lng": 10832154636.0
+    },
+    "postid": "564270",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Khu Công Nghiệp Điện Nam Điện Ngọc",
+    "address": "Lô Hành Chính, Khu công nghiệp Điện Nam -điện Ngọc, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
+    "phone": "02353843297",
+    "location": {
+      "lat": 159353906.0,
+      "lng": 1082552872.0
+    },
+    "postid": "564280",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Ngọc",
+    "address": "Thôn Ngọc Vinh, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
+    "phone": "0235943790",
+    "location": {
+      "lat": 159552275403365.0,
+      "lng": 108254919045192.0
+    },
+    "postid": "564290",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KHL KCN Điện Nam-Điện Ngọc",
+    "address": "Lô Hành Chính, Khu công nghiệp Điện Nam -điện Ngọc, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
+    "phone": "02353843297",
+    "location": {
+      "lat": 1593531243.0,
+      "lng": 10825532806.0
+    },
+    "postid": "564310",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Điện Thắng Nam",
+    "address": "Thôn Phong Ngũ Tây, Xã Điện Thắng Nam, Điện Bàn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1592001465.0,
+      "lng": 10822141134.0
+    },
+    "postid": "564327",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Hòa",
+    "address": "Xóm Bùng, Xã Điện Hoà, Điện Bàn, Quảng Nam",
+    "phone": "0898221205",
+    "location": {
+      "lat": 1593216164.0,
+      "lng": 10820085522.0
+    },
+    "postid": "564350",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Tiến",
+    "address": "Thôn Thái Sơn 1, Xã Điện Tiến, Điện Bàn, Quảng Nam",
+    "phone": "0935537346",
+    "location": {
+      "lat": 1592591057.0,
+      "lng": 10815782236.0
+    },
+    "postid": "564380",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện An",
+    "address": "Thôn Phong Nhất, Xã Điện An, Điện Bàn, Quảng Nam",
+    "phone": "0773487247",
+    "location": {
+      "lat": 159043939.0,
+      "lng": 1082316613.0
+    },
+    "postid": "564400",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phong Thử",
+    "address": "Thôn Phong Thử 1, Xã Điện Thọ, Điện Bàn, Quảng Nam",
+    "phone": "02353741403",
+    "location": {
+      "lat": 1588814279.0,
+      "lng": 10818024834.0
+    },
+    "postid": "564420",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Thọ",
+    "address": "Thôn La Trung, Xã Điện Thọ, Điện Bàn, Quảng Nam",
+    "phone": "02353741888",
+    "location": {
+      "lat": 159069301.0,
+      "lng": 10818404202.0
+    },
+    "postid": "564421",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Hồng",
+    "address": "Thôn 10, Xã Điện Hồng, Điện Bàn, Quảng Nam",
+    "phone": "0913299252",
+    "location": {
+      "lat": 1588633805.0,
+      "lng": 10824968752.0
+    },
+    "postid": "564440",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Phước",
+    "address": "Thôn Nhị Dinh 1, Xã Điện Phước, Điện Bàn, Quảng Nam",
+    "phone": "0935985194",
+    "location": {
+      "lat": 158753606.0,
+      "lng": 10820605024.0
+    },
+    "postid": "564470",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Quang",
+    "address": "Thôn Bảo An Tây, Xã Điện Quang, Điện Bàn, Quảng Nam",
+    "phone": "02353744999",
+    "location": {
+      "lat": 158410678.0,
+      "lng": 108170492.0
+    },
+    "postid": "564490",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Trung 2",
+    "address": "Thôn Nam Hà 2, Xã Điện Trung, Điện Bàn, Quảng Nam",
+    "phone": "0793542560",
+    "location": {
+      "lat": 158399219.0,
+      "lng": 10820855911.0
+    },
+    "postid": "564510",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Trung",
+    "address": "Thôn Tân Bình, Xã Điện Trung, Điện Bàn, Quảng Nam",
+    "phone": "02353744969",
+    "location": {
+      "lat": 1585857638.0,
+      "lng": 10821287869.0
+    },
+    "postid": "564511",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Minh",
+    "address": "Thôn Bồng Lai, Xã Điện Minh, Điện Bàn, Quảng Nam",
+    "phone": "0939152863",
+    "location": {
+      "lat": 1588019843.0,
+      "lng": 10824877221.0
+    },
+    "postid": "564530",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Phong",
+    "address": "Thôn Tân Thành, Xã Điện Phong, Điện Bàn, Quảng Nam",
+    "phone": "0905664317",
+    "location": {
+      "lat": 1585046333.0,
+      "lng": 10823852426.0
+    },
+    "postid": "564550",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Điện Thắng",
+    "address": "Thôn Bồ Mưng 2, Xã Điện Thắng Bắc, Điện Bàn, Quảng Nam",
+    "phone": "02353869601",
+    "location": {
+      "lat": 1594330194.0,
+      "lng": 10822275313.0
+    },
+    "postid": "564570",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thanh Quýt",
+    "address": "Thôn Thanh Quýt 4, Xã Điện Thắng Trung, Điện Bàn, Quảng Nam",
+    "phone": "0905957121",
+    "location": {
+      "lat": 1592884909.0,
+      "lng": 1082296691.0
+    },
+    "postid": "564590",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cẩm Sa",
+    "address": "Thôn 4, Xã Điện Nam Trung, Điện Bàn, Quảng Nam",
+    "phone": "0763740007",
+    "location": {
+      "lat": 1591473248.0,
+      "lng": 10826903954.0
+    },
+    "postid": "564610",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Lộc",
+    "address": "Khu 2, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": "02353765555",
+    "location": {
+      "lat": 158829104.0,
+      "lng": 10811092673.0
+    },
+    "postid": "564700",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Sơn",
+    "address": "Thôn Hội Khách 1, Xã Đại Sơn, Đại Lộc, Quảng Nam",
+    "phone": "0914749833",
+    "location": {
+      "lat": 2013275634.0,
+      "lng": 1055588253.0
+    },
+    "postid": "564701",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Lộc",
+    "address": "Khu 1, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": "02353765255",
+    "location": {
+      "lat": 1588283101.0,
+      "lng": 10811093717.0
+    },
+    "postid": "564720",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục HCC Đại Lộc",
+    "address": "Khu 7, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 158827862.0,
+      "lng": 10811900638.0
+    },
+    "postid": "564721",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KHL Đại Lộc",
+    "address": "Khu 2, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": "02353765555",
+    "location": {
+      "lat": 1588279163.0,
+      "lng": 10811096027.0
+    },
+    "postid": "564725",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Hiệp",
+    "address": "Thôn Tích Phú, Xã Đại Hiệp, Đại Lộc, Quảng Nam",
+    "phone": "0936010801",
+    "location": {
+      "lat": 1591797882.0,
+      "lng": 10812642811.0
+    },
+    "postid": "564730",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã Đại Nghĩa",
+    "address": "Thôn Hòa Mỹ, Xã Đại Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 15874930.0,
+      "lng": 108092403.0
+    },
+    "postid": "564764",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Nghĩa",
+    "address": "Thôn Mỹ Liên, Xã Đại Nghĩa, Đại Lộc, Quảng Nam",
+    "phone": "0918684407",
+    "location": {
+      "lat": 1587558592.0,
+      "lng": 10809288143.0
+    },
+    "postid": "564765",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Quang",
+    "address": "Thôn Hòa Thạch, Xã Đại Quang, Đại Lộc, Quảng Nam",
+    "phone": "0968682809",
+    "location": {
+      "lat": 1587667832.0,
+      "lng": 10806397785.0
+    },
+    "postid": "564770",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hà Nha",
+    "address": "Thôn Hà Nha, Xã Đại Đồng, Đại Lộc, Quảng Nam",
+    "phone": "02353846108",
+    "location": {
+      "lat": 158510391.0,
+      "lng": 10801386949.0
+    },
+    "postid": "564791",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Đồng",
+    "address": "Thôn Lộc Phước, Xã Đại Đồng, Đại Lộc, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1586371413.0,
+      "lng": 10802324822.0
+    },
+    "postid": "564805",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hà Tân",
+    "address": "Thôn Tân Hà, Xã Đại Lãnh, Đại Lộc, Quảng Nam",
+    "phone": "02353974102",
+    "location": {
+      "lat": 1076846562.0,
+      "lng": 10667629468.0
+    },
+    "postid": "564810",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Minh",
+    "address": "Thôn Đông Gia, Xã Đại Minh, Đại Lộc, Quảng Nam",
+    "phone": "02353971104",
+    "location": {
+      "lat": 1584975727.0,
+      "lng": 10806693232.0
+    },
+    "postid": "564830",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Phong",
+    "address": "Thôn Mỹ Tây, Xã Đại Phong, Đại Lộc, Quảng Nam",
+    "phone": "0763792405",
+    "location": {
+      "lat": 1585435245.0,
+      "lng": 10804869435.0
+    },
+    "postid": "564850",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Tân",
+    "address": "Thôn Xuân Tây, Xã Đại Tân, Đại Lộc, Quảng Nam",
+    "phone": "0938701785",
+    "location": {
+      "lat": 1582299747.0,
+      "lng": 10805424463.0
+    },
+    "postid": "564860",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Hồng",
+    "address": "Thôn Phước Lâm, Xã Đại Hồng, Đại Lộc, Quảng Nam",
+    "phone": "0911274499",
+    "location": {
+      "lat": 1584120623.0,
+      "lng": 10795997219.0
+    },
+    "postid": "564870",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Chánh",
+    "address": "Thôn Tập Phước, Xã Đại Chánh, Đại Lộc, Quảng Nam",
+    "phone": "0825855194",
+    "location": {
+      "lat": 1580393734.0,
+      "lng": 10804126473.0
+    },
+    "postid": "564910",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Thạnh",
+    "address": "Thôn Tây Lễ, Xã Đại Thạnh, Đại Lộc, Quảng Nam",
+    "phone": "02353971108",
+    "location": {
+      "lat": 1578610318.0,
+      "lng": 10804514184.0
+    },
+    "postid": "564920",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Cường",
+    "address": "Thôn Thanh Vân, Xã Đại Cường, Đại Lộc, Quảng Nam",
+    "phone": "0935263937",
+    "location": {
+      "lat": 1584661004.0,
+      "lng": 10808655839.0
+    },
+    "postid": "564930",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Gia Cốc",
+    "address": "Thôn Phú An, Xã Đại Thắng, Đại Lộc, Quảng Nam",
+    "phone": "02353971106",
+    "location": {
+      "lat": 158270931.0,
+      "lng": 10807518569.0
+    },
+    "postid": "564950",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Hòa",
+    "address": "Thôn Quảng Huế, Xã Đại Hoà, Đại Lộc, Quảng Nam",
+    "phone": "0935800370",
+    "location": {
+      "lat": 158528891.0,
+      "lng": 10812140113.0
+    },
+    "postid": "564990",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại Hưng",
+    "address": "Thôn Trúc Hà, Xã Đại Hưng, Đại Lộc, Quảng Nam",
+    "phone": "0915935440",
+    "location": {
+      "lat": 1586009647.0,
+      "lng": 10792058178.0
+    },
+    "postid": "565000",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Đại An",
+    "address": "Thôn Quảng Huế, Xã Đại An, Đại Lộc, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 15855714.0,
+      "lng": 108109920.0
+    },
+    "postid": "565030",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đại An",
+    "address": "Thôn Quảng Huế, Xã Đại An, Đại Lộc, Quảng Nam",
+    "phone": "0794561161",
+    "location": {
+      "lat": 1585555267.0,
+      "lng": 10812135767.0
+    },
+    "postid": "565035",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Sơn",
+    "address": "Khối 4, Thị Trấn Khâm Đức, Phước Sơn, Quảng Nam",
+    "phone": "02353881800",
+    "location": {
+      "lat": 1544400742.0,
+      "lng": 10779388129.0
+    },
+    "postid": "565100",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Sơn",
+    "address": "Khối 4, Thị Trấn Khâm Đức, Phước Sơn, Quảng Nam",
+    "phone": "02353881330",
+    "location": {
+      "lat": 1544402721.0,
+      "lng": 10779383762.0
+    },
+    "postid": "565110",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Kỳ",
+    "address": "Số 18, Đường Trần Cao Vân, Phường An Xuân, Tam Kỳ, Quảng Nam",
+    "phone": "023533858578",
+    "location": {
+      "lat": 155650827.0,
+      "lng": 108493321.0
+    },
+    "postid": "560000",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KTC1 Quảng Nam",
+    "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353852898",
+    "location": {
+      "lat": 155779751617495.0,
+      "lng": 108474493045943.0
+    },
+    "postid": "560100",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hệ 1 Quảng Nam",
+    "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 155780955527061.0,
+      "lng": 108474465610274.0
+    },
+    "postid": "560900",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Vườn Lài",
+    "address": "Số 233B, Đường Trần Cao Vân, Phường An Sơn, Tam Kỳ, Quảng Nam",
+    "phone": "02353834102",
+    "location": {
+      "lat": 155592468.0,
+      "lng": 10848845623.0
+    },
+    "postid": "561060",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phan Chu Trinh",
+    "address": "Khối phố Lê Hồng Phong, Phường Hoà Hương, Tam Kỳ, Quảng Nam",
+    "phone": "02353525222",
+    "location": {
+      "lat": 1556231838.0,
+      "lng": 10849873134.0
+    },
+    "postid": "561100",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Phú",
+    "address": "Thôn Phú Thạnh, Xã Tam Phú, Tam Kỳ, Quảng Nam",
+    "phone": "02353858609",
+    "location": {
+      "lat": 1866208254.0,
+      "lng": 1056317755.0
+    },
+    "postid": "561120",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã Tam Thanh",
+    "address": "Thôn Thượng Thanh, Xã Tam Thanh, Tam Kỳ, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1560687279.0,
+      "lng": 10853808116.0
+    },
+    "postid": "561148",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục BCP Tam Kỳ",
+    "address": "Số 01, Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353852840",
+    "location": {
+      "lat": 1557809387.0,
+      "lng": 10847419938.0
+    },
+    "postid": "561150",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Thăng",
+    "address": "Thôn Vĩnh Bình, Xã Tam Thăng, Tam Kỳ, Quảng Nam",
+    "phone": "0905189591",
+    "location": {
+      "lat": 1560978016.0,
+      "lng": 1084688206.0
+    },
+    "postid": "561160",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KCN Tam Thăng",
+    "address": "Thôn Vĩnh Bình, Xã Tam Thăng, Tam Kỳ, Quảng Nam",
+    "phone": "02353525666",
+    "location": {
+      "lat": 1561589767.0,
+      "lng": 108472196.0
+    },
+    "postid": "561175",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục An Xuân",
+    "address": "Số 02, Đường Phan Bội Châu, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353810284",
+    "location": {
+      "lat": 15579089207795.0,
+      "lng": 108474757429064.0
+    },
+    "postid": "561210",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục TMĐT Tam Kỳ",
+    "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353535000",
+    "location": {
+      "lat": 155786631388353.0,
+      "lng": 108474975048882.0
+    },
+    "postid": "561242",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục HCC TP Tam Kỳ",
+    "address": "Số 159, Đường Trương Nữ Vương, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353825333",
+    "location": {
+      "lat": 1557101724.0,
+      "lng": 10847285405.0
+    },
+    "postid": "561243",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KHL Tam Kỳ",
+    "address": "Số 01, Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
+    "phone": "02353825456",
+    "location": {
+      "lat": 155786884001683.0,
+      "lng": 108474929758118.0
+    },
+    "postid": "561280",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thành Phố Tam Kỳ GD",
+    "address": "Số 18, Đường Trần Cao Vân, Phường An Xuân, Tam Kỳ, Quảng Nam",
+    "phone": "02353858578",
+    "location": {
+      "lat": 1556493081.0,
+      "lng": 10849341598.0
+    },
+    "postid": "561303",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Ngọc",
+    "address": "Thôn 3, Xã Tam Ngọc, Tam Kỳ, Quảng Nam",
+    "phone": "0982216408",
+    "location": {
+      "lat": 1554493479.0,
+      "lng": 10848349048.0
+    },
+    "postid": "561380",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Số 3",
+    "address": "Thôn Phú Thạnh, Xã Tam Phú, Tam Kỳ, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1558189583.0,
+      "lng": 10851562566.0
+    },
+    "postid": "561409",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Huỳnh Thúc Kháng",
+    "address": "Kiệt Khu Tt Xí Nghiệp May, Đường Huỳnh Thúc Kháng, Phường An Xuân, Tam Kỳ, Quảng Nam",
+    "phone": "02353859083",
+    "location": {
+      "lat": 1555839845.0,
+      "lng": 10848452277.0
+    },
+    "postid": "561450",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thăng Bình",
+    "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
+    "phone": "02353874265",
+    "location": {
+      "lat": 1574245138.0,
+      "lng": 10835946321.0
+    },
+    "postid": "561600",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Thăng Bình",
+    "address": "Khu phố 2, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
+    "phone": "02353674789",
+    "location": {
+      "lat": 1574242615.0,
+      "lng": 1083595109.0
+    },
+    "postid": "561610",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Phục",
+    "address": "Thôn 2 (làng Tất Viên), Xã Bình Phục, Thăng Bình, Quảng Nam",
+    "phone": "0911559122",
+    "location": {
+      "lat": 1574711875.0,
+      "lng": 10837702997.0
+    },
+    "postid": "561620",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Sa",
+    "address": "Thôn 3 (làng Bình Trúc 1), Xã Bình Sa, Thăng Bình, Quảng Nam",
+    "phone": "0918764496",
+    "location": {
+      "lat": 1569928384.0,
+      "lng": 10844422561.0
+    },
+    "postid": "561630",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Hải",
+    "address": "Thôn Hiệp Hưng, Xã Bình Hải, Thăng Bình, Quảng Nam",
+    "phone": "01697071772",
+    "location": {
+      "lat": 1571287652.0,
+      "lng": 1084546501.0
+    },
+    "postid": "561640",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Triều",
+    "address": "Thôn Phước Ấm (thôn 3), Xã Bình Triều, Thăng Bình, Quảng Nam",
+    "phone": "0905204273",
+    "location": {
+      "lat": 1575904699.0,
+      "lng": 10839398321.0
+    },
+    "postid": "561650",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Đào",
+    "address": "Thôn 2 (làng Trà Đóa 2), Xã Bình Đào, Thăng Bình, Quảng Nam",
+    "phone": "02353679442",
+    "location": {
+      "lat": 1576156536.0,
+      "lng": 10840364617.0
+    },
+    "postid": "561660",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Minh",
+    "address": "Thôn Hà Bình, Xã Bình Minh, Thăng Bình, Quảng Nam",
+    "phone": "0914308468",
+    "location": {
+      "lat": 1577351874.0,
+      "lng": 10842284554.0
+    },
+    "postid": "561670",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Nguyên",
+    "address": "Thôn Thanh Ly 1, Xã Bình Nguyên, Thăng Bình, Quảng Nam",
+    "phone": "02353875638",
+    "location": {
+      "lat": 1576110841.0,
+      "lng": 10834469706.0
+    },
+    "postid": "561680",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Giang",
+    "address": "Thôn 3 (làng Bình Túy), Xã Bình Giang, Thăng Bình, Quảng Nam",
+    "phone": "02353874607",
+    "location": {
+      "lat": 1579507236.0,
+      "lng": 10836512368.0
+    },
+    "postid": "561690",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Dương",
+    "address": "Thôn 2 (làng Ấp Nam), Xã Bình Dương, Thăng Bình, Quảng Nam",
+    "phone": "0935687533",
+    "location": {
+      "lat": 1580378733.0,
+      "lng": 10838090085.0
+    },
+    "postid": "561700",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Quý",
+    "address": "Thôn Quý Phước 2, Xã Bình Quý, Thăng Bình, Quảng Nam",
+    "phone": "0328889201",
+    "location": {
+      "lat": 1570397241.0,
+      "lng": 10834244756.0
+    },
+    "postid": "561710",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Định Bắc",
+    "address": "Thôn Đồng Dương, Xã Bình Định Bắc, Thăng Bình, Quảng Nam",
+    "phone": "0794521667",
+    "location": {
+      "lat": 156776133.0,
+      "lng": 1083055847.0
+    },
+    "postid": "561720",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Định Nam",
+    "address": "Thôn Đồng Đức, Xã Bình Định Nam, Thăng Bình, Quảng Nam",
+    "phone": "01642030552",
+    "location": {
+      "lat": 1567498572.0,
+      "lng": 10831125089.0
+    },
+    "postid": "561727",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Trị",
+    "address": "Thôn Châu Lâm(làng Nho Lâm, Châu Đức, Châu Nho), Xã Bình Trị, Thăng Bình, Quảng Nam",
+    "phone": "0914251451",
+    "location": {
+      "lat": 1565808948.0,
+      "lng": 10828029941.0
+    },
+    "postid": "561730",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Lãnh",
+    "address": "Thôn Nam Bình Sơn, Xã Bình Lãnh, Thăng Bình, Quảng Nam",
+    "phone": "0979750665",
+    "location": {
+      "lat": 1563772709.0,
+      "lng": 10825053335.0
+    },
+    "postid": "561740",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Chánh",
+    "address": "Thôn Rừng Bồng, Xã Bình Chánh, Thăng Bình, Quảng Nam",
+    "phone": "0914315169",
+    "location": {
+      "lat": 1566472284.0,
+      "lng": 10835493908.0
+    },
+    "postid": "561760",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Phú",
+    "address": "Thôn Lý Trường, Xã Bình Phú, Thăng Bình, Quảng Nam",
+    "phone": "02353873013",
+    "location": {
+      "lat": 1564581502.0,
+      "lng": 10833422345.0
+    },
+    "postid": "561770",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Quế",
+    "address": "Thôn Bình Quang, Xã Bình Quế, Thăng Bình, Quảng Nam",
+    "phone": "0792096971",
+    "location": {
+      "lat": 1563348767.0,
+      "lng": 108375101.0
+    },
+    "postid": "561780",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Tú",
+    "address": "Thôn Phước Cẩm, Xã Bình Tú, Thăng Bình, Quảng Nam",
+    "phone": "0912889230",
+    "location": {
+      "lat": 1570248806.0,
+      "lng": 10839063384.0
+    },
+    "postid": "561790",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Trung",
+    "address": "Thôn Kế Xuyên 1, Xã Bình Trung, Thăng Bình, Quảng Nam",
+    "phone": "02353673666",
+    "location": {
+      "lat": 1567798386.0,
+      "lng": 10840684124.0
+    },
+    "postid": "561810",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quán Gò",
+    "address": "Thôn An Thành 2, Xã Bình An, Thăng Bình, Quảng Nam",
+    "phone": "02353672193",
+    "location": {
+      "lat": 1563649191.0,
+      "lng": 10843198624.0
+    },
+    "postid": "561820",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục KHL Thăng Bình",
+    "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
+    "phone": "02353874974",
+    "location": {
+      "lat": 157424386.0,
+      "lng": 10835952149.0
+    },
+    "postid": "561830",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bình Nam",
+    "address": "Thôn Nghĩa Hòa, Xã Bình Nam, Thăng Bình, Quảng Nam",
+    "phone": "0912852442",
+    "location": {
+      "lat": 1565087267.0,
+      "lng": 10848571933.0
+    },
+    "postid": "561840",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục TMĐT Thăng Bình",
+    "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1574247243.0,
+      "lng": 10835948261.0
+    },
+    "postid": "561861",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Phước",
+    "address": "Khối phố Tiên Bình, Thị Trấn Tiên Kỳ, Tiên Phước, Quảng Nam",
+    "phone": "02353884164",
+    "location": {
+      "lat": 1548952667.0,
+      "lng": 10830834276.0
+    },
+    "postid": "562000",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Thọ",
+    "address": "Thôn 3, Xã Tiên Thọ, Tiên Phước, Quảng Nam",
+    "phone": "02353896311",
+    "location": {
+      "lat": 1548679412.0,
+      "lng": 10836452606.0
+    },
+    "postid": "562020",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Phong",
+    "address": "Thôn Tiên Hòa (Thôn 3), Xã Tiên Phong, Tiên Phước, Quảng Nam",
+    "phone": "0912884442",
+    "location": {
+      "lat": 1552050265.0,
+      "lng": 10835736187.0
+    },
+    "postid": "562040",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Mỹ",
+    "address": "Thôn Tiên Phú Đông (Thôn 3), Xã Tiên Mỹ, Tiên Phước, Quảng Nam",
+    "phone": "0914947444",
+    "location": {
+      "lat": 155049081105746.0,
+      "lng": 108319800503478.0
+    },
+    "postid": "562050",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Phước",
+    "address": "Khối phố Tiên Bình, Thị Trấn Tiên Kỳ, Tiên Phước, Quảng Nam",
+    "phone": "02353879777",
+    "location": {
+      "lat": 154895427569505.0,
+      "lng": 108308332858848.0
+    },
+    "postid": "562060",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Cẩm",
+    "address": "Thôn Cẩm Tây, Xã Tiên Cẩm, Tiên Phước, Quảng Nam",
+    "phone": "0329843369",
+    "location": {
+      "lat": 155541325.0,
+      "lng": 1082944871.0
+    },
+    "postid": "562070",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Sơn",
+    "address": "Thôn 3, Xã Tiên Sơn, Tiên Phước, Quảng Nam",
+    "phone": "0914744649",
+    "location": {
+      "lat": 1557410813.0,
+      "lng": 10827858161.0
+    },
+    "postid": "562086",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Châu",
+    "address": "Thôn Hội An, Xã Tiên Châu, Tiên Phước, Quảng Nam",
+    "phone": "0903280570",
+    "location": {
+      "lat": 1550913595.0,
+      "lng": 10829362116.0
+    },
+    "postid": "562090",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Hà",
+    "address": "Thôn Phú Vinh, Xã Tiên Hà, Tiên Phước, Quảng Nam",
+    "phone": "0394819192",
+    "location": {
+      "lat": 1554972721.0,
+      "lng": 10824703369.0
+    },
+    "postid": "562106",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Ngọc",
+    "address": "Thôn 4, Xã Tiên Ngọc, Tiên Phước, Quảng Nam",
+    "phone": "0903280321",
+    "location": {
+      "lat": 1544585974.0,
+      "lng": 10820587315.0
+    },
+    "postid": "562116",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Lãnh",
+    "address": "Thôn 10, Xã Tiên Lãnh, Tiên Phước, Quảng Nam",
+    "phone": "0825719026",
+    "location": {
+      "lat": 1545789147.0,
+      "lng": 10817338786.0
+    },
+    "postid": "562120",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Cảnh",
+    "address": "Thôn 5, Xã Tiên Cảnh, Tiên Phước, Quảng Nam",
+    "phone": "0945367653",
+    "location": {
+      "lat": 1546188667.0,
+      "lng": 10829587963.0
+    },
+    "postid": "562140",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Hiệp",
+    "address": "Thôn 4, Xã Tiên Hiệp, Tiên Phước, Quảng Nam",
+    "phone": "0979783067",
+    "location": {
+      "lat": 154234388.0,
+      "lng": 1082620033.0
+    },
+    "postid": "562160",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên An",
+    "address": "Thôn 3, Xã Tiên An, Tiên Phước, Quảng Nam",
+    "phone": "0914749062",
+    "location": {
+      "lat": 1542548819.0,
+      "lng": 10831883665.0
+    },
+    "postid": "562170",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Lộc",
+    "address": "Thôn 2, Xã Tiên Lộc, Tiên Phước, Quảng Nam",
+    "phone": "0353668099",
+    "location": {
+      "lat": 1546784654.0,
+      "lng": 10834331862.0
+    },
+    "postid": "562180",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tiên Lập",
+    "address": "Thôn 2, Xã Tiên Lập, Tiên Phước, Quảng Nam",
+    "phone": "0844915411",
+    "location": {
+      "lat": 1542766869.0,
+      "lng": 10835830517.0
+    },
+    "postid": "562190",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Núi Thành",
+    "address": "Khối 3, Thị Trấn Núi Thành, Núi Thành, Quảng Nam",
+    "phone": "02353871227",
+    "location": {
+      "lat": 1542967131.0,
+      "lng": 10865979109.0
+    },
+    "postid": "562300",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Núi Thành",
+    "address": "Khối 3, Thị Trấn Núi Thành, Núi Thành, Quảng Nam",
+    "phone": "02353871411",
+    "location": {
+      "lat": 1542963923.0,
+      "lng": 10865981745.0
+    },
+    "postid": "562310",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Giang",
+    "address": "Thôn Đông An (Thôn 4), Xã Tam Giang, Núi Thành, Quảng Nam",
+    "phone": "0948597946",
+    "location": {
+      "lat": 1545350295.0,
+      "lng": 10865518856.0
+    },
+    "postid": "562320",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Hải",
+    "address": "Thôn 2, Xã Tam Hải, Núi Thành, Quảng Nam",
+    "phone": "0913034976",
+    "location": {
+      "lat": 1547544919.0,
+      "lng": 10867958595.0
+    },
+    "postid": "562348",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Hòa",
+    "address": "Thôn Hòa Xuân, Xã Tam Hoà, Núi Thành, Quảng Nam",
+    "phone": "0913014775",
+    "location": {
+      "lat": 1550437499.0,
+      "lng": 10860814524.0
+    },
+    "postid": "562360",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Tiến",
+    "address": "Thôn Tân Bình Trung, Xã Tam Tiến, Núi Thành, Quảng Nam",
+    "phone": "02353891382",
+    "location": {
+      "lat": 155448569418126.0,
+      "lng": 108581807628726.0
+    },
+    "postid": "562380",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Khu Kinh Tế Mở Chu Lai",
+    "address": "Thôn An Hải Đông, Xã Tam Quang, Núi Thành, Quảng Nam",
+    "phone": "02353550557",
+    "location": {
+      "lat": 1547140208.0,
+      "lng": 1086848524.0
+    },
+    "postid": "562400",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Khu Công Nghiệp Tam Hiệp",
+    "address": "Thôn Vĩnh Đại (Thôn 3), Xã Tam Hiệp, Núi Thành, Quảng Nam",
+    "phone": "02353565000",
+    "location": {
+      "lat": 1544961342.0,
+      "lng": 10861647084.0
+    },
+    "postid": "562413",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Chợ Trạm",
+    "address": "Thôn Vân Thạch  (Thôn 9), Xã Tam Hiệp, Núi Thành, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1543873478.0,
+      "lng": 1086366932.0
+    },
+    "postid": "562414",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Diêm Phổ",
+    "address": "Thôn Diêm Phổ, Xã Tam Anh Nam, Núi Thành, Quảng Nam",
+    "phone": "02353892772",
+    "location": {
+      "lat": 154794955.0,
+      "lng": 1085861295.0
+    },
+    "postid": "562420",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Tam Anh Bắc",
+    "address": "Thôn Lý Trà, Xã Tam Anh Bắc, Núi Thành, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1551905333.0,
+      "lng": 10855951452.0
+    },
+    "postid": "562427",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Xuân II",
+    "address": "Thôn Bà Bầu, Xã Tam Xuân 2, Núi Thành, Quảng Nam",
+    "phone": "0942395654",
+    "location": {
+      "lat": 1552881264.0,
+      "lng": 108545805.0
+    },
+    "postid": "562450",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bà Bầu",
+    "address": "Thôn Phú Hưng (Thôn 6), Xã Tam Xuân 1, Núi Thành, Quảng Nam",
+    "phone": "02353891200",
+    "location": {
+      "lat": 155453401672578.0,
+      "lng": 108522420800731.0
+    },
+    "postid": "562480",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Thạnh",
+    "address": "Thôn Trung Hòa (Thôn 2), Xã Tam Thạnh, Núi Thành, Quảng Nam",
+    "phone": "02353892779",
+    "location": {
+      "lat": 154374443007886.0,
+      "lng": 108529112964275.0
+    },
+    "postid": "562500",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Sơn",
+    "address": "Thôn Mỹ Đông (Thôn 1), Xã Tam Sơn, Núi Thành, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1544146131.0,
+      "lng": 10847095347.0
+    },
+    "postid": "562510",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Mỹ",
+    "address": "Thôn Đa Phú 1, Xã Tam Mỹ Đông, Núi Thành, Quảng Nam",
+    "phone": "01684580059",
+    "location": {
+      "lat": 1541344082.0,
+      "lng": 10864192768.0
+    },
+    "postid": "562520",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Trà",
+    "address": "Thôn Phú Thành (Thôn 3), Xã Tam Trà, Núi Thành, Quảng Nam",
+    "phone": "02353871033",
+    "location": {
+      "lat": 1538262868.0,
+      "lng": 10850585026.0
+    },
+    "postid": "562540",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bến Xe",
+    "address": "Thôn Định Phước, Xã Tam Nghĩa, Núi Thành, Quảng Nam",
+    "phone": "02353535559",
+    "location": {
+      "lat": 154193299223692.0,
+      "lng": 108673126105988.0
+    },
+    "postid": "562560",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Nghĩa",
+    "address": "Thôn Định Phước, Xã Tam Nghĩa, Núi Thành, Quảng Nam",
+    "phone": "0909389492",
+    "location": {
+      "lat": 154151863529895.0,
+      "lng": 108675039836094.0
+    },
+    "postid": "562573",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Tam Mỹ Tây",
+    "address": "Thôn Trung Thành, Xã Tam Mỹ Tây, Núi Thành, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1541085911.0,
+      "lng": 10861314928.0
+    },
+    "postid": "562617",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Xuyên",
+    "address": "Khối Phố Long Xuyên 2 (đội 2+3), Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
+    "phone": "02353877251",
+    "location": {
+      "lat": 1584073843.0,
+      "lng": 10828333337.0
+    },
+    "postid": "562700",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cầu Chìm",
+    "address": "Khối Phố Mỹ Hòa, Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
+    "phone": "02353878333",
+    "location": {
+      "lat": 1582769871.0,
+      "lng": 10825756281.0
+    },
+    "postid": "562710",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Xuyên",
+    "address": "Khối Phố Mỹ Hòa, Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
+    "phone": "02353877431",
+    "location": {
+      "lat": 1584081537.0,
+      "lng": 10828385067.0
+    },
+    "postid": "562720",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Thành",
+    "address": "Thôn 2 (thôn Thi Thại), Xã Duy Thành, Duy Xuyên, Quảng Nam",
+    "phone": "02353878299",
+    "location": {
+      "lat": 158249982501668.0,
+      "lng": 108318189367641.0
+    },
+    "postid": "562730",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Nghĩa",
+    "address": "Thôn 3 (làng Hội Sơn), Xã Duy Nghĩa, Duy Xuyên, Quảng Nam",
+    "phone": "0935352414",
+    "location": {
+      "lat": 1585369082.0,
+      "lng": 10837161953.0
+    },
+    "postid": "562740",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Hải",
+    "address": "Thôn 1, Xã Duy Hải, Duy Xuyên, Quảng Nam",
+    "phone": "0765944476",
+    "location": {
+      "lat": 1585819719.0,
+      "lng": 10838924105.0
+    },
+    "postid": "562750",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Phước",
+    "address": "Thôn Mỹ Phước, Xã Duy Phước, Duy Xuyên, Quảng Nam",
+    "phone": "02353877024",
+    "location": {
+      "lat": 1585803857.0,
+      "lng": 10829612737.0
+    },
+    "postid": "562760",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Vinh 1",
+    "address": "Thôn Hà Thuận (thôn 4b), Xã Duy Vinh, Duy Xuyên, Quảng Nam",
+    "phone": "02353738666",
+    "location": {
+      "lat": 1584678147.0,
+      "lng": 10832978119.0
+    },
+    "postid": "562780",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Trinh",
+    "address": "Thôn Phú Bông (thôn 3), Xã Duy Trinh, Duy Xuyên, Quảng Nam",
+    "phone": "0906442056",
+    "location": {
+      "lat": 1582851543.0,
+      "lng": 10821855716.0
+    },
+    "postid": "562800",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Châu",
+    "address": "Thôn Lệ An, Xã Duy Châu, Duy Xuyên, Quảng Nam",
+    "phone": "01229535557",
+    "location": {
+      "lat": 1583568895.0,
+      "lng": 10814983264.0
+    },
+    "postid": "562810",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Kiểm Lâm",
+    "address": "Thôn La Tháp Tây, Xã Duy Hòa, Duy Xuyên, Quảng Nam",
+    "phone": "02353731456",
+    "location": {
+      "lat": 1583839586.0,
+      "lng": 10812168504.0
+    },
+    "postid": "562830",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Hòa",
+    "address": "Thôn La Tháp Tây, Xã Duy Hòa, Duy Xuyên, Quảng Nam",
+    "phone": "0935231877",
+    "location": {
+      "lat": 1582898258.0,
+      "lng": 10812444278.0
+    },
+    "postid": "562831",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Tân",
+    "address": "Thôn Thu Bồn Đông, Xã Duy Tân, Duy Xuyên, Quảng Nam",
+    "phone": "02353733805",
+    "location": {
+      "lat": 1581921731.0,
+      "lng": 10808120228.0
+    },
+    "postid": "562850",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Mỹ Sơn",
+    "address": "Thôn Mỹ Sơn, Xã Duy Phú, Duy Xuyên, Quảng Nam",
+    "phone": "02353877013",
+    "location": {
+      "lat": 1577328256.0,
+      "lng": 10810896125.0
+    },
+    "postid": "562860",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Thu",
+    "address": "Thôn Phú Đa 2, Xã Duy Thu, Duy Xuyên, Quảng Nam",
+    "phone": "02353731102",
+    "location": {
+      "lat": 1579982955.0,
+      "lng": 10806786706.0
+    },
+    "postid": "562870",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Sơn 2",
+    "address": "Thôn Trà Châu, Xã Duy Sơn, Duy Xuyên, Quảng Nam",
+    "phone": "0387806006",
+    "location": {
+      "lat": 158245918129924.0,
+      "lng": 108232211141638.0
+    },
+    "postid": "562880",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Sơn",
+    "address": "Thôn Chiêm Sơn, Xã Duy Sơn, Duy Xuyên, Quảng Nam",
+    "phone": "02353878222",
+    "location": {
+      "lat": 158099324328144.0,
+      "lng": 108225726892956.0
+    },
+    "postid": "562881",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Duy Trung",
+    "address": "Thôn Hòa Nam (thôn 3), Xã Duy Trung, Duy Xuyên, Quảng Nam",
+    "phone": "0978819733",
+    "location": {
+      "lat": 158039821.0,
+      "lng": 10825572753.0
+    },
+    "postid": "562900",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Sơn",
+    "address": "Thôn Thuận An, Thị Trấn Đông Phú, Quế Sơn, Quảng Nam",
+    "phone": "02353885189",
+    "location": {
+      "lat": 1567423328.0,
+      "lng": 10822225258.0
+    },
+    "postid": "563000",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Sơn",
+    "address": "Thôn Cang Tây, Thị Trấn Đông Phú, Quế Sơn, Quảng Nam",
+    "phone": "02353885079",
+    "location": {
+      "lat": 1567429947.0,
+      "lng": 10822230066.0
+    },
+    "postid": "563030",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Châu",
+    "address": "Thôn 4, Xã Quế Châu, Quế Sơn, Quảng Nam",
+    "phone": "0978797022",
+    "location": {
+      "lat": 156819953.0,
+      "lng": 10824809613.0
+    },
+    "postid": "563032",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phú Thọ",
+    "address": "Thôn 2, Xã Phú Thọ, Quế Sơn, Quảng Nam",
+    "phone": "0905243048",
+    "location": {
+      "lat": 1573684351.0,
+      "lng": 10828866244.0
+    },
+    "postid": "563050",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Cường",
+    "address": "Thôn 2, Xã Quế Cường, Quế Sơn, Quảng Nam",
+    "phone": "0775584109",
+    "location": {
+      "lat": 1576213061.0,
+      "lng": 10831806256.0
+    },
+    "postid": "563070",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Hương An",
+    "address": "Thôn Thương Nghiệp, Xã Hương An, Quế Sơn, Quảng Nam",
+    "phone": "02353886500",
+    "location": {
+      "lat": 157777084305822.0,
+      "lng": 108329089586051.0
+    },
+    "postid": "563080",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã Quế Phú",
+    "address": "Thôn 11, Xã Quế Phú, Quế Sơn, Quảng Nam",
+    "phone": "0914489963",
+    "location": {
+      "lat": 157967616.0,
+      "lng": 1083126964.0
+    },
+    "postid": "563095",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Xuân 1",
+    "address": "Thôn 2, Xã Quế Xuân 1, Quế Sơn, Quảng Nam",
+    "phone": "0339621097",
+    "location": {
+      "lat": 1582141385.0,
+      "lng": 10829198808.0
+    },
+    "postid": "563120",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Xuân 2",
+    "address": "Thôn Phú Bình, Xã Quế Xuân 2, Quế Sơn, Quảng Nam",
+    "phone": "0943028223",
+    "location": {
+      "lat": 1579511213.0,
+      "lng": 10828674131.0
+    },
+    "postid": "563121",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Hiệp",
+    "address": "Thôn Nghi Trung, Xã Quế Hiệp, Quế Sơn, Quảng Nam",
+    "phone": "0913603593",
+    "location": {
+      "lat": 1572028341.0,
+      "lng": 10823845267.0
+    },
+    "postid": "563150",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Long",
+    "address": "Thôn 3, Xã Quế Long, Quế Sơn, Quảng Nam",
+    "phone": "0909329603",
+    "location": {
+      "lat": 1567984106.0,
+      "lng": 10819407792.0
+    },
+    "postid": "563160",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Lộc",
+    "address": "Thôn Lộc Đông, Xã Quế Lộc, Nông Sơn, Quảng Nam",
+    "phone": "02353654424",
+    "location": {
+      "lat": 1570583233.0,
+      "lng": 10810836039.0
+    },
+    "postid": "563170",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nông sơn",
+    "address": "Thôn Trung Phước 1, Xã Quế Trung, Nông Sơn, Quảng Nam",
+    "phone": "02353654010",
+    "location": {
+      "lat": 157130508536791.0,
+      "lng": 108063543127473.0
+    },
+    "postid": "563180",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Hiệp",
+    "address": "Thôn 11, Xã Phước Hiệp, Phước Sơn, Quảng Nam",
+    "phone": "01253528784",
+    "location": {
+      "lat": 1546344577.0,
+      "lng": 10793677034.0
+    },
+    "postid": "565120",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Đức",
+    "address": "Thôn 5, Xã Phước Đức, Phước Sơn, Quảng Nam",
+    "phone": "01676780266",
+    "location": {
+      "lat": 1542118556.0,
+      "lng": 10777258274.0
+    },
+    "postid": "565140",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Năng",
+    "address": "Thôn 2 (thôn Plây Khôn), Xã Phước Năng, Phước Sơn, Quảng Nam",
+    "phone": "01642794278",
+    "location": {
+      "lat": 1540028139.0,
+      "lng": 10776051512.0
+    },
+    "postid": "565150",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Mỹ",
+    "address": "Thôn 2 (làng Mừng), Xã Phước Mỹ, Phước Sơn, Quảng Nam",
+    "phone": "01267627021",
+    "location": {
+      "lat": 1536550201.0,
+      "lng": 10775579122.0
+    },
+    "postid": "565160",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Chánh",
+    "address": "Thôn Ca Ra Ngâu, Xã Phước Chánh, Phước Sơn, Quảng Nam",
+    "phone": "01267618861",
+    "location": {
+      "lat": 1536746392.0,
+      "lng": 10781891422.0
+    },
+    "postid": "565170",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Công",
+    "address": "Thôn 1 (thôn Công Tơ Năng Trên), Xã Phước Công, Phước Sơn, Quảng Nam",
+    "phone": "0966913946",
+    "location": {
+      "lat": 1532260062.0,
+      "lng": 10781108741.0
+    },
+    "postid": "565190",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Kim",
+    "address": "Làng Luông A, Xã Phước Kim, Phước Sơn, Quảng Nam",
+    "phone": "01629991915",
+    "location": {
+      "lat": 1533668335.0,
+      "lng": 10788168142.0
+    },
+    "postid": "565200",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Xuân",
+    "address": "Thôn Lao Mưng, Xã Phước Xuân, Phước Sơn, Quảng Nam",
+    "phone": "0969092053",
+    "location": {
+      "lat": 1545616799.0,
+      "lng": 10782457854.0
+    },
+    "postid": "565213",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Phước Thành",
+    "address": "Thôn 4b, Xã Phước Thành, Phước Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 15286092.0,
+      "lng": 10789159842.0
+    },
+    "postid": "565226",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Phước Lộc",
+    "address": "Thôn 5a, Xã Phước Lộc, Phước Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1527554752.0,
+      "lng": 10785130075.0
+    },
+    "postid": "565236",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Phước Hoà",
+    "address": "Thôn 6, Xã Phước Hoà, Phước Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1545299722.0,
+      "lng": 10791030034.0
+    },
+    "postid": "565243",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nam Trà My",
+    "address": "Thôn 1, Xã Trà Mai, Nam Trà My, Quảng Nam",
+    "phone": "02353880051",
+    "location": {
+      "lat": 151482930008619.0,
+      "lng": 108122641435508.0
+    },
+    "postid": "565300",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã TRà Dơn",
+    "address": "Thôn 1, Xã Trà Dơn, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 152437765.0,
+      "lng": 10808589049.0
+    },
+    "postid": "565317",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Tập",
+    "address": "Thôn 1, Xã Trà Tập, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1515351361.0,
+      "lng": 10810845183.0
+    },
+    "postid": "565324",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Cang",
+    "address": "Thôn 3, Xã Trà Cang, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1510443922.0,
+      "lng": 10807147314.0
+    },
+    "postid": "565337",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Don",
+    "address": "Thôn 6, Xã Trà Don, Nam Trà My, Quảng Nam",
+    "phone": "01642723317",
+    "location": {
+      "lat": 1509474647.0,
+      "lng": 10812232795.0
+    },
+    "postid": "565343",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Vân",
+    "address": "Thôn 1, Xã Trà Vân, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1511299546.0,
+      "lng": 10818011375.0
+    },
+    "postid": "565353",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Leng",
+    "address": "Thôn 3, Xã Trà Leng, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 152724501.0,
+      "lng": 10801386086.0
+    },
+    "postid": "565364",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Trà Nam",
+    "address": "Thôn 3, Xã Trà Nam, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1503834511.0,
+      "lng": 10806978288.0
+    },
+    "postid": "565375",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Vinh",
+    "address": "Thôn 1, Xã Trà Vinh, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1506658841.0,
+      "lng": 10819422829.0
+    },
+    "postid": "565384",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Trà Linh",
+    "address": "Thôn 3, Xã Trà Linh, Nam Trà My, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 150354073.0,
+      "lng": 1080184133.0
+    },
+    "postid": "565395",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nam Trà My",
+    "address": "Thôn 4, Xã Trà Cang, Nam Trà My, Quảng Nam",
+    "phone": "02353880727",
+    "location": {
+      "lat": 1514827761.0,
+      "lng": 10812267717.0
+    },
+    "postid": "565400",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đông Giang",
+    "address": "Thôn Ngã Ba, Thị Trấn PRao, Đông Giang, Quảng Nam",
+    "phone": "02353898654",
+    "location": {
+      "lat": 1592216613.0,
+      "lng": 10764931901.0
+    },
+    "postid": "565500",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đông Giang",
+    "address": "Thôn Ngã Ba, Thị Trấn PRao, Đông Giang, Quảng Nam",
+    "phone": "02353898789",
+    "location": {
+      "lat": 1592225175.0,
+      "lng": 10764952662.0
+    },
+    "postid": "565520",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã TaLou",
+    "address": "Thôn Pà Nai 1, Xã Tà Lu, Đông Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1592821967.0,
+      "lng": 10767428219.0
+    },
+    "postid": "565540",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã JơNgây",
+    "address": "Thôn Sông Voi, Xã Jơ Ngây, Đông Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1595610436.0,
+      "lng": 10779976395.0
+    },
+    "postid": "565541",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Kà Dăng",
+    "address": "Thôn Hiệp, Xã Kà Dăng, Đông Giang, Quảng Nam",
+    "phone": "01633235570",
+    "location": {
+      "lat": 1588138057.0,
+      "lng": 10780708909.0
+    },
+    "postid": "565558",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quyết Thắng",
+    "address": "Thôn Ban Mai 1, Xã Ba, Đông Giang, Quảng Nam",
+    "phone": "02353797165",
+    "location": {
+      "lat": 1596058123.0,
+      "lng": 10792223097.0
+    },
+    "postid": "565570",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tư",
+    "address": "Thôn Láy, Xã Tư, Đông Giang, Quảng Nam",
+    "phone": "0905436838",
+    "location": {
+      "lat": 1600820753.0,
+      "lng": 10790818859.0
+    },
+    "postid": "565590",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Sông Kôn",
+    "address": "Thôn Bền, Xã Sông Kôn, Đông Giang, Quảng Nam",
+    "phone": "0947605150",
+    "location": {
+      "lat": 159661036787969.0,
+      "lng": 107781805374644.0
+    },
+    "postid": "565610",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Ting",
+    "address": "Thôn Chờ Nết, Xã A Ting, Đông Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1596562016.0,
+      "lng": 10781530196.0
+    },
+    "postid": "565637",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Ariooih",
+    "address": "Thôn A Bung, Xã A Rooih, Đông Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 158822474.0,
+      "lng": 10763648184.0
+    },
+    "postid": "565645",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Zà Hung",
+    "address": "Thôn A Xanh 2, Xã Za Hung, Đông Giang, Quảng Nam",
+    "phone": "02353898966",
+    "location": {
+      "lat": 1588836534.0,
+      "lng": 10764795498.0
+    },
+    "postid": "565650",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Ma Cooih",
+    "address": "Thôn A Xờ, Xã Ma Cooih, Đông Giang, Quảng Nam",
+    "phone": "0962111492",
+    "location": {
+      "lat": 1583828507.0,
+      "lng": 10767777711.0
+    },
+    "postid": "565660",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tây Giang",
+    "address": "Thôn A Grồng, Xã A Tiêng, Tây Giang, Quảng Nam",
+    "phone": "02353796066",
+    "location": {
+      "lat": 1588767841.0,
+      "lng": 10749137207.0
+    },
+    "postid": "565800",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Lăng",
+    "address": "Thôn Nal, Xã Lăng, Tây Giang, Quảng Nam",
+    "phone": "0903462070",
+    "location": {
+      "lat": 1585452475.0,
+      "lng": 10747481658.0
+    },
+    "postid": "565801",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tây Giang",
+    "address": "Thôn A Cấp, Xã A Nông, Tây Giang, Quảng Nam",
+    "phone": "02353796088",
+    "location": {
+      "lat": 158876059.0,
+      "lng": 10749142505.0
+    },
+    "postid": "565810",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Vương",
+    "address": "Thôn Bh Lố 1, Xã A Vương, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1594254421.0,
+      "lng": 10756824715.0
+    },
+    "postid": "565829",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Bha Lee",
+    "address": "Thôn A Ung, Xã BHa Lêê, Tây Giang, Quảng Nam",
+    "phone": "01666795488",
+    "location": {
+      "lat": 1592935224.0,
+      "lng": 10753484732.0
+    },
+    "postid": "565840",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Nông",
+    "address": "Thôn A Rớt, Xã A Nông, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1594985716.0,
+      "lng": 10746737508.0
+    },
+    "postid": "565864",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục A Tiêng",
+    "address": "Thôn Ahu, Xã A Tiêng, Tây Giang, Quảng Nam",
+    "phone": "01686618046",
+    "location": {
+      "lat": 159090834.0,
+      "lng": 10749622124.0
+    },
+    "postid": "565876",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Tr'Hy",
+    "address": "Thôn Voòng, Xã Tr'Hy, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1581293576.0,
+      "lng": 10736698269.0
+    },
+    "postid": "565886",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Xan",
+    "address": "Thôn A Rầng 2, Xã A Xan, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1583414316.0,
+      "lng": 10730820905.0
+    },
+    "postid": "565898",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã A Ch'om",
+    "address": "Thôn Đhung, Xã Ch'Om, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1580007757.0,
+      "lng": 10726121097.0
+    },
+    "postid": "565918",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã GaRi",
+    "address": "Thôn Da Ding, Xã Ga Ri, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1575923643.0,
+      "lng": 10727751946.0
+    },
+    "postid": "565936",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Dang",
+    "address": "Thôn Ka La, Xã Dang, Tây Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1583939184.0,
+      "lng": 10755795241.0
+    },
+    "postid": "565948",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nam Giang",
+    "address": "Thôn Dung, Thị Trấn Thạnh Mỹ, Nam Giang, Quảng Nam",
+    "phone": "02353840356",
+    "location": {
+      "lat": 157484991204324.0,
+      "lng": 107836191782331.0
+    },
+    "postid": "566000",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Zuôih",
+    "address": "Thôn Côn Dôn, Xã Zuôih, Nam Giang, Quảng Nam",
+    "phone": "01659222407",
+    "location": {
+      "lat": 1567683977.0,
+      "lng": 10749839885.0
+    },
+    "postid": "566020",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục La Êê",
+    "address": "Thôn Ba Lan, Xã La Êê, Nam Giang, Quảng Nam",
+    "phone": "01642209044",
+    "location": {
+      "lat": 1563122949.0,
+      "lng": 10736994976.0
+    },
+    "postid": "566036",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tà Bhing",
+    "address": "Thôn Bà Xua, Xã Tà BHing, Nam Giang, Quảng Nam",
+    "phone": "02353792123",
+    "location": {
+      "lat": 1566272977.0,
+      "lng": 10770391175.0
+    },
+    "postid": "566040",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nam Giang",
+    "address": "Thôn Dung, Thị Trấn Thạnh Mỹ, Nam Giang, Quảng Nam",
+    "phone": "02353840838",
+    "location": {
+      "lat": 1574838801.0,
+      "lng": 10783619169.0
+    },
+    "postid": "566050",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cha Vàl",
+    "address": "Thôn A Bát, Xã Cha Vàl, Nam Giang, Quảng Nam",
+    "phone": "0962746643",
+    "location": {
+      "lat": 1562013976.0,
+      "lng": 1075086882.0
+    },
+    "postid": "566060",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục La Dêê",
+    "address": "Thôn Đắc Ốc, Xã La Dêê, Nam Giang, Quảng Nam",
+    "phone": "0868008342",
+    "location": {
+      "lat": 1560234271.0,
+      "lng": 10745518943.0
+    },
+    "postid": "566080",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đắc Pre",
+    "address": "Thôn 56b, Xã Đac Pree, Nam Giang, Quảng Nam",
+    "phone": "0965875932",
+    "location": {
+      "lat": 1558859034.0,
+      "lng": 10753712566.0
+    },
+    "postid": "566094",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Đắc Pring",
+    "address": "Thôn 49b, Xã Đac Pring, Nam Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1557223856.0,
+      "lng": 10757185475.0
+    },
+    "postid": "566104",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cà Dy",
+    "address": "Thôn Crung, Xã Cà Dy, Nam Giang, Quảng Nam",
+    "phone": "01689488678",
+    "location": {
+      "lat": 1569245662.0,
+      "lng": 10776876413.0
+    },
+    "postid": "566111",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Xã Chơ Chun",
+    "address": "Thôn A Xo, Xã Chơ Chun, Nam Giang, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 156463661801351.0,
+      "lng": 107355744225177.0
+    },
+    "postid": "566130",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phú Ninh",
+    "address": "Khối phố Cẩm Thịnh, Thị Trấn Phú Thịnh, Phú Ninh, Quảng Nam",
+    "phone": "02353890977",
+    "location": {
+      "lat": 1555195077.0,
+      "lng": 10841495164.0
+    },
+    "postid": "566200",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Lãnh",
+    "address": "Thôn An Lâu 1, Xã Tam Lãnh, Phú Ninh, Quảng Nam",
+    "phone": "0343770089",
+    "location": {
+      "lat": 154332487.0,
+      "lng": 10840841177.0
+    },
+    "postid": "566201",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục xã Tam Thái",
+    "address": "Thôn Khánh Thọ, Xã Tam Thái, Phú Ninh, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1553968352.0,
+      "lng": 10844991687.0
+    },
+    "postid": "566227",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Cây Sanh",
+    "address": "Thôn Cây Sanh, Xã Tam Dân, Phú Ninh, Quảng Nam",
+    "phone": "02353855777",
+    "location": {
+      "lat": 1552377808.0,
+      "lng": 10842006081.0
+    },
+    "postid": "566240",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phú Ninh",
+    "address": "Khối phố Thạnh Đức, Thị Trấn Phú Thịnh, Phú Ninh, Quảng Nam",
+    "phone": "02353823799",
+    "location": {
+      "lat": 155513584255335.0,
+      "lng": 108414784617072.0
+    },
+    "postid": "566250",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Chiên Đàn",
+    "address": "Thôn Đàn Hạ, Xã Tam Đàn, Phú Ninh, Quảng Nam",
+    "phone": "02353890995",
+    "location": {
+      "lat": 1559436063.0,
+      "lng": 10845621984.0
+    },
+    "postid": "566260",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam An",
+    "address": "Thôn An Mỹ 2, Xã Tam An, Phú Ninh, Quảng Nam",
+    "phone": "0914550157",
+    "location": {
+      "lat": 1559375803.0,
+      "lng": 10842640142.0
+    },
+    "postid": "566280",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Lộc",
+    "address": "Thôn 2, Xã Tam Lộc, Phú Ninh, Quảng Nam",
+    "phone": "0981936945",
+    "location": {
+      "lat": 1556423606.0,
+      "lng": 10836696464.0
+    },
+    "postid": "566300",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Vinh",
+    "address": "Thôn 1 (Thôn Tú Lâm), Xã Tam Vinh, Phú Ninh, Quảng Nam",
+    "phone": "0916555236",
+    "location": {
+      "lat": 1553665973.0,
+      "lng": 10838904613.0
+    },
+    "postid": "566320",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Thành",
+    "address": "Thôn 1, Xã Tam Thành, Phú Ninh, Quảng Nam",
+    "phone": "0934645280",
+    "location": {
+      "lat": 156171656183579.0,
+      "lng": 108411298989188.0
+    },
+    "postid": "566340",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Phước",
+    "address": "Thôn Cẩm Khê, Xã Tam Phước, Phú Ninh, Quảng Nam",
+    "phone": "0912405665",
+    "location": {
+      "lat": 1556940117.0,
+      "lng": 1084064871.0
+    },
+    "postid": "566360",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Tam Đại",
+    "address": "Thôn Đại An, Xã Tam Đại, Phú Ninh, Quảng Nam",
+    "phone": "0911506583",
+    "location": {
+      "lat": 1551377632.0,
+      "lng": 1084625934.0
+    },
+    "postid": "566410",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Nông sơn",
+    "address": "Thôn Xuân Hòa, Xã Phước Ninh, Nông Sơn, Quảng Nam",
+    "phone": "02353654010",
+    "location": {
+      "lat": 157129306.0,
+      "lng": 10806353902.0
+    },
+    "postid": "566710",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Phước Ninh",
+    "address": "Thôn Bình Yên, Xã Phước Ninh, Nông Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1571164064.0,
+      "lng": 10805907919.0
+    },
+    "postid": "566723",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Quế Lâm",
+    "address": "Thôn 3, Xã Quế Lâm, Nông Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 1563729928.0,
+      "lng": 10799156242.0
+    },
+    "postid": "566736",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục Sơn Viên",
+    "address": "Thôn Phước Bình, Xã Sơn Viên, Nông Sơn, Quảng Nam",
+    "phone": null,
+    "location": {
+      "lat": 157129157340487.0,
+      "lng": 10810948434892.0
+    },
+    "postid": "566773",
+    "province": "Quảng Nam"
+  },
+  {
+    "name": "Bưu Cục BCP Nông Sơn",
+    "address": "Thôn Trung Phước 1, Xã Quế Trung, Nông Sơn, Quảng Nam",
+    "phone": "02353654010",
+    "location": {
+      "lat": 1571294866.0,
+      "lng": 10806357924.0
+    },
+    "postid": "566780",
+    "province": "Quảng Nam"
+  }
+]

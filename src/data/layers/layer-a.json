@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Phường Hải Châu",
+    "type": "urban",
+    "address": "Số 15 đường Lê Hồng Phong, phường Hải Châu (Trụ sở phường Phước Ninh cũ)",
+    "phone": "0903570134",
+    "location": {
+      "lat": 16.06372834024789,
+      "lng": 108.22247219553093
+    }
+  },
+  {
+    "name": "Phường Hòa Cường",
+    "type": "urban",
+    "address": "Số 388 đường Núi Thành, phường Hòa Cường (Trụ sở phường Hòa Cường Bắc cũ)",
+    "phone": "09052759080905207778 0905111308",
+    "location": {
+      "lat": 16.038544573026545,
+      "lng": 108.22187291569672
+    }
+  },
+  {
+    "name": "Phường An Khê",
+    "type": "urban",
+    "address": "Số 916 đường Tôn Đản, phường An Khê (Trụ sở phường Hòa Phát cũ)",
+    "phone": "0903555480",
+    "location": {
+      "lat": 16.025480447287954,
+      "lng": 108.18810480777326
+    }
+  },
+  {
+    "name": "Phường Thanh Khê",
+    "type": "urban",
+    "address": "Số 503 đường Trần Cao Vân, phường Thanh Khê (Trụ sở quận Thanh Khê cũ)",
+    "phone": "0989074161",
+    "location": {
+      "lat": 16.070995194769353,
+      "lng": 108.19106197813886
+    }
+  },
+  {
+    "name": "Phường An Hải",
+    "type": "urban",
+    "address": "Số 289 đường Nguyễn Công Trứ, phường An Hải (Trụ sở phường Phước Mỹ cũ)",
+    "phone": "0905607727",
+    "location": {
+      "lat": 16.0649122223973,
+      "lng": 108.24248032768
+    }
+  },
+  {
+    "name": "Phường Sơn Trà",
+    "type": "urban",
+    "address": "Số 06 đường Nguyễn Phan Vinh, phường Sơn Trà (Trụ sở phường Thọ Quang cũ)",
+    "phone": "0913415457",
+    "location": {
+      "lat": 16.1011671835079,
+      "lng": 108.249401794754
+    }
+  },
+  {
+    "name": "Phường Ngũ Hành Sơn",
+    "type": "urban",
+    "address": "Số 486 đường Lê Văn Hiến, phường Ngũ Hành Sơn (Trụ sở quận Ngũ Hành Sơn cũ)",
+    "phone": "0905058559",
+    "location": {
+      "lat": 16.01638737234392,
+      "lng": 108.25367116028592
+    }
+  },
+  {
+    "name": "Phường Hòa Khánh",
+    "type": "urban",
+    "address": "Số 168 đường Nguyễn Sinh Sắc, phường Hòa Khánh (Trụ sở quận Liên Chiểu cũ)",
+    "phone": "0905234569",
+    "location": {
+      "lat": 16.072657705029805,
+      "lng": 108.15823261104448
+    }
+  },
+  {
+    "name": "Phường Liên Chiểu",
+    "type": "urban",
+    "address": "Số 68 đường Lạc Long Quân, phường Liên Chiểu (Trụ sở phường Hòa Khánh Bắc cũ)",
+    "phone": "0905537609",
+    "location": {
+      "lat": 16.076467079275318,
+      "lng": 108.14556482711018
+    }
+  },
+  {
+    "name": "Phường Hải Vân",
+    "type": "urban",
+    "address": "Lô 1-2 đường Nguyễn Tất Thành, phường Hải Vân (Trụ sở phường Hòa Hiệp Nam cũ)",
+    "phone": "02363771456",
+    "location": {
+      "lat": 16.106978030875325,
+      "lng": 108.1264339853078
+    }
+  },
+  {
+    "name": "Phường Cẩm Lệ",
+    "type": "urban",
+    "address": "40 Ông Ích Đường, Phường Cẩm Lệ",
+    "phone": "02363674174",
+    "location": {
+      "lat": 16.017818136488827,
+      "lng": 108.20403706663316
+    }
+  },
+  {
+    "name": "Phường Hòa Xuân",
+    "type": "urban",
+    "address": "Số 111 đường Hoàng Ngân, phường Hòa Xuân (Trụ sở phường Hòa Xuân cũ)",
+    "phone": "0905023357",
+    "location": {
+      "lat": 15.995705076937789,
+      "lng": 108.21141998102372
+    }
+  },
+  {
+    "name": "Phường Tam Kỳ",
+    "type": "urban",
+    "address": "Số 159 đường Trưng Nữ Vương, phường Tam Kỳ",
+    "phone": "0905381177",
+    "location": {
+      "lat": 15.570390555620907,
+      "lng": 108.47258064776194
+    }
+  },
+  {
+    "name": "Phường Quảng Phú",
+    "type": "urban",
+    "address": "Khối phố Phú Thạnh, Phường Quảng Phú (Trụ sở Phường An Phú cũ)",
+    "phone": "0911197777",
+    "location": {
+      "lat": 15.577899745788356,
+      "lng": 108.50677436139657
+    }
+  },
+  {
+    "name": "Phường Hương Trà",
+    "type": "urban",
+    "address": "Số 510 đường Hùng Vương, phường Hương Trà (Trụ sở Ban Quản lý dự án đầu tư xây dựng tỉnh Quảng Nam cũ)",
+    "phone": "0901937789",
+    "location": {
+      "lat": 15.554651948158432,
+      "lng": 108.49659491583074
+    }
+  },
+  {
+    "name": "Phường Bàn Thạch",
+    "type": "urban",
+    "address": "Số 01 đường Nguyễn Đình Hiến, phường Bàn Thạch",
+    "phone": "0905285611",
+    "location": {
+      "lat": 15.580602543733772,
+      "lng": 108.47453143045892
+    }
+  },
+  {
+    "name": "Phường Điện Bàn",
+    "type": "urban",
+    "address": "Số 22-24 đường Hoàng Diệu, khối 3, phường Điện Bàn (Trụ sở thị xã Điện Bàn cũ)",
+    "phone": "0917027555",
+    "location": {
+      "lat": 15.88874597234782,
+      "lng": 108.25467430902272
+    }
+  },
+  {
+    "name": "Phường Điện Bàn Đông",
+    "type": "urban",
+    "address": "Số 845 đường Trần Thủ Độ, Khối phố Quảng Lăng B, Phường Điện Bàn Đông (Trụ sở phường Điện Nam Trung cũ)",
+    "phone": "0935028629",
+    "location": {
+      "lat": 15.91291147372988,
+      "lng": 108.26995846784985
+    }
+  },
+  {
+    "name": "Phường An Thắng",
+    "type": "urban",
+    "address": "Khối Phong Nhị, phường Điện Thắng (Trụ sở phường Điện An cũ)",
+    "phone": "0905661999",
+    "location": {
+      "lat": 15.902955926867204,
+      "lng": 108.23788591147446
+    }
+  },
+  {
+    "name": "Phường Điện Bàn Bắc",
+    "type": "urban",
+    "address": "Thôn Xóm Bùng, phường Điện Bàn Bắc (Trụ sở xã Điện Hòa cũ)",
+    "phone": "0916521767",
+    "location": {
+      "lat": 15.934104147256866,
+      "lng": 108.1966960388974
+    }
+  },
+  {
+    "name": "Phường Hội An",
+    "type": "urban",
+    "address": "Số 02 đường Hoàng Diệu, phường Hội An",
+    "phone": "0948157868",
+    "location": {
+      "lat": 15.879401236179584,
+      "lng": 108.3319657488581
+    }
+  },
+  {
+    "name": "Phường Hội An Đông",
+    "type": "urban",
+    "address": "Số 456 đường Cửa Đại, phường Hội An Đông (Trụ sở Phường Cẩm Châu cũ)",
+    "phone": "0989639724",
+    "location": {
+      "lat": 15.880725189133944,
+      "lng": 108.34256049272628
+    }
+  },
+  {
+    "name": "Phường Hội An Tây",
+    "type": "urban",
+    "address": "Số 544 đường Hai Bà Trưng, phường Hội An Tây",
+    "phone": "0988620700",
+    "location": {
+      "lat": 15.88664390366524,
+      "lng": 108.32727111927193
+    }
+  }
+]
