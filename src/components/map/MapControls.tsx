@@ -528,20 +528,22 @@ export function MapControls({
                             </div>
                             
                             {/* Radius selection for hiding logic */}
-                            <div className="flex items-center justify-between mt-2">
-                              <Label htmlFor="use-management-radius" className="text-xs text-blue-700">
-                                Dùng bán kính quản lý
+                            <div className="mt-2">
+                              <Label className="text-xs text-blue-700 mb-2 block">
+                                Bán kính để kiểm tra
                               </Label>
-                              <Switch
-                                id="use-management-radius"
-                                checked={useManagementRadiusForHiding || false}
-                                onCheckedChange={onToggleUseManagementRadiusForHiding}
-                                className="data-[state=checked]:bg-blue-600"
-                              />
-                            </div>
-                            
-                            <div className="text-xs text-blue-500 mt-1">
-                              {useManagementRadiusForHiding ? 'Quản lý' : 'Tiếp nhận'} radius được sử dụng
+                              <Select 
+                                value={useManagementRadiusForHiding ? 'management' : 'reception'} 
+                                onValueChange={(value) => onToggleUseManagementRadiusForHiding?.(value === 'management')}
+                              >
+                                <SelectTrigger className="w-full h-8 text-xs">
+                                  <SelectValue />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="reception">Tiếp nhận ({layerAReceptionRadius}km)</SelectItem>
+                                  <SelectItem value="management">Quản lý ({layerAManagementRadius}km)</SelectItem>
+                                </SelectContent>
+                              </Select>
                             </div>
                           </div>
                         )}

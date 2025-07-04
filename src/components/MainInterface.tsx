@@ -78,7 +78,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
 
   // Layer B within Layer A control state
   const [hideLayerBWithinA, setHideLayerBWithinA] = useState(false); // Option to hide/dim Layer B within Layer A
-  const [useManagementRadiusForHiding, setUseManagementRadiusForHiding] = useState(false); // Use management vs reception radius
+  const [useManagementRadiusForHiding, setUseManagementRadiusForHiding] = useState(true); // Use management vs reception radius
 
   // Polygon color mode state
   const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
