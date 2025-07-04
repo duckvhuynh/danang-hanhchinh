@@ -26,10 +26,14 @@ export function downloadAsExcel(data: AdministrativeOffice[], filename: string, 
     'Địa chỉ': office.address,
     'Khu vực': office.region,
     'Lớp': office.layer,
-    'Bán kính (km)': office.radius,
+    'Bán kính chính (km)': office.radius,
+    'Bán kính tiếp nhận (km)': office.receptionRadius || '', // Layer A only
+    'Bán kính quản lý (km)': office.managementRadius || '', // Layer A only
+    'Loại vùng': office.type || '', // Layer B only (urban/suburban)
     'Điện thoại': office.phone || '',
     'Xã/phường cũ': office.old_commune_ward || '',
-    'Loại': office.is_commune ? 'Xã' : 'Phường',
+    'Loại đơn vị': office.is_commune ? 'Xã' : 'Phường',
+    'Mã bưu điện': office.postid || '', // Layer C only
     'Vĩ độ (Latitude)': office.location.lat,
     'Kinh độ (Longitude)': office.location.lng,
     'Hồ sơ 2024': office.procedures_2024 || 0,
@@ -47,10 +51,14 @@ export function downloadAsExcel(data: AdministrativeOffice[], filename: string, 
     { wch: 50 }, // Địa chỉ
     { wch: 15 }, // Khu vực
     { wch: 10 }, // Lớp
-    { wch: 15 }, // Bán kính
+    { wch: 15 }, // Bán kính chính
+    { wch: 20 }, // Bán kính tiếp nhận
+    { wch: 18 }, // Bán kính quản lý
+    { wch: 12 }, // Loại vùng
     { wch: 15 }, // Điện thoại
     { wch: 20 }, // Xã/phường cũ
-    { wch: 12 }, // Loại
+    { wch: 12 }, // Loại đơn vị
+    { wch: 15 }, // Mã bưu điện
     { wch: 15 }, // Vĩ độ
     { wch: 15 }, // Kinh độ
     { wch: 15 }, // Hồ sơ 2024
@@ -85,10 +93,14 @@ export function downloadAllLayersAsExcel(
       'Địa chỉ': office.address,
       'Khu vực': office.region,
       'Lớp': office.layer,
-      'Bán kính (km)': office.radius,
+      'Bán kính chính (km)': office.radius,
+      'Bán kính tiếp nhận (km)': office.receptionRadius || '', // Layer A only
+      'Bán kính quản lý (km)': office.managementRadius || '', // Layer A only
+      'Loại vùng': office.type || '', // Layer B only (urban/suburban)
       'Điện thoại': office.phone || '',
       'Xã/phường cũ': office.old_commune_ward || '',
-      'Loại': office.is_commune ? 'Xã' : 'Phường',
+      'Loại đơn vị': office.is_commune ? 'Xã' : 'Phường',
+      'Mã bưu điện': office.postid || '', // Layer C only
       'Vĩ độ (Latitude)': office.location.lat,
       'Kinh độ (Longitude)': office.location.lng,
       'Hồ sơ 2024': office.procedures_2024 || 0,

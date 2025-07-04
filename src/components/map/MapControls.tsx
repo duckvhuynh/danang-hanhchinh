@@ -743,19 +743,19 @@ export function MapControls({
                             <SelectItem value="A">
                               <div className="flex items-center gap-2">
                                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <span>Lớp A - Quận/Huyện cũ</span>
+                                <span>Lớp A - Chi nhánh (2 bán kính)</span>
                               </div>
                             </SelectItem>
                             <SelectItem value="B">
                               <div className="flex items-center gap-2">
                                 <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                <span>Lớp B - Phường/Xã hiện tại</span>
+                                <span>Lớp B - Điểm tiếp nhận (theo loại vùng)</span>
                               </div>
                             </SelectItem>
                             <SelectItem value="C">
                               <div className="flex items-center gap-2">
                                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                <span>Lớp C - Phường/Xã cũ</span>
+                                <span>Lớp C - Điểm tăng cường (bưu điện)</span>
                               </div>
                             </SelectItem>
                           </SelectContent>
@@ -774,6 +774,14 @@ export function MapControls({
                             <li>• <strong>Xóa:</strong> Click vào marker và chọn nút xóa</li>
                             <li>• <strong>Chỉnh sửa:</strong> Click vào marker để sửa thông tin</li>
                           </ul>
+                          <div className="mt-2 pt-2 border-t border-blue-200">
+                            <p className="text-xs font-medium text-blue-800 mb-1">Lưu ý về bán kính:</p>
+                            <ul className="text-xs text-blue-600 space-y-0.5 pl-2">
+                              <li>• <strong>Lớp A:</strong> Có 2 bán kính (tiếp nhận + quản lý)</li>
+                              <li>• <strong>Lớp B:</strong> Bán kính theo loại vùng (đô thị/ngoại ô)</li>
+                              <li>• <strong>Lớp C:</strong> Bán kính cố định (bưu điện)</li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     )}

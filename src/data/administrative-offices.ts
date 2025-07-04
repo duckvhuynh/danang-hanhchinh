@@ -89,7 +89,7 @@ export const allAdministrativeOffices: AdministrativeOffice[] = [
 export const layerConfigurations = {
   A: {
     name: 'Chi nhánh',
-    description: 'Trung tâm hành chính công Phường',
+    description: 'Trung tâm hành chính công (Phường)',
     radius: 5, // Reception radius
     managementRadius: 15, // Management radius
     color: '#DC2626', // Red
@@ -99,7 +99,7 @@ export const layerConfigurations = {
   },
   B: {
     name: 'Điểm tiếp nhận',
-    description: 'Trung tâm hành chính công Xã',
+    description: 'Trung tâm hành chính công (Xã)',
     radius: 5, // Default radius
     color: '#2563EB', // Blue
     fillColor: '#DBEAFE',

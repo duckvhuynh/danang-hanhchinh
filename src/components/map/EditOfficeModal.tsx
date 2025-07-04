@@ -30,6 +30,10 @@ export function EditOfficeModal({
         region: office.region,
         layer: office.layer,
         radius: office.radius,
+        receptionRadius: office.receptionRadius,
+        managementRadius: office.managementRadius,
+        type: office.type,
+        postid: office.postid,
         procedures_2024: office.procedures_2024 || 0,
         procedures_6months_2025: office.procedures_6months_2025 || 0,
         old_commune_ward: office.old_commune_ward || ''
@@ -121,39 +125,130 @@ export function EditOfficeModal({
                 <SelectItem value="A">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span>Lớp A - Quận/Huyện cũ</span>
+                    <span>Lớp A - Chi nhánh (2 bán kính)</span>
                   </div>
                 </SelectItem>
                 <SelectItem value="B">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span>Lớp B - Phường/Xã hiện tại</span>
+                    <span>Lớp B - Điểm tiếp nhận (theo loại vùng)</span>
                   </div>
                 </SelectItem>
                 <SelectItem value="C">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span>Lớp C - Phường/Xã cũ</span>
+                    <span>Lớp C - Điểm tăng cường (bưu điện)</span>
                   </div>
                 </SelectItem>
               </SelectContent>
             </Select>
           </div>
 
-          {/* Radius */}
-          <div className="space-y-2">
-            <Label htmlFor="radius">Bán kính phục vụ (km) *</Label>
-            <Input
-              id="radius"
-              type="number"
-              min="1"
-              max="20"
-              step="0.5"
-              value={formData.radius || 5}
-              onChange={(e) => setFormData(prev => ({ ...prev, radius: Number(e.target.value) }))}
-              required
-            />
-          </div>
+          {/* Radius Controls - Conditional based on layer */}
+          {formData.layer === 'A' && (
+            <div className="space-y-3">
+              <Label className="text-sm font-medium">Bán kính Lớp A (km)</Label>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-1">
+                  <Label htmlFor="receptionRadius" className="text-xs text-orange-700">Tiếp nhận</Label>
+                  <Input
+                    id="receptionRadius"
+                    type="number"
+                    min="1"
+                    max="20"
+                    step="0.5"
+                    value={formData.receptionRadius || 5}
+                    onChange={(e) => setFormData(prev => ({ 
+                      ...prev, 
+                      receptionRadius: Number(e.target.value),
+                      radius: Number(e.target.value) // Update main radius to reception
+                    }))}
+                    required
+                  />
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="managementRadius" className="text-xs text-red-700">Quản lý</Label>
+                  <Input
+                    id="managementRadius"
+                    type="number"
+                    min="1"
+                    max="30"
+                    step="0.5"
+                    value={formData.managementRadius || 15}
+                    onChange={(e) => setFormData(prev => ({ 
+                      ...prev, 
+                      managementRadius: Number(e.target.value)
+                    }))}
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {formData.layer === 'B' && (
+            <div className="space-y-3">
+              <div className="space-y-2">
+                <Label htmlFor="type">Loại vùng *</Label>
+                <Select
+                  value={formData.type || 'urban'}
+                  onValueChange={(value: 'urban' | 'suburban') => setFormData(prev => ({ 
+                    ...prev, 
+                    type: value,
+                    radius: value === 'urban' ? 3 : 8 // Update radius based on type
+                  }))}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Chọn loại vùng" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="urban">Đô thị (3km)</SelectItem>
+                    <SelectItem value="suburban">Ngoại ô (8km)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="radius">Bán kính phục vụ (km) *</Label>
+                <Input
+                  id="radius"
+                  type="number"
+                  min="1"
+                  max="20"
+                  step="0.5"
+                  value={formData.radius || (formData.type === 'urban' ? 3 : 8)}
+                  onChange={(e) => setFormData(prev => ({ ...prev, radius: Number(e.target.value) }))}
+                  required
+                />
+              </div>
+            </div>
+          )}
+
+          {formData.layer === 'C' && (
+            <div className="space-y-3">
+              <div className="space-y-2">
+                <Label htmlFor="postid">Mã bưu điện</Label>
+                <Input
+                  id="postid"
+                  value={formData.postid || ''}
+                  onChange={(e) => setFormData(prev => ({ ...prev, postid: e.target.value }))}
+                  placeholder="Nhập mã bưu điện (nếu có)"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="radius">Bán kính phục vụ (km) *</Label>
+                <Input
+                  id="radius"
+                  type="number"
+                  min="1"
+                  max="20"
+                  step="0.5"
+                  value={formData.radius || 5}
+                  onChange={(e) => setFormData(prev => ({ ...prev, radius: Number(e.target.value) }))}
+                  required
+                />
+              </div>
+            </div>
+          )}
 
           {/* Old commune ward */}
           <div className="space-y-2">

@@ -172,7 +172,21 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
           address: "Địa chỉ cần cập nhật",
           region: "Đà Nẵng",
           layer: selectedLayerForAdd,
-          radius: selectedLayerForAdd === 'A' ? 7 : 5,
+          // Set radius based on layer type and current settings
+          radius: selectedLayerForAdd === 'A' 
+            ? layerAReceptionRadius // Default to reception radius for Layer A
+            : selectedLayerForAdd === 'B'
+            ? layerBUrbanRadius // Default to urban radius for Layer B
+            : layerCRadius, // Layer C uses single radius
+          // Add Layer A specific radii if applicable
+          ...(selectedLayerForAdd === 'A' && {
+            receptionRadius: layerAReceptionRadius,
+            managementRadius: layerAManagementRadius,
+          }),
+          // Add Layer B type if applicable (default to urban)
+          ...(selectedLayerForAdd === 'B' && {
+            type: 'urban' as const,
+          }),
         };
         
         setCustomOffices(prev => [...prev, newOffice]);
@@ -198,7 +212,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
         }
       }
     }
-  }, [zoomLevel, editMode, selectedLayerForAdd]);
+  }, [zoomLevel, editMode, selectedLayerForAdd, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerCRadius]);
 
   const handleGetUserLocation = () => {
     if (!navigator.geolocation) {
