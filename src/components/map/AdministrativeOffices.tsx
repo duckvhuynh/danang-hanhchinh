@@ -10,6 +10,10 @@ interface AdministrativeOfficesProps {
     visible: boolean;
     showCircles: boolean;
     userLocation?: { lat: number; lng: number } | null;
+    directionMode?: boolean;
+    selectedStartOffice?: AdministrativeOffice | null;
+    selectedEndOffice?: AdministrativeOffice | null;
+    isLoadingRoute?: boolean;
     onOfficeClick?: (office: AdministrativeOffice) => void;
 }
 
@@ -18,6 +22,10 @@ export function AdministrativeOffices({
     visible,
     showCircles,
     userLocation,
+    directionMode = false,
+    selectedStartOffice,
+    selectedEndOffice,
+    isLoadingRoute = false,
     onOfficeClick
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
@@ -50,34 +58,102 @@ export function AdministrativeOffices({
 
     // Get circle colors based on layer
     const getCircleColors = (layer: 'A' | 'B' | 'C') => {
-        switch (layer) {
-            case 'A':
-                return {
-                    fillColor: '#EF4444',   // strong red
-                    strokeColor: '#B91C1C', // dark red
-                };
-            case 'B':
-                return {
-                    fillColor: '#3B82F6',   // vibrant blue
-                    strokeColor: '#1D4ED8', // deep blue
-                };
-            case 'C':
-                return {
-                    fillColor: '#10B981',   // bright green
-                    strokeColor: '#047857', // dark green
-                };
-            default:
-                return {
-                    fillColor: '#9CA3AF',   // neutral gray (still visible)
-                    strokeColor: '#4B5563', // darker gray
-                };
+        const baseColors = {
+            'A': {
+                fillColor: '#EF4444',   // strong red
+                strokeColor: '#B91C1C', // dark red
+            },
+            'B': {
+                fillColor: '#3B82F6',   // vibrant blue
+                strokeColor: '#1D4ED8', // deep blue
+            },
+            'C': {
+                fillColor: '#10B981',   // bright green
+                strokeColor: '#047857', // dark green
+            },
+        };
+
+        const colors = baseColors[layer] || {
+            fillColor: '#9CA3AF',   // neutral gray (still visible)
+            strokeColor: '#4B5563', // darker gray
+        };
+
+        // Dim colors when direction mode is active
+        if (directionMode) {
+            return {
+                fillColor: colors.fillColor,
+                strokeColor: colors.strokeColor,
+                fillOpacity: 0.15, // Much more transparent
+                strokeOpacity: 0.1,
+            };
         }
+
+        return {
+            ...colors,
+            fillOpacity: 0.4,
+            strokeOpacity: 0.2,
+        };
     };
 
 
+    // Get marker appearance based on direction mode selection
+    const getMarkerAppearance = (office: AdministrativeOffice) => {
+        if (directionMode) {
+            if (selectedStartOffice?.id === office.id) {
+                return {
+                    background: "#10B981", // Green for start
+                    borderColor: "#FFFFFF",
+                    glyphColor: "#FFFFFF",
+                    scale: 1.4, // Larger for better visibility
+                    zIndex: 1000,
+                };
+            } else if (selectedEndOffice?.id === office.id) {
+                return {
+                    background: "#EF4444", // Red for end
+                    borderColor: "#FFFFFF", 
+                    glyphColor: "#FFFFFF",
+                    scale: 1.4, // Larger for better visibility
+                    zIndex: 1000,
+                };
+            } else if (isLoadingRoute && selectedStartOffice) {
+                // Show muted appearance when loading route
+                return {
+                    background: "#D1D5DB", // Gray when loading
+                    borderColor: "#FFFFFF",
+                    glyphColor: "#9CA3AF",
+                    scale: office.layer === 'A' ? 0.8 : 0.6, // Smaller when dimmed
+                    zIndex: 10,
+                };
+            } else {
+                // Non-selected markers in direction mode should be less prominent
+                return {
+                    background: getLayerColor(office.layer),
+                    borderColor: "#FFFFFF",
+                    glyphColor: "#FFFFFF",
+                    scale: office.layer === 'A' ? 0.9 : 0.7, // Smaller for less prominence
+                    zIndex: 10,
+                };
+            }
+        } else {
+            return {
+                background: getLayerColor(office.layer),
+                borderColor: "#FFFFFF",
+                glyphColor: "#FFFFFF",
+                scale: office.layer === 'A' ? 1.1 : 0.9,
+                zIndex: 100,
+            };
+        }
+    };
+
     const handleMarkerClick = (office: AdministrativeOffice) => {
-        setSelectedOffice(office);
-        onOfficeClick?.(office);
+        if (directionMode) {
+            // In direction mode, delegate to the direction selection handler
+            onOfficeClick?.(office);
+        } else {
+            // In normal mode, show info window
+            setSelectedOffice(office);
+            onOfficeClick?.(office);
+        }
     };
 
     if (!visible) return null;
@@ -93,30 +169,35 @@ export function AdministrativeOffices({
                         center={office.location}
                         radius={office.radius * 1000} // Convert km to meters
                         fillColor={colors.fillColor}
-                        fillOpacity={0.4}
+                        fillOpacity={colors.fillOpacity}
                         strokeColor={colors.strokeColor}
-                        strokeOpacity={0.2}
-                        strokeWeight={1.5}
+                        strokeOpacity={colors.strokeOpacity}
+                        strokeWeight={directionMode ? 1 : 1.5}
                         clickable={false}
+                        zIndex={directionMode ? 1 : 5}
                     />
                 );
             })}
 
             {/* Office markers */}
-            {offices.map((office) => (
-                <AdvancedMarker
-                    key={office.id}
-                    position={office.location}
-                    onClick={() => handleMarkerClick(office)}
-                >
-                    <Pin
-                        background={getLayerColor(office.layer)}
-                        borderColor="#FFFFFF"
-                        glyphColor="#FFFFFF"
-                        scale={office.layer === 'A' ? 1.1 : 0.9}
-                    />
-                </AdvancedMarker>
-            ))}
+            {offices.map((office) => {
+                const appearance = getMarkerAppearance(office);
+                return (
+                    <AdvancedMarker
+                        key={office.id}
+                        position={office.location}
+                        onClick={() => handleMarkerClick(office)}
+                        zIndex={appearance.zIndex}
+                    >
+                        <Pin
+                            background={appearance.background}
+                            borderColor={appearance.borderColor}
+                            glyphColor={appearance.glyphColor}
+                            scale={appearance.scale}
+                        />
+                    </AdvancedMarker>
+                );
+            })}
 
             {/* Info window for selected office */}
             {selectedOffice && (

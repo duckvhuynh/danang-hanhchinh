@@ -13,7 +13,10 @@ import {
   Map,
   Circle as CircleIcon,
   Eye,
-  EyeOff
+  EyeOff,
+  Navigation,
+  LineSquiggle,
+  ChevronsLeftRightEllipsis
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -22,8 +25,6 @@ import { layerConfigurations } from "../../data/administrative-offices";
 interface MapControlsProps {
   showPolygons: boolean;
   onTogglePolygons: (show: boolean) => void;
-  showOffices: boolean;
-  onToggleOffices: (show: boolean) => void;
   onGetUserLocation: () => void;
   isLocating: boolean;
   // Administrative controls
@@ -48,13 +49,17 @@ interface MapControlsProps {
   // Map type
   mapType: "roadmap" | "satellite" | "styled";
   onMapTypeChange: (type: "roadmap" | "satellite" | "styled") => void;
+  // Direction mode
+  directionMode: boolean;
+  onToggleDirectionMode: (enabled: boolean) => void;
+  directionModeType?: 'route' | 'straightline';
+  onDirectionModeTypeChange?: (type: 'route' | 'straightline') => void;
+  distanceInfo?: {distance: number, type: 'route' | 'straightline'} | null;
 }
 
 export function MapControls({
   showPolygons,
   onTogglePolygons,
-  showOffices,
-  onToggleOffices,
   onGetUserLocation,
   isLocating,
   showLayerA,
@@ -75,6 +80,11 @@ export function MapControls({
   onToggleNeutralPolygonMode,
   mapType,
   onMapTypeChange,
+  directionMode,
+  onToggleDirectionMode,
+  directionModeType = 'route',
+  onDirectionModeTypeChange,
+  distanceInfo,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -452,31 +462,73 @@ export function MapControls({
                   </div>
                 </div>
 
+                {/* Divider */}
                 <div className="h-px bg-gray-200 w-full"></div>
+
+                {/* Direction Mode Control */}
                 <div className="space-y-2">
-                  <h3 className="text-sm font-medium text-gray-900">Điểm phục vụ HCC</h3>
-                  <div className="p-2 bg-emerald-50 rounded-lg border border-emerald-100">
+                  <h3 className="text-sm font-medium text-gray-900">Chế độ chỉ đường</h3>
+                  
+                  {/* Direction Mode Toggle */}
+                  <div className="p-2 bg-purple-50 rounded-lg border border-purple-100">
                     <div className="flex items-center justify-between">
                       <Label
-                        htmlFor="show-offices"
+                        htmlFor="direction-mode"
                         className="flex items-center gap-2 cursor-pointer flex-1"
                       >
-                        <div className="w-6 h-6 flex items-center justify-center bg-emerald-100 rounded-full">
-                          <Building2 className="w-3 h-3 text-emerald-700" />
+                        <div className="w-6 h-6 flex items-center justify-center bg-purple-100 rounded-full">
+                          <Navigation className="w-3 h-3 text-purple-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-emerald-900">Vị trí trụ sở</p>
-                          <p className="text-xs text-emerald-700">Trung tâm PV hành chính công</p>
+                          <p className="text-sm font-medium text-purple-900">Chế độ chỉ đường</p>
+                          <p className="text-xs text-purple-700">Chọn 2 điểm để xem lộ trình</p>
                         </div>
                       </Label>
                       <Switch
-                        id="show-offices"
-                        checked={showOffices}
-                        onCheckedChange={onToggleOffices}
-                        className="data-[state=checked]:bg-emerald-600"
+                        id="direction-mode"
+                        checked={directionMode}
+                        onCheckedChange={onToggleDirectionMode}
+                        className="data-[state=checked]:bg-purple-600"
                       />
                     </div>
                   </div>
+
+                  {/* Direction Mode Type Selection */}
+                  {directionMode && (
+                    <div className="p-2 bg-gray-50 rounded-lg border border-gray-100">
+                      <Label className="text-xs font-medium text-gray-700 mb-2 block">
+                        Loại chỉ đường
+                      </Label>
+                      <Select value={directionModeType} onValueChange={onDirectionModeTypeChange}>
+                        <SelectTrigger className="w-full h-8 text-xs">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="route"><LineSquiggle />Đường đi thực tế</SelectItem>
+                          <SelectItem value="straightline"><ChevronsLeftRightEllipsis /> Đường chim bay</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  )}
+
+                  {/* Distance Information Display */}
+                  {directionMode && distanceInfo && (
+                    <div className="p-2 bg-green-50 rounded-lg border border-green-100">
+                      <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 flex items-center justify-center bg-green-100 rounded-full">
+                          <span className="text-xs">📏</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-xs font-medium text-green-800">
+                            {distanceInfo.type === 'route' ? 'Khoảng cách đường đi' : 'Khoảng cách đường chim bay'}
+                          </p>
+                          <p className="text-sm font-semibold text-green-900">
+                            {(distanceInfo.distance / 1000).toFixed(2)} km
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -9,6 +9,7 @@ interface WardLabelsOverlayProps {
   visible: boolean;
   zoomLevel: number;
   zoomThreshold: number;
+  directionMode?: boolean;
 }
 
 interface PolygonCentroid {
@@ -21,7 +22,8 @@ export default function WardLabelsOverlay({
   polygons,
   visible,
   zoomLevel,
-  zoomThreshold
+  zoomThreshold,
+  directionMode = false
 }: WardLabelsOverlayProps) {
   const isMobile = useIsMobile();
   const map = useMap();
@@ -216,7 +218,7 @@ export default function WardLabelsOverlay({
               flex-direction: column;
               max-width: 160px;
               min-width: 40px;
-              opacity: 0.9;
+              opacity: ${directionMode ? '0.3' : '0.9'};
               transform-origin: center center;
               text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white;
             }
@@ -391,7 +393,7 @@ export default function WardLabelsOverlay({
       });
       overlaysRef.current = [];
     };
-  }, [map, polygons, visible, zoomLevel, zoomThreshold, createCentroids, getFilteredPolygons, isMobile]);
+  }, [map, polygons, visible, zoomLevel, zoomThreshold, createCentroids, getFilteredPolygons, isMobile, directionMode]);
 
   // Add an early warning if somehow rendered below the proper threshold
   useEffect(() => {

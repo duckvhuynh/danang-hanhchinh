@@ -21,6 +21,7 @@ interface PolygonOverlayProps {
   interactive?: boolean; // New prop to control if the polygon is clickable and hoverable
   zoomThreshold?: number; // Threshold below which the ward is unselected
   neutralMode?: boolean; // New prop to control neutral color mode
+  directionMode?: boolean; // New prop to dim polygons when direction mode is active
 }
 
 // Selected polygon colors (gold/yellow)
@@ -36,7 +37,7 @@ const NEUTRAL_COLORS = {
 };
 
 export function PolygonOverlay(
-  { polygons, visible, selectedPolygon, onPolygonClick, onUnselectWard, interactive = true, zoomThreshold = 9.5, neutralMode = false }: PolygonOverlayProps
+  { polygons, visible, selectedPolygon, onPolygonClick, onUnselectWard, interactive = true, zoomThreshold = 9.5, neutralMode = false, directionMode = false }: PolygonOverlayProps
 ) {
   const map = useMap();
   const isMobile = useIsMobile();
@@ -197,19 +198,19 @@ export function PolygonOverlay(
         if (isSelected) {
           strokeColor = SELECTED_COLORS.stroke;
           fillColor = SELECTED_COLORS.fill;
-          fillOpacity = 0.4;
-          strokeOpacity = 0.8;
+          fillOpacity = directionMode ? 0.2 : 0.4; // Dimmed when direction mode is on
+          strokeOpacity = directionMode ? 0.4 : 0.8;
         } else if (neutralMode) {
           strokeColor = NEUTRAL_COLORS.stroke;
           fillColor = NEUTRAL_COLORS.fill;
-          fillOpacity = 0.08; // Lower opacity for neutral mode
-          strokeOpacity = 0.5; // Lower stroke opacity for neutral mode
+          fillOpacity = directionMode ? 0.03 : 0.08; // Much dimmer for neutral mode when direction mode is on
+          strokeOpacity = directionMode ? 0.2 : 0.5;
         } else {
           const districtColors = getWardColor(polygonData.ward);
           strokeColor = districtColors.stroke;
           fillColor = districtColors.fill;
-          fillOpacity = 0.12;
-          strokeOpacity = 0.8;
+          fillOpacity = directionMode ? 0.04 : 0.12; // Dimmed when direction mode is on
+          strokeOpacity = directionMode ? 0.3 : 0.8;
         }
         
         const strokeWeight = isSelected ? 2.5 : 1.5;
@@ -342,7 +343,7 @@ export function PolygonOverlay(
       setHoveredWard(null);
       setOverlayPosition(null);
     };
-  }, [map, polygons, visible, selectedPolygon, onPolygonClick, interactive, isMobile, neutralMode]);
+  }, [map, polygons, visible, selectedPolygon, onPolygonClick, interactive, isMobile, neutralMode, directionMode]);
 
   return (
     <>
