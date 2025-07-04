@@ -1,9 +1,10 @@
 import { AdvancedMarker, Pin, InfoWindow } from "@vis.gl/react-google-maps";
 import { useState } from "react";
 import { Button } from "../ui/button";
-import { MapPin, Phone, Navigation, Building2, FileText } from "lucide-react";
+import { MapPin, Phone, Navigation, Building2, FileText, Trash2, Edit } from "lucide-react";
 import { Circle } from "../geometry/circle";
 import type { AdministrativeOffice } from "../../data/administrative-offices";
+import { EditOfficeModal } from "./EditOfficeModal";
 
 interface AdministrativeOfficesProps {
     offices: AdministrativeOffice[];
@@ -15,6 +16,10 @@ interface AdministrativeOfficesProps {
     selectedEndOffice?: AdministrativeOffice | null;
     isLoadingRoute?: boolean;
     onOfficeClick?: (office: AdministrativeOffice) => void;
+    editMode?: boolean;
+    onMarkerDrag?: (office: AdministrativeOffice, newPosition: {lat: number, lng: number}) => void;
+    onMarkerDelete?: (office: AdministrativeOffice) => void;
+    onOfficeEdit?: (office: AdministrativeOffice, updates: Partial<AdministrativeOffice>) => void;
 }
 
 export function AdministrativeOffices({
@@ -26,9 +31,15 @@ export function AdministrativeOffices({
     selectedStartOffice,
     selectedEndOffice,
     isLoadingRoute = false,
-    onOfficeClick
+    onOfficeClick,
+    editMode = false,
+    onMarkerDrag,
+    onMarkerDelete,
+    onOfficeEdit
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
+    const [editingOffice, setEditingOffice] = useState<AdministrativeOffice | null>(null);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
     // Helper function to create Google Maps directions URL
     const getGoogleMapsDirectionsUrl = (lat: number, lng: number): string => {
@@ -188,6 +199,15 @@ export function AdministrativeOffices({
                         position={office.location}
                         onClick={() => handleMarkerClick(office)}
                         zIndex={appearance.zIndex}
+                        draggable={editMode}
+                        onDragEnd={(event) => {
+                            if (editMode && onMarkerDrag && event.latLng) {
+                                onMarkerDrag(office, {
+                                    lat: event.latLng.lat(),
+                                    lng: event.latLng.lng()
+                                });
+                            }
+                        }}
                     >
                         <Pin
                             background={appearance.background}
@@ -299,44 +319,97 @@ export function AdministrativeOffices({
                         </div>
 
                         {/* Action buttons */}
-                        <div className="px-4 py-3 flex gap-3">
-                            <Button
-                                size="sm"
-                                className="flex-1 bg-white"
-                                variant="outline"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    window.open(
-                                        getGoogleMapsDirectionsUrl(
-                                            selectedOffice.location.lat,
-                                            selectedOffice.location.lng
-                                        ),
-                                        '_blank'
-                                    );
-                                }}
-                            >
-                                <Navigation className="w-4 h-4 mr-1.5" />
-                                Chỉ đường
-                            </Button>
+                        <div className="px-4 py-3 flex gap-2">
+                            {/* Edit mode buttons */}
+                            {editMode && (
+                                <>
+                                    <Button
+                                        size="sm"
+                                        className="flex-1 bg-white hover:bg-blue-50 border-blue-200 hover:border-blue-300 text-blue-700"
+                                        variant="outline"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setEditingOffice(selectedOffice);
+                                            setIsEditModalOpen(true);
+                                        }}
+                                    >
+                                        <Edit className="w-4 h-4 mr-1.5" />
+                                        Sửa
+                                    </Button>
+                                    <Button
+                                        size="sm"
+                                        className="flex-1 bg-white hover:bg-red-50 border-red-200 hover:border-red-300 text-red-700"
+                                        variant="outline"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            onMarkerDelete?.(selectedOffice);
+                                            setSelectedOffice(null);
+                                        }}
+                                    >
+                                        <Trash2 className="w-4 h-4 mr-1.5" />
+                                        {selectedOffice.id.startsWith('custom-') ? 'Xóa' : 'Ẩn'}
+                                    </Button>
+                                </>
+                            )}
+                            
+                            {/* Regular action buttons (only show when not in edit mode) */}
+                            {!editMode && (
+                                <>
+                                    <Button
+                                        size="sm"
+                                        className="flex-1 bg-white"
+                                        variant="outline"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            window.open(
+                                                getGoogleMapsDirectionsUrl(
+                                                    selectedOffice.location.lat,
+                                                    selectedOffice.location.lng
+                                                ),
+                                                '_blank'
+                                            );
+                                        }}
+                                    >
+                                        <Navigation className="w-4 h-4 mr-1.5" />
+                                        Chỉ đường
+                                    </Button>
 
-                            {selectedOffice.phone && (
-                                <Button
-                                    size="sm"
-                                    className="flex-1 bg-white hover:bg-green-50 border-green-200 hover:border-green-300 text-green-700"
-                                    variant="outline"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        window.location.href = `tel:${selectedOffice.phone}`;
-                                    }}
-                                >
-                                    <Phone className="w-4 h-4 mr-1.5" />
-                                    Gọi điện
-                                </Button>
+                                    {selectedOffice.phone && (
+                                        <Button
+                                            size="sm"
+                                            className="flex-1 bg-white hover:bg-green-50 border-green-200 hover:border-green-300 text-green-700"
+                                            variant="outline"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                window.location.href = `tel:${selectedOffice.phone}`;
+                                            }}
+                                        >
+                                            <Phone className="w-4 h-4 mr-1.5" />
+                                            Gọi điện
+                                        </Button>
+                                    )}
+                                </>
                             )}
                         </div>
                     </div>
                 </InfoWindow>
             )}
+
+            {/* Edit Office Modal */}
+            <EditOfficeModal
+                office={editingOffice}
+                isOpen={isEditModalOpen}
+                onClose={() => {
+                    setIsEditModalOpen(false);
+                    setEditingOffice(null);
+                }}
+                onSave={(office: AdministrativeOffice, updates: Partial<AdministrativeOffice>) => {
+                    onOfficeEdit?.(office, updates);
+                    setIsEditModalOpen(false);
+                    setEditingOffice(null);
+                    setSelectedOffice(null);
+                }}
+            />
         </>
     );
 }

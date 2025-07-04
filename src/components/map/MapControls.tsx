@@ -16,7 +16,8 @@ import {
   EyeOff,
   Navigation,
   LineSquiggle,
-  ChevronsLeftRightEllipsis
+  ChevronsLeftRightEllipsis,
+  Edit3
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -55,6 +56,11 @@ interface MapControlsProps {
   directionModeType?: 'route' | 'straightline';
   onDirectionModeTypeChange?: (type: 'route' | 'straightline') => void;
   distanceInfo?: {distance: number, type: 'route' | 'straightline'} | null;
+  // Edit mode
+  editMode?: boolean;
+  onToggleEditMode?: (enabled: boolean) => void;
+  selectedLayerForAdd?: 'A' | 'B' | 'C';
+  onSelectedLayerForAddChange?: (layer: 'A' | 'B' | 'C') => void;
 }
 
 export function MapControls({
@@ -85,6 +91,10 @@ export function MapControls({
   directionModeType = 'route',
   onDirectionModeTypeChange,
   distanceInfo,
+  editMode = false,
+  onToggleEditMode,
+  selectedLayerForAdd = 'B',
+  onSelectedLayerForAddChange,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -530,6 +540,89 @@ export function MapControls({
                     </div>
                   )}
                 </div>
+
+                {/* Divider */}
+                <div className="h-px bg-gray-200 w-full"></div>
+
+                {/* Edit Mode Control */}
+                {onToggleEditMode && (
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-medium text-gray-900">Chế độ chỉnh sửa</h3>
+                    
+                    {/* Edit Mode Toggle */}
+                    <div className="p-2 bg-orange-50 rounded-lg border border-orange-100">
+                      <div className="flex items-center justify-between">
+                        <Label
+                          htmlFor="edit-mode"
+                          className="flex items-center gap-2 cursor-pointer flex-1"
+                        >
+                          <div className="w-6 h-6 flex items-center justify-center bg-orange-100 rounded-full">
+                            <Edit3 className="w-3 h-3 text-orange-700" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-orange-900">Chế độ chỉnh sửa</p>
+                            <p className="text-xs text-orange-700">Thêm, sửa, xóa trụ sở</p>
+                          </div>
+                        </Label>
+                        <Switch
+                          id="edit-mode"
+                          checked={editMode}
+                          onCheckedChange={onToggleEditMode}
+                          className="data-[state=checked]:bg-orange-600"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Layer Selection for Adding New Offices */}
+                    {editMode && onSelectedLayerForAddChange && (
+                      <div className="p-2 bg-gray-50 rounded-lg border border-gray-100">
+                        <Label className="text-xs font-medium text-gray-700 mb-2 block">
+                          Lớp để thêm trụ sở mới
+                        </Label>
+                        <Select value={selectedLayerForAdd} onValueChange={onSelectedLayerForAddChange}>
+                          <SelectTrigger className="w-full h-8 text-xs">
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="A">
+                              <div className="flex items-center gap-2">
+                                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <span>Lớp A - Quận/Huyện cũ</span>
+                              </div>
+                            </SelectItem>
+                            <SelectItem value="B">
+                              <div className="flex items-center gap-2">
+                                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <span>Lớp B - Phường/Xã hiện tại</span>
+                              </div>
+                            </SelectItem>
+                            <SelectItem value="C">
+                              <div className="flex items-center gap-2">
+                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <span>Lớp C - Phường/Xã cũ</span>
+                              </div>
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    )}
+
+                    {/* Edit Mode Instructions */}
+                    {editMode && (
+                      <div className="p-2 bg-blue-50 rounded-lg border border-blue-100">
+                        <div className="space-y-1">
+                          <p className="text-xs font-medium text-blue-800">Hướng dẫn sử dụng:</p>
+                          <ul className="text-xs text-blue-700 space-y-0.5 pl-2">
+                            <li>• <strong>Thêm mới:</strong> Click vào bản đồ để thêm trụ sở</li>
+                            <li>• <strong>Di chuyển:</strong> Kéo thả marker để di chuyển</li>
+                            <li>• <strong>Xóa:</strong> Click vào marker và chọn nút xóa</li>
+                            <li>• <strong>Chỉnh sửa:</strong> Click vào marker để sửa thông tin</li>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>

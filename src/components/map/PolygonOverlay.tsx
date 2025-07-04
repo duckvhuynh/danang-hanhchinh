@@ -17,11 +17,13 @@ interface PolygonOverlayProps {
   visible: boolean;
   selectedPolygon?: PolygonData | null;
   onPolygonClick?: (polygon: PolygonData) => void;
+  onPolygonClickInEditMode?: (event: google.maps.PolyMouseEvent) => void; // New prop for edit mode polygon clicks
   onUnselectWard?: () => void; // New prop to unselect the current ward
   interactive?: boolean; // New prop to control if the polygon is clickable and hoverable
   zoomThreshold?: number; // Threshold below which the ward is unselected
   neutralMode?: boolean; // New prop to control neutral color mode
   directionMode?: boolean; // New prop to dim polygons when direction mode is active
+  editMode?: boolean; // New prop to enable edit mode behavior for polygon clicks
 }
 
 // Selected polygon colors (gold/yellow)
@@ -37,7 +39,7 @@ const NEUTRAL_COLORS = {
 };
 
 export function PolygonOverlay(
-  { polygons, visible, selectedPolygon, onPolygonClick, onUnselectWard, interactive = true, zoomThreshold = 9.5, neutralMode = false, directionMode = false }: PolygonOverlayProps
+  { polygons, visible, selectedPolygon, onPolygonClick, onPolygonClickInEditMode, onUnselectWard, interactive = true, zoomThreshold = 9.5, neutralMode = false, directionMode = false, editMode = false }: PolygonOverlayProps
 ) {
   const map = useMap();
   const isMobile = useIsMobile();
@@ -235,14 +237,18 @@ export function PolygonOverlay(
         // Only add event listeners if interactive
         if (interactive) {
           // Add click listener
-          polygon.addListener("click", () => {
-            if (onPolygonClick) {
+          polygon.addListener("click", (event: google.maps.PolyMouseEvent) => {
+            if (editMode && onPolygonClickInEditMode) {
+              // In edit mode, forward the click event for marker addition
+              onPolygonClickInEditMode(event);
+            } else if (!editMode && onPolygonClick) {
+              // In normal mode, handle polygon selection
               onPolygonClick(polygonData);
             }
           });
 
-          // Add hover effects (disabled on mobile)
-          if (!isMobile) {
+          // Add hover effects (disabled on mobile and in edit mode)
+          if (!isMobile && !editMode) {
             polygon.addListener("mouseover", (event: google.maps.PolyMouseEvent) => {
               // Highlight all polygons for this ward
               const allWardPolygons = wardPolygonMap.get(polygonData.ward) || [];
@@ -343,7 +349,7 @@ export function PolygonOverlay(
       setHoveredWard(null);
       setOverlayPosition(null);
     };
-  }, [map, polygons, visible, selectedPolygon, onPolygonClick, interactive, isMobile, neutralMode, directionMode]);
+  }, [map, polygons, visible, selectedPolygon, onPolygonClick, onPolygonClickInEditMode, interactive, isMobile, neutralMode, directionMode, editMode]);
 
   return (
     <>

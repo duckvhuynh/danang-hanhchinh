@@ -27,6 +27,15 @@ import {
   getOfficesByLayer, 
   type AdministrativeOffice 
 } from "../data/administrative-offices";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogFooter, 
+  DialogHeader, 
+  DialogTitle 
+} from "./ui/dialog";
+import { Button } from "./ui/button";
 
 // Da Nang coordinates
 const DA_NANG_CENTER = { lat: 15.733009, lng: 108.060244 };
@@ -71,6 +80,19 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [distanceInfo, setDistanceInfo] = useState<{distance: number, type: 'route' | 'straightline'} | null>(null);
   const [isLoadingRoute, setIsLoadingRoute] = useState(false);
 
+  // Edit mode state
+  const [editMode, setEditMode] = useState(false);
+  const [selectedLayerForAdd, setSelectedLayerForAdd] = useState<'A' | 'B' | 'C'>('B');
+  const [customOffices, setCustomOffices] = useState<AdministrativeOffice[]>([]);
+  const [editedOffices, setEditedOffices] = useState<Map<string, AdministrativeOffice>>(new Map());
+  const [deletedOfficeIds, setDeletedOfficeIds] = useState<Set<string>>(new Set());
+  
+  // Confirmation dialog state
+  const [deleteConfirmDialog, setDeleteConfirmDialog] = useState<{
+    isOpen: boolean;
+    office: AdministrativeOffice | null;
+  }>({ isOpen: false, office: null });
+
   // New state for zoom level and city boundary
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
   const [wholeDanangPolygon] = useState<PolygonData>(getWholeDanangPolygon());
@@ -98,8 +120,52 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     setSelectedWard(polygonData);
   }, []);
 
+  const handlePolygonClickInEditMode = useCallback((event: google.maps.PolyMouseEvent) => {
+    if (event.latLng && editMode) {
+      const newOffice: AdministrativeOffice = {
+        id: `custom-${Date.now()}`,
+        name: `Trụ sở mới ${selectedLayerForAdd}`,
+        location: {
+          lat: event.latLng.lat(),
+          lng: event.latLng.lng(),
+        },
+        address: "Địa chỉ cần cập nhật",
+        region: "Đà Nẵng",
+        layer: selectedLayerForAdd,
+        radius: selectedLayerForAdd === 'A' ? 7 : 5,
+      };
+      
+      setCustomOffices(prev => [...prev, newOffice]);
+      toast.success(`Đã thêm trụ sở lớp ${selectedLayerForAdd}`, {
+        description: "Có thể kéo thả để di chuyển hoặc xóa trong chế độ chỉnh sửa"
+      });
+    }
+  }, [editMode, selectedLayerForAdd]);
+
   const handleMapClick = useCallback((event: MapMouseEvent) => {
     if (event.detail.latLng) {
+      // Edit mode: Add new marker
+      if (editMode) {
+        const newOffice: AdministrativeOffice = {
+          id: `custom-${Date.now()}`,
+          name: `Trụ sở mới ${selectedLayerForAdd}`,
+          location: {
+            lat: event.detail.latLng.lat,
+            lng: event.detail.latLng.lng,
+          },
+          address: "Địa chỉ cần cập nhật",
+          region: "Đà Nẵng",
+          layer: selectedLayerForAdd,
+          radius: selectedLayerForAdd === 'A' ? 7 : 5,
+        };
+        
+        setCustomOffices(prev => [...prev, newOffice]);
+        toast.success(`Đã thêm trụ sở lớp ${selectedLayerForAdd}`, {
+          description: "Có thể kéo thả để di chuyển hoặc xóa trong chế độ chỉnh sửa"
+        });
+        return;
+      }
+
       // Only process polygon selection when zoom level is at or above threshold
       // This prevents selecting administrative divisions when viewing the whole city
       if (zoomLevel >= ZOOM_THRESHOLD) {
@@ -116,7 +182,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
         }
       }
     }
-  }, [zoomLevel]);
+  }, [zoomLevel, editMode, selectedLayerForAdd]);
 
   const handleGetUserLocation = () => {
     if (!navigator.geolocation) {
@@ -209,29 +275,57 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     const visibleOffices: AdministrativeOffice[] = [];
     
     if (showLayerA) {
-      const layerAOffices = getOfficesByLayer('A').map(office => ({
-        ...office,
-        radius: layerARadius
-      }));
+      const layerAOffices = getOfficesByLayer('A')
+        .filter(office => !deletedOfficeIds.has(office.id)) // Filter out deleted offices
+        .map(office => {
+          // Check if this office has been edited
+          const editedOffice = editedOffices.get(office.id);
+          return editedOffice || {
+            ...office,
+            radius: layerARadius
+          };
+        });
       visibleOffices.push(...layerAOffices);
     }
     if (showLayerB) {
-      const layerBOffices = getOfficesByLayer('B').map(office => ({
-        ...office,
-        radius: layerBRadius
-      }));
+      const layerBOffices = getOfficesByLayer('B')
+        .filter(office => !deletedOfficeIds.has(office.id)) // Filter out deleted offices
+        .map(office => {
+          // Check if this office has been edited
+          const editedOffice = editedOffices.get(office.id);
+          return editedOffice || {
+            ...office,
+            radius: layerBRadius
+          };
+        });
       visibleOffices.push(...layerBOffices);
     }
     if (showLayerC) {
-      const layerCOffices = getOfficesByLayer('C').map(office => ({
-        ...office,
-        radius: layerCRadius
-      }));
+      const layerCOffices = getOfficesByLayer('C')
+        .filter(office => !deletedOfficeIds.has(office.id)) // Filter out deleted offices
+        .map(office => {
+          // Check if this office has been edited
+          const editedOffice = editedOffices.get(office.id);
+          return editedOffice || {
+            ...office,
+            radius: layerCRadius
+          };
+        });
       visibleOffices.push(...layerCOffices);
     }
     
+    // Add custom offices based on visible layers
+    const visibleCustomOffices = customOffices.filter(office => {
+      if (office.layer === 'A' && showLayerA) return true;
+      if (office.layer === 'B' && showLayerB) return true;
+      if (office.layer === 'C' && showLayerC) return true;
+      return false;
+    });
+    
+    visibleOffices.push(...visibleCustomOffices);
+    
     return visibleOffices;
-  }, [showLayerA, showLayerB, showLayerC, layerARadius, layerBRadius, layerCRadius]);
+  }, [showLayerA, showLayerB, showLayerC, layerARadius, layerBRadius, layerCRadius, customOffices, editedOffices, deletedOfficeIds]);
 
   // Direction mode functions
   
@@ -339,6 +433,89 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     }
   }, [directionMode, selectedStartOffice, selectedEndOffice, directionModeType, fetchRoute, calculateStraightLine]);
 
+  // Edit mode functions
+  const handleMarkerDrag = useCallback((office: AdministrativeOffice, newPosition: {lat: number, lng: number}) => {
+    if (!editMode) return;
+
+    const updatedOffice = {
+      ...office,
+      location: newPosition,
+    };
+
+    // Check if it's a custom office or original office
+    if (office.id.startsWith('custom-')) {
+      setCustomOffices(prev => prev.map(o => o.id === office.id ? updatedOffice : o));
+    } else {
+      setEditedOffices(prev => new Map(prev).set(office.id, updatedOffice));
+    }
+
+    toast.success("Đã di chuyển trụ sở", {
+      description: `${office.name} đã được di chuyển đến vị trí mới`
+    });
+  }, [editMode]);
+
+  const handleMarkerDelete = useCallback((office: AdministrativeOffice) => {
+    if (!editMode) return;
+
+    // Check if it's a custom office or original office
+    if (office.id.startsWith('custom-')) {
+      // Custom offices can be deleted immediately
+      setCustomOffices(prev => prev.filter(o => o.id !== office.id));
+      toast.success("Đã xóa trụ sở tùy chỉnh", {
+        description: `${office.name} đã được xóa`
+      });
+    } else {
+      // Original offices require confirmation
+      setDeleteConfirmDialog({
+        isOpen: true,
+        office: office
+      });
+    }
+  }, [editMode]);
+
+  // Handle confirmed deletion of original office
+  const handleConfirmDeleteOriginalOffice = useCallback((office: AdministrativeOffice) => {
+    setDeletedOfficeIds(prev => new Set(prev).add(office.id));
+    setDeleteConfirmDialog({ isOpen: false, office: null });
+    
+    toast.success("Đã ẩn trụ sở gốc", {
+      description: `${office.name} đã được ẩn khỏi bản đồ`
+    });
+  }, []);
+
+  // Handle cancel deletion
+  const handleCancelDelete = useCallback(() => {
+    setDeleteConfirmDialog({ isOpen: false, office: null });
+  }, []);
+
+  const handleOfficeEdit = useCallback((office: AdministrativeOffice, updates: Partial<AdministrativeOffice>) => {
+    if (!editMode) return;
+
+    const updatedOffice = { ...office, ...updates };
+
+    // Check if it's a custom office or original office
+    if (office.id.startsWith('custom-')) {
+      setCustomOffices(prev => prev.map(o => o.id === office.id ? updatedOffice : o));
+    } else {
+      setEditedOffices(prev => new Map(prev).set(office.id, updatedOffice));
+    }
+
+    toast.success("Đã cập nhật thông tin trụ sở", {
+      description: `Thông tin ${office.name} đã được cập nhật`
+    });
+  }, [editMode]);
+
+  // Clear edit mode selections when edit mode is disabled
+  useEffect(() => {
+    if (!editMode) {
+      // Restore deleted offices when exiting edit mode
+      setDeletedOfficeIds(new Set());
+      // Optionally clear custom offices or keep them
+      // setCustomOffices([]);
+      // setEditedOffices(new Map());
+    }
+  }, [editMode]);
+
   // Recalculate when direction mode type changes (if both offices are selected)
   useEffect(() => {
     if (directionMode && selectedStartOffice && selectedEndOffice) {
@@ -415,11 +592,13 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                     visible={showPolygons}
                     selectedPolygon={selectedWard}
                     onPolygonClick={handlePolygonClick}
+                    onPolygonClickInEditMode={handlePolygonClickInEditMode}
                     onUnselectWard={clearSelectedWard}
                     interactive={false} // Make the whole city polygon non-interactive
                     zoomThreshold={ZOOM_THRESHOLD}
                     neutralMode={neutralPolygonMode}
                     directionMode={directionMode}
+                    editMode={editMode}
                   />
                 )}
 
@@ -430,10 +609,12 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                     visible={showPolygons}
                     selectedPolygon={selectedWard}
                     onPolygonClick={handlePolygonClick}
+                    onPolygonClickInEditMode={handlePolygonClickInEditMode}
                     onUnselectWard={clearSelectedWard}
                     zoomThreshold={ZOOM_THRESHOLD}
                     neutralMode={neutralPolygonMode}
                     directionMode={directionMode}
+                    editMode={editMode}
                   />
                 )}
 
@@ -465,6 +646,10 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   selectedEndOffice={selectedEndOffice}
                   isLoadingRoute={isLoadingRoute}
                   onOfficeClick={handleOfficeClick}
+                  editMode={editMode}
+                  onMarkerDrag={handleMarkerDrag}
+                  onMarkerDelete={handleMarkerDelete}
+                  onOfficeEdit={handleOfficeEdit}
                 />
 
                 {/* User location marker */}
@@ -557,6 +742,10 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 directionModeType={directionModeType}
                 onDirectionModeTypeChange={setDirectionModeType}
                 distanceInfo={distanceInfo}
+                editMode={editMode}
+                onToggleEditMode={setEditMode}
+                selectedLayerForAdd={selectedLayerForAdd}
+                onSelectedLayerForAddChange={setSelectedLayerForAdd}
               />
 
               {/* Selected Ward Info Card/Drawer */}
@@ -569,6 +758,34 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
           </div>
         </SidebarInset>
       </div>
+
+      {/* Delete Confirmation Dialog */}
+      <Dialog open={deleteConfirmDialog.isOpen} onOpenChange={(open) => !open && handleCancelDelete()}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Xác nhận xóa trụ sở</DialogTitle>
+            <DialogDescription>
+              Bạn có chắc chắn muốn ẩn trụ sở "{deleteConfirmDialog.office?.name}" khỏi bản đồ không?
+              <br /><br />
+              <strong>Lưu ý:</strong> Hành động này sẽ ẩn trụ sở gốc khỏi bản đồ. Bạn có thể khôi phục lại bằng cách tắt và bật lại chế độ chỉnh sửa.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-2 sm:gap-0">
+            <Button
+              variant="outline"
+              onClick={handleCancelDelete}
+            >
+              Hủy
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={() => deleteConfirmDialog.office && handleConfirmDeleteOriginalOffice(deleteConfirmDialog.office)}
+            >
+              Ẩn trụ sở
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </SidebarProvider>
   );
 }
