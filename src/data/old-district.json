@@ -84,8 +84,8 @@
       "lng": 108.21726366530719
     },
     "address": "Thôn Dương Hòa, xã Trà Sơn, huyện Bắc Trà My",
-    "procedures_2024": 636000,
-    "procedures_6months_2025": 401000
+    "procedures_2024": 636,
+    "procedures_6months_2025": 401
   },
   {
     "region": "Quảng Nam",
@@ -128,8 +128,8 @@
       "lng": 107.49284815318018
     },
     "address": "Thôn Agrồng, xã Atiêng, huyện Tây Giang",
-    "procedures_2024": 264000,
-    "procedures_6months_2025": 213000
+    "procedures_2024": 264,
+    "procedures_6months_2025": 213
   },
   {
     "region": "Quảng Nam",
@@ -150,8 +150,8 @@
       "lng": 107.84095926054576
     },
     "address": "khối phố Mực, Thị trấn Thạnh Mỹ, Huyện Nam Giang",
-    "procedures_2024": 395000,
-    "procedures_6months_2025": 273000
+    "procedures_2024": 395,
+    "procedures_6months_2025": 273
   },
   {
     "region": "Quảng Nam",
@@ -162,7 +162,7 @@
     },
     "address": "Hồ Chí Minh, TT. Khâm Đức, Phước Sơn,",
     "procedures_2024": 1061,
-    "procedures_6months_2025": 155000
+    "procedures_6months_2025": 155
   },
   {
     "region": "Quảng Nam",
@@ -184,7 +184,7 @@
     },
     "address": "Khối phố An Trung- thị trấn Tân An- huyện Hiệp Đức",
     "procedures_2024": 1696,
-    "procedures_6months_2025": 876000
+    "procedures_6months_2025": 876
   },
   {
     "region": "Quảng Nam",
@@ -238,8 +238,8 @@
       "lng": 107.64791350678817
     },
     "address": "Thị trấn PRao, Thị trấn P Rao, Huyện Đông Giang",
-    "procedures_2024": 779000,
-    "procedures_6months_2025": 240000
+    "procedures_2024": 779,
+    "procedures_6months_2025": 240
   },
   {
     "region": "Quảng Nam",
