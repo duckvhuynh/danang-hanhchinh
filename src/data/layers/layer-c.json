@@ -367,8 +367,8 @@
     "address": "Thôn 6, Xã Quế Thuận, Quế Sơn, Quảng Nam",
     "phone": "0359365197",
     "location": {
-      "lat": 1569535379.0,
-      "lng": 10825873232.0
+      "lat": 15.69535379,
+      "lng": 108.25873232
     },
     "postid": "563190",
     "province": "Quảng Nam"
@@ -378,8 +378,8 @@
     "address": "Thôn Tân Phong, Xã Quế Phong, Quế Sơn, Quảng Nam",
     "phone": "0944343965",
     "location": {
-      "lat": 156560997.0,
-      "lng": 1081775423.0
+      "lat": 15.6560997,
+      "lng": 108.1775423
     },
     "postid": "563200",
     "province": "Quảng Nam"
@@ -389,8 +389,8 @@
     "address": "Thôn 1 (thôn Khánh Bình), Xã Quế Ninh, Nông Sơn, Quảng Nam",
     "phone": "02353654151",
     "location": {
-      "lat": 1569495605.0,
-      "lng": 10803059942.0
+      "lat": 15.69495605,
+      "lng": 108.03059942
     },
     "postid": "563220",
     "province": "Quảng Nam"
@@ -400,8 +400,8 @@
     "address": "Thôn Phú Gia 1, Xã Quế Phước, Nông Sơn, Quảng Nam",
     "phone": "02353654152",
     "location": {
-      "lat": 1566441778.0,
-      "lng": 10800010915.0
+      "lat": 15.66441778,
+      "lng": 108.00010915
     },
     "postid": "563230",
     "province": "Quảng Nam"
@@ -411,8 +411,8 @@
     "address": "Thôn Thắng Đông 1, Xã Quế An, Quế Sơn, Quảng Nam",
     "phone": "0935531849",
     "location": {
-      "lat": 1564853574.0,
-      "lng": 1082091199.0
+      "lat": 15.64853574,
+      "lng": 108.2091199
     },
     "postid": "563250",
     "province": "Quảng Nam"
@@ -422,8 +422,8 @@
     "address": "Thôn Đại Lộc, Xã Quế Minh, Quế Sơn, Quảng Nam",
     "phone": "0961087456",
     "location": {
-      "lat": 1564952636.0,
-      "lng": 10823363219.0
+      "lat": 15.64952636,
+      "lng": 108.23363219
     },
     "postid": "563270",
     "province": "Quảng Nam"
@@ -433,8 +433,8 @@
     "address": "Khu phố An Bắc, Thị Trấn Tân An, Hiệp Đức, Quảng Nam",
     "phone": "02353883210",
     "location": {
-      "lat": 1558263437.0,
-      "lng": 10811504982.0
+      "lat": 15.58263437,
+      "lng": 108.11504982
     },
     "postid": "563400",
     "province": "Quảng Nam"
@@ -444,8 +444,8 @@
     "address": "Thôn 2, Xã Bình Sơn, Hiệp Đức, Quảng Nam",
     "phone": "02353895918",
     "location": {
-      "lat": 1556512975.0,
-      "lng": 10820170592.0
+      "lat": 15.56512975,
+      "lng": 108.20170592
     },
     "postid": "563410",
     "province": "Quảng Nam"
@@ -455,8 +455,8 @@
     "address": "Thôn Nhì Đông, Xã Bình Lâm, Hiệp Đức, Quảng Nam",
     "phone": "02353895289",
     "location": {
-      "lat": 1561768072.0,
-      "lng": 1082210803.0
+      "lat": 15.61768072,
+      "lng": 108.2210803
     },
     "postid": "563420",
     "province": "Quảng Nam"
@@ -466,8 +466,8 @@
     "address": "Thôn Hương Phố, Xã Bình Lâm, Hiệp Đức, Quảng Nam",
     "phone": "02353895055",
     "location": {
-      "lat": 156003142.0,
-      "lng": 10823337972.0
+      "lat": 15.6003142,
+      "lng": 108.23337972
     },
     "postid": "563421",
     "province": "Quảng Nam"
@@ -477,8 +477,8 @@
     "address": "Thôn Phú Bình, Xã Quế Thọ, Hiệp Đức, Quảng Nam",
     "phone": "0913667857",
     "location": {
-      "lat": 1560703104.0,
-      "lng": 10815468408.0
+      "lat": 15.60703104,
+      "lng": 108.15468408
     },
     "postid": "563440",
     "province": "Quảng Nam"
@@ -488,8 +488,8 @@
     "address": "Thôn 2, Xã Hiệp Thuận, Hiệp Đức, Quảng Nam",
     "phone": "0906488635",
     "location": {
-      "lat": 155867017.0,
-      "lng": 10810089613.0
+      "lat": 15.5867017,
+      "lng": 108.10089613
     },
     "postid": "563450",
     "province": "Quảng Nam"
@@ -499,8 +499,8 @@
     "address": "Thôn 3, Xã Hiệp Hoà, Hiệp Đức, Quảng Nam",
     "phone": "02353883111",
     "location": {
-      "lat": 1559267751.0,
-      "lng": 10802819419.0
+      "lat": 15.59267751,
+      "lng": 108.02819419
     },
     "postid": "563460",
     "province": "Quảng Nam"
@@ -510,8 +510,8 @@
     "address": "Thôn 2, Xã Quế Bình, Hiệp Đức, Quảng Nam",
     "phone": "0253883109",
     "location": {
-      "lat": 1555155871.0,
-      "lng": 10807763985.0
+      "lat": 15.55155871,
+      "lng": 108.07763985
     },
     "postid": "563470",
     "province": "Quảng Nam"
@@ -521,8 +521,8 @@
     "address": "Thôn 2, Xã Quế Lưu, Hiệp Đức, Quảng Nam",
     "phone": "02353883030",
     "location": {
-      "lat": 1555852619.0,
-      "lng": 10811103771.0
+      "lat": 15.55852619,
+      "lng": 108.11103771
     },
     "postid": "563480",
     "province": "Quảng Nam"
@@ -532,8 +532,8 @@
     "address": "Thôn 3, Xã Phước Gia, Hiệp Đức, Quảng Nam",
     "phone": "02353684700",
     "location": {
-      "lat": 1546304291.0,
-      "lng": 10814377662.0
+      "lat": 15.46304291,
+      "lng": 108.14377662
     },
     "postid": "563490",
     "province": "Quảng Nam"
@@ -543,8 +543,8 @@
     "address": "Thôn 5, Xã Phước Trà, Hiệp Đức, Quảng Nam",
     "phone": "02353683505",
     "location": {
-      "lat": 1545742813.0,
-      "lng": 10805989142.0
+      "lat": 15.45742813,
+      "lng": 108.05989142
     },
     "postid": "563500",
     "province": "Quảng Nam"
@@ -554,8 +554,8 @@
     "address": "Thôn 2, Xã Thăng Phước, Hiệp Đức, Quảng Nam",
     "phone": "02353883033",
     "location": {
-      "lat": 1556910375.0,
-      "lng": 10814984732.0
+      "lat": 15.56910375,
+      "lng": 108.14984732
     },
     "postid": "563510",
     "province": "Quảng Nam"
@@ -565,8 +565,8 @@
     "address": "Thôn 3, Xã Sông Trà, Hiệp Đức, Quảng Nam",
     "phone": "0399442268",
     "location": {
-      "lat": 1552690531.0,
-      "lng": 10804278486.0
+      "lat": 15.52690531,
+      "lng": 108.04278486
     },
     "postid": "563520",
     "province": "Quảng Nam"
@@ -576,8 +576,8 @@
     "address": "Khu phố An Bắc, Thị Trấn Tân An, Hiệp Đức, Quảng Nam",
     "phone": "02353883210",
     "location": {
-      "lat": 1558264898.0,
-      "lng": 10811502137.0
+      "lat": 15.58264898,
+      "lng": 108.11502137
     },
     "postid": "563530",
     "province": "Quảng Nam"
@@ -587,8 +587,8 @@
     "address": "Khối Đồng Bàu, Thị Trấn Trà My, Bắc Trà My, Quảng Nam",
     "phone": "02353882336",
     "location": {
-      "lat": 153366138.0,
-      "lng": 1082241293.0
+      "lat": 15.3366138,
+      "lng": 108.2241293
     },
     "postid": "563600",
     "province": "Quảng Nam"
@@ -598,8 +598,8 @@
     "address": "Tổ dân phố Trung Thị, Thị Trấn Trà My, Bắc Trà My, Quảng Nam",
     "phone": "02353879999",
     "location": {
-      "lat": 1533972161.0,
-      "lng": 10822202072.0
+      "lat": 15.33972161,
+      "lng": 108.22202072
     },
     "postid": "563610",
     "province": "Quảng Nam"
@@ -609,8 +609,8 @@
     "address": "Thôn 1, Xã Trà Giang, Bắc Trà My, Quảng Nam",
     "phone": "0339232712",
     "location": {
-      "lat": 1533313703.0,
-      "lng": 10823798536.0
+      "lat": 15.33313703,
+      "lng": 108.23798536
     },
     "postid": "563626",
     "province": "Quảng Nam"
@@ -620,8 +620,8 @@
     "address": "Thôn 2, Xã Trà Nú, Bắc Trà My, Quảng Nam",
     "phone": "01697074446",
     "location": {
-      "lat": 153562516.0,
-      "lng": 10832416831.0
+      "lat": 15.3562516,
+      "lng": 108.32416831
     },
     "postid": "563634",
     "province": "Quảng Nam"
@@ -631,8 +631,8 @@
     "address": "Thôn 2, Xã Trà Kót, Bắc Trà My, Quảng Nam",
     "phone": "02353879676",
     "location": {
-      "lat": 1535652034.0,
-      "lng": 10838280623.0
+      "lat": 15.35652034,
+      "lng": 108.38280623
     },
     "postid": "563644",
     "province": "Quảng Nam"
@@ -642,8 +642,8 @@
     "address": "Thôn 7, Xã Trà Đông, Bắc Trà My, Quảng Nam",
     "phone": "0978663835",
     "location": {
-      "lat": 1537482085.0,
-      "lng": 10832587547.0
+      "lat": 15.37482085,
+      "lng": 108.32587547
     },
     "postid": "563650",
     "province": "Quảng Nam"
@@ -653,8 +653,8 @@
     "address": "Thôn 2, Xã Trà Dương, Bắc Trà My, Quảng Nam",
     "phone": "01692335786",
     "location": {
-      "lat": 1536932652.0,
-      "lng": 10825053036.0
+      "lat": 15.36932652,
+      "lng": 108.25053036
     },
     "postid": "563660",
     "province": "Quảng Nam"
@@ -664,8 +664,8 @@
     "address": "Thôn 1, Xã Trà Tân, Bắc Trà My, Quảng Nam",
     "phone": "01642110108",
     "location": {
-      "lat": 1533158499.0,
-      "lng": 10816520034.0
+      "lat": 15.33158499,
+      "lng": 108.16520034
     },
     "postid": "563670",
     "province": "Quảng Nam"
@@ -675,8 +675,8 @@
     "address": "Thôn 1, Xã Trà Đốc, Bắc Trà My, Quảng Nam",
     "phone": "01693475971",
     "location": {
-      "lat": 1538784161.0,
-      "lng": 10813881397.0
+      "lat": 15.38784161,
+      "lng": 108.13881397
     },
     "postid": "563685",
     "province": "Quảng Nam"
@@ -697,8 +697,8 @@
     "address": "Thôn 4, Xã Trà Bui, Bắc Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1536632838.0,
-      "lng": 10805020585.0
+      "lat": 15.36632838,
+      "lng": 108.05020585
     },
     "postid": "563697",
     "province": "Quảng Nam"
@@ -708,8 +708,8 @@
     "address": "Thôn 1a, Xã Trà Giác, Bắc Trà My, Quảng Nam",
     "phone": "0961750646",
     "location": {
-      "lat": 1524043833.0,
-      "lng": 108180035.0
+      "lat": 15.24043833,
+      "lng": 108.180035
     },
     "postid": "563700",
     "province": "Quảng Nam"
@@ -719,8 +719,8 @@
     "address": "Thôn 1, Xã Trà Giáp, Bắc Trà My, Quảng Nam",
     "phone": "01694758589",
     "location": {
-      "lat": 1522258787.0,
-      "lng": 10825305376.0
+      "lat": 15.22258787,
+      "lng": 108.25305376
     },
     "postid": "563710",
     "province": "Quảng Nam"
@@ -730,8 +730,8 @@
     "address": "Thôn 2, Xã Trà Ka, Bắc Trà My, Quảng Nam",
     "phone": "01664163601",
     "location": {
-      "lat": 1520357947.0,
-      "lng": 10827643201.0
+      "lat": 15.20357947,
+      "lng": 108.27643201
     },
     "postid": "563720",
     "province": "Quảng Nam"
@@ -741,8 +741,8 @@
     "address": "Thôn Tân Hiệp, Xã Trà Sơn, Bắc Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 152653691343873.0,
-      "lng": 108491902553605.0
+      "lat": 15.26536913,
+      "lng": 108.49190255
     },
     "postid": "563765",
     "province": "Quảng Nam"
@@ -752,8 +752,8 @@
     "address": "Thôn Dương Hòa, Xã Trà Sơn, Bắc Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1533209074.0,
-      "lng": 10821750986.0
+      "lat": 15.33209074,
+      "lng": 108.21750986
     },
     "postid": "563769",
     "province": "Quảng Nam"
@@ -763,8 +763,8 @@
     "address": "Số 06, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
     "phone": "02353861635",
     "location": {
-      "lat": 158799436.0,
-      "lng": 10833164334.0
+      "lat": 15.8799436,
+      "lng": 108.33164334
     },
     "postid": "563800",
     "province": "Quảng Nam"
@@ -774,8 +774,8 @@
     "address": "Đường Nguyễn Duy Hiệu, Phường Sơn Phong, Hội An, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 15877982.0,
-      "lng": 108334682.0
+      "lat": 15.877982,
+      "lng": 108.334682
     },
     "postid": "563815",
     "province": "Quảng Nam"
@@ -785,8 +785,8 @@
     "address": "Khối Thanh Tây (10 tổ), Phường Cẩm Châu, Hội An, Quảng Nam",
     "phone": "02353923111",
     "location": {
-      "lat": 158896456.0,
-      "lng": 10835772345.0
+      "lat": 15.8896456,
+      "lng": 108.35772345
     },
     "postid": "563820",
     "province": "Quảng Nam"
@@ -796,8 +796,8 @@
     "address": "Số 06, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
     "phone": "02353861229",
     "location": {
-      "lat": 1588002874.0,
-      "lng": 10833188205.0
+      "lat": 15.88002874,
+      "lng": 108.33188205
     },
     "postid": "563830",
     "province": "Quảng Nam"
@@ -807,8 +807,8 @@
     "address": "Thôn 6 (6 tổ dân cư), Xã Cẩm Thanh, Hội An, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 15886578.0,
-      "lng": 108362441.0
+      "lat": 15.886578,
+      "lng": 108.362441
     },
     "postid": "563849",
     "province": "Quảng Nam"
@@ -818,8 +818,8 @@
     "address": "Khối An Tân (9 tổ), Phường Cẩm An, Hội An, Quảng Nam",
     "phone": "02353927555",
     "location": {
-      "lat": 159117872.0,
-      "lng": 10834008056.0
+      "lat": 15.9117872,
+      "lng": 108.34008056
     },
     "postid": "563860",
     "province": "Quảng Nam"
@@ -829,8 +829,8 @@
     "address": "Thôn Đồng Nà, Xã Cẩm Hà, Hội An, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 159007361074799.0,
-      "lng": 108322384361644.0
+      "lat": 15.9007361,
+      "lng": 108.32238436
     },
     "postid": "563898",
     "province": "Quảng Nam"
@@ -840,8 +840,8 @@
     "address": "Đường Trần Hưng Đạo, Phường Cẩm Phô, Hội An, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1587913611.0,
-      "lng": 10832316085.0
+      "lat": 15.87913611,
+      "lng": 108.32316085
     },
     "postid": "563959",
     "province": "Quảng Nam"
@@ -851,8 +851,8 @@
     "address": "Khối phố 8 (tổ 41-49), Phường Thanh Hà, Hội An, Quảng Nam",
     "phone": "02353922222",
     "location": {
-      "lat": 1589975328.0,
-      "lng": 10829378126.0
+      "lat": 15.89975328,
+      "lng": 108.29378126
     },
     "postid": "563981",
     "province": "Quảng Nam"
@@ -862,8 +862,8 @@
     "address": "Số 47/8, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
     "phone": "02353861405",
     "location": {
-      "lat": 1587950761.0,
-      "lng": 10832924682.0
+      "lat": 15.87950761,
+      "lng": 108.32924682
     },
     "postid": "564025",
     "province": "Quảng Nam"
@@ -873,8 +873,8 @@
     "address": "Thôn Trung Hà (tổ 9 đến 12), Xã Cẩm Kim, Hội An, Quảng Nam",
     "phone": "02353863444",
     "location": {
-      "lat": 1586380472.0,
-      "lng": 10832425654.0
+      "lat": 15.86380472,
+      "lng": 108.32425654
     },
     "postid": "564030",
     "province": "Quảng Nam"
@@ -884,8 +884,8 @@
     "address": "Khối Châu Trung (10 tổ), Phường Cẩm Nam, Hội An, Quảng Nam",
     "phone": "02353864222",
     "location": {
-      "lat": 1587256104.0,
-      "lng": 10833838761.0
+      "lat": 15.87256104,
+      "lng": 108.33838761
     },
     "postid": "564040",
     "province": "Quảng Nam"
@@ -895,8 +895,8 @@
     "address": "Thôn Cấm (tổ 1-3), Xã Tân Hiệp, Hội An, Quảng Nam",
     "phone": "0945584343",
     "location": {
-      "lat": 159593885227974.0,
-      "lng": 108504365534848.0
+      "lat": 15.95938852,
+      "lng": 108.50436553
     },
     "postid": "564050",
     "province": "Quảng Nam"
@@ -906,8 +906,8 @@
     "address": "Khối Phước Tân (7 tổ), Phường Cửa Đại, Hội An, Quảng Nam",
     "phone": "02353927066",
     "location": {
-      "lat": 158968151.0,
-      "lng": 10836497781.0
+      "lat": 15.8968151,
+      "lng": 108.36497781
     },
     "postid": "564060",
     "province": "Quảng Nam"
@@ -917,8 +917,8 @@
     "address": "Số 6, Đường Trần Hưng Đạo, Phường Minh An, Hội An, Quảng Nam",
     "phone": "02353501679",
     "location": {
-      "lat": 1588001842.0,
-      "lng": 10833173962.0
+      "lat": 15.88001842,
+      "lng": 108.33173962
     },
     "postid": "564070",
     "province": "Quảng Nam"
@@ -928,8 +928,8 @@
     "address": "Số 189, Đường Trần Nhân Tông, Thị Trấn Vĩnh Điện, Điện Bàn, Quảng Nam",
     "phone": "02353867436",
     "location": {
-      "lat": 1588914228.0,
-      "lng": 10824919998.0
+      "lat": 15.88914228,
+      "lng": 108.24919998
     },
     "postid": "564200",
     "province": "Quảng Nam"
@@ -939,8 +939,8 @@
     "address": "Thôn Thanh Chiêm 1, Xã Điện Phương, Điện Bàn, Quảng Nam",
     "phone": "02353867941",
     "location": {
-      "lat": 1586830709.0,
-      "lng": 10826306611.0
+      "lat": 15.86830709,
+      "lng": 108.26306611
     },
     "postid": "564220",
     "province": "Quảng Nam"
@@ -950,8 +950,8 @@
     "address": "Khối 3, Thị Trấn Vĩnh Điện, Điện Bàn, Quảng Nam",
     "phone": "02353868678",
     "location": {
-      "lat": 158910818502896.0,
-      "lng": 108254239716365.0
+      "lat": 15.89108185,
+      "lng": 108.25423971
     },
     "postid": "564230",
     "province": "Quảng Nam"
@@ -961,8 +961,8 @@
     "address": "Thôn 7 B, Xã Điện Nam Đông, Điện Bàn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 159002099.0,
-      "lng": 1082912766.0
+      "lat": 15.9002099,
+      "lng": 108.2912766
     },
     "postid": "564250",
     "province": "Quảng Nam"
@@ -972,8 +972,8 @@
     "address": "Thôn Hà My Trung, Xã Điện Dương, Điện Bàn, Quảng Nam",
     "phone": "0943773577",
     "location": {
-      "lat": 1592339589.0,
-      "lng": 10832154636.0
+      "lat": 15.92339589,
+      "lng": 108.32154636
     },
     "postid": "564270",
     "province": "Quảng Nam"
@@ -983,8 +983,8 @@
     "address": "Lô Hành Chính, Khu công nghiệp Điện Nam -điện Ngọc, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
     "phone": "02353843297",
     "location": {
-      "lat": 159353906.0,
-      "lng": 1082552872.0
+      "lat": 15.9353906,
+      "lng": 108.2552872
     },
     "postid": "564280",
     "province": "Quảng Nam"
@@ -994,8 +994,8 @@
     "address": "Thôn Ngọc Vinh, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
     "phone": "0235943790",
     "location": {
-      "lat": 159552275403365.0,
-      "lng": 108254919045192.0
+      "lat": 15.95522754,
+      "lng": 108.25491904
     },
     "postid": "564290",
     "province": "Quảng Nam"
@@ -1005,8 +1005,8 @@
     "address": "Lô Hành Chính, Khu công nghiệp Điện Nam -điện Ngọc, Xã Điện Ngọc, Điện Bàn, Quảng Nam",
     "phone": "02353843297",
     "location": {
-      "lat": 1593531243.0,
-      "lng": 10825532806.0
+      "lat": 15.93531243,
+      "lng": 108.25532806
     },
     "postid": "564310",
     "province": "Quảng Nam"
@@ -1016,8 +1016,8 @@
     "address": "Thôn Phong Ngũ Tây, Xã Điện Thắng Nam, Điện Bàn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1592001465.0,
-      "lng": 10822141134.0
+      "lat": 15.92001465,
+      "lng": 108.22141134
     },
     "postid": "564327",
     "province": "Quảng Nam"
@@ -1027,8 +1027,8 @@
     "address": "Xóm Bùng, Xã Điện Hoà, Điện Bàn, Quảng Nam",
     "phone": "0898221205",
     "location": {
-      "lat": 1593216164.0,
-      "lng": 10820085522.0
+      "lat": 15.93216164,
+      "lng": 108.20085522
     },
     "postid": "564350",
     "province": "Quảng Nam"
@@ -1038,8 +1038,8 @@
     "address": "Thôn Thái Sơn 1, Xã Điện Tiến, Điện Bàn, Quảng Nam",
     "phone": "0935537346",
     "location": {
-      "lat": 1592591057.0,
-      "lng": 10815782236.0
+      "lat": 15.92591057,
+      "lng": 108.15782236
     },
     "postid": "564380",
     "province": "Quảng Nam"
@@ -1049,8 +1049,8 @@
     "address": "Thôn Phong Nhất, Xã Điện An, Điện Bàn, Quảng Nam",
     "phone": "0773487247",
     "location": {
-      "lat": 159043939.0,
-      "lng": 1082316613.0
+      "lat": 15.9043939,
+      "lng": 108.2316613
     },
     "postid": "564400",
     "province": "Quảng Nam"
@@ -1060,8 +1060,8 @@
     "address": "Thôn Phong Thử 1, Xã Điện Thọ, Điện Bàn, Quảng Nam",
     "phone": "02353741403",
     "location": {
-      "lat": 1588814279.0,
-      "lng": 10818024834.0
+      "lat": 15.88814279,
+      "lng": 108.18024834
     },
     "postid": "564420",
     "province": "Quảng Nam"
@@ -1071,8 +1071,8 @@
     "address": "Thôn La Trung, Xã Điện Thọ, Điện Bàn, Quảng Nam",
     "phone": "02353741888",
     "location": {
-      "lat": 159069301.0,
-      "lng": 10818404202.0
+      "lat": 15.9069301,
+      "lng": 108.18404202
     },
     "postid": "564421",
     "province": "Quảng Nam"
@@ -1082,8 +1082,8 @@
     "address": "Thôn 10, Xã Điện Hồng, Điện Bàn, Quảng Nam",
     "phone": "0913299252",
     "location": {
-      "lat": 1588633805.0,
-      "lng": 10824968752.0
+      "lat": 15.88633805,
+      "lng": 108.24968752
     },
     "postid": "564440",
     "province": "Quảng Nam"
@@ -1093,8 +1093,8 @@
     "address": "Thôn Nhị Dinh 1, Xã Điện Phước, Điện Bàn, Quảng Nam",
     "phone": "0935985194",
     "location": {
-      "lat": 158753606.0,
-      "lng": 10820605024.0
+      "lat": 15.8753606,
+      "lng": 108.20605024
     },
     "postid": "564470",
     "province": "Quảng Nam"
@@ -1104,8 +1104,8 @@
     "address": "Thôn Bảo An Tây, Xã Điện Quang, Điện Bàn, Quảng Nam",
     "phone": "02353744999",
     "location": {
-      "lat": 158410678.0,
-      "lng": 108170492.0
+      "lat": 15.8410678,
+      "lng": 108.170492
     },
     "postid": "564490",
     "province": "Quảng Nam"
@@ -1115,8 +1115,8 @@
     "address": "Thôn Nam Hà 2, Xã Điện Trung, Điện Bàn, Quảng Nam",
     "phone": "0793542560",
     "location": {
-      "lat": 158399219.0,
-      "lng": 10820855911.0
+      "lat": 15.8399219,
+      "lng": 108.20855911
     },
     "postid": "564510",
     "province": "Quảng Nam"
@@ -1126,8 +1126,8 @@
     "address": "Thôn Tân Bình, Xã Điện Trung, Điện Bàn, Quảng Nam",
     "phone": "02353744969",
     "location": {
-      "lat": 1585857638.0,
-      "lng": 10821287869.0
+      "lat": 15.85857638,
+      "lng": 108.21287869
     },
     "postid": "564511",
     "province": "Quảng Nam"
@@ -1137,8 +1137,8 @@
     "address": "Thôn Bồng Lai, Xã Điện Minh, Điện Bàn, Quảng Nam",
     "phone": "0939152863",
     "location": {
-      "lat": 1588019843.0,
-      "lng": 10824877221.0
+      "lat": 15.88019843,
+      "lng": 108.24877221
     },
     "postid": "564530",
     "province": "Quảng Nam"
@@ -1148,8 +1148,8 @@
     "address": "Thôn Tân Thành, Xã Điện Phong, Điện Bàn, Quảng Nam",
     "phone": "0905664317",
     "location": {
-      "lat": 1585046333.0,
-      "lng": 10823852426.0
+      "lat": 15.85046333,
+      "lng": 108.23852426
     },
     "postid": "564550",
     "province": "Quảng Nam"
@@ -1159,8 +1159,8 @@
     "address": "Thôn Bồ Mưng 2, Xã Điện Thắng Bắc, Điện Bàn, Quảng Nam",
     "phone": "02353869601",
     "location": {
-      "lat": 1594330194.0,
-      "lng": 10822275313.0
+      "lat": 15.94330194,
+      "lng": 108.22275313
     },
     "postid": "564570",
     "province": "Quảng Nam"
@@ -1170,8 +1170,8 @@
     "address": "Thôn Thanh Quýt 4, Xã Điện Thắng Trung, Điện Bàn, Quảng Nam",
     "phone": "0905957121",
     "location": {
-      "lat": 1592884909.0,
-      "lng": 1082296691.0
+      "lat": 15.92884909,
+      "lng": 108.2296691
     },
     "postid": "564590",
     "province": "Quảng Nam"
@@ -1181,8 +1181,8 @@
     "address": "Thôn 4, Xã Điện Nam Trung, Điện Bàn, Quảng Nam",
     "phone": "0763740007",
     "location": {
-      "lat": 1591473248.0,
-      "lng": 10826903954.0
+      "lat": 15.91473248,
+      "lng": 108.26903954
     },
     "postid": "564610",
     "province": "Quảng Nam"
@@ -1192,8 +1192,8 @@
     "address": "Khu 2, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
     "phone": "02353765555",
     "location": {
-      "lat": 158829104.0,
-      "lng": 10811092673.0
+      "lat": 15.8829104,
+      "lng": 108.11092673
     },
     "postid": "564700",
     "province": "Quảng Nam"
@@ -1214,8 +1214,8 @@
     "address": "Khu 1, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
     "phone": "02353765255",
     "location": {
-      "lat": 1588283101.0,
-      "lng": 10811093717.0
+      "lat": 15.88283101,
+      "lng": 108.11093717
     },
     "postid": "564720",
     "province": "Quảng Nam"
@@ -1225,8 +1225,8 @@
     "address": "Khu 7, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 158827862.0,
-      "lng": 10811900638.0
+      "lat": 15.8827862,
+      "lng": 108.11900638
     },
     "postid": "564721",
     "province": "Quảng Nam"
@@ -1236,8 +1236,8 @@
     "address": "Khu 2, Thị Trấn Ái Nghĩa, Đại Lộc, Quảng Nam",
     "phone": "02353765555",
     "location": {
-      "lat": 1588279163.0,
-      "lng": 10811096027.0
+      "lat": 15.88279163,
+      "lng": 108.11096027
     },
     "postid": "564725",
     "province": "Quảng Nam"
@@ -1247,8 +1247,8 @@
     "address": "Thôn Tích Phú, Xã Đại Hiệp, Đại Lộc, Quảng Nam",
     "phone": "0936010801",
     "location": {
-      "lat": 1591797882.0,
-      "lng": 10812642811.0
+      "lat": 15.91797882,
+      "lng": 108.12642811
     },
     "postid": "564730",
     "province": "Quảng Nam"
@@ -1258,8 +1258,8 @@
     "address": "Thôn Hòa Mỹ, Xã Đại Nghĩa, Đại Lộc, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 15874930.0,
-      "lng": 108092403.0
+      "lat": 15.87493,
+      "lng": 108.092403
     },
     "postid": "564764",
     "province": "Quảng Nam"
@@ -1269,8 +1269,8 @@
     "address": "Thôn Mỹ Liên, Xã Đại Nghĩa, Đại Lộc, Quảng Nam",
     "phone": "0918684407",
     "location": {
-      "lat": 1587558592.0,
-      "lng": 10809288143.0
+      "lat": 15.87558592,
+      "lng": 108.09288143
     },
     "postid": "564765",
     "province": "Quảng Nam"
@@ -1280,8 +1280,8 @@
     "address": "Thôn Hòa Thạch, Xã Đại Quang, Đại Lộc, Quảng Nam",
     "phone": "0968682809",
     "location": {
-      "lat": 1587667832.0,
-      "lng": 10806397785.0
+      "lat": 15.87667832,
+      "lng": 108.06397785
     },
     "postid": "564770",
     "province": "Quảng Nam"
@@ -1291,8 +1291,8 @@
     "address": "Thôn Hà Nha, Xã Đại Đồng, Đại Lộc, Quảng Nam",
     "phone": "02353846108",
     "location": {
-      "lat": 158510391.0,
-      "lng": 10801386949.0
+      "lat": 15.8510391,
+      "lng": 108.01386949
     },
     "postid": "564791",
     "province": "Quảng Nam"
@@ -1302,8 +1302,8 @@
     "address": "Thôn Lộc Phước, Xã Đại Đồng, Đại Lộc, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1586371413.0,
-      "lng": 10802324822.0
+      "lat": 15.86371413,
+      "lng": 108.02324822
     },
     "postid": "564805",
     "province": "Quảng Nam"
@@ -1324,8 +1324,8 @@
     "address": "Thôn Đông Gia, Xã Đại Minh, Đại Lộc, Quảng Nam",
     "phone": "02353971104",
     "location": {
-      "lat": 1584975727.0,
-      "lng": 10806693232.0
+      "lat": 15.84975727,
+      "lng": 108.06693232
     },
     "postid": "564830",
     "province": "Quảng Nam"
@@ -1335,8 +1335,8 @@
     "address": "Thôn Mỹ Tây, Xã Đại Phong, Đại Lộc, Quảng Nam",
     "phone": "0763792405",
     "location": {
-      "lat": 1585435245.0,
-      "lng": 10804869435.0
+      "lat": 15.85435245,
+      "lng": 108.04869435
     },
     "postid": "564850",
     "province": "Quảng Nam"
@@ -1346,8 +1346,8 @@
     "address": "Thôn Xuân Tây, Xã Đại Tân, Đại Lộc, Quảng Nam",
     "phone": "0938701785",
     "location": {
-      "lat": 1582299747.0,
-      "lng": 10805424463.0
+      "lat": 15.82299747,
+      "lng": 108.05424463
     },
     "postid": "564860",
     "province": "Quảng Nam"
@@ -1357,8 +1357,8 @@
     "address": "Thôn Phước Lâm, Xã Đại Hồng, Đại Lộc, Quảng Nam",
     "phone": "0911274499",
     "location": {
-      "lat": 1584120623.0,
-      "lng": 10795997219.0
+      "lat": 15.84120623,
+      "lng": 107.95997219
     },
     "postid": "564870",
     "province": "Quảng Nam"
@@ -1368,8 +1368,8 @@
     "address": "Thôn Tập Phước, Xã Đại Chánh, Đại Lộc, Quảng Nam",
     "phone": "0825855194",
     "location": {
-      "lat": 1580393734.0,
-      "lng": 10804126473.0
+      "lat": 15.80393734,
+      "lng": 108.04126473
     },
     "postid": "564910",
     "province": "Quảng Nam"
@@ -1379,8 +1379,8 @@
     "address": "Thôn Tây Lễ, Xã Đại Thạnh, Đại Lộc, Quảng Nam",
     "phone": "02353971108",
     "location": {
-      "lat": 1578610318.0,
-      "lng": 10804514184.0
+      "lat": 15.78610318,
+      "lng": 108.04514184
     },
     "postid": "564920",
     "province": "Quảng Nam"
@@ -1390,8 +1390,8 @@
     "address": "Thôn Thanh Vân, Xã Đại Cường, Đại Lộc, Quảng Nam",
     "phone": "0935263937",
     "location": {
-      "lat": 1584661004.0,
-      "lng": 10808655839.0
+      "lat": 15.84661004,
+      "lng": 108.08655839
     },
     "postid": "564930",
     "province": "Quảng Nam"
@@ -1401,8 +1401,8 @@
     "address": "Thôn Phú An, Xã Đại Thắng, Đại Lộc, Quảng Nam",
     "phone": "02353971106",
     "location": {
-      "lat": 158270931.0,
-      "lng": 10807518569.0
+      "lat": 15.8270931,
+      "lng": 108.07518569
     },
     "postid": "564950",
     "province": "Quảng Nam"
@@ -1412,8 +1412,8 @@
     "address": "Thôn Quảng Huế, Xã Đại Hoà, Đại Lộc, Quảng Nam",
     "phone": "0935800370",
     "location": {
-      "lat": 158528891.0,
-      "lng": 10812140113.0
+      "lat": 15.8528891,
+      "lng": 108.12140113
     },
     "postid": "564990",
     "province": "Quảng Nam"
@@ -1423,8 +1423,8 @@
     "address": "Thôn Trúc Hà, Xã Đại Hưng, Đại Lộc, Quảng Nam",
     "phone": "0915935440",
     "location": {
-      "lat": 1586009647.0,
-      "lng": 10792058178.0
+      "lat": 15.86009647,
+      "lng": 107.92058178
     },
     "postid": "565000",
     "province": "Quảng Nam"
@@ -1434,8 +1434,8 @@
     "address": "Thôn Quảng Huế, Xã Đại An, Đại Lộc, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 15855714.0,
-      "lng": 108109920.0
+      "lat": 15.855714,
+      "lng": 108.10992
     },
     "postid": "565030",
     "province": "Quảng Nam"
@@ -1445,8 +1445,8 @@
     "address": "Thôn Quảng Huế, Xã Đại An, Đại Lộc, Quảng Nam",
     "phone": "0794561161",
     "location": {
-      "lat": 1585555267.0,
-      "lng": 10812135767.0
+      "lat": 15.85555267,
+      "lng": 108.12135767
     },
     "postid": "565035",
     "province": "Quảng Nam"
@@ -1456,8 +1456,8 @@
     "address": "Khối 4, Thị Trấn Khâm Đức, Phước Sơn, Quảng Nam",
     "phone": "02353881800",
     "location": {
-      "lat": 1544400742.0,
-      "lng": 10779388129.0
+      "lat": 15.44400742,
+      "lng": 107.79388129
     },
     "postid": "565100",
     "province": "Quảng Nam"
@@ -1467,8 +1467,8 @@
     "address": "Khối 4, Thị Trấn Khâm Đức, Phước Sơn, Quảng Nam",
     "phone": "02353881330",
     "location": {
-      "lat": 1544402721.0,
-      "lng": 10779383762.0
+      "lat": 15.44402721,
+      "lng": 107.79383762
     },
     "postid": "565110",
     "province": "Quảng Nam"
@@ -1478,8 +1478,8 @@
     "address": "Số 18, Đường Trần Cao Vân, Phường An Xuân, Tam Kỳ, Quảng Nam",
     "phone": "023533858578",
     "location": {
-      "lat": 155650827.0,
-      "lng": 108493321.0
+      "lat": 15.5650827,
+      "lng": 108.493321
     },
     "postid": "560000",
     "province": "Quảng Nam"
@@ -1489,8 +1489,8 @@
     "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353852898",
     "location": {
-      "lat": 155779751617495.0,
-      "lng": 108474493045943.0
+      "lat": 15.57797516,
+      "lng": 108.47449304
     },
     "postid": "560100",
     "province": "Quảng Nam"
@@ -1500,8 +1500,8 @@
     "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 155780955527061.0,
-      "lng": 108474465610274.0
+      "lat": 15.57809555,
+      "lng": 108.47446561
     },
     "postid": "560900",
     "province": "Quảng Nam"
@@ -1511,8 +1511,8 @@
     "address": "Số 233B, Đường Trần Cao Vân, Phường An Sơn, Tam Kỳ, Quảng Nam",
     "phone": "02353834102",
     "location": {
-      "lat": 155592468.0,
-      "lng": 10848845623.0
+      "lat": 15.5592468,
+      "lng": 108.48845623
     },
     "postid": "561060",
     "province": "Quảng Nam"
@@ -1522,8 +1522,8 @@
     "address": "Khối phố Lê Hồng Phong, Phường Hoà Hương, Tam Kỳ, Quảng Nam",
     "phone": "02353525222",
     "location": {
-      "lat": 1556231838.0,
-      "lng": 10849873134.0
+      "lat": 15.56231838,
+      "lng": 108.49873134
     },
     "postid": "561100",
     "province": "Quảng Nam"
@@ -1544,8 +1544,8 @@
     "address": "Thôn Thượng Thanh, Xã Tam Thanh, Tam Kỳ, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1560687279.0,
-      "lng": 10853808116.0
+      "lat": 15.60687279,
+      "lng": 108.53808116
     },
     "postid": "561148",
     "province": "Quảng Nam"
@@ -1555,8 +1555,8 @@
     "address": "Số 01, Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353852840",
     "location": {
-      "lat": 1557809387.0,
-      "lng": 10847419938.0
+      "lat": 15.57809387,
+      "lng": 108.47419938
     },
     "postid": "561150",
     "province": "Quảng Nam"
@@ -1566,8 +1566,8 @@
     "address": "Thôn Vĩnh Bình, Xã Tam Thăng, Tam Kỳ, Quảng Nam",
     "phone": "0905189591",
     "location": {
-      "lat": 1560978016.0,
-      "lng": 1084688206.0
+      "lat": 15.60978016,
+      "lng": 108.4688206
     },
     "postid": "561160",
     "province": "Quảng Nam"
@@ -1577,8 +1577,8 @@
     "address": "Thôn Vĩnh Bình, Xã Tam Thăng, Tam Kỳ, Quảng Nam",
     "phone": "02353525666",
     "location": {
-      "lat": 1561589767.0,
-      "lng": 108472196.0
+      "lat": 15.61589767,
+      "lng": 108.472196
     },
     "postid": "561175",
     "province": "Quảng Nam"
@@ -1588,8 +1588,8 @@
     "address": "Số 02, Đường Phan Bội Châu, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353810284",
     "location": {
-      "lat": 15579089207795.0,
-      "lng": 108474757429064.0
+      "lat": 15.5790892,
+      "lng": 108.47475742
     },
     "postid": "561210",
     "province": "Quảng Nam"
@@ -1599,8 +1599,8 @@
     "address": "Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353535000",
     "location": {
-      "lat": 155786631388353.0,
-      "lng": 108474975048882.0
+      "lat": 15.57866313,
+      "lng": 108.47497504
     },
     "postid": "561242",
     "province": "Quảng Nam"
@@ -1610,8 +1610,8 @@
     "address": "Số 159, Đường Trương Nữ Vương, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353825333",
     "location": {
-      "lat": 1557101724.0,
-      "lng": 10847285405.0
+      "lat": 15.57101724,
+      "lng": 108.47285405
     },
     "postid": "561243",
     "province": "Quảng Nam"
@@ -1621,8 +1621,8 @@
     "address": "Số 01, Đường Trần Phú, Phường Tân Thạnh, Tam Kỳ, Quảng Nam",
     "phone": "02353825456",
     "location": {
-      "lat": 155786884001683.0,
-      "lng": 108474929758118.0
+      "lat": 15.5786884,
+      "lng": 108.47492975
     },
     "postid": "561280",
     "province": "Quảng Nam"
@@ -1632,8 +1632,8 @@
     "address": "Số 18, Đường Trần Cao Vân, Phường An Xuân, Tam Kỳ, Quảng Nam",
     "phone": "02353858578",
     "location": {
-      "lat": 1556493081.0,
-      "lng": 10849341598.0
+      "lat": 15.56493081,
+      "lng": 108.49341598
     },
     "postid": "561303",
     "province": "Quảng Nam"
@@ -1643,8 +1643,8 @@
     "address": "Thôn 3, Xã Tam Ngọc, Tam Kỳ, Quảng Nam",
     "phone": "0982216408",
     "location": {
-      "lat": 1554493479.0,
-      "lng": 10848349048.0
+      "lat": 15.54493479,
+      "lng": 108.48349048
     },
     "postid": "561380",
     "province": "Quảng Nam"
@@ -1654,8 +1654,8 @@
     "address": "Thôn Phú Thạnh, Xã Tam Phú, Tam Kỳ, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1558189583.0,
-      "lng": 10851562566.0
+      "lat": 15.58189583,
+      "lng": 108.51562566
     },
     "postid": "561409",
     "province": "Quảng Nam"
@@ -1665,8 +1665,8 @@
     "address": "Kiệt Khu Tt Xí Nghiệp May, Đường Huỳnh Thúc Kháng, Phường An Xuân, Tam Kỳ, Quảng Nam",
     "phone": "02353859083",
     "location": {
-      "lat": 1555839845.0,
-      "lng": 10848452277.0
+      "lat": 15.55839845,
+      "lng": 108.48452277
     },
     "postid": "561450",
     "province": "Quảng Nam"
@@ -1676,8 +1676,8 @@
     "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
     "phone": "02353874265",
     "location": {
-      "lat": 1574245138.0,
-      "lng": 10835946321.0
+      "lat": 15.74245138,
+      "lng": 108.35946321
     },
     "postid": "561600",
     "province": "Quảng Nam"
@@ -1687,8 +1687,8 @@
     "address": "Khu phố 2, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
     "phone": "02353674789",
     "location": {
-      "lat": 1574242615.0,
-      "lng": 1083595109.0
+      "lat": 15.74242615,
+      "lng": 108.3595109
     },
     "postid": "561610",
     "province": "Quảng Nam"
@@ -1698,8 +1698,8 @@
     "address": "Thôn 2 (làng Tất Viên), Xã Bình Phục, Thăng Bình, Quảng Nam",
     "phone": "0911559122",
     "location": {
-      "lat": 1574711875.0,
-      "lng": 10837702997.0
+      "lat": 15.74711875,
+      "lng": 108.37702997
     },
     "postid": "561620",
     "province": "Quảng Nam"
@@ -1709,8 +1709,8 @@
     "address": "Thôn 3 (làng Bình Trúc 1), Xã Bình Sa, Thăng Bình, Quảng Nam",
     "phone": "0918764496",
     "location": {
-      "lat": 1569928384.0,
-      "lng": 10844422561.0
+      "lat": 15.69928384,
+      "lng": 108.44422561
     },
     "postid": "561630",
     "province": "Quảng Nam"
@@ -1720,8 +1720,8 @@
     "address": "Thôn Hiệp Hưng, Xã Bình Hải, Thăng Bình, Quảng Nam",
     "phone": "01697071772",
     "location": {
-      "lat": 1571287652.0,
-      "lng": 1084546501.0
+      "lat": 15.71287652,
+      "lng": 108.4546501
     },
     "postid": "561640",
     "province": "Quảng Nam"
@@ -1731,8 +1731,8 @@
     "address": "Thôn Phước Ấm (thôn 3), Xã Bình Triều, Thăng Bình, Quảng Nam",
     "phone": "0905204273",
     "location": {
-      "lat": 1575904699.0,
-      "lng": 10839398321.0
+      "lat": 15.75904699,
+      "lng": 108.39398321
     },
     "postid": "561650",
     "province": "Quảng Nam"
@@ -1742,8 +1742,8 @@
     "address": "Thôn 2 (làng Trà Đóa 2), Xã Bình Đào, Thăng Bình, Quảng Nam",
     "phone": "02353679442",
     "location": {
-      "lat": 1576156536.0,
-      "lng": 10840364617.0
+      "lat": 15.76156536,
+      "lng": 108.40364617
     },
     "postid": "561660",
     "province": "Quảng Nam"
@@ -1753,8 +1753,8 @@
     "address": "Thôn Hà Bình, Xã Bình Minh, Thăng Bình, Quảng Nam",
     "phone": "0914308468",
     "location": {
-      "lat": 1577351874.0,
-      "lng": 10842284554.0
+      "lat": 15.77351874,
+      "lng": 108.42284554
     },
     "postid": "561670",
     "province": "Quảng Nam"
@@ -1764,8 +1764,8 @@
     "address": "Thôn Thanh Ly 1, Xã Bình Nguyên, Thăng Bình, Quảng Nam",
     "phone": "02353875638",
     "location": {
-      "lat": 1576110841.0,
-      "lng": 10834469706.0
+      "lat": 15.76110841,
+      "lng": 108.34469706
     },
     "postid": "561680",
     "province": "Quảng Nam"
@@ -1775,8 +1775,8 @@
     "address": "Thôn 3 (làng Bình Túy), Xã Bình Giang, Thăng Bình, Quảng Nam",
     "phone": "02353874607",
     "location": {
-      "lat": 1579507236.0,
-      "lng": 10836512368.0
+      "lat": 15.79507236,
+      "lng": 108.36512368
     },
     "postid": "561690",
     "province": "Quảng Nam"
@@ -1786,8 +1786,8 @@
     "address": "Thôn 2 (làng Ấp Nam), Xã Bình Dương, Thăng Bình, Quảng Nam",
     "phone": "0935687533",
     "location": {
-      "lat": 1580378733.0,
-      "lng": 10838090085.0
+      "lat": 15.80378733,
+      "lng": 108.38090085
     },
     "postid": "561700",
     "province": "Quảng Nam"
@@ -1797,8 +1797,8 @@
     "address": "Thôn Quý Phước 2, Xã Bình Quý, Thăng Bình, Quảng Nam",
     "phone": "0328889201",
     "location": {
-      "lat": 1570397241.0,
-      "lng": 10834244756.0
+      "lat": 15.70397241,
+      "lng": 108.34244756
     },
     "postid": "561710",
     "province": "Quảng Nam"
@@ -1808,8 +1808,8 @@
     "address": "Thôn Đồng Dương, Xã Bình Định Bắc, Thăng Bình, Quảng Nam",
     "phone": "0794521667",
     "location": {
-      "lat": 156776133.0,
-      "lng": 1083055847.0
+      "lat": 15.6776133,
+      "lng": 108.3055847
     },
     "postid": "561720",
     "province": "Quảng Nam"
@@ -1819,8 +1819,8 @@
     "address": "Thôn Đồng Đức, Xã Bình Định Nam, Thăng Bình, Quảng Nam",
     "phone": "01642030552",
     "location": {
-      "lat": 1567498572.0,
-      "lng": 10831125089.0
+      "lat": 15.67498572,
+      "lng": 108.31125089
     },
     "postid": "561727",
     "province": "Quảng Nam"
@@ -1830,8 +1830,8 @@
     "address": "Thôn Châu Lâm(làng Nho Lâm, Châu Đức, Châu Nho), Xã Bình Trị, Thăng Bình, Quảng Nam",
     "phone": "0914251451",
     "location": {
-      "lat": 1565808948.0,
-      "lng": 10828029941.0
+      "lat": 15.65808948,
+      "lng": 108.28029941
     },
     "postid": "561730",
     "province": "Quảng Nam"
@@ -1841,8 +1841,8 @@
     "address": "Thôn Nam Bình Sơn, Xã Bình Lãnh, Thăng Bình, Quảng Nam",
     "phone": "0979750665",
     "location": {
-      "lat": 1563772709.0,
-      "lng": 10825053335.0
+      "lat": 15.63772709,
+      "lng": 108.25053335
     },
     "postid": "561740",
     "province": "Quảng Nam"
@@ -1852,8 +1852,8 @@
     "address": "Thôn Rừng Bồng, Xã Bình Chánh, Thăng Bình, Quảng Nam",
     "phone": "0914315169",
     "location": {
-      "lat": 1566472284.0,
-      "lng": 10835493908.0
+      "lat": 15.66472284,
+      "lng": 108.35493908
     },
     "postid": "561760",
     "province": "Quảng Nam"
@@ -1863,8 +1863,8 @@
     "address": "Thôn Lý Trường, Xã Bình Phú, Thăng Bình, Quảng Nam",
     "phone": "02353873013",
     "location": {
-      "lat": 1564581502.0,
-      "lng": 10833422345.0
+      "lat": 15.64581502,
+      "lng": 108.33422345
     },
     "postid": "561770",
     "province": "Quảng Nam"
@@ -1874,8 +1874,8 @@
     "address": "Thôn Bình Quang, Xã Bình Quế, Thăng Bình, Quảng Nam",
     "phone": "0792096971",
     "location": {
-      "lat": 1563348767.0,
-      "lng": 108375101.0
+      "lat": 15.63348767,
+      "lng": 108.375101
     },
     "postid": "561780",
     "province": "Quảng Nam"
@@ -1885,8 +1885,8 @@
     "address": "Thôn Phước Cẩm, Xã Bình Tú, Thăng Bình, Quảng Nam",
     "phone": "0912889230",
     "location": {
-      "lat": 1570248806.0,
-      "lng": 10839063384.0
+      "lat": 15.70248806,
+      "lng": 108.39063384
     },
     "postid": "561790",
     "province": "Quảng Nam"
@@ -1896,8 +1896,8 @@
     "address": "Thôn Kế Xuyên 1, Xã Bình Trung, Thăng Bình, Quảng Nam",
     "phone": "02353673666",
     "location": {
-      "lat": 1567798386.0,
-      "lng": 10840684124.0
+      "lat": 15.67798386,
+      "lng": 108.40684124
     },
     "postid": "561810",
     "province": "Quảng Nam"
@@ -1907,8 +1907,8 @@
     "address": "Thôn An Thành 2, Xã Bình An, Thăng Bình, Quảng Nam",
     "phone": "02353672193",
     "location": {
-      "lat": 1563649191.0,
-      "lng": 10843198624.0
+      "lat": 15.63649191,
+      "lng": 108.43198624
     },
     "postid": "561820",
     "province": "Quảng Nam"
@@ -1918,8 +1918,8 @@
     "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
     "phone": "02353874974",
     "location": {
-      "lat": 157424386.0,
-      "lng": 10835952149.0
+      "lat": 15.7424386,
+      "lng": 108.35952149
     },
     "postid": "561830",
     "province": "Quảng Nam"
@@ -1929,8 +1929,8 @@
     "address": "Thôn Nghĩa Hòa, Xã Bình Nam, Thăng Bình, Quảng Nam",
     "phone": "0912852442",
     "location": {
-      "lat": 1565087267.0,
-      "lng": 10848571933.0
+      "lat": 15.65087267,
+      "lng": 108.48571933
     },
     "postid": "561840",
     "province": "Quảng Nam"
@@ -1940,8 +1940,8 @@
     "address": "Tổ 7, Thị Trấn Hà Lam, Thăng Bình, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1574247243.0,
-      "lng": 10835948261.0
+      "lat": 15.74247243,
+      "lng": 108.35948261
     },
     "postid": "561861",
     "province": "Quảng Nam"
@@ -1951,8 +1951,8 @@
     "address": "Khối phố Tiên Bình, Thị Trấn Tiên Kỳ, Tiên Phước, Quảng Nam",
     "phone": "02353884164",
     "location": {
-      "lat": 1548952667.0,
-      "lng": 10830834276.0
+      "lat": 15.48952667,
+      "lng": 108.30834276
     },
     "postid": "562000",
     "province": "Quảng Nam"
@@ -1962,8 +1962,8 @@
     "address": "Thôn 3, Xã Tiên Thọ, Tiên Phước, Quảng Nam",
     "phone": "02353896311",
     "location": {
-      "lat": 1548679412.0,
-      "lng": 10836452606.0
+      "lat": 15.48679412,
+      "lng": 108.36452606
     },
     "postid": "562020",
     "province": "Quảng Nam"
@@ -1973,8 +1973,8 @@
     "address": "Thôn Tiên Hòa (Thôn 3), Xã Tiên Phong, Tiên Phước, Quảng Nam",
     "phone": "0912884442",
     "location": {
-      "lat": 1552050265.0,
-      "lng": 10835736187.0
+      "lat": 15.52050265,
+      "lng": 108.35736187
     },
     "postid": "562040",
     "province": "Quảng Nam"
@@ -1984,8 +1984,8 @@
     "address": "Thôn Tiên Phú Đông (Thôn 3), Xã Tiên Mỹ, Tiên Phước, Quảng Nam",
     "phone": "0914947444",
     "location": {
-      "lat": 155049081105746.0,
-      "lng": 108319800503478.0
+      "lat": 15.50490811,
+      "lng": 108.3198005
     },
     "postid": "562050",
     "province": "Quảng Nam"
@@ -1995,8 +1995,8 @@
     "address": "Khối phố Tiên Bình, Thị Trấn Tiên Kỳ, Tiên Phước, Quảng Nam",
     "phone": "02353879777",
     "location": {
-      "lat": 154895427569505.0,
-      "lng": 108308332858848.0
+      "lat": 15.48954275,
+      "lng": 108.30833285
     },
     "postid": "562060",
     "province": "Quảng Nam"
@@ -2006,8 +2006,8 @@
     "address": "Thôn Cẩm Tây, Xã Tiên Cẩm, Tiên Phước, Quảng Nam",
     "phone": "0329843369",
     "location": {
-      "lat": 155541325.0,
-      "lng": 1082944871.0
+      "lat": 15.5541325,
+      "lng": 108.2944871
     },
     "postid": "562070",
     "province": "Quảng Nam"
@@ -2017,8 +2017,8 @@
     "address": "Thôn 3, Xã Tiên Sơn, Tiên Phước, Quảng Nam",
     "phone": "0914744649",
     "location": {
-      "lat": 1557410813.0,
-      "lng": 10827858161.0
+      "lat": 15.57410813,
+      "lng": 108.27858161
     },
     "postid": "562086",
     "province": "Quảng Nam"
@@ -2028,8 +2028,8 @@
     "address": "Thôn Hội An, Xã Tiên Châu, Tiên Phước, Quảng Nam",
     "phone": "0903280570",
     "location": {
-      "lat": 1550913595.0,
-      "lng": 10829362116.0
+      "lat": 15.50913595,
+      "lng": 108.29362116
     },
     "postid": "562090",
     "province": "Quảng Nam"
@@ -2039,8 +2039,8 @@
     "address": "Thôn Phú Vinh, Xã Tiên Hà, Tiên Phước, Quảng Nam",
     "phone": "0394819192",
     "location": {
-      "lat": 1554972721.0,
-      "lng": 10824703369.0
+      "lat": 15.54972721,
+      "lng": 108.24703369
     },
     "postid": "562106",
     "province": "Quảng Nam"
@@ -2050,8 +2050,8 @@
     "address": "Thôn 4, Xã Tiên Ngọc, Tiên Phước, Quảng Nam",
     "phone": "0903280321",
     "location": {
-      "lat": 1544585974.0,
-      "lng": 10820587315.0
+      "lat": 15.44585974,
+      "lng": 108.20587315
     },
     "postid": "562116",
     "province": "Quảng Nam"
@@ -2061,8 +2061,8 @@
     "address": "Thôn 10, Xã Tiên Lãnh, Tiên Phước, Quảng Nam",
     "phone": "0825719026",
     "location": {
-      "lat": 1545789147.0,
-      "lng": 10817338786.0
+      "lat": 15.45789147,
+      "lng": 108.17338786
     },
     "postid": "562120",
     "province": "Quảng Nam"
@@ -2072,8 +2072,8 @@
     "address": "Thôn 5, Xã Tiên Cảnh, Tiên Phước, Quảng Nam",
     "phone": "0945367653",
     "location": {
-      "lat": 1546188667.0,
-      "lng": 10829587963.0
+      "lat": 15.46188667,
+      "lng": 108.29587963
     },
     "postid": "562140",
     "province": "Quảng Nam"
@@ -2083,8 +2083,8 @@
     "address": "Thôn 4, Xã Tiên Hiệp, Tiên Phước, Quảng Nam",
     "phone": "0979783067",
     "location": {
-      "lat": 154234388.0,
-      "lng": 1082620033.0
+      "lat": 15.4234388,
+      "lng": 108.2620033
     },
     "postid": "562160",
     "province": "Quảng Nam"
@@ -2094,8 +2094,8 @@
     "address": "Thôn 3, Xã Tiên An, Tiên Phước, Quảng Nam",
     "phone": "0914749062",
     "location": {
-      "lat": 1542548819.0,
-      "lng": 10831883665.0
+      "lat": 15.42548819,
+      "lng": 108.31883665
     },
     "postid": "562170",
     "province": "Quảng Nam"
@@ -2105,8 +2105,8 @@
     "address": "Thôn 2, Xã Tiên Lộc, Tiên Phước, Quảng Nam",
     "phone": "0353668099",
     "location": {
-      "lat": 1546784654.0,
-      "lng": 10834331862.0
+      "lat": 15.46784654,
+      "lng": 108.34331862
     },
     "postid": "562180",
     "province": "Quảng Nam"
@@ -2116,8 +2116,8 @@
     "address": "Thôn 2, Xã Tiên Lập, Tiên Phước, Quảng Nam",
     "phone": "0844915411",
     "location": {
-      "lat": 1542766869.0,
-      "lng": 10835830517.0
+      "lat": 15.42766869,
+      "lng": 108.35830517
     },
     "postid": "562190",
     "province": "Quảng Nam"
@@ -2127,8 +2127,8 @@
     "address": "Khối 3, Thị Trấn Núi Thành, Núi Thành, Quảng Nam",
     "phone": "02353871227",
     "location": {
-      "lat": 1542967131.0,
-      "lng": 10865979109.0
+      "lat": 15.42967131,
+      "lng": 108.65979109
     },
     "postid": "562300",
     "province": "Quảng Nam"
@@ -2138,8 +2138,8 @@
     "address": "Khối 3, Thị Trấn Núi Thành, Núi Thành, Quảng Nam",
     "phone": "02353871411",
     "location": {
-      "lat": 1542963923.0,
-      "lng": 10865981745.0
+      "lat": 15.42963923,
+      "lng": 108.65981745
     },
     "postid": "562310",
     "province": "Quảng Nam"
@@ -2149,8 +2149,8 @@
     "address": "Thôn Đông An (Thôn 4), Xã Tam Giang, Núi Thành, Quảng Nam",
     "phone": "0948597946",
     "location": {
-      "lat": 1545350295.0,
-      "lng": 10865518856.0
+      "lat": 15.45350295,
+      "lng": 108.65518856
     },
     "postid": "562320",
     "province": "Quảng Nam"
@@ -2160,8 +2160,8 @@
     "address": "Thôn 2, Xã Tam Hải, Núi Thành, Quảng Nam",
     "phone": "0913034976",
     "location": {
-      "lat": 1547544919.0,
-      "lng": 10867958595.0
+      "lat": 15.47544919,
+      "lng": 108.67958595
     },
     "postid": "562348",
     "province": "Quảng Nam"
@@ -2171,8 +2171,8 @@
     "address": "Thôn Hòa Xuân, Xã Tam Hoà, Núi Thành, Quảng Nam",
     "phone": "0913014775",
     "location": {
-      "lat": 1550437499.0,
-      "lng": 10860814524.0
+      "lat": 15.50437499,
+      "lng": 108.60814524
     },
     "postid": "562360",
     "province": "Quảng Nam"
@@ -2182,8 +2182,8 @@
     "address": "Thôn Tân Bình Trung, Xã Tam Tiến, Núi Thành, Quảng Nam",
     "phone": "02353891382",
     "location": {
-      "lat": 155448569418126.0,
-      "lng": 108581807628726.0
+      "lat": 15.54485694,
+      "lng": 108.58180762
     },
     "postid": "562380",
     "province": "Quảng Nam"
@@ -2193,8 +2193,8 @@
     "address": "Thôn An Hải Đông, Xã Tam Quang, Núi Thành, Quảng Nam",
     "phone": "02353550557",
     "location": {
-      "lat": 1547140208.0,
-      "lng": 1086848524.0
+      "lat": 15.47140208,
+      "lng": 108.6848524
     },
     "postid": "562400",
     "province": "Quảng Nam"
@@ -2204,8 +2204,8 @@
     "address": "Thôn Vĩnh Đại (Thôn 3), Xã Tam Hiệp, Núi Thành, Quảng Nam",
     "phone": "02353565000",
     "location": {
-      "lat": 1544961342.0,
-      "lng": 10861647084.0
+      "lat": 15.44961342,
+      "lng": 108.61647084
     },
     "postid": "562413",
     "province": "Quảng Nam"
@@ -2215,8 +2215,8 @@
     "address": "Thôn Vân Thạch  (Thôn 9), Xã Tam Hiệp, Núi Thành, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1543873478.0,
-      "lng": 1086366932.0
+      "lat": 15.43873478,
+      "lng": 108.6366932
     },
     "postid": "562414",
     "province": "Quảng Nam"
@@ -2226,8 +2226,8 @@
     "address": "Thôn Diêm Phổ, Xã Tam Anh Nam, Núi Thành, Quảng Nam",
     "phone": "02353892772",
     "location": {
-      "lat": 154794955.0,
-      "lng": 1085861295.0
+      "lat": 15.4794955,
+      "lng": 108.5861295
     },
     "postid": "562420",
     "province": "Quảng Nam"
@@ -2237,8 +2237,8 @@
     "address": "Thôn Lý Trà, Xã Tam Anh Bắc, Núi Thành, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1551905333.0,
-      "lng": 10855951452.0
+      "lat": 15.51905333,
+      "lng": 108.55951452
     },
     "postid": "562427",
     "province": "Quảng Nam"
@@ -2248,8 +2248,8 @@
     "address": "Thôn Bà Bầu, Xã Tam Xuân 2, Núi Thành, Quảng Nam",
     "phone": "0942395654",
     "location": {
-      "lat": 1552881264.0,
-      "lng": 108545805.0
+      "lat": 15.52881264,
+      "lng": 108.545805
     },
     "postid": "562450",
     "province": "Quảng Nam"
@@ -2259,8 +2259,8 @@
     "address": "Thôn Phú Hưng (Thôn 6), Xã Tam Xuân 1, Núi Thành, Quảng Nam",
     "phone": "02353891200",
     "location": {
-      "lat": 155453401672578.0,
-      "lng": 108522420800731.0
+      "lat": 15.54534016,
+      "lng": 108.5224208
     },
     "postid": "562480",
     "province": "Quảng Nam"
@@ -2270,8 +2270,8 @@
     "address": "Thôn Trung Hòa (Thôn 2), Xã Tam Thạnh, Núi Thành, Quảng Nam",
     "phone": "02353892779",
     "location": {
-      "lat": 154374443007886.0,
-      "lng": 108529112964275.0
+      "lat": 15.4374443,
+      "lng": 108.52911296
     },
     "postid": "562500",
     "province": "Quảng Nam"
@@ -2281,8 +2281,8 @@
     "address": "Thôn Mỹ Đông (Thôn 1), Xã Tam Sơn, Núi Thành, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1544146131.0,
-      "lng": 10847095347.0
+      "lat": 15.44146131,
+      "lng": 108.47095347
     },
     "postid": "562510",
     "province": "Quảng Nam"
@@ -2292,8 +2292,8 @@
     "address": "Thôn Đa Phú 1, Xã Tam Mỹ Đông, Núi Thành, Quảng Nam",
     "phone": "01684580059",
     "location": {
-      "lat": 1541344082.0,
-      "lng": 10864192768.0
+      "lat": 15.41344082,
+      "lng": 108.64192768
     },
     "postid": "562520",
     "province": "Quảng Nam"
@@ -2303,8 +2303,8 @@
     "address": "Thôn Phú Thành (Thôn 3), Xã Tam Trà, Núi Thành, Quảng Nam",
     "phone": "02353871033",
     "location": {
-      "lat": 1538262868.0,
-      "lng": 10850585026.0
+      "lat": 15.38262868,
+      "lng": 108.50585026
     },
     "postid": "562540",
     "province": "Quảng Nam"
@@ -2314,8 +2314,8 @@
     "address": "Thôn Định Phước, Xã Tam Nghĩa, Núi Thành, Quảng Nam",
     "phone": "02353535559",
     "location": {
-      "lat": 154193299223692.0,
-      "lng": 108673126105988.0
+      "lat": 15.41932992,
+      "lng": 108.6731261
     },
     "postid": "562560",
     "province": "Quảng Nam"
@@ -2325,8 +2325,8 @@
     "address": "Thôn Định Phước, Xã Tam Nghĩa, Núi Thành, Quảng Nam",
     "phone": "0909389492",
     "location": {
-      "lat": 154151863529895.0,
-      "lng": 108675039836094.0
+      "lat": 15.41518635,
+      "lng": 108.67503983
     },
     "postid": "562573",
     "province": "Quảng Nam"
@@ -2336,8 +2336,8 @@
     "address": "Thôn Trung Thành, Xã Tam Mỹ Tây, Núi Thành, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1541085911.0,
-      "lng": 10861314928.0
+      "lat": 15.41085911,
+      "lng": 108.61314928
     },
     "postid": "562617",
     "province": "Quảng Nam"
@@ -2347,8 +2347,8 @@
     "address": "Khối Phố Long Xuyên 2 (đội 2+3), Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
     "phone": "02353877251",
     "location": {
-      "lat": 1584073843.0,
-      "lng": 10828333337.0
+      "lat": 15.84073843,
+      "lng": 108.28333337
     },
     "postid": "562700",
     "province": "Quảng Nam"
@@ -2358,8 +2358,8 @@
     "address": "Khối Phố Mỹ Hòa, Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
     "phone": "02353878333",
     "location": {
-      "lat": 1582769871.0,
-      "lng": 10825756281.0
+      "lat": 15.82769871,
+      "lng": 108.25756281
     },
     "postid": "562710",
     "province": "Quảng Nam"
@@ -2369,8 +2369,8 @@
     "address": "Khối Phố Mỹ Hòa, Thị Trấn Nam Phước, Duy Xuyên, Quảng Nam",
     "phone": "02353877431",
     "location": {
-      "lat": 1584081537.0,
-      "lng": 10828385067.0
+      "lat": 15.84081537,
+      "lng": 108.28385067
     },
     "postid": "562720",
     "province": "Quảng Nam"
@@ -2380,8 +2380,8 @@
     "address": "Thôn 2 (thôn Thi Thại), Xã Duy Thành, Duy Xuyên, Quảng Nam",
     "phone": "02353878299",
     "location": {
-      "lat": 158249982501668.0,
-      "lng": 108318189367641.0
+      "lat": 15.82499825,
+      "lng": 108.31818936
     },
     "postid": "562730",
     "province": "Quảng Nam"
@@ -2391,8 +2391,8 @@
     "address": "Thôn 3 (làng Hội Sơn), Xã Duy Nghĩa, Duy Xuyên, Quảng Nam",
     "phone": "0935352414",
     "location": {
-      "lat": 1585369082.0,
-      "lng": 10837161953.0
+      "lat": 15.85369082,
+      "lng": 108.37161953
     },
     "postid": "562740",
     "province": "Quảng Nam"
@@ -2402,8 +2402,8 @@
     "address": "Thôn 1, Xã Duy Hải, Duy Xuyên, Quảng Nam",
     "phone": "0765944476",
     "location": {
-      "lat": 1585819719.0,
-      "lng": 10838924105.0
+      "lat": 15.85819719,
+      "lng": 108.38924105
     },
     "postid": "562750",
     "province": "Quảng Nam"
@@ -2413,8 +2413,8 @@
     "address": "Thôn Mỹ Phước, Xã Duy Phước, Duy Xuyên, Quảng Nam",
     "phone": "02353877024",
     "location": {
-      "lat": 1585803857.0,
-      "lng": 10829612737.0
+      "lat": 15.85803857,
+      "lng": 108.29612737
     },
     "postid": "562760",
     "province": "Quảng Nam"
@@ -2424,8 +2424,8 @@
     "address": "Thôn Hà Thuận (thôn 4b), Xã Duy Vinh, Duy Xuyên, Quảng Nam",
     "phone": "02353738666",
     "location": {
-      "lat": 1584678147.0,
-      "lng": 10832978119.0
+      "lat": 15.84678147,
+      "lng": 108.32978119
     },
     "postid": "562780",
     "province": "Quảng Nam"
@@ -2435,8 +2435,8 @@
     "address": "Thôn Phú Bông (thôn 3), Xã Duy Trinh, Duy Xuyên, Quảng Nam",
     "phone": "0906442056",
     "location": {
-      "lat": 1582851543.0,
-      "lng": 10821855716.0
+      "lat": 15.82851543,
+      "lng": 108.21855716
     },
     "postid": "562800",
     "province": "Quảng Nam"
@@ -2446,8 +2446,8 @@
     "address": "Thôn Lệ An, Xã Duy Châu, Duy Xuyên, Quảng Nam",
     "phone": "01229535557",
     "location": {
-      "lat": 1583568895.0,
-      "lng": 10814983264.0
+      "lat": 15.83568895,
+      "lng": 108.14983264
     },
     "postid": "562810",
     "province": "Quảng Nam"
@@ -2457,8 +2457,8 @@
     "address": "Thôn La Tháp Tây, Xã Duy Hòa, Duy Xuyên, Quảng Nam",
     "phone": "02353731456",
     "location": {
-      "lat": 1583839586.0,
-      "lng": 10812168504.0
+      "lat": 15.83839586,
+      "lng": 108.12168504
     },
     "postid": "562830",
     "province": "Quảng Nam"
@@ -2468,8 +2468,8 @@
     "address": "Thôn La Tháp Tây, Xã Duy Hòa, Duy Xuyên, Quảng Nam",
     "phone": "0935231877",
     "location": {
-      "lat": 1582898258.0,
-      "lng": 10812444278.0
+      "lat": 15.82898258,
+      "lng": 108.12444278
     },
     "postid": "562831",
     "province": "Quảng Nam"
@@ -2479,8 +2479,8 @@
     "address": "Thôn Thu Bồn Đông, Xã Duy Tân, Duy Xuyên, Quảng Nam",
     "phone": "02353733805",
     "location": {
-      "lat": 1581921731.0,
-      "lng": 10808120228.0
+      "lat": 15.81921731,
+      "lng": 108.08120228
     },
     "postid": "562850",
     "province": "Quảng Nam"
@@ -2490,8 +2490,8 @@
     "address": "Thôn Mỹ Sơn, Xã Duy Phú, Duy Xuyên, Quảng Nam",
     "phone": "02353877013",
     "location": {
-      "lat": 1577328256.0,
-      "lng": 10810896125.0
+      "lat": 15.77328256,
+      "lng": 108.10896125
     },
     "postid": "562860",
     "province": "Quảng Nam"
@@ -2501,8 +2501,8 @@
     "address": "Thôn Phú Đa 2, Xã Duy Thu, Duy Xuyên, Quảng Nam",
     "phone": "02353731102",
     "location": {
-      "lat": 1579982955.0,
-      "lng": 10806786706.0
+      "lat": 15.79982955,
+      "lng": 108.06786706
     },
     "postid": "562870",
     "province": "Quảng Nam"
@@ -2512,8 +2512,8 @@
     "address": "Thôn Trà Châu, Xã Duy Sơn, Duy Xuyên, Quảng Nam",
     "phone": "0387806006",
     "location": {
-      "lat": 158245918129924.0,
-      "lng": 108232211141638.0
+      "lat": 15.82459181,
+      "lng": 108.23221114
     },
     "postid": "562880",
     "province": "Quảng Nam"
@@ -2523,8 +2523,8 @@
     "address": "Thôn Chiêm Sơn, Xã Duy Sơn, Duy Xuyên, Quảng Nam",
     "phone": "02353878222",
     "location": {
-      "lat": 158099324328144.0,
-      "lng": 108225726892956.0
+      "lat": 15.80993243,
+      "lng": 108.22572689
     },
     "postid": "562881",
     "province": "Quảng Nam"
@@ -2534,8 +2534,8 @@
     "address": "Thôn Hòa Nam (thôn 3), Xã Duy Trung, Duy Xuyên, Quảng Nam",
     "phone": "0978819733",
     "location": {
-      "lat": 158039821.0,
-      "lng": 10825572753.0
+      "lat": 15.8039821,
+      "lng": 108.25572753
     },
     "postid": "562900",
     "province": "Quảng Nam"
@@ -2545,8 +2545,8 @@
     "address": "Thôn Thuận An, Thị Trấn Đông Phú, Quế Sơn, Quảng Nam",
     "phone": "02353885189",
     "location": {
-      "lat": 1567423328.0,
-      "lng": 10822225258.0
+      "lat": 15.67423328,
+      "lng": 108.22225258
     },
     "postid": "563000",
     "province": "Quảng Nam"
@@ -2556,8 +2556,8 @@
     "address": "Thôn Cang Tây, Thị Trấn Đông Phú, Quế Sơn, Quảng Nam",
     "phone": "02353885079",
     "location": {
-      "lat": 1567429947.0,
-      "lng": 10822230066.0
+      "lat": 15.67429947,
+      "lng": 108.22230066
     },
     "postid": "563030",
     "province": "Quảng Nam"
@@ -2567,8 +2567,8 @@
     "address": "Thôn 4, Xã Quế Châu, Quế Sơn, Quảng Nam",
     "phone": "0978797022",
     "location": {
-      "lat": 156819953.0,
-      "lng": 10824809613.0
+      "lat": 15.6819953,
+      "lng": 108.24809613
     },
     "postid": "563032",
     "province": "Quảng Nam"
@@ -2578,8 +2578,8 @@
     "address": "Thôn 2, Xã Phú Thọ, Quế Sơn, Quảng Nam",
     "phone": "0905243048",
     "location": {
-      "lat": 1573684351.0,
-      "lng": 10828866244.0
+      "lat": 15.73684351,
+      "lng": 108.28866244
     },
     "postid": "563050",
     "province": "Quảng Nam"
@@ -2589,8 +2589,8 @@
     "address": "Thôn 2, Xã Quế Cường, Quế Sơn, Quảng Nam",
     "phone": "0775584109",
     "location": {
-      "lat": 1576213061.0,
-      "lng": 10831806256.0
+      "lat": 15.76213061,
+      "lng": 108.31806256
     },
     "postid": "563070",
     "province": "Quảng Nam"
@@ -2600,8 +2600,8 @@
     "address": "Thôn Thương Nghiệp, Xã Hương An, Quế Sơn, Quảng Nam",
     "phone": "02353886500",
     "location": {
-      "lat": 157777084305822.0,
-      "lng": 108329089586051.0
+      "lat": 15.77770843,
+      "lng": 108.32908958
     },
     "postid": "563080",
     "province": "Quảng Nam"
@@ -2611,8 +2611,8 @@
     "address": "Thôn 11, Xã Quế Phú, Quế Sơn, Quảng Nam",
     "phone": "0914489963",
     "location": {
-      "lat": 157967616.0,
-      "lng": 1083126964.0
+      "lat": 15.7967616,
+      "lng": 108.3126964
     },
     "postid": "563095",
     "province": "Quảng Nam"
@@ -2622,8 +2622,8 @@
     "address": "Thôn 2, Xã Quế Xuân 1, Quế Sơn, Quảng Nam",
     "phone": "0339621097",
     "location": {
-      "lat": 1582141385.0,
-      "lng": 10829198808.0
+      "lat": 15.82141385,
+      "lng": 108.29198808
     },
     "postid": "563120",
     "province": "Quảng Nam"
@@ -2633,8 +2633,8 @@
     "address": "Thôn Phú Bình, Xã Quế Xuân 2, Quế Sơn, Quảng Nam",
     "phone": "0943028223",
     "location": {
-      "lat": 1579511213.0,
-      "lng": 10828674131.0
+      "lat": 15.79511213,
+      "lng": 108.28674131
     },
     "postid": "563121",
     "province": "Quảng Nam"
@@ -2644,8 +2644,8 @@
     "address": "Thôn Nghi Trung, Xã Quế Hiệp, Quế Sơn, Quảng Nam",
     "phone": "0913603593",
     "location": {
-      "lat": 1572028341.0,
-      "lng": 10823845267.0
+      "lat": 15.72028341,
+      "lng": 108.23845267
     },
     "postid": "563150",
     "province": "Quảng Nam"
@@ -2655,8 +2655,8 @@
     "address": "Thôn 3, Xã Quế Long, Quế Sơn, Quảng Nam",
     "phone": "0909329603",
     "location": {
-      "lat": 1567984106.0,
-      "lng": 10819407792.0
+      "lat": 15.67984106,
+      "lng": 108.19407792
     },
     "postid": "563160",
     "province": "Quảng Nam"
@@ -2666,8 +2666,8 @@
     "address": "Thôn Lộc Đông, Xã Quế Lộc, Nông Sơn, Quảng Nam",
     "phone": "02353654424",
     "location": {
-      "lat": 1570583233.0,
-      "lng": 10810836039.0
+      "lat": 15.70583233,
+      "lng": 108.10836039
     },
     "postid": "563170",
     "province": "Quảng Nam"
@@ -2677,8 +2677,8 @@
     "address": "Thôn Trung Phước 1, Xã Quế Trung, Nông Sơn, Quảng Nam",
     "phone": "02353654010",
     "location": {
-      "lat": 157130508536791.0,
-      "lng": 108063543127473.0
+      "lat": 15.71305085,
+      "lng": 108.06354312
     },
     "postid": "563180",
     "province": "Quảng Nam"
@@ -2688,8 +2688,8 @@
     "address": "Thôn 11, Xã Phước Hiệp, Phước Sơn, Quảng Nam",
     "phone": "01253528784",
     "location": {
-      "lat": 1546344577.0,
-      "lng": 10793677034.0
+      "lat": 15.46344577,
+      "lng": 107.93677034
     },
     "postid": "565120",
     "province": "Quảng Nam"
@@ -2699,8 +2699,8 @@
     "address": "Thôn 5, Xã Phước Đức, Phước Sơn, Quảng Nam",
     "phone": "01676780266",
     "location": {
-      "lat": 1542118556.0,
-      "lng": 10777258274.0
+      "lat": 15.42118556,
+      "lng": 107.77258274
     },
     "postid": "565140",
     "province": "Quảng Nam"
@@ -2710,8 +2710,8 @@
     "address": "Thôn 2 (thôn Plây Khôn), Xã Phước Năng, Phước Sơn, Quảng Nam",
     "phone": "01642794278",
     "location": {
-      "lat": 1540028139.0,
-      "lng": 10776051512.0
+      "lat": 15.40028139,
+      "lng": 107.76051512
     },
     "postid": "565150",
     "province": "Quảng Nam"
@@ -2721,8 +2721,8 @@
     "address": "Thôn 2 (làng Mừng), Xã Phước Mỹ, Phước Sơn, Quảng Nam",
     "phone": "01267627021",
     "location": {
-      "lat": 1536550201.0,
-      "lng": 10775579122.0
+      "lat": 15.36550201,
+      "lng": 107.75579122
     },
     "postid": "565160",
     "province": "Quảng Nam"
@@ -2732,8 +2732,8 @@
     "address": "Thôn Ca Ra Ngâu, Xã Phước Chánh, Phước Sơn, Quảng Nam",
     "phone": "01267618861",
     "location": {
-      "lat": 1536746392.0,
-      "lng": 10781891422.0
+      "lat": 15.36746392,
+      "lng": 107.81891422
     },
     "postid": "565170",
     "province": "Quảng Nam"
@@ -2743,8 +2743,8 @@
     "address": "Thôn 1 (thôn Công Tơ Năng Trên), Xã Phước Công, Phước Sơn, Quảng Nam",
     "phone": "0966913946",
     "location": {
-      "lat": 1532260062.0,
-      "lng": 10781108741.0
+      "lat": 15.32260062,
+      "lng": 107.81108741
     },
     "postid": "565190",
     "province": "Quảng Nam"
@@ -2754,8 +2754,8 @@
     "address": "Làng Luông A, Xã Phước Kim, Phước Sơn, Quảng Nam",
     "phone": "01629991915",
     "location": {
-      "lat": 1533668335.0,
-      "lng": 10788168142.0
+      "lat": 15.33668335,
+      "lng": 107.88168142
     },
     "postid": "565200",
     "province": "Quảng Nam"
@@ -2765,8 +2765,8 @@
     "address": "Thôn Lao Mưng, Xã Phước Xuân, Phước Sơn, Quảng Nam",
     "phone": "0969092053",
     "location": {
-      "lat": 1545616799.0,
-      "lng": 10782457854.0
+      "lat": 15.45616799,
+      "lng": 107.82457854
     },
     "postid": "565213",
     "province": "Quảng Nam"
@@ -2776,8 +2776,8 @@
     "address": "Thôn 4b, Xã Phước Thành, Phước Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 15286092.0,
-      "lng": 10789159842.0
+      "lat": 15.286092,
+      "lng": 107.89159842
     },
     "postid": "565226",
     "province": "Quảng Nam"
@@ -2787,8 +2787,8 @@
     "address": "Thôn 5a, Xã Phước Lộc, Phước Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1527554752.0,
-      "lng": 10785130075.0
+      "lat": 15.27554752,
+      "lng": 107.85130075
     },
     "postid": "565236",
     "province": "Quảng Nam"
@@ -2798,8 +2798,8 @@
     "address": "Thôn 6, Xã Phước Hoà, Phước Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1545299722.0,
-      "lng": 10791030034.0
+      "lat": 15.45299722,
+      "lng": 107.91030034
     },
     "postid": "565243",
     "province": "Quảng Nam"
@@ -2809,8 +2809,8 @@
     "address": "Thôn 1, Xã Trà Mai, Nam Trà My, Quảng Nam",
     "phone": "02353880051",
     "location": {
-      "lat": 151482930008619.0,
-      "lng": 108122641435508.0
+      "lat": 15.148293,
+      "lng": 108.12264143
     },
     "postid": "565300",
     "province": "Quảng Nam"
@@ -2820,8 +2820,8 @@
     "address": "Thôn 1, Xã Trà Dơn, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 152437765.0,
-      "lng": 10808589049.0
+      "lat": 15.2437765,
+      "lng": 108.08589049
     },
     "postid": "565317",
     "province": "Quảng Nam"
@@ -2831,8 +2831,8 @@
     "address": "Thôn 1, Xã Trà Tập, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1515351361.0,
-      "lng": 10810845183.0
+      "lat": 15.15351361,
+      "lng": 108.10845183
     },
     "postid": "565324",
     "province": "Quảng Nam"
@@ -2842,8 +2842,8 @@
     "address": "Thôn 3, Xã Trà Cang, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1510443922.0,
-      "lng": 10807147314.0
+      "lat": 15.10443922,
+      "lng": 108.07147314
     },
     "postid": "565337",
     "province": "Quảng Nam"
@@ -2853,8 +2853,8 @@
     "address": "Thôn 6, Xã Trà Don, Nam Trà My, Quảng Nam",
     "phone": "01642723317",
     "location": {
-      "lat": 1509474647.0,
-      "lng": 10812232795.0
+      "lat": 15.09474647,
+      "lng": 108.12232795
     },
     "postid": "565343",
     "province": "Quảng Nam"
@@ -2864,8 +2864,8 @@
     "address": "Thôn 1, Xã Trà Vân, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1511299546.0,
-      "lng": 10818011375.0
+      "lat": 15.11299546,
+      "lng": 108.18011375
     },
     "postid": "565353",
     "province": "Quảng Nam"
@@ -2875,8 +2875,8 @@
     "address": "Thôn 3, Xã Trà Leng, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 152724501.0,
-      "lng": 10801386086.0
+      "lat": 15.2724501,
+      "lng": 108.01386086
     },
     "postid": "565364",
     "province": "Quảng Nam"
@@ -2886,8 +2886,8 @@
     "address": "Thôn 3, Xã Trà Nam, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1503834511.0,
-      "lng": 10806978288.0
+      "lat": 15.03834511,
+      "lng": 108.06978288
     },
     "postid": "565375",
     "province": "Quảng Nam"
@@ -2897,8 +2897,8 @@
     "address": "Thôn 1, Xã Trà Vinh, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1506658841.0,
-      "lng": 10819422829.0
+      "lat": 15.06658841,
+      "lng": 108.19422829
     },
     "postid": "565384",
     "province": "Quảng Nam"
@@ -2908,8 +2908,8 @@
     "address": "Thôn 3, Xã Trà Linh, Nam Trà My, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 150354073.0,
-      "lng": 1080184133.0
+      "lat": 15.0354073,
+      "lng": 108.0184133
     },
     "postid": "565395",
     "province": "Quảng Nam"
@@ -2919,8 +2919,8 @@
     "address": "Thôn 4, Xã Trà Cang, Nam Trà My, Quảng Nam",
     "phone": "02353880727",
     "location": {
-      "lat": 1514827761.0,
-      "lng": 10812267717.0
+      "lat": 15.14827761,
+      "lng": 108.12267717
     },
     "postid": "565400",
     "province": "Quảng Nam"
@@ -2930,8 +2930,8 @@
     "address": "Thôn Ngã Ba, Thị Trấn PRao, Đông Giang, Quảng Nam",
     "phone": "02353898654",
     "location": {
-      "lat": 1592216613.0,
-      "lng": 10764931901.0
+      "lat": 15.92216613,
+      "lng": 107.64931901
     },
     "postid": "565500",
     "province": "Quảng Nam"
@@ -2941,8 +2941,8 @@
     "address": "Thôn Ngã Ba, Thị Trấn PRao, Đông Giang, Quảng Nam",
     "phone": "02353898789",
     "location": {
-      "lat": 1592225175.0,
-      "lng": 10764952662.0
+      "lat": 15.92225175,
+      "lng": 107.64952662
     },
     "postid": "565520",
     "province": "Quảng Nam"
@@ -2952,8 +2952,8 @@
     "address": "Thôn Pà Nai 1, Xã Tà Lu, Đông Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1592821967.0,
-      "lng": 10767428219.0
+      "lat": 15.92821967,
+      "lng": 107.67428219
     },
     "postid": "565540",
     "province": "Quảng Nam"
@@ -2963,8 +2963,8 @@
     "address": "Thôn Sông Voi, Xã Jơ Ngây, Đông Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1595610436.0,
-      "lng": 10779976395.0
+      "lat": 15.95610436,
+      "lng": 107.79976395
     },
     "postid": "565541",
     "province": "Quảng Nam"
@@ -2974,8 +2974,8 @@
     "address": "Thôn Hiệp, Xã Kà Dăng, Đông Giang, Quảng Nam",
     "phone": "01633235570",
     "location": {
-      "lat": 1588138057.0,
-      "lng": 10780708909.0
+      "lat": 15.88138057,
+      "lng": 107.80708909
     },
     "postid": "565558",
     "province": "Quảng Nam"
@@ -2985,8 +2985,8 @@
     "address": "Thôn Ban Mai 1, Xã Ba, Đông Giang, Quảng Nam",
     "phone": "02353797165",
     "location": {
-      "lat": 1596058123.0,
-      "lng": 10792223097.0
+      "lat": 15.96058123,
+      "lng": 107.92223097
     },
     "postid": "565570",
     "province": "Quảng Nam"
@@ -2996,8 +2996,8 @@
     "address": "Thôn Láy, Xã Tư, Đông Giang, Quảng Nam",
     "phone": "0905436838",
     "location": {
-      "lat": 1600820753.0,
-      "lng": 10790818859.0
+      "lat": 16.00820753,
+      "lng": 107.90818859
     },
     "postid": "565590",
     "province": "Quảng Nam"
@@ -3007,8 +3007,8 @@
     "address": "Thôn Bền, Xã Sông Kôn, Đông Giang, Quảng Nam",
     "phone": "0947605150",
     "location": {
-      "lat": 159661036787969.0,
-      "lng": 107781805374644.0
+      "lat": 15.96610367,
+      "lng": 107.78180537
     },
     "postid": "565610",
     "province": "Quảng Nam"
@@ -3018,8 +3018,8 @@
     "address": "Thôn Chờ Nết, Xã A Ting, Đông Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1596562016.0,
-      "lng": 10781530196.0
+      "lat": 15.96562016,
+      "lng": 107.81530196
     },
     "postid": "565637",
     "province": "Quảng Nam"
@@ -3029,8 +3029,8 @@
     "address": "Thôn A Bung, Xã A Rooih, Đông Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 158822474.0,
-      "lng": 10763648184.0
+      "lat": 15.8822474,
+      "lng": 107.63648184
     },
     "postid": "565645",
     "province": "Quảng Nam"
@@ -3040,8 +3040,8 @@
     "address": "Thôn A Xanh 2, Xã Za Hung, Đông Giang, Quảng Nam",
     "phone": "02353898966",
     "location": {
-      "lat": 1588836534.0,
-      "lng": 10764795498.0
+      "lat": 15.88836534,
+      "lng": 107.64795498
     },
     "postid": "565650",
     "province": "Quảng Nam"
@@ -3051,8 +3051,8 @@
     "address": "Thôn A Xờ, Xã Ma Cooih, Đông Giang, Quảng Nam",
     "phone": "0962111492",
     "location": {
-      "lat": 1583828507.0,
-      "lng": 10767777711.0
+      "lat": 15.83828507,
+      "lng": 107.67777711
     },
     "postid": "565660",
     "province": "Quảng Nam"
@@ -3062,8 +3062,8 @@
     "address": "Thôn A Grồng, Xã A Tiêng, Tây Giang, Quảng Nam",
     "phone": "02353796066",
     "location": {
-      "lat": 1588767841.0,
-      "lng": 10749137207.0
+      "lat": 15.88767841,
+      "lng": 107.49137207
     },
     "postid": "565800",
     "province": "Quảng Nam"
@@ -3073,8 +3073,8 @@
     "address": "Thôn Nal, Xã Lăng, Tây Giang, Quảng Nam",
     "phone": "0903462070",
     "location": {
-      "lat": 1585452475.0,
-      "lng": 10747481658.0
+      "lat": 15.85452475,
+      "lng": 107.47481658
     },
     "postid": "565801",
     "province": "Quảng Nam"
@@ -3084,8 +3084,8 @@
     "address": "Thôn A Cấp, Xã A Nông, Tây Giang, Quảng Nam",
     "phone": "02353796088",
     "location": {
-      "lat": 158876059.0,
-      "lng": 10749142505.0
+      "lat": 15.8876059,
+      "lng": 107.49142505
     },
     "postid": "565810",
     "province": "Quảng Nam"
@@ -3095,8 +3095,8 @@
     "address": "Thôn Bh Lố 1, Xã A Vương, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1594254421.0,
-      "lng": 10756824715.0
+      "lat": 15.94254421,
+      "lng": 107.56824715
     },
     "postid": "565829",
     "province": "Quảng Nam"
@@ -3106,8 +3106,8 @@
     "address": "Thôn A Ung, Xã BHa Lêê, Tây Giang, Quảng Nam",
     "phone": "01666795488",
     "location": {
-      "lat": 1592935224.0,
-      "lng": 10753484732.0
+      "lat": 15.92935224,
+      "lng": 107.53484732
     },
     "postid": "565840",
     "province": "Quảng Nam"
@@ -3117,8 +3117,8 @@
     "address": "Thôn A Rớt, Xã A Nông, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1594985716.0,
-      "lng": 10746737508.0
+      "lat": 15.94985716,
+      "lng": 107.46737508
     },
     "postid": "565864",
     "province": "Quảng Nam"
@@ -3128,8 +3128,8 @@
     "address": "Thôn Ahu, Xã A Tiêng, Tây Giang, Quảng Nam",
     "phone": "01686618046",
     "location": {
-      "lat": 159090834.0,
-      "lng": 10749622124.0
+      "lat": 15.9090834,
+      "lng": 107.49622124
     },
     "postid": "565876",
     "province": "Quảng Nam"
@@ -3139,8 +3139,8 @@
     "address": "Thôn Voòng, Xã Tr'Hy, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1581293576.0,
-      "lng": 10736698269.0
+      "lat": 15.81293576,
+      "lng": 107.36698269
     },
     "postid": "565886",
     "province": "Quảng Nam"
@@ -3150,8 +3150,8 @@
     "address": "Thôn A Rầng 2, Xã A Xan, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1583414316.0,
-      "lng": 10730820905.0
+      "lat": 15.83414316,
+      "lng": 107.30820905
     },
     "postid": "565898",
     "province": "Quảng Nam"
@@ -3161,8 +3161,8 @@
     "address": "Thôn Đhung, Xã Ch'Om, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1580007757.0,
-      "lng": 10726121097.0
+      "lat": 15.80007757,
+      "lng": 107.26121097
     },
     "postid": "565918",
     "province": "Quảng Nam"
@@ -3172,8 +3172,8 @@
     "address": "Thôn Da Ding, Xã Ga Ri, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1575923643.0,
-      "lng": 10727751946.0
+      "lat": 15.75923643,
+      "lng": 107.27751946
     },
     "postid": "565936",
     "province": "Quảng Nam"
@@ -3183,8 +3183,8 @@
     "address": "Thôn Ka La, Xã Dang, Tây Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1583939184.0,
-      "lng": 10755795241.0
+      "lat": 15.83939184,
+      "lng": 107.55795241
     },
     "postid": "565948",
     "province": "Quảng Nam"
@@ -3194,8 +3194,8 @@
     "address": "Thôn Dung, Thị Trấn Thạnh Mỹ, Nam Giang, Quảng Nam",
     "phone": "02353840356",
     "location": {
-      "lat": 157484991204324.0,
-      "lng": 107836191782331.0
+      "lat": 15.74849912,
+      "lng": 107.83619178
     },
     "postid": "566000",
     "province": "Quảng Nam"
@@ -3205,8 +3205,8 @@
     "address": "Thôn Côn Dôn, Xã Zuôih, Nam Giang, Quảng Nam",
     "phone": "01659222407",
     "location": {
-      "lat": 1567683977.0,
-      "lng": 10749839885.0
+      "lat": 15.67683977,
+      "lng": 107.49839885
     },
     "postid": "566020",
     "province": "Quảng Nam"
@@ -3216,8 +3216,8 @@
     "address": "Thôn Ba Lan, Xã La Êê, Nam Giang, Quảng Nam",
     "phone": "01642209044",
     "location": {
-      "lat": 1563122949.0,
-      "lng": 10736994976.0
+      "lat": 15.63122949,
+      "lng": 107.36994976
     },
     "postid": "566036",
     "province": "Quảng Nam"
@@ -3227,8 +3227,8 @@
     "address": "Thôn Bà Xua, Xã Tà BHing, Nam Giang, Quảng Nam",
     "phone": "02353792123",
     "location": {
-      "lat": 1566272977.0,
-      "lng": 10770391175.0
+      "lat": 15.66272977,
+      "lng": 107.70391175
     },
     "postid": "566040",
     "province": "Quảng Nam"
@@ -3238,8 +3238,8 @@
     "address": "Thôn Dung, Thị Trấn Thạnh Mỹ, Nam Giang, Quảng Nam",
     "phone": "02353840838",
     "location": {
-      "lat": 1574838801.0,
-      "lng": 10783619169.0
+      "lat": 15.74838801,
+      "lng": 107.83619169
     },
     "postid": "566050",
     "province": "Quảng Nam"
@@ -3249,8 +3249,8 @@
     "address": "Thôn A Bát, Xã Cha Vàl, Nam Giang, Quảng Nam",
     "phone": "0962746643",
     "location": {
-      "lat": 1562013976.0,
-      "lng": 1075086882.0
+      "lat": 15.62013976,
+      "lng": 107.5086882
     },
     "postid": "566060",
     "province": "Quảng Nam"
@@ -3260,8 +3260,8 @@
     "address": "Thôn Đắc Ốc, Xã La Dêê, Nam Giang, Quảng Nam",
     "phone": "0868008342",
     "location": {
-      "lat": 1560234271.0,
-      "lng": 10745518943.0
+      "lat": 15.60234271,
+      "lng": 107.45518943
     },
     "postid": "566080",
     "province": "Quảng Nam"
@@ -3271,8 +3271,8 @@
     "address": "Thôn 56b, Xã Đac Pree, Nam Giang, Quảng Nam",
     "phone": "0965875932",
     "location": {
-      "lat": 1558859034.0,
-      "lng": 10753712566.0
+      "lat": 15.58859034,
+      "lng": 107.53712566
     },
     "postid": "566094",
     "province": "Quảng Nam"
@@ -3282,8 +3282,8 @@
     "address": "Thôn 49b, Xã Đac Pring, Nam Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1557223856.0,
-      "lng": 10757185475.0
+      "lat": 15.57223856,
+      "lng": 107.57185475
     },
     "postid": "566104",
     "province": "Quảng Nam"
@@ -3293,8 +3293,8 @@
     "address": "Thôn Crung, Xã Cà Dy, Nam Giang, Quảng Nam",
     "phone": "01689488678",
     "location": {
-      "lat": 1569245662.0,
-      "lng": 10776876413.0
+      "lat": 15.69245662,
+      "lng": 107.76876413
     },
     "postid": "566111",
     "province": "Quảng Nam"
@@ -3304,8 +3304,8 @@
     "address": "Thôn A Xo, Xã Chơ Chun, Nam Giang, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 156463661801351.0,
-      "lng": 107355744225177.0
+      "lat": 15.64636618,
+      "lng": 107.35574422
     },
     "postid": "566130",
     "province": "Quảng Nam"
@@ -3315,8 +3315,8 @@
     "address": "Khối phố Cẩm Thịnh, Thị Trấn Phú Thịnh, Phú Ninh, Quảng Nam",
     "phone": "02353890977",
     "location": {
-      "lat": 1555195077.0,
-      "lng": 10841495164.0
+      "lat": 15.55195077,
+      "lng": 108.41495164
     },
     "postid": "566200",
     "province": "Quảng Nam"
@@ -3326,8 +3326,8 @@
     "address": "Thôn An Lâu 1, Xã Tam Lãnh, Phú Ninh, Quảng Nam",
     "phone": "0343770089",
     "location": {
-      "lat": 154332487.0,
-      "lng": 10840841177.0
+      "lat": 15.4332487,
+      "lng": 108.40841177
     },
     "postid": "566201",
     "province": "Quảng Nam"
@@ -3337,8 +3337,8 @@
     "address": "Thôn Khánh Thọ, Xã Tam Thái, Phú Ninh, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1553968352.0,
-      "lng": 10844991687.0
+      "lat": 15.53968352,
+      "lng": 108.44991687
     },
     "postid": "566227",
     "province": "Quảng Nam"
@@ -3348,8 +3348,8 @@
     "address": "Thôn Cây Sanh, Xã Tam Dân, Phú Ninh, Quảng Nam",
     "phone": "02353855777",
     "location": {
-      "lat": 1552377808.0,
-      "lng": 10842006081.0
+      "lat": 15.52377808,
+      "lng": 108.42006081
     },
     "postid": "566240",
     "province": "Quảng Nam"
@@ -3359,8 +3359,8 @@
     "address": "Khối phố Thạnh Đức, Thị Trấn Phú Thịnh, Phú Ninh, Quảng Nam",
     "phone": "02353823799",
     "location": {
-      "lat": 155513584255335.0,
-      "lng": 108414784617072.0
+      "lat": 15.55135842,
+      "lng": 108.41478461
     },
     "postid": "566250",
     "province": "Quảng Nam"
@@ -3370,8 +3370,8 @@
     "address": "Thôn Đàn Hạ, Xã Tam Đàn, Phú Ninh, Quảng Nam",
     "phone": "02353890995",
     "location": {
-      "lat": 1559436063.0,
-      "lng": 10845621984.0
+      "lat": 15.59436063,
+      "lng": 108.45621984
     },
     "postid": "566260",
     "province": "Quảng Nam"
@@ -3381,8 +3381,8 @@
     "address": "Thôn An Mỹ 2, Xã Tam An, Phú Ninh, Quảng Nam",
     "phone": "0914550157",
     "location": {
-      "lat": 1559375803.0,
-      "lng": 10842640142.0
+      "lat": 15.59375803,
+      "lng": 108.42640142
     },
     "postid": "566280",
     "province": "Quảng Nam"
@@ -3392,8 +3392,8 @@
     "address": "Thôn 2, Xã Tam Lộc, Phú Ninh, Quảng Nam",
     "phone": "0981936945",
     "location": {
-      "lat": 1556423606.0,
-      "lng": 10836696464.0
+      "lat": 15.56423606,
+      "lng": 108.36696464
     },
     "postid": "566300",
     "province": "Quảng Nam"
@@ -3403,8 +3403,8 @@
     "address": "Thôn 1 (Thôn Tú Lâm), Xã Tam Vinh, Phú Ninh, Quảng Nam",
     "phone": "0916555236",
     "location": {
-      "lat": 1553665973.0,
-      "lng": 10838904613.0
+      "lat": 15.53665973,
+      "lng": 108.38904613
     },
     "postid": "566320",
     "province": "Quảng Nam"
@@ -3414,8 +3414,8 @@
     "address": "Thôn 1, Xã Tam Thành, Phú Ninh, Quảng Nam",
     "phone": "0934645280",
     "location": {
-      "lat": 156171656183579.0,
-      "lng": 108411298989188.0
+      "lat": 15.61716561,
+      "lng": 108.41129898
     },
     "postid": "566340",
     "province": "Quảng Nam"
@@ -3425,8 +3425,8 @@
     "address": "Thôn Cẩm Khê, Xã Tam Phước, Phú Ninh, Quảng Nam",
     "phone": "0912405665",
     "location": {
-      "lat": 1556940117.0,
-      "lng": 1084064871.0
+      "lat": 15.56940117,
+      "lng": 108.4064871
     },
     "postid": "566360",
     "province": "Quảng Nam"
@@ -3436,8 +3436,8 @@
     "address": "Thôn Đại An, Xã Tam Đại, Phú Ninh, Quảng Nam",
     "phone": "0911506583",
     "location": {
-      "lat": 1551377632.0,
-      "lng": 1084625934.0
+      "lat": 15.51377632,
+      "lng": 108.4625934
     },
     "postid": "566410",
     "province": "Quảng Nam"
@@ -3447,8 +3447,8 @@
     "address": "Thôn Xuân Hòa, Xã Phước Ninh, Nông Sơn, Quảng Nam",
     "phone": "02353654010",
     "location": {
-      "lat": 157129306.0,
-      "lng": 10806353902.0
+      "lat": 15.7129306,
+      "lng": 108.06353902
     },
     "postid": "566710",
     "province": "Quảng Nam"
@@ -3458,8 +3458,8 @@
     "address": "Thôn Bình Yên, Xã Phước Ninh, Nông Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1571164064.0,
-      "lng": 10805907919.0
+      "lat": 15.71164064,
+      "lng": 108.05907919
     },
     "postid": "566723",
     "province": "Quảng Nam"
@@ -3469,8 +3469,8 @@
     "address": "Thôn 3, Xã Quế Lâm, Nông Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 1563729928.0,
-      "lng": 10799156242.0
+      "lat": 15.63729928,
+      "lng": 107.99156242
     },
     "postid": "566736",
     "province": "Quảng Nam"
@@ -3480,8 +3480,8 @@
     "address": "Thôn Phước Bình, Xã Sơn Viên, Nông Sơn, Quảng Nam",
     "phone": null,
     "location": {
-      "lat": 157129157340487.0,
-      "lng": 10810948434892.0
+      "lat": 15.71291573,
+      "lng": 108.10948434
     },
     "postid": "566773",
     "province": "Quảng Nam"
@@ -3491,8 +3491,8 @@
     "address": "Thôn Trung Phước 1, Xã Quế Trung, Nông Sơn, Quảng Nam",
     "phone": "02353654010",
     "location": {
-      "lat": 1571294866.0,
-      "lng": 10806357924.0
+      "lat": 15.71294866,
+      "lng": 108.06357924
     },
     "postid": "566780",
     "province": "Quảng Nam"

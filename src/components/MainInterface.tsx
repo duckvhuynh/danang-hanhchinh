@@ -25,6 +25,7 @@ import { offices } from "../data/office-utils";
 import { getWholeDanangPolygon, getWholeDanangBounds } from "../data/whole-danang-utils";
 import { 
   getOfficesByLayer, 
+  categorizeLayerBOffices,
   type AdministrativeOffice 
 } from "../data/administrative-offices";
 import { 
@@ -66,9 +67,15 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [showCircles, setShowCircles] = useState(true);
 
   // Radius state for each layer
-  const [layerARadius, setLayerARadius] = useState(7); // Default 7km
-  const [layerBRadius, setLayerBRadius] = useState(5); // Default 5km
+  const [layerAReceptionRadius, setLayerAReceptionRadius] = useState(5); // Layer A reception radius (default 5km)
+  const [layerAManagementRadius, setLayerAManagementRadius] = useState(15); // Layer A management radius (default 15km)
+  const [layerBUrbanRadius, setLayerBUrbanRadius] = useState(3); // Layer B urban radius (default 3km)
+  const [layerBSuburbanRadius, setLayerBSuburbanRadius] = useState(8); // Layer B suburban radius (default 8km)
   const [layerCRadius, setLayerCRadius] = useState(5); // Default 5km
+
+  // Layer B within Layer A control state
+  const [hideLayerBWithinA, setHideLayerBWithinA] = useState(false); // Option to hide/dim Layer B within Layer A
+  const [useManagementRadiusForHiding, setUseManagementRadiusForHiding] = useState(false); // Use management vs reception radius
 
   // Polygon color mode state
   const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
@@ -288,7 +295,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
           const editedOffice = editedOffices.get(office.id);
           return editedOffice || {
             ...office,
-            radius: layerARadius
+            receptionRadius: layerAReceptionRadius,
+            managementRadius: layerAManagementRadius,
+            radius: layerAReceptionRadius, // Primary radius for Layer A is reception radius
           };
         });
       visibleOffices.push(...layerAOffices);
@@ -299,9 +308,17 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
         .map(office => {
           // Check if this office has been edited
           const editedOffice = editedOffices.get(office.id);
-          return editedOffice || {
+          if (editedOffice) {
+            return editedOffice;
+          }
+          
+          // Apply radius based on office type
+          const radius = office.type === 'urban' ? layerBUrbanRadius : 
+                        office.type === 'suburban' ? layerBSuburbanRadius : 5;
+          
+          return {
             ...office,
-            radius: layerBRadius
+            radius: radius
           };
         });
       visibleOffices.push(...layerBOffices);
@@ -331,7 +348,53 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     visibleOffices.push(...visibleCustomOffices);
     
     return visibleOffices;
-  }, [showLayerA, showLayerB, showLayerC, layerARadius, layerBRadius, layerCRadius, customOffices, editedOffices, deletedOfficeIds]);
+  }, [showLayerA, showLayerB, showLayerC, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerBSuburbanRadius, layerCRadius, customOffices, editedOffices, deletedOfficeIds]);
+
+  // Calculate Layer B offices within Layer A circles
+  const getLayerBWithinAInfo = useCallback(() => {
+    if (!showLayerA || !showLayerB) {
+      return { count: 0, withinOffices: [], outsideOffices: [] };
+    }
+
+    const layerAOffices = getOfficesByLayer('A')
+      .filter(office => !deletedOfficeIds.has(office.id))
+      .map(office => {
+        const editedOffice = editedOffices.get(office.id);
+        return editedOffice || {
+          ...office,
+          receptionRadius: layerAReceptionRadius,
+          managementRadius: layerAManagementRadius,
+          radius: layerAReceptionRadius,
+        };
+      });
+
+    const layerBOffices = getOfficesByLayer('B')
+      .filter(office => !deletedOfficeIds.has(office.id))
+      .map(office => {
+        const editedOffice = editedOffices.get(office.id);
+        if (editedOffice) {
+          return editedOffice;
+        }
+        
+        // Apply radius based on office type
+        const radius = office.type === 'urban' ? layerBUrbanRadius : 
+                      office.type === 'suburban' ? layerBSuburbanRadius : 5;
+        
+        return {
+          ...office,
+          radius: radius
+        };
+      });
+
+    // Import the categorization function
+    const result = categorizeLayerBOffices(layerBOffices, layerAOffices, useManagementRadiusForHiding);
+    
+    return {
+      count: result.withinLayerA.length,
+      withinOffices: result.withinLayerA,
+      outsideOffices: result.outsideLayerA
+    };
+  }, [showLayerA, showLayerB, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerBSuburbanRadius, deletedOfficeIds, editedOffices, useManagementRadiusForHiding]);
 
   // Direction mode functions
   
@@ -734,6 +797,8 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   onMarkerDrag={handleMarkerDrag}
                   onMarkerDelete={handleMarkerDelete}
                   onOfficeEdit={handleOfficeEdit}
+                  hideLayerBWithinA={hideLayerBWithinA}
+                  useManagementRadiusForHiding={useManagementRadiusForHiding}
                 />
 
                 {/* User location marker */}
@@ -811,12 +876,21 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleLayerB={setShowLayerB}
                 onToggleLayerC={setShowLayerC}
                 onToggleCircles={setShowCircles}
-                layerARadius={layerARadius}
-                layerBRadius={layerBRadius}
+                layerAReceptionRadius={layerAReceptionRadius}
+                layerAManagementRadius={layerAManagementRadius}
+                layerBUrbanRadius={layerBUrbanRadius}
+                layerBSuburbanRadius={layerBSuburbanRadius}
                 layerCRadius={layerCRadius}
-                onLayerARadiusChange={setLayerARadius}
-                onLayerBRadiusChange={setLayerBRadius}
+                onLayerAReceptionRadiusChange={setLayerAReceptionRadius}
+                onLayerAManagementRadiusChange={setLayerAManagementRadius}
+                onLayerBUrbanRadiusChange={setLayerBUrbanRadius}
+                onLayerBSuburbanRadiusChange={setLayerBSuburbanRadius}
                 onLayerCRadiusChange={setLayerCRadius}
+                hideLayerBWithinA={hideLayerBWithinA}
+                onToggleHideLayerBWithinA={setHideLayerBWithinA}
+                useManagementRadiusForHiding={useManagementRadiusForHiding}
+                onToggleUseManagementRadiusForHiding={setUseManagementRadiusForHiding}
+                layerBWithinACount={getLayerBWithinAInfo().count}
                 neutralPolygonMode={neutralPolygonMode}
                 onToggleNeutralPolygonMode={setNeutralPolygonMode}
                 mapType={mapType}

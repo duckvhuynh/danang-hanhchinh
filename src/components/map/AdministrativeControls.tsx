@@ -23,12 +23,20 @@ interface AdministrativeControlsProps {
   onToggleLayerC: (show: boolean) => void;
   onToggleCircles: (show: boolean) => void;
   // Radius controls
-  layerARadius: number;
+  layerAReceptionRadius: number;
+  layerAManagementRadius: number;
   layerBRadius: number;
   layerCRadius: number;
-  onLayerARadiusChange: (radius: number) => void;
+  onLayerAReceptionRadiusChange: (radius: number) => void;
+  onLayerAManagementRadiusChange: (radius: number) => void;
   onLayerBRadiusChange: (radius: number) => void;
   onLayerCRadiusChange: (radius: number) => void;
+  // Layer B within Layer A controls
+  hideLayerBWithinA: boolean;
+  onToggleHideLayerBWithinA: (hide: boolean) => void;
+  useManagementRadiusForHiding: boolean;
+  onToggleUseManagementRadiusForHiding: (use: boolean) => void;
+  layerBWithinACount?: number;
 }
 
 export function AdministrativeControls({
@@ -40,12 +48,19 @@ export function AdministrativeControls({
   onToggleLayerB,
   onToggleLayerC,
   onToggleCircles,
-  layerARadius,
+  layerAReceptionRadius,
+  layerAManagementRadius,
   layerBRadius,
   layerCRadius,
-  onLayerARadiusChange,
+  onLayerAReceptionRadiusChange,
+  onLayerAManagementRadiusChange,
   onLayerBRadiusChange,
   onLayerCRadiusChange,
+  hideLayerBWithinA,
+  onToggleHideLayerBWithinA,
+  useManagementRadiusForHiding,
+  onToggleUseManagementRadiusForHiding,
+  layerBWithinACount = 0,
 }: AdministrativeControlsProps) {
   const [expanded, setExpanded] = useState(false);
   const layerCount = [showLayerA, showLayerB, showLayerC].filter(Boolean).length;
@@ -127,10 +142,10 @@ export function AdministrativeControls({
                   </div>
                   <div>
                     <p className="text-sm font-medium text-red-900">
-                      Lớp A - {layerARadius}km
+                      Lớp A - Tiếp nhận: {layerAReceptionRadius}km, Quản lý: {layerAManagementRadius}km
                     </p>
                     <p className="text-xs text-red-700">
-                      {layerConfigurations.A.count} Quận/Huyện cũ
+                      {layerConfigurations.A.count} Chi nhánh (2 vòng)
                     </p>
                   </div>
                 </Label>
@@ -142,24 +157,47 @@ export function AdministrativeControls({
                 />
               </div>
               
-              {/* Layer A Radius Control */}
+              {/* Layer A Dual Radius Controls */}
               {showLayerA && (
-                <div className="mt-2 px-2">
-                  <Label htmlFor="layer-a-radius" className="text-xs text-red-700">
-                    Bán kính phục vụ (km):
-                  </Label>
-                  <div className="flex items-center gap-2 mt-1">
-                    <Input
-                      id="layer-a-radius"
-                      type="number"
-                      min="1"
-                      max="20"
-                      step="0.5"
-                      value={layerARadius}
-                      onChange={(e) => onLayerARadiusChange(Number(e.target.value))}
-                      className="w-16 h-7 text-xs"
-                    />
-                    <span className="text-xs text-red-600">km</span>
+                <div className="mt-2 px-2 space-y-2">
+                  {/* Reception Radius */}
+                  <div>
+                    <Label htmlFor="layer-a-reception-radius" className="text-xs text-red-700">
+                      Bán kính tiếp nhận (km):
+                    </Label>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Input
+                        id="layer-a-reception-radius"
+                        type="number"
+                        min="1"
+                        max="20"
+                        step="0.5"
+                        value={layerAReceptionRadius}
+                        onChange={(e) => onLayerAReceptionRadiusChange(Number(e.target.value))}
+                        className="w-16 h-7 text-xs"
+                      />
+                      <span className="text-xs text-red-600">km</span>
+                    </div>
+                  </div>
+                  
+                  {/* Management Radius */}
+                  <div>
+                    <Label htmlFor="layer-a-management-radius" className="text-xs text-red-700">
+                      Bán kính quản lý (km):
+                    </Label>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Input
+                        id="layer-a-management-radius"
+                        type="number"
+                        min="1"
+                        max="30"
+                        step="0.5"
+                        value={layerAManagementRadius}
+                        onChange={(e) => onLayerAManagementRadiusChange(Number(e.target.value))}
+                        className="w-16 h-7 text-xs"
+                      />
+                      <span className="text-xs text-red-600">km</span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -194,23 +232,68 @@ export function AdministrativeControls({
               
               {/* Layer B Radius Control */}
               {showLayerB && (
-                <div className="mt-2 px-2">
-                  <Label htmlFor="layer-b-radius" className="text-xs text-blue-700">
-                    Bán kính phục vụ (km):
-                  </Label>
-                  <div className="flex items-center gap-2 mt-1">
-                    <Input
-                      id="layer-b-radius"
-                      type="number"
-                      min="1"
-                      max="20"
-                      step="0.5"
-                      value={layerBRadius}
-                      onChange={(e) => onLayerBRadiusChange(Number(e.target.value))}
-                      className="w-16 h-7 text-xs"
-                    />
-                    <span className="text-xs text-blue-600">km</span>
+                <div className="mt-2 px-2 space-y-3">
+                  {/* Radius Control */}
+                  <div>
+                    <Label htmlFor="layer-b-radius" className="text-xs text-blue-700">
+                      Bán kính phục vụ (km):
+                    </Label>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Input
+                        id="layer-b-radius"
+                        type="number"
+                        min="1"
+                        max="20"
+                        step="0.5"
+                        value={layerBRadius}
+                        onChange={(e) => onLayerBRadiusChange(Number(e.target.value))}
+                        className="w-16 h-7 text-xs"
+                      />
+                      <span className="text-xs text-blue-600">km</span>
+                    </div>
                   </div>
+
+                  {/* Layer B within Layer A Controls */}
+                  {showLayerA && (
+                    <div className="border-t border-blue-200 pt-2">
+                      <Label className="text-xs text-blue-700 font-medium">
+                        Lớp B trong vùng Lớp A:
+                      </Label>
+                      
+                      {/* Hide Layer B within A toggle */}
+                      <div className="flex items-center justify-between mt-1">
+                        <Label htmlFor="hide-layer-b-within-a" className="text-xs text-blue-600">
+                          Ẩn Lớp B trong vùng A ({layerBWithinACount})
+                        </Label>
+                        <Switch
+                          id="hide-layer-b-within-a"
+                          checked={hideLayerBWithinA}
+                          onCheckedChange={onToggleHideLayerBWithinA}
+                          className="data-[state=checked]:bg-blue-500 scale-75"
+                        />
+                      </div>
+
+                      {/* Radius selection for hiding */}
+                      <div className="flex items-center justify-between mt-1">
+                        <Label htmlFor="use-management-radius" className="text-xs text-blue-600">
+                          Dùng bán kính quản lý
+                        </Label>
+                        <Switch
+                          id="use-management-radius"
+                          checked={useManagementRadiusForHiding}
+                          onCheckedChange={onToggleUseManagementRadiusForHiding}
+                          className="data-[state=checked]:bg-blue-500 scale-75"
+                        />
+                      </div>
+                      
+                      <div className="text-xs text-blue-500 mt-1">
+                        {useManagementRadiusForHiding 
+                          ? `Sử dụng bán kính quản lý (${layerAManagementRadius}km)` 
+                          : `Sử dụng bán kính tiếp nhận (${layerAReceptionRadius}km)`
+                        }
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

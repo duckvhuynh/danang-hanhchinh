@@ -1,6 +1,6 @@
-import oldDistrictData from './old-district.json';
-import administrativeInfoData from './administrative-information.json';
-import oldCommuneWardData from './old-commune-ward.json';
+import layerAData from './layers/layer-a.json';
+import layerBData from './layers/layer-b.json';
+import layerCData from './layers/layer-c.json';
 
 // Define the data structure for administrative offices
 export interface AdministrativeOffice {
@@ -15,57 +15,67 @@ export interface AdministrativeOffice {
   procedures_2024?: number;
   procedures_6months_2025?: number;
   layer: 'A' | 'B' | 'C';
-  radius: number; // in kilometers
+  radius: number; // in kilometers - primary radius
+  managementRadius?: number; // in kilometers - only for Layer A (15km default)
+  receptionRadius?: number; // in kilometers - only for Layer A (5km default)
   phone?: string;
   old_commune_ward?: string;
   is_commune?: boolean;
+  type?: 'urban' | 'suburban'; // for radius calculation
+  postid?: string; // for Layer C (post offices)
 }
 
-// Layer A: 22 administrative service offices (17 old QN districts + 5 DN quận) - 7km radius
-export const layerAOffices: AdministrativeOffice[] = oldDistrictData.map((office, index) => ({
+// Helper function to calculate radius based on type
+function calculateRadiusByType(type?: 'urban' | 'suburban', defaultRadius: number = 5): number {
+  if (type === 'urban') return 3; // Urban areas: 3km
+  if (type === 'suburban') return 8; // Mountainous/suburban areas: 8km
+  return defaultRadius; // Default: 5km
+}
+
+// Layer A: Chi nhánh (Branches) - each point has 2 circles: management (15km) and reception (5km)
+export const layerAOffices: AdministrativeOffice[] = layerAData.map((office, index) => ({
   id: `layer-a-${index}`,
   name: office.name,
   location: office.location,
   address: office.address,
-  region: office.region,
-  procedures_2024: office.procedures_2024,
-  procedures_6months_2025: office.procedures_6months_2025,
+  region: 'Đà Nẵng',
   layer: 'A',
-  radius: 7, // 7km radius as per PRD
+  radius: 5, // Reception radius (adjustable)
+  managementRadius: 15, // Management radius (adjustable)
+  receptionRadius: 5, // Reception radius (adjustable)
+  phone: office.phone,
+  type: office.type as 'urban' | 'suburban',
 }));
 
-// Layer B: 93 centers of new xã (commune/ward centers) - 5km radius
-export const layerBOffices: AdministrativeOffice[] = administrativeInfoData.commune_ward_list
-  .filter(item => item.location && item.location.latitude && item.location.longitude)
+// Layer B: Điểm tiếp nhận (Reception Points) - new commune/ward offices
+export const layerBOffices: AdministrativeOffice[] = layerBData
+  .filter(office => office.location && office.location.lat && office.location.lng)
   .map((office, index) => ({
     id: `layer-b-${index}`,
-    name: `UBND ${office.is_commune ? 'xã' : 'phường'} ${office.new_commune_ward}`,
-    location: {
-      lat: office.location.latitude,
-      lng: office.location.longitude,
-    },
-    address: office.location.address,
+    name: office.name,
+    location: office.location,
+    address: office.address,
     region: 'Đà Nẵng',
     layer: 'B',
-    radius: 5, // 5km radius as per PRD
-    phone: office.location.phone,
-    old_commune_ward: office.old_commune_ward,
-    is_commune: office.is_commune,
+    radius: calculateRadiusByType(office.type as 'urban' | 'suburban'),
+    phone: office.phone,
+    type: office.type as 'urban' | 'suburban',
   }));
 
-// Layer C: All former xã (excluding those already in A/B) - 5km radius
-export const layerCOffices: AdministrativeOffice[] = oldCommuneWardData
+// Layer C: Điểm tăng cường (Reinforcement Points) - post offices
+export const layerCOffices: AdministrativeOffice[] = layerCData
+  .filter(office => office.location && office.location.lat && office.location.lng)
   .map((office, index) => ({
     id: `layer-c-${index}`,
     name: office.name,
     location: office.location,
     address: office.address,
-    region: office.region,
-    procedures_2024: office.procedures_2024,
-    procedures_6months_2025: office.procedures_6months_2025,
+    region: office.province || 'Đà Nẵng',
     layer: 'C',
-    radius: 5, // 5km radius as per PRD
-    old_commune_ward: office.old_commune_ward,
+    radius: calculateRadiusByType(undefined), // Post offices default to 5km since no type specified
+    phone: office.phone || undefined,
+    postid: office.postid,
+    type: undefined, // Post offices don't have type classification
   }));
 
 // Combined all layers
@@ -78,27 +88,28 @@ export const allAdministrativeOffices: AdministrativeOffice[] = [
 // Layer configurations for UI
 export const layerConfigurations = {
   A: {
-    name: 'Trụ sở UBND cấp huyện',
-    description: '22 trụ sở hành chính (17 QN cũ + 5 DN)',
-    radius: 7,
+    name: 'Chi nhánh',
+    description: 'Điểm có 2 vòng: Quản lý (15km) và Tiếp nhận (5km)',
+    radius: 5, // Reception radius
+    managementRadius: 15, // Management radius
     color: '#DC2626', // Red
     fillColor: '#FEE2E2',
     strokeColor: '#DC2626',
     count: layerAOffices.length,
   },
   B: {
-    name: 'Trung tâm xã/phường mới',
-    description: '93 trung tâm xã/phường sau sáp nhập',
-    radius: 5,
+    name: 'Điểm tiếp nhận',
+    description: 'Trụ sở xã/phường mới (3km đô thị, 8km miền núi)',
+    radius: 5, // Default radius
     color: '#2563EB', // Blue
     fillColor: '#DBEAFE',
     strokeColor: '#2563EB',
     count: layerBOffices.length,
   },
   C: {
-    name: 'Trụ sở xã/phường cũ',
-    description: 'Các trụ sở xã/phường trước sáp nhập',
-    radius: 5,
+    name: 'Điểm tăng cường',
+    description: 'Bưu điện (bán kính 5km)',
+    radius: 5, // Default radius
     color: '#059669', // Green
     fillColor: '#D1FAE5',
     strokeColor: '#059669',
@@ -123,4 +134,81 @@ export function getOfficesByLayer(layer: 'A' | 'B' | 'C'): AdministrativeOffice[
 // Helper function to get layer configuration
 export function getLayerConfig(layer: 'A' | 'B' | 'C') {
   return layerConfigurations[layer];
+}
+
+// Utility function to calculate distance between two coordinates using Haversine formula
+export function calculateDistance(
+  lat1: number, 
+  lng1: number, 
+  lat2: number, 
+  lng2: number
+): number {
+  const R = 6371; // Earth's radius in kilometers
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLng/2) * Math.sin(dLng/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c; // Distance in kilometers
+}
+
+// Utility function to check if a Layer B office is within any Layer A circle
+export function isLayerBWithinLayerA(
+  layerBOffice: AdministrativeOffice,
+  layerAOffices: AdministrativeOffice[],
+  useManagementRadius: boolean = false
+): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
+  for (const layerAOffice of layerAOffices) {
+    const radius = useManagementRadius 
+      ? (layerAOffice.managementRadius || 15) 
+      : (layerAOffice.receptionRadius || 5);
+    
+    const distance = calculateDistance(
+      layerBOffice.location.lat,
+      layerBOffice.location.lng,
+      layerAOffice.location.lat,
+      layerAOffice.location.lng
+    );
+    
+    if (distance <= radius) {
+      return { 
+        isWithin: true, 
+        containingOffice: layerAOffice, 
+        distance 
+      };
+    }
+  }
+  
+  return { isWithin: false };
+}
+
+// Utility function to get Layer B offices categorized by their relationship to Layer A
+export function categorizeLayerBOffices(
+  layerBOffices: AdministrativeOffice[],
+  layerAOffices: AdministrativeOffice[],
+  useManagementRadius: boolean = false
+): {
+  withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number }>;
+  outsideLayerA: AdministrativeOffice[];
+} {
+  const withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number }> = [];
+  const outsideLayerA: AdministrativeOffice[] = [];
+  
+  for (const layerBOffice of layerBOffices) {
+    const result = isLayerBWithinLayerA(layerBOffice, layerAOffices, useManagementRadius);
+    
+    if (result.isWithin && result.containingOffice && result.distance !== undefined) {
+      withinLayerA.push({
+        ...layerBOffice,
+        containingOffice: result.containingOffice,
+        distance: result.distance
+      });
+    } else {
+      outsideLayerA.push(layerBOffice);
+    }
+  }
+  
+  return { withinLayerA, outsideLayerA };
 }

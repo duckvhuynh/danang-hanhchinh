@@ -1,9 +1,10 @@
 import { AdvancedMarker, Pin, InfoWindow } from "@vis.gl/react-google-maps";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "../ui/button";
 import { MapPin, Phone, Navigation, Building2, FileText, Trash2, Edit } from "lucide-react";
 import { Circle } from "../geometry/circle";
 import type { AdministrativeOffice } from "../../data/administrative-offices";
+import { isLayerBWithinLayerA } from "../../data/administrative-offices";
 import { EditOfficeModal } from "./EditOfficeModal";
 
 interface AdministrativeOfficesProps {
@@ -20,6 +21,9 @@ interface AdministrativeOfficesProps {
     onMarkerDrag?: (office: AdministrativeOffice, newPosition: {lat: number, lng: number}) => void;
     onMarkerDelete?: (office: AdministrativeOffice) => void;
     onOfficeEdit?: (office: AdministrativeOffice, updates: Partial<AdministrativeOffice>) => void;
+    // Layer B within Layer A controls
+    hideLayerBWithinA?: boolean;
+    useManagementRadiusForHiding?: boolean;
 }
 
 export function AdministrativeOffices({
@@ -35,11 +39,59 @@ export function AdministrativeOffices({
     editMode = false,
     onMarkerDrag,
     onMarkerDelete,
-    onOfficeEdit
+    onOfficeEdit,
+    hideLayerBWithinA = false,
+    useManagementRadiusForHiding = false,
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
     const [editingOffice, setEditingOffice] = useState<AdministrativeOffice | null>(null);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
+    // Process offices to determine which Layer B offices are within Layer A circles
+    const processedOffices = useMemo(() => {
+        const layerAOffices = offices.filter(office => office.layer === 'A');
+        const layerBOffices = offices.filter(office => office.layer === 'B');
+        const layerCOffices = offices.filter(office => office.layer === 'C');
+        
+        // Check which Layer B offices are within Layer A circles
+        const layerBWithinA: AdministrativeOffice[] = [];
+        const layerBOutsideA: AdministrativeOffice[] = [];
+        
+        for (const layerBOffice of layerBOffices) {
+            const result = isLayerBWithinLayerA(layerBOffice, layerAOffices, useManagementRadiusForHiding);
+            if (result.isWithin) {
+                layerBWithinA.push(layerBOffice);
+            } else {
+                layerBOutsideA.push(layerBOffice);
+            }
+        }
+        
+        // Determine which offices to show
+        const visibleOffices = [...layerAOffices, ...layerCOffices];
+        
+        if (hideLayerBWithinA) {
+            // Show only Layer B offices outside Layer A circles
+            visibleOffices.push(...layerBOutsideA);
+        } else {
+            // Show all Layer B offices
+            visibleOffices.push(...layerBOffices);
+        }
+        
+        return {
+            visibleOffices,
+            layerBWithinA,
+            layerBOutsideA,
+        };
+    }, [offices, hideLayerBWithinA, useManagementRadiusForHiding]);
+
+    // Helper function to check if a Layer B office should be dimmed
+    const isLayerBDimmed = (office: AdministrativeOffice): boolean => {
+        if (office.layer !== 'B' || hideLayerBWithinA) return false;
+        
+        const layerAOffices = offices.filter(o => o.layer === 'A');
+        const result = isLayerBWithinLayerA(office, layerAOffices, useManagementRadiusForHiding);
+        return result.isWithin;
+    };
 
     // Helper function to create Google Maps directions URL
     const getGoogleMapsDirectionsUrl = (lat: number, lng: number): string => {
@@ -109,6 +161,8 @@ export function AdministrativeOffices({
 
     // Get marker appearance based on direction mode selection
     const getMarkerAppearance = (office: AdministrativeOffice) => {
+        const isDimmed = isLayerBDimmed(office);
+        
         if (directionMode) {
             if (selectedStartOffice?.id === office.id) {
                 return {
@@ -138,20 +192,20 @@ export function AdministrativeOffices({
             } else {
                 // Non-selected markers in direction mode should be less prominent
                 return {
-                    background: getLayerColor(office.layer),
+                    background: isDimmed ? "#94A3B8" : getLayerColor(office.layer), // Dimmed color for Layer B within A
                     borderColor: "#FFFFFF",
                     glyphColor: "#FFFFFF",
                     scale: office.layer === 'A' ? 0.9 : 0.7, // Smaller for less prominence
-                    zIndex: 10,
+                    zIndex: isDimmed ? 5 : 10, // Lower z-index for dimmed markers
                 };
             }
         } else {
             return {
-                background: getLayerColor(office.layer),
+                background: isDimmed ? "#94A3B8" : getLayerColor(office.layer), // Dimmed color for Layer B within A
                 borderColor: "#FFFFFF",
                 glyphColor: "#FFFFFF",
-                scale: office.layer === 'A' ? 1.1 : 0.9,
-                zIndex: 100,
+                scale: isDimmed ? 0.7 : (office.layer === 'A' ? 1.1 : 0.9), // Smaller scale for dimmed markers
+                zIndex: isDimmed ? 50 : 100, // Lower z-index for dimmed markers
             };
         }
     };
@@ -172,33 +226,71 @@ export function AdministrativeOffices({
     return (
         <>
             {/* Service coverage circles */}
-            {showCircles && offices.map((office) => {
+            {showCircles && processedOffices.visibleOffices.map((office) => {
                 const colors = getCircleColors(office.layer);
-                return (
-                    <Circle
-                        key={`circle-${office.id}`}
-                        center={office.location}
-                        radius={office.radius * 1000} // Convert km to meters
-                        fillColor={colors.fillColor}
-                        fillOpacity={colors.fillOpacity}
-                        strokeColor={colors.strokeColor}
-                        strokeOpacity={colors.strokeOpacity}
-                        strokeWeight={directionMode ? 1 : 1.5}
-                        clickable={false}
-                        zIndex={directionMode ? 1 : 5}
-                    />
-                );
+                
+                if (office.layer === 'A') {
+                    // Layer A (Chi nhánh) has dual circles: management and reception
+                    return (
+                        <div key={`circle-${office.id}`}>
+                            {/* Management Circle (Outer, larger) */}
+                            <Circle
+                                key={`management-circle-${office.id}`}
+                                center={office.location}
+                                radius={(office.managementRadius || 15) * 1000} // Convert km to meters
+                                fillColor={colors.fillColor}
+                                fillOpacity={directionMode ? 0.1 : 0.2} // More transparent for outer circle
+                                strokeColor={colors.strokeColor}
+                                strokeOpacity={directionMode ? 0.1 : 0.3}
+                                strokeWeight={directionMode ? 1 : 2}
+                                clickable={false}
+                                zIndex={directionMode ? 1 : 4}
+                            />
+                            {/* Reception Circle (Inner, smaller) */}
+                            <Circle
+                                key={`reception-circle-${office.id}`}
+                                center={office.location}
+                                radius={(office.receptionRadius || 5) * 1000} // Convert km to meters
+                                fillColor={colors.fillColor}
+                                fillOpacity={colors.fillOpacity} // Normal opacity for inner circle
+                                strokeColor={colors.strokeColor}
+                                strokeOpacity={colors.strokeOpacity}
+                                strokeWeight={directionMode ? 1 : 1.5}
+                                clickable={false}
+                                zIndex={directionMode ? 2 : 5}
+                            />
+                        </div>
+                    );
+                } else {
+                    // Layer B and C have single circles
+                    return (
+                        <Circle
+                            key={`circle-${office.id}`}
+                            center={office.location}
+                            radius={office.radius * 1000} // Convert km to meters
+                            fillColor={colors.fillColor}
+                            fillOpacity={colors.fillOpacity}
+                            strokeColor={colors.strokeColor}
+                            strokeOpacity={colors.strokeOpacity}
+                            strokeWeight={directionMode ? 1 : 1.5}
+                            clickable={false}
+                            zIndex={directionMode ? 1 : 5}
+                        />
+                    );
+                }
             })}
 
             {/* Office markers */}
-            {offices.map((office) => {
+            {processedOffices.visibleOffices.map((office) => {
                 const appearance = getMarkerAppearance(office);
+                const isDimmed = isLayerBDimmed(office);
+                
                 return (
                     <AdvancedMarker
                         key={office.id}
                         position={office.location}
                         onClick={() => handleMarkerClick(office)}
-                        zIndex={appearance.zIndex}
+                        zIndex={isDimmed ? appearance.zIndex - 10 : appearance.zIndex}
                         draggable={editMode}
                         onDragEnd={(event) => {
                             if (editMode && onMarkerDrag && event.latLng) {
