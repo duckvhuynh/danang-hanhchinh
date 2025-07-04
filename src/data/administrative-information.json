@@ -69,7 +69,7 @@
       }
     },
     {
-      "old_commune_ward": "Cẩm Lệ",
+      "old_commune_ward": "Cẩm Lệ, Thanh Khê",
       "new_commune_ward": "An Khê",
       "merged_communes_wards": "Phường Hòa An, Phường Hòa Phát, Phường An Khê",
       "area_km2": 12.36,
@@ -125,7 +125,7 @@
       }
     },
     {
-      "old_commune_ward": "Liên Chiểu",
+      "old_commune_ward": "Liên Chiểu, Hòa Vang",
       "new_commune_ward": "Hòa Khánh",
       "merged_communes_wards": "Phường Hòa Khánh Nam, Phường Hòa Minh, Xã Hòa Sơn",
       "area_km2": 40.93,
@@ -139,7 +139,7 @@
       }
     },
     {
-      "old_commune_ward": "Hòa Vang",
+      "old_commune_ward": "Hòa Vang, Liên Chiểu",
       "new_commune_ward": "Hải Vân",
       "merged_communes_wards": "Phường Hòa Hiệp Bắc, Phường Hòa Hiệp Nam, Xã Hòa Bắc, Xã Hòa Liên",
       "area_km2": 406.09,
@@ -153,7 +153,7 @@
       }
     },
     {
-      "old_commune_ward": "Liên Chiểu",
+      "old_commune_ward": "Liên Chiểu, Hòa Vang",
       "new_commune_ward": "Liên Chiểu",
       "merged_communes_wards": "Phường Hòa Khánh Bắc, Xã Hòa Liên",
       "area_km2": 41.19,
@@ -181,7 +181,7 @@
       }
     },
     {
-      "old_commune_ward": "Hòa Vang",
+      "old_commune_ward": "Hòa Vang, Cẩm Lệ",
       "new_commune_ward": "Hòa Xuân",
       "merged_communes_wards": "Phường Hòa Xuân, Xã Hòa Châu, Xã Hòa Phước",
       "area_km2": 27.96,
