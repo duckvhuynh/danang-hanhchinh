@@ -1064,7 +1064,7 @@ export function MapControls({
 
             {/* Planning & Reporting Section - Always Visible */}
             {onDownloadAdministrativePlanningReport && onDownloadExecutiveSummary && (
-              <div className="space-y-2">
+              <div className="space-y-2 p-3">
                 {/* Divider */}
                 <div className="h-px bg-gray-200 w-full"></div>
 

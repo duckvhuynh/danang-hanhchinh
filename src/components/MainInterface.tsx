@@ -952,7 +952,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   }
 
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <div className="flex h-screen w-screen">
         <AppSidebar
           onGetUserLocation={handleGetUserLocation}
