@@ -982,29 +982,46 @@ export function MapControls({
           </DialogHeader>
           
           <div className="space-y-4 text-sm">
-            <h3 className="font-medium text-base">Giới thiệu</h3>
+            <h3 className="font-medium text-base">Mục tiêu của bản đồ hành chính</h3>
             <p>
-              Ứng dụng Bản đồ Hành chính Đà Nẵng được phát triển nhằm cung cấp công cụ trực quan để quản lý và theo dõi
-              các cơ quan hành chính trên địa bàn thành phố Đà Nẵng. Ứng dụng hỗ trợ hiển thị các điểm hành chính theo 3 lớp (A, B, C) 
-              với phạm vi hoạt động được thể hiện bằng bán kính.
+              Bản đồ này được xây dựng để:
             </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Hình dung rõ các điểm tiếp nhận và phục vụ hành chính công sau khi sáp nhập các đơn vị hành chính.</li>
+              <li>Đảm bảo mỗi người dân đều có điểm tiếp nhận gần, phù hợp với khu vực mình sống (Đô thị hoặc Nông thôn).</li>
+              <li>Hỗ trợ cho việc quy hoạch, điều phối và tối ưu vị trí các trung tâm hành chính trong thành phố Đà Nẵng.</li>
+            </ul>
             
-            <h3 className="font-medium text-base">Các lớp điểm hành chính</h3>
-            <div className="space-y-2">
+            <h3 className="font-medium text-base">Bản đồ được chia thành 3 lớp chính</h3>
+            <div className="space-y-3">
               <div>
-                <span className="font-medium">Lớp A - Các Chi Nhánh Hành Chính Cấp Quận/Huyện Cũ:</span> Hiển thị bằng màu đỏ, có hai bán kính phụ thuộc vào loại khu vực:
-                <ul className="list-disc pl-5 mt-1">
-                  <li>Bán kính tiếp nhận hồ sơ: Đô thị (2-3km), Ngoại ô (5km)</li>
-                  <li>Bán kính quản lý của chi nhánh: Đô thị (5km), Ngoại ô (10km)</li>
+                <span className="font-medium">Lớp A - Các Chi Nhánh Hành Chính Cấp Quận/Huyện Cũ:</span>
+                <p className="mt-1 text-gray-700">Hiển thị bằng màu đỏ. Mỗi Quận, Huyện, Thị xã, Thành phố trực thuộc tỉnh (trước khi sáp nhập) sẽ có 1 Chi nhánh Trung tâm Hành chính.</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>Tổng cộng:</strong> 23 Chi nhánh (17 từ Quảng Nam và 6 từ Đà Nẵng)</li>
+                  <li><strong>Loại trừ:</strong> Quận Hải Châu (đã là Trung tâm chính) và Huyện Hoàng Sa (không có dân cư)</li>
+                  <li><strong>Bán kính tiếp nhận hồ sơ:</strong> Đô thị (2-3km), Nông thôn (5km)</li>
+                  <li><strong>Bán kính quản lý của chi nhánh:</strong> Đô thị (5km), Nông thôn (10km)</li>
                 </ul>
               </div>
               
               <div>
-                <span className="font-medium">Lớp B - Các Trung Tâm Hành Chính Cấp Xã/Phường Mới:</span> Hiển thị bằng màu xanh dương, có bán kính cố định mặc định 5km.
+                <span className="font-medium">Lớp B - Các Trung Tâm Hành Chính Cấp Xã/Phường Mới:</span>
+                <p className="mt-1 text-gray-700">Hiển thị bằng màu xanh dương. Bao gồm toàn bộ 93 đơn vị hành chính cấp Xã/Phường sau sáp nhập.</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Trong đó, 23 điểm trùng với Lớp A, nên chỉ còn 70 điểm Lớp B được hiển thị</li>
+                  <li>Có bán kính cố định mặc định 5km</li>
+                </ul>
               </div>
               
               <div>
-                <span className="font-medium">Lớp C - Các Điểm Tiếp Nhận Do Bưu Điện Quản Lý:</span> Hiển thị bằng màu xanh lá, có bán kính mặc định 5km.
+                <span className="font-medium">Lớp C - Các Điểm Tiếp Nhận Do Bưu Điện Quản Lý:</span>
+                <p className="mt-1 text-gray-700">Hiển thị bằng màu vàng/cam. Bổ sung tại các khu vực chưa được bao phủ hiệu quả bởi Lớp A và B.</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Có thể đặt tại các trụ sở Xã cũ hoặc các bưu cục cấp Xã do Bưu điện vận hành</li>
+                  <li>Số lượng có thể thay đổi tùy thực tế, nhưng không trùng lặp với Lớp A hoặc B</li>
+                  <li>Có bán kính mặc định 5km</li>
+                </ul>
               </div>
             </div>
             
@@ -1012,17 +1029,24 @@ export function MapControls({
             <div className="space-y-2">
               <p>
                 <span className="font-medium">Điều chỉnh hiển thị:</span> Bạn có thể bật/tắt hiển thị từng lớp và điều chỉnh 
-                bán kính cho mỗi lớp trong phần điều khiển.
+                bán kính cho mỗi lớp trong phần điều khiển. Lớp A có thể điều chỉnh riêng biệt cho từng loại khu vực (đô thị/nông thôn) 
+                và từng loại bán kính (tiếp nhận/quản lý).
               </p>
               
               <p>
                 <span className="font-medium">Lớp B trong Lớp A:</span> Chức năng này cho phép ẩn hoặc làm mờ các điểm Lớp B 
-                nằm trong bán kính của Lớp A, giúp giảm bớt sự chồng chéo trên bản đồ.
+                nằm trong bán kính của Lớp A, giúp giảm bớt sự chồng chéo trên bản đồ. Có thể chọn sử dụng bán kính tiếp nhận 
+                hoặc bán kính quản lý để xác định vùng che phủ.
+              </p>
+              
+              <p>
+                <span className="font-medium">Độ trong suốt lớp phủ:</span> Điều chỉnh độ trong suốt của các vòng tròn bán kính 
+                để quan sát tốt hơn các điểm và ranh giới hành chính bên dưới.
               </p>
               
               <p>
                 <span className="font-medium">Chế độ đo đạc:</span> Bật chế độ đo đạc để đo khoảng cách giữa hai điểm trên bản đồ,
-                có thể chọn đo theo đường thẳng hoặc theo tuyến đường.
+                có thể chọn đo theo đường thẳng hoặc theo tuyến đường thực tế.
               </p>
               
               <p>
@@ -1031,23 +1055,41 @@ export function MapControls({
                   <li>Thêm điểm mới: Chọn lớp và nhấp vào vị trí trên bản đồ</li>
                   <li>Chỉnh sửa điểm: Nhấp vào điểm hiện có để mở giao diện chỉnh sửa</li>
                   <li>Xóa điểm: Sử dụng nút xóa trong giao diện chỉnh sửa</li>
+                  <li>Chỉnh sửa thông tin: Tên, địa chỉ, loại khu vực (cho Lớp A), bán kính tùy chỉnh</li>
                 </ul>
               </p>
               
               <p>
                 <span className="font-medium">Xuất dữ liệu:</span> Ứng dụng cho phép xuất dữ liệu dưới dạng JSON hoặc Excel,
-                cho từng lớp riêng biệt hoặc tất cả các lớp.
+                cho từng lớp riêng biệt hoặc tất cả các lớp, bao gồm cả dữ liệu đã chỉnh sửa.
               </p>
             </div>
             
-            <h3 className="font-medium text-base">Thông tin thêm</h3>
+            <h3 className="font-medium text-base">Ghi chú quan trọng</h3>
+            <div className="space-y-2">
+              <p>
+                • <span className="font-medium">Trung tâm hành chính chính</span> của toàn thành phố được đặt tại Quận Hải Châu 
+                (không xếp vào Lớp A, B, hay C).
+              </p>
+              <p>
+                • <span className="font-medium">Tránh trùng lặp:</span> Các điểm được thiết kế để không trùng nhau giữa các lớp. 
+                Một địa điểm không thể vừa là điểm Lớp A, vừa là điểm Lớp B hoặc C.
+              </p>
+              <p>
+                • <span className="font-medium">Mục đích bán kính:</span> Việc phân chia bán kính tiếp nhận và quản lý nhằm đảm bảo 
+                người dân không phải đi quá xa để làm thủ tục hành chính.
+              </p>
+            </div>
+            
+            <h3 className="font-medium text-base">Thông tin kỹ thuật</h3>
             <p>
               Bản đồ được phát triển sử dụng công nghệ React, TypeScript và Google Maps API. 
-              Dữ liệu ranh giới hành chính được xây dựng dựa trên dữ liệu chính thức của thành phố Đà Nẵng.
+              Dữ liệu ranh giới hành chính được xây dựng dựa trên dữ liệu chính thức của thành phố Đà Nẵng 
+              và Quảng Nam sau sáp nhập.
             </p>
             <p>
               Đây là công cụ hỗ trợ quản lý và phân tích không gian địa lý hành chính, giúp các cơ quan, tổ chức 
-              có cái nhìn tổng thể về phân bố các điểm hành chính trên địa bàn thành phố.
+              có cái nhìn tổng thể về phân bố các điểm hành chính và tối ưu hóa việc phục vụ người dân trên địa bàn thành phố.
             </p>
           </div>
           
