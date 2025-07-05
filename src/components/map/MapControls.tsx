@@ -21,11 +21,19 @@ import {
   Edit3,
   Download,
   FileText,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Info
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { layerConfigurations } from "../../data/administrative-offices";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogFooter, 
+  DialogHeader, 
+  DialogTitle 
+} from "../ui/dialog";
 
 interface MapControlsProps {
   showPolygons: boolean;
@@ -83,6 +91,9 @@ interface MapControlsProps {
   // Fill opacity control
   fillOpacity?: number;
   onFillOpacityChange?: (opacity: number) => void;
+  // About dialog
+  showAboutDialog?: boolean;
+  onToggleAboutDialog?: (show: boolean) => void;
 }
 
 export function MapControls({
@@ -132,6 +143,8 @@ export function MapControls({
   onDownloadAllLayersAsExcel,
   fillOpacity = 0.3,
   onFillOpacityChange,
+  onToggleAboutDialog,
+  showAboutDialog = false,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -173,13 +186,19 @@ export function MapControls({
             <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full">
               <Layers className="w-3.5 h-3.5 text-blue-700" />
             </div>
-            <div>
+            <div className="flex items-center">
               <span className="text-sm font-medium">Điều khiển bản đồ</span>
-              {/* {!expanded && (
-                <div className="text-xs text-gray-500">
-                  {layerCount > 0 ? `${layerCount} lớp hiển thị` : 'Ẩn tất cả'}
-                </div>
-              )} */}
+              <Button
+                variant="ghost" 
+                size="sm" 
+                className="h-6 w-6 p-0 ml-2 rounded-full bg-gray-100 hover:bg-gray-200"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (onToggleAboutDialog) onToggleAboutDialog(true);
+                }}
+              >
+                <Info className="w-3 h-3 text-gray-600" />
+              </Button>
             </div>
           </div>
           <Button
@@ -920,6 +939,98 @@ export function MapControls({
           </div>
         )}
       </div>
+      
+      {/* About Dialog */}
+      <Dialog open={showAboutDialog} onOpenChange={(open) => onToggleAboutDialog && onToggleAboutDialog(open)}>
+        <DialogContent className="sm:max-w-[600px] max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl text-center">Về Bản Đồ Hành Chính Đà Nẵng</DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-4 text-sm">
+            <h3 className="font-medium text-base">Giới thiệu</h3>
+            <p>
+              Ứng dụng Bản đồ Hành chính Đà Nẵng được phát triển nhằm cung cấp công cụ trực quan để quản lý và theo dõi
+              các cơ quan hành chính trên địa bàn thành phố Đà Nẵng. Ứng dụng hỗ trợ hiển thị các điểm hành chính theo 3 lớp (A, B, C) 
+              với phạm vi hoạt động được thể hiện bằng bán kính.
+            </p>
+            
+            <h3 className="font-medium text-base">Các lớp điểm hành chính</h3>
+            <div className="space-y-2">
+              <div>
+                <span className="font-medium">Lớp A - Chi nhánh:</span> Hiển thị bằng màu đỏ, có hai bán kính:
+                <ul className="list-disc pl-5 mt-1">
+                  <li>Bán kính tiếp nhận: Thể hiện phạm vi tiếp nhận hồ sơ của chi nhánh</li>
+                  <li>Bán kính quản lý: Thể hiện phạm vi quản lý hành chính của chi nhánh</li>
+                </ul>
+              </div>
+              
+              <div>
+                <span className="font-medium">Lớp B - Điểm tiếp nhận:</span> Hiển thị bằng màu xanh dương, bán kính phụ thuộc vào loại khu vực:
+                <ul className="list-disc pl-5 mt-1">
+                  <li>Khu vực đô thị: Mặc định 3km</li>
+                  <li>Khu vực ngoại thành: Mặc định 8km</li>
+                </ul>
+              </div>
+              
+              <div>
+                <span className="font-medium">Lớp C - Điểm tăng cường:</span> Hiển thị bằng màu xanh lá, có bán kính mặc định 5km.
+              </div>
+            </div>
+            
+            <h3 className="font-medium text-base">Hướng dẫn sử dụng</h3>
+            <div className="space-y-2">
+              <p>
+                <span className="font-medium">Điều chỉnh hiển thị:</span> Bạn có thể bật/tắt hiển thị từng lớp và điều chỉnh 
+                bán kính cho mỗi lớp trong phần điều khiển.
+              </p>
+              
+              <p>
+                <span className="font-medium">Lớp B trong Lớp A:</span> Chức năng này cho phép ẩn hoặc làm mờ các điểm Lớp B 
+                nằm trong bán kính của Lớp A, giúp giảm bớt sự chồng chéo trên bản đồ.
+              </p>
+              
+              <p>
+                <span className="font-medium">Chế độ đo đạc:</span> Bật chế độ đo đạc để đo khoảng cách giữa hai điểm trên bản đồ,
+                có thể chọn đo theo đường thẳng hoặc theo tuyến đường.
+              </p>
+              
+              <p>
+                <span className="font-medium">Chế độ chỉnh sửa:</span> Khi bật chế độ chỉnh sửa, bạn có thể:
+                <ul className="list-disc pl-5 mt-1">
+                  <li>Thêm điểm mới: Chọn lớp và nhấp vào vị trí trên bản đồ</li>
+                  <li>Chỉnh sửa điểm: Nhấp vào điểm hiện có để mở giao diện chỉnh sửa</li>
+                  <li>Xóa điểm: Sử dụng nút xóa trong giao diện chỉnh sửa</li>
+                </ul>
+              </p>
+              
+              <p>
+                <span className="font-medium">Xuất dữ liệu:</span> Ứng dụng cho phép xuất dữ liệu dưới dạng JSON hoặc Excel,
+                cho từng lớp riêng biệt hoặc tất cả các lớp.
+              </p>
+            </div>
+            
+            <h3 className="font-medium text-base">Thông tin thêm</h3>
+            <p>
+              Bản đồ được phát triển sử dụng công nghệ React, TypeScript và Google Maps API. 
+              Dữ liệu ranh giới hành chính được xây dựng dựa trên dữ liệu chính thức của thành phố Đà Nẵng.
+            </p>
+            <p>
+              Đây là công cụ hỗ trợ quản lý và phân tích không gian địa lý hành chính, giúp các cơ quan, tổ chức 
+              có cái nhìn tổng thể về phân bố các điểm hành chính trên địa bàn thành phố.
+            </p>
+          </div>
+          
+          <DialogFooter>
+            <Button 
+              className="w-full sm:w-auto" 
+              onClick={() => onToggleAboutDialog && onToggleAboutDialog(false)}
+            >
+              Đóng
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

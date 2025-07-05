@@ -113,6 +113,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
   const [wholeDanangPolygon] = useState<PolygonData>(getWholeDanangPolygon());
   const [danangBounds] = useState(getWholeDanangBounds());
+  
+  // About dialog state
+  const [showAboutDialog, setShowAboutDialog] = useState(false);
 
   // This effect ensures the selectedWard variable is used
   useEffect(() => {
@@ -928,6 +931,8 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onDownloadAllLayersAsExcel={handleDownloadAllLayersAsExcel}
                 fillOpacity={fillOpacity}
                 onFillOpacityChange={setFillOpacity}
+                showAboutDialog={showAboutDialog}
+                onToggleAboutDialog={setShowAboutDialog}
               />
 
               {/* Selected Ward Info Card/Drawer */}

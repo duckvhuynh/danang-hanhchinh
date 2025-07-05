@@ -9,7 +9,8 @@
     "address": "503 Trần Cao Vân",
     "procedures_2024": 21858,
     "procedures_6months_2025": 12435,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Đà Nẵng",
@@ -21,7 +22,8 @@
     "address": "183A Phan Đăng Lưu",
     "procedures_2024": 29776,
     "procedures_6months_2025": 14046,
-    "type": "urban"
+    "type": "urban",
+    "main_center": true
   },
   {
     "region": "Đà Nẵng",
@@ -33,7 +35,8 @@
     "address": "2 Đông Giang",
     "procedures_2024": 27894,
     "procedures_6months_2025": 21786,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Đà Nẵng",
@@ -45,7 +48,8 @@
     "address": "40 Ông Ích Đường",
     "procedures_2024": 42948,
     "procedures_6months_2025": 28208,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Đà Nẵng",
@@ -57,7 +61,8 @@
     "address": "168 Nguyễn Sinh Sắc",
     "procedures_2024": 39925,
     "procedures_6months_2025": 21078,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Đà Nẵng",
@@ -69,7 +74,8 @@
     "address": "486 Lê Văn Hiến",
     "procedures_2024": 35262,
     "procedures_6months_2025": 22120,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Đà Nẵng",
@@ -81,7 +87,8 @@
     "address": "Thôn Dương Lâm 2",
     "procedures_2024": 35902,
     "procedures_6months_2025": 19362,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -93,7 +100,8 @@
     "address": "Thôn Dương Hòa, xã Trà Sơn, huyện Bắc Trà My",
     "procedures_2024": 636,
     "procedures_6months_2025": 401,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -105,7 +113,8 @@
     "address": "02 Tôn Đức Thắng, TT. ĐôngPhú, huyện Quế Sơn",
     "procedures_2024": 2257,
     "procedures_6months_2025": 2678,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -117,7 +126,8 @@
     "address": "70 Hùng Vương, TP. Tam Kỳ",
     "procedures_2024": 5907,
     "procedures_6months_2025": 4154,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -129,7 +139,8 @@
     "address": "thị trấn Trà My, huyện Bắc Trà My",
     "procedures_2024": 1849,
     "procedures_6months_2025": 1025,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -141,7 +152,8 @@
     "address": "Thôn Agrồng, xã Atiêng, huyện Tây Giang",
     "procedures_2024": 264,
     "procedures_6months_2025": 213,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -153,7 +165,8 @@
     "address": "81 Huỳnh Thúc Kháng, huyện Tiên Phước",
     "procedures_2024": 4236,
     "procedures_6months_2025": 1621,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -165,7 +178,8 @@
     "address": "khối phố Mực, Thị trấn Thạnh Mỹ, Huyện Nam Giang",
     "procedures_2024": 395,
     "procedures_6months_2025": 273,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -177,7 +191,8 @@
     "address": "Hồ Chí Minh, TT. Khâm Đức, Phước Sơn,",
     "procedures_2024": 1061,
     "procedures_6months_2025": 155,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -189,7 +204,8 @@
     "address": "01 đường Nguyễn Văn Linh, thị trấn Núi Thành, huyện Núi Thành",
     "procedures_2024": 7876,
     "procedures_6months_2025": 4875,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -201,7 +217,8 @@
     "address": "Khối phố An Trung- thị trấn Tân An- huyện Hiệp Đức",
     "procedures_2024": 1696,
     "procedures_6months_2025": 876,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -213,7 +230,8 @@
     "address": "đường Hùng Vương, TT. Nam Phước, huyện Duy Xuyên",
     "procedures_2024": 2367,
     "procedures_6months_2025": 2196,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -225,7 +243,8 @@
     "address": "22 Hoàng Diệu, thị trấn Vĩnh Điện, Điện Bàn",
     "procedures_2024": 4196,
     "procedures_6months_2025": 3765,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -237,7 +256,8 @@
     "address": "09-11 Trần Hưng Đạo, TP Hội An",
     "procedures_2024": 13446,
     "procedures_6months_2025": 4297,
-    "type": "urban"
+    "type": "urban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -249,7 +269,8 @@
     "address": "15 Hùng Vương, TT. ái Nghĩa, huyện Đại Lộc",
     "procedures_2024": 2216,
     "procedures_6months_2025": 2289,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -261,7 +282,8 @@
     "address": "Thị trấn PRao, Thị trấn P Rao, Huyện Đông Giang",
     "procedures_2024": 779,
     "procedures_6months_2025": 240,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -273,7 +295,8 @@
     "address": "282 Tiểu La, thị trấn Hà Lam, huyện Thăng Bình",
     "procedures_2024": 3709,
     "procedures_6months_2025": 4671,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   },
   {
     "region": "Quảng Nam",
@@ -285,6 +308,7 @@
     "address": "Thị trấn Phú Thịnh - huyện Phú Ninh",
     "procedures_2024": 1676,
     "procedures_6months_2025": 1231,
-    "type": "suburban"
+    "type": "suburban",
+    "main_center": false
   }
 ]

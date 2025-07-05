@@ -1,0 +1,1010 @@
+[
+  {
+    "old_commune_ward": "Hải Châu",
+    "new_commune_ward": "Hải Châu",
+    "merged_communes_wards": "Phường Thanh Bình, Phường Thuận Phước, Phường Thạch Thang, Phường Phước Ninh, Phường Hải Châu",
+    "area_km2": 7.58,
+    "population": 131427,
+    "is_commune": false,
+    "location": {
+      "address": "Số 15 đường Lê Hồng Phong, phường Hải Châu",
+      "latitude": 16.06372834024789,
+      "longitude": 108.22247219553093,
+      "phone": "0903570134"
+    }
+  },
+  {
+    "old_commune_ward": "Hải Châu",
+    "new_commune_ward": "Hòa Cường",
+    "merged_communes_wards": "Phường Bình Thuận, Phường Hòa Thuận Tây, Phường Hòa Cường Bắc, Phường Hòa Cường Nam",
+    "area_km2": 15.72,
+    "population": 119363,
+    "is_commune": false,
+    "location": {
+      "address": "Số 388 đường Núi Thành, phường Hòa Cường",
+      "latitude": 16.038544573026545,
+      "longitude": 108.22187291569671,
+      "phone": "0905275908"
+    }
+  },
+  {
+    "old_commune_ward": "Cẩm Lệ, Thanh Khê",
+    "new_commune_ward": "An Khê",
+    "merged_communes_wards": "Phường Hòa An, Phường Hòa Phát, Phường An Khê",
+    "area_km2": 12.36,
+    "population": 93625,
+    "is_commune": false,
+    "location": {
+      "address": "Số 916 đường Tôn Đản, phường An Khê",
+      "latitude": 16.025480447287954,
+      "longitude": 108.18810480777326,
+      "phone": "0903555480"
+    }
+  },
+  {
+    "old_commune_ward": "Sơn Trà",
+    "new_commune_ward": "An Hải",
+    "merged_communes_wards": "Phường Phước Mỹ, Phường An Hải Bắc, Phường An Hải Nam",
+    "area_km2": 7.37,
+    "population": 82635,
+    "is_commune": false,
+    "location": {
+      "address": "Số 289 đường Nguyễn Công Trứ, phường An Hải",
+      "latitude": 16.0649122223973,
+      "longitude": 108.24248032768,
+      "phone": "0905607727"
+    }
+  },
+  {
+    "old_commune_ward": "Hòa Vang, Liên Chiểu",
+    "new_commune_ward": "Hải Vân",
+    "merged_communes_wards": "Phường Hòa Hiệp Bắc, Phường Hòa Hiệp Nam, Xã Hòa Bắc, Xã Hòa Liên",
+    "area_km2": 406.09,
+    "population": 48992.0,
+    "is_commune": false,
+    "location": {
+      "address": "Lô 1-2 đường Nguyễn Tất Thành, phường Hải Vân",
+      "latitude": 16.106978030875325,
+      "longitude": 108.12643398530781,
+      "phone": "02363771456"
+    }
+  },
+  {
+    "old_commune_ward": "Liên Chiểu, Hòa Vang",
+    "new_commune_ward": "Liên Chiểu",
+    "merged_communes_wards": "Phường Hòa Khánh Bắc, Xã Hòa Liên",
+    "area_km2": 41.19,
+    "population": 70628.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 68 đường Lạc Long Quân, phường Liên Chiểu",
+      "latitude": 16.076467079275318,
+      "longitude": 108.14556482711018,
+      "phone": "0905537609"
+    }
+  },
+  {
+    "old_commune_ward": "Hòa Vang, Cẩm Lệ",
+    "new_commune_ward": "Hòa Xuân",
+    "merged_communes_wards": "Phường Hòa Xuân, Xã Hòa Châu, Xã Hòa Phước",
+    "area_km2": 27.96,
+    "population": 85580.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 111 đường Hoàng Ngân, phường Hòa Xuân",
+      "latitude": 15.995705076937789,
+      "longitude": 108.21141998102371,
+      "phone": "0905023357"
+    }
+  },
+  {
+    "old_commune_ward": "Tam Kỳ",
+    "new_commune_ward": "Quảng Phú",
+    "merged_communes_wards": "Phường An Phú, Xã Tam Thanh, Xã Tam Phú",
+    "area_km2": 36.21,
+    "population": 29401.0,
+    "is_commune": false,
+    "location": {
+      "address": "Khối phố Phú Thạnh, Phường Quảng Phú",
+      "latitude": 15.577899745788356,
+      "longitude": 108.50677436139655,
+      "phone": "0911197777"
+    }
+  },
+  {
+    "old_commune_ward": "Tam Kỳ",
+    "new_commune_ward": "Hương Trà",
+    "merged_communes_wards": "Phường An Sơn, Phường Hòa Hương, Xã Tam Ngọc",
+    "area_km2": 14.64,
+    "population": 33523.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 510 đường Hùng Vương, phường Hương Trà",
+      "latitude": 15.554651948158433,
+      "longitude": 108.49659491583074,
+      "phone": "0901937789"
+    }
+  },
+  {
+    "old_commune_ward": "Tam Kỳ",
+    "new_commune_ward": "Bàn Thạch",
+    "merged_communes_wards": "Phường Tân Thạnh, Phường Hòa Thuận, Xã Tam Thăng",
+    "area_km2": 34.77,
+    "population": 36800.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 01 đường Nguyễn Đình Hiến, phường Bàn Thạch",
+      "latitude": 15.580602543733773,
+      "longitude": 108.47453143045891,
+      "phone": "0905285611"
+    }
+  },
+  {
+    "old_commune_ward": "Điện Bàn",
+    "new_commune_ward": "Điện Bàn Đông",
+    "merged_communes_wards": "Phường Điện Nam Đông, Phường Điện Nam Trung, Phường Điện Dương, Phường Điện Ngọc, Phường Điện Nam Bắc",
+    "area_km2": 61.02,
+    "population": 72273,
+    "is_commune": false,
+    "location": {
+      "address": "Số 845 đường Trần Thủ Độ, Khối phố Quảng Lăng B, Phường Điện Bàn Đông",
+      "latitude": 15.91291147372988,
+      "longitude": 108.26995846784983,
+      "phone": "0935028629"
+    }
+  },
+  {
+    "old_commune_ward": "Điện Bàn",
+    "new_commune_ward": "An Thắng",
+    "merged_communes_wards": "Phường Điện An, Phường Điện Thắng Nam, Phường Điện Thắng Trung",
+    "area_km2": 19.64,
+    "population": 34176.0,
+    "is_commune": false,
+    "location": {
+      "address": "Khối Phong Nhị, phường Điện Thắng (Trụ sở phường Điện An cũ)",
+      "latitude": 15.902955926867204,
+      "longitude": 108.23788591147446,
+      "phone": "0905661999"
+    }
+  },
+  {
+    "old_commune_ward": "Điện Bàn",
+    "new_commune_ward": "Điện Bàn Bắc",
+    "merged_communes_wards": "Phường Điện Thắng Bắc, Xã Điện Hòa, Xã Điện Tiến",
+    "area_km2": 36.39,
+    "population": 30780.0,
+    "is_commune": false,
+    "location": {
+      "address": "Thôn Xóm Bùng, phường Điện Bàn Bắc (Trụ sở xã Điện Hòa cũ)",
+      "latitude": 15.934104147256866,
+      "longitude": 108.19669603889739,
+      "phone": "0916521767"
+    }
+  },
+  {
+    "old_commune_ward": "Hội An",
+    "new_commune_ward": "Hội An Đông",
+    "merged_communes_wards": "Phường Cẩm Châu, Phường Cửa Đại, Xã Cẩm Thanh",
+    "area_km2": 18.22,
+    "population": 31109.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 456 đường Cửa Đại, phường Hội An Đông,",
+      "latitude": 15.880725189133944,
+      "longitude": 108.34256049272628,
+      "phone": "0989639724"
+    }
+  },
+  {
+    "old_commune_ward": "Hội An",
+    "new_commune_ward": "Hội An Tây",
+    "merged_communes_wards": "Phường Thanh Hà, Phường Tân An, Phường Cẩm An, Xã Cẩm Hà",
+    "area_km2": 18.09,
+    "population": 42370.0,
+    "is_commune": false,
+    "location": {
+      "address": "Số 544 đường Hai Bà Trưng, phường Hội An Tây",
+      "latitude": 15.88664390366524,
+      "longitude": 108.32727111927191,
+      "phone": "0988620700"
+    }
+  },
+  {
+    "old_commune_ward": "Hòa Vang",
+    "new_commune_ward": "Hòa Tiến",
+    "merged_communes_wards": "Xã Hòa Khương, Xã Hòa Tiến",
+    "area_km2": 65.9,
+    "population": 38823.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Phú Sơn Tây (Quốc lộ 14B), xã Hòa Tiến",
+      "latitude": 15.960965130756609,
+      "longitude": 108.13975063204553,
+      "phone": "0905006789"
+    }
+  },
+  {
+    "old_commune_ward": "Hòa Vang",
+    "new_commune_ward": "Bà Nà",
+    "merged_communes_wards": "Xã Hòa Ninh, Xã Hòa Nhơn",
+    "area_km2": 136.41,
+    "population": 25267.0,
+    "is_commune": true,
+    "location": {
+      "address": "Đường ĐH 2, thôn Thạch Nham Tây, xã Bà Nà",
+      "latitude": 16.00582571137964,
+      "longitude": 108.13544883499469,
+      "phone": "0946000234"
+    }
+  },
+  {
+    "old_commune_ward": "Núi Thành",
+    "new_commune_ward": "Tam Mỹ",
+    "merged_communes_wards": "Xã Tam Mỹ Đông, Xã Tam Mỹ Tây, Xã Tam Trà",
+    "area_km2": 173.14,
+    "population": 18064.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Tịnh Sơn, xã Tam Mỹ",
+      "latitude": 15.410755616178111,
+      "longitude": 108.61324796446749,
+      "phone": "0982090704"
+    }
+  },
+  {
+    "old_commune_ward": "Núi Thành",
+    "new_commune_ward": "Tam Anh",
+    "merged_communes_wards": "Xã Tam Hòa, Xã Tam Anh Bắc, Xã Tam Anh Nam",
+    "area_km2": 68.84,
+    "population": 31026.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Nam Định, xã Tam Anh",
+      "latitude": 15.484405042199336,
+      "longitude": 108.58341425074717,
+      "phone": "0973551072"
+    }
+  },
+  {
+    "old_commune_ward": "Núi Thành",
+    "new_commune_ward": "Đức Phú",
+    "merged_communes_wards": "Xã Tam Sơn, Xã Tam Thạnh",
+    "area_km2": 108.97,
+    "population": 9240.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Thuận Yên Đông, xã Đức Phú",
+      "latitude": 15.439909723335512,
+      "longitude": 108.47175464977262,
+      "phone": "0914020538"
+    }
+  },
+  {
+    "old_commune_ward": "Núi Thành",
+    "new_commune_ward": "Tam Xuân",
+    "merged_communes_wards": "Xã Tam Xuân I, Xã Tam Xuân II, Xã Tam Tiến",
+    "area_km2": 66.92,
+    "population": 42834.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Phú Khê, xã Tam Xuân",
+      "latitude": 15.53392689605803,
+      "longitude": 108.53884891386126,
+      "phone": "0988951776"
+    }
+  },
+  {
+    "old_commune_ward": "Phú Ninh",
+    "new_commune_ward": "Tây Hồ",
+    "merged_communes_wards": "Xã Tam An, Xã Tam Thành, Xã Tam Phước, Xã Tam Lộc",
+    "area_km2": 75.67,
+    "population": 35493.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Cẩm Khê, xã Tây Hồ",
+      "latitude": 15.569716929240787,
+      "longitude": 108.40655664209989,
+      "phone": "0913430656"
+    }
+  },
+  {
+    "old_commune_ward": "Phú Ninh",
+    "new_commune_ward": "Chiên Đàn",
+    "merged_communes_wards": "Thị trấn Phú Thịnh, Xã Tam Đàn, Xã Tam Thái",
+    "area_km2": 48.63,
+    "population": 32145.000000000004,
+    "is_commune": true,
+    "location": {
+      "address": "Số 01 đường Hà Đông, xã Chiên Đàn",
+      "latitude": 15.54779127568345,
+      "longitude": 108.40819789812976,
+      "phone": "0911323888"
+    }
+  },
+  {
+    "old_commune_ward": "Tiên Phước",
+    "new_commune_ward": "Lãnh Ngọc",
+    "merged_communes_wards": "Xã Tiên Lãnh, Xã Tiên Ngọc, Xã Tiên Hiệp",
+    "area_km2": 161.14,
+    "population": 14847.0,
+    "is_commune": true,
+    "location": {
+      "address": "ĐT 616, thôn 4, xã Lãnh Ngọc (Trụ sở Xã Tiên Hiệp cũ)",
+      "latitude": 15.424539038263376,
+      "longitude": 108.26203537207921,
+      "phone": "0983716353"
+    }
+  },
+  {
+    "old_commune_ward": "Tiên Phước",
+    "new_commune_ward": "Thạnh Bình",
+    "merged_communes_wards": "Xã Tiên Lập, Xã Tiên Lộc, Xã Tiên An, Xã Tiên Cảnh",
+    "area_km2": 100.89,
+    "population": 24775.0,
+    "is_commune": true,
+    "location": {
+      "address": "QL40B, xã Thạnh Bình (Trụ sở Xã Tiên Cảnh cũ)",
+      "latitude": 15.462264213806263,
+      "longitude": 108.29563861483412,
+      "phone": "0935202065"
+    }
+  },
+  {
+    "old_commune_ward": "Tiên Phước",
+    "new_commune_ward": "Sơn Cẩm Hà",
+    "merged_communes_wards": "Xã Tiên Sơn, Xã Tiên Hà, Xã Tiên Châu",
+    "area_km2": 118.75,
+    "population": 17608.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Cẩm Tây, xã Sơn Cẩm Hà (trụ sở xã Tiên Cẩm cũ trước 01/2025)",
+      "latitude": 15.555417479976787,
+      "longitude": 108.29608431672396,
+      "phone": "0903426456"
+    }
+  },
+  {
+    "old_commune_ward": "Bắc Trà My",
+    "new_commune_ward": "Trà Liên",
+    "merged_communes_wards": "Xã Trà Đông, Xã Trà Nú, Xã Trà Kót",
+    "area_km2": 178.15,
+    "population": 7052,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Định Yên, xã Trà Liên (Trụ sở Xã Trà Đông cũ)",
+      "latitude": 15.374509741293194,
+      "longitude": 108.32165493471419,
+      "phone": "0968078959"
+    }
+  },
+  {
+    "old_commune_ward": "Bắc Trà My",
+    "new_commune_ward": "Trà Giáp",
+    "merged_communes_wards": "Xã Trà Ka, Xã Trà Giáp",
+    "area_km2": 121.55,
+    "population": 5939.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, xã Trà Giáp",
+      "latitude": 15.222508506635213,
+      "longitude": 108.25434989836646,
+      "phone": "0984673444"
+    }
+  },
+  {
+    "old_commune_ward": "Bắc Trà My",
+    "new_commune_ward": "Trà Tân",
+    "merged_communes_wards": "Xã Trà Giác, Xã Trà Tân",
+    "area_km2": 183.08,
+    "population": 6293.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 1, Xã Trà Tân",
+      "latitude": 15.318760255618098,
+      "longitude": 108.16475947471234,
+      "phone": "0985601388"
+    }
+  },
+  {
+    "old_commune_ward": "Bắc Trà My",
+    "new_commune_ward": "Trà Đốc",
+    "merged_communes_wards": "Xã Trà Bui, Xã Trà Đốc",
+    "area_km2": 233.61,
+    "population": 10475.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, xã Trà Đốc",
+      "latitude": 15.368551081372805,
+      "longitude": 108.14802978377038,
+      "phone": "0914021921"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Trà My",
+    "new_commune_ward": "Trà Tập",
+    "merged_communes_wards": "Xã Trà Cang, Xã Trà Tập",
+    "area_km2": 183.17,
+    "population": 8384.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 1, Xã Trà Tập",
+      "latitude": 15.152621207527295,
+      "longitude": 108.09918905043016,
+      "phone": "0914012509"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Trà My",
+    "new_commune_ward": "Trà Vân",
+    "merged_communes_wards": "Xã Trà Vinh, Xã Trà Vân",
+    "area_km2": 85.58,
+    "population": 5342.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, Xã Trà Vân",
+      "latitude": 15.11292733901125,
+      "longitude": 108.18001700322145,
+      "phone": "0979889891"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Trà My",
+    "new_commune_ward": "Trà Linh",
+    "merged_communes_wards": "Xã Trà Nam, Xã Trà Linh",
+    "area_km2": 158.19,
+    "population": 7088.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 3, Xã Trà Linh",
+      "latitude": 15.03532512429612,
+      "longitude": 108.01849502765695,
+      "phone": "0987243565"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Trà My",
+    "new_commune_ward": "Trà Leng",
+    "merged_communes_wards": "Xã Trà Dơn, Xã Trà Leng",
+    "area_km2": 221.15,
+    "population": 6586.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, Xã Trà Leng",
+      "latitude": 15.243729426034212,
+      "longitude": 108.08595175136442,
+      "phone": "0986100060"
+    }
+  },
+  {
+    "old_commune_ward": "Thăng Bình",
+    "new_commune_ward": "Thăng An",
+    "merged_communes_wards": "Xã Bình Triều, Xã Bình Giang, Xã Bình Đào, Xã Bình Minh, Xã Bình Dương",
+    "area_km2": 80.98,
+    "population": 51988.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Nam Hà, xã Thăng An",
+      "latitude": 15.804736030609336,
+      "longitude": 108.38080436587575,
+      "phone": "0905914740"
+    }
+  },
+  {
+    "old_commune_ward": "Thăng Bình",
+    "new_commune_ward": "Thăng Trường",
+    "merged_communes_wards": "Xã Bình Nam, Xã Bình Hải, Xã Bình Sa",
+    "area_km2": 63.79,
+    "population": 24803.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Bình Trúc, xã Thăng Trường",
+      "latitude": 15.699951216704525,
+      "longitude": 108.44363385440343,
+      "phone": "0905859579"
+    }
+  },
+  {
+    "old_commune_ward": "Thăng Bình",
+    "new_commune_ward": "Thăng Điền",
+    "merged_communes_wards": "Xã Bình An, Xã Bình Trung, Xã Bình Tú",
+    "area_km2": 61.59,
+    "population": 42280.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Kế Xuyên 2, xã Thăng Điền",
+      "latitude": 15.676028095573287,
+      "longitude": 108.40792884147693,
+      "phone": "0983065282"
+    }
+  },
+  {
+    "old_commune_ward": "Thăng Bình",
+    "new_commune_ward": "Thăng Phú",
+    "merged_communes_wards": "Xã Bình Phú, Xã Bình Quế",
+    "area_km2": 60.5,
+    "population": 17266.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Tú Trà, xã Thăng Phú",
+      "latitude": 15.664831969424924,
+      "longitude": 108.35513431843617,
+      "phone": "0974912555"
+    }
+  },
+  {
+    "old_commune_ward": "Thăng Bình",
+    "new_commune_ward": "Đồng Dương",
+    "merged_communes_wards": "Xã Bình Lãnh, Xã Bình Trị, Xã Bình Định",
+    "area_km2": 76.49,
+    "population": 24773.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Châu Lâm, xã Đồng Dương",
+      "latitude": 15.656788667446094,
+      "longitude": 108.27774622059412,
+      "phone": "0977034885"
+    }
+  },
+  {
+    "old_commune_ward": "Quế Sơn",
+    "new_commune_ward": "Quế Sơn Trung",
+    "merged_communes_wards": "Xã Quế Mỹ, Xã Quế Hiệp, Xã Quế Thuận, Xã Quế Châu",
+    "area_km2": 111.37,
+    "population": 33300.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Phước Dương, xã Quế Sơn Trung",
+      "latitude": 15.710809928609855,
+      "longitude": 108.26796790294995,
+      "phone": "0977034442"
+    }
+  },
+  {
+    "old_commune_ward": "Quế Sơn",
+    "new_commune_ward": "Xuân Phú",
+    "merged_communes_wards": "Thị trấn Hương An, Xã Quế Xuân 1, Xã Quế Xuân 2, Xã Quế Phú",
+    "area_km2": 51.99,
+    "population": 37083.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Mộc Bài, xã Xuân Phú",
+      "latitude": 15.794641546555374,
+      "longitude": 108.3148808518791,
+      "phone": "0982100444"
+    }
+  },
+  {
+    "old_commune_ward": "Quế Sơn",
+    "new_commune_ward": "Nông Sơn",
+    "merged_communes_wards": "Thị trấn Trung Phước, Xã Quế Lộc",
+    "area_km2": 112.53,
+    "population": 21018.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Trung Hạ, xã Nông Sơn",
+      "latitude": 15.717836170300568,
+      "longitude": 108.05898241050264,
+      "phone": "0912909121"
+    }
+  },
+  {
+    "old_commune_ward": "Quế Sơn",
+    "new_commune_ward": "Quế Phước",
+    "merged_communes_wards": "Xã Quế Lâm, Xã Phước Ninh, Xã Ninh Phước",
+    "area_km2": 359.11,
+    "population": 14162.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Bình Yên, xã Quế Phước",
+      "latitude": 15.681014555837343,
+      "longitude": 108.00073197356568,
+      "phone": "0345779757"
+    }
+  },
+  {
+    "old_commune_ward": "Duy Xuyên",
+    "new_commune_ward": "Duy Nghĩa",
+    "merged_communes_wards": "Xã Duy Thành, Xã Duy Hải, Xã Duy Nghĩa",
+    "area_km2": 35.36,
+    "population": 32143.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Thuận An,Xã Duy Nghĩa",
+      "latitude": 15.855391652640762,
+      "longitude": 108.37435341575933,
+      "phone": "0985921513"
+    }
+  },
+  {
+    "old_commune_ward": "Duy Xuyên",
+    "new_commune_ward": "Nam Phước",
+    "merged_communes_wards": "Thị trấn Nam Phước, Xã Duy Phước, Xã Duy Vinh",
+    "area_km2": 38.85,
+    "population": 53498.0,
+    "is_commune": true,
+    "location": {
+      "address": "429 Hùng Vương, xã Nam Phước (Trụ sở thị trấn Nam Phước cũ)",
+      "latitude": 15.830314408267247,
+      "longitude": 108.27177834258336,
+      "phone": "0905242458"
+    }
+  },
+  {
+    "old_commune_ward": "Duy Xuyên",
+    "new_commune_ward": "Thu Bồn",
+    "merged_communes_wards": "Xã Duy Châu, Xã Duy Hoà, Xã Duy Phú, Xã Duy Tân",
+    "area_km2": 108.77,
+    "population": 36909.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Phú Lạc, xã Thu Bồn",
+      "latitude": 15.829513048640429,
+      "longitude": 108.12433036489787,
+      "phone": "0935347778"
+    }
+  },
+  {
+    "old_commune_ward": "Điện Bàn",
+    "new_commune_ward": "Điện Bàn Tây",
+    "merged_communes_wards": "Xã Điện Hồng, Xã Điện Thọ, Xã Điện Phước",
+    "area_km2": 44.473,
+    "population": 43310.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Phong Thử 1, xã Điện Bàn Tây (Trụ sở xã Điện Thọ cũ)",
+      "latitude": 15.888438266363474,
+      "longitude": 108.17991830388263,
+      "phone": "0919800090"
+    }
+  },
+  {
+    "old_commune_ward": "Điện Bàn",
+    "new_commune_ward": "Gò Nổi",
+    "merged_communes_wards": "Xã Điện Phong, Xã Điện Trung, Xã Điện Quang",
+    "area_km2": 36.2,
+    "population": 29968.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Đông Lãnh, xã Gò Nổi (Trụ sở xã Điện Trung cũ)",
+      "latitude": 15.839702994651379,
+      "longitude": 108.20824877144676,
+      "phone": "0905030703"
+    }
+  },
+  {
+    "old_commune_ward": "Đại Lộc",
+    "new_commune_ward": "Hà Nha",
+    "merged_communes_wards": "Xã Đại Đồng, Xã Đại Hồng, Xã Đại Quang",
+    "area_km2": 132.69,
+    "population": 38199.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Hà Nha, xã Hà Nha",
+      "latitude": 15.851396579737175,
+      "longitude": 108.01023710386515,
+      "phone": "0905234556"
+    }
+  },
+  {
+    "old_commune_ward": "Đại Lộc",
+    "new_commune_ward": "Thượng Đức",
+    "merged_communes_wards": "Xã Đại Lãnh, Xã Đại Hưng, Xã Đại Sơn",
+    "area_km2": 216.37,
+    "population": 22520.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Tân Hà, xã Thượng Đức",
+      "latitude": 15.846108896133215,
+      "longitude": 107.93307214189929,
+      "phone": "0967465777"
+    }
+  },
+  {
+    "old_commune_ward": "Đại Lộc",
+    "new_commune_ward": "Vu Gia",
+    "merged_communes_wards": "Xã Đại Phong, Xã Đại Minh, Xã Đại Cường",
+    "area_km2": 25.12,
+    "population": 27649.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Lâm Yên, xã Vu Gia",
+      "latitude": 15.85354658978577,
+      "longitude": 108.06647437989412,
+      "phone": "0983408934"
+    }
+  },
+  {
+    "old_commune_ward": "Đại Lộc",
+    "new_commune_ward": "Phú Thuận",
+    "merged_communes_wards": "Xã Đại Tân, Xã Đại Thắng, Xã Đại Chánh, Xã Đại Thạnh",
+    "area_km2": 130.89,
+    "population": 27575.0,
+    "is_commune": true,
+    "location": {
+      "address": "Số 204 đường ĐH4 thôn Phú An, xã Phú Thuận (Trụ sở Xã Đại Thắng cũ)",
+      "latitude": 15.826422309720398,
+      "longitude": 108.0756520588899,
+      "phone": "0905152182"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "Thạnh Mỹ",
+    "merged_communes_wards": "Thị trấn Thạnh Mỹ",
+    "area_km2": 207.28,
+    "population": 9072.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Mực, xã Thạnh Mỹ (Trụ sở thị trấn Thạnh Mỹ cũ)",
+      "latitude": 15.747273513775294,
+      "longitude": 107.83629012741793,
+      "phone": "0905344838"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "Bến Giằng",
+    "merged_communes_wards": "Xã Cà Dy, Xã Tà Bhinh, Xã Tà Pơơ",
+    "area_km2": 535.96,
+    "population": 8277.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Bến Giằng, Xã Bến Giằng",
+      "latitude": 15.690398726159335,
+      "longitude": 107.76606686426656,
+      "phone": "0919769272"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "Nam Giang",
+    "merged_communes_wards": "Xã Zuôich, Xã Chà Vàl",
+    "area_km2": 262.94,
+    "population": 4979.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn A Bát, xã Chà Vàl",
+      "latitude": 15.62024251417955,
+      "longitude": 107.50833094998362,
+      "phone": "0983519121"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "Đắc Pring",
+    "merged_communes_wards": "Xã Đắc Pre, Xã Đắc Pring",
+    "area_km2": 412.49,
+    "population": 3060.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 56B, xã Đắc Pring",
+      "latitude": 15.588707366600682,
+      "longitude": 107.5373987440672,
+      "phone": "0976291920"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "La Dêê",
+    "merged_communes_wards": "Xã Đắc Tôi, Xã La Dêê",
+    "area_km2": 184.81,
+    "population": 2930.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Đắc Ốc, xã La Dêê",
+      "latitude": 15.598376786934226,
+      "longitude": 107.45397868309362,
+      "phone": "0396113007"
+    }
+  },
+  {
+    "old_commune_ward": "Nam Giang",
+    "new_commune_ward": "La Êê",
+    "merged_communes_wards": "Xã Chơ Chun, Xã Laêê",
+    "area_km2": 243.12,
+    "population": 2371.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Pà Ooi, xã Laêê",
+      "latitude": 15.673991,
+      "longitude": 107.346596,
+      "phone": "0965134135"
+    }
+  },
+  {
+    "old_commune_ward": "Đông Giang",
+    "new_commune_ward": "Sông Vàng",
+    "merged_communes_wards": "Xã Tư, Xã Ba",
+    "area_km2": 183.63,
+    "population": 7024.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Ban Mai, Xã Sông Vàng",
+      "latitude": 15.957796636959332,
+      "longitude": 107.9254658894496,
+      "phone": "0374631376"
+    }
+  },
+  {
+    "old_commune_ward": "Đông Giang",
+    "new_commune_ward": "Sông Kôn",
+    "merged_communes_wards": "Xã A Ting, Xã Jơ Ngây, Xã Sông Kôn",
+    "area_km2": 212.94,
+    "population": 8746.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Ra Lang, xã Sông Kôn",
+      "latitude": 15.956110137694877,
+      "longitude": 107.79972376125863,
+      "phone": "0915011323"
+    }
+  },
+  {
+    "old_commune_ward": "Đông Giang",
+    "new_commune_ward": "Bến Hiên",
+    "merged_communes_wards": "Xã Ka Dăng, Xã Mà Cooi",
+    "area_km2": 255.85,
+    "population": 4588.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn AXờ, xã Bến Hiên",
+      "latitude": 15.84431375174836,
+      "longitude": 107.69105179302223,
+      "phone": "0987775619"
+    }
+  },
+  {
+    "old_commune_ward": "Tây Giang",
+    "new_commune_ward": "Avương",
+    "merged_communes_wards": "Xã Bha Lê, Xã A Vương",
+    "area_km2": 225.3,
+    "population": 5463.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Azứt, xã Avương",
+      "latitude": 15.928021392179351,
+      "longitude": 107.53251732435375,
+      "phone": "0876010009"
+    }
+  },
+  {
+    "old_commune_ward": "Tây Giang",
+    "new_commune_ward": "Hùng Sơn",
+    "merged_communes_wards": "Xã Ch’ơm, Xã Ga Ri, Xã Tr’Hy, Xã A Xan",
+    "area_km2": 287.95,
+    "population": 7958.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Arâng, xã Hùng Sơn",
+      "latitude": 15.833832744053154,
+      "longitude": 107.30664719236195,
+      "phone": "0981461119"
+    }
+  },
+  {
+    "old_commune_ward": "Hiệp Đức",
+    "new_commune_ward": "Việt An",
+    "merged_communes_wards": "Xã Thăng Phước, Xã Bình Sơn, Xã Quế Thọ, Xã Bình Lâm",
+    "area_km2": 150.17,
+    "population": 26196.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Việt An, xã Việt An",
+      "latitude": 15.613617190332926,
+      "longitude": 108.21890001550553,
+      "phone": "0982777125"
+    }
+  },
+  {
+    "old_commune_ward": "Hiệp Đức",
+    "new_commune_ward": "Phước Trà",
+    "merged_communes_wards": "Xã Sông Trà, Xã Phước Gia, Xã Phước Trà",
+    "area_km2": 196.22,
+    "population": 6933.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Trà Sơn, xã Phước Trà",
+      "latitude": 15.54098434861613,
+      "longitude": 108.04231216701973,
+      "phone": "0983747601"
+    }
+  },
+  {
+    "old_commune_ward": "Phước Sơn",
+    "new_commune_ward": "Phước Năng",
+    "merged_communes_wards": "Xã Phước Đức, Xã Phước Mỹ, Xã Phước Năng",
+    "area_km2": 257.1,
+    "population": 8452.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, xã Phước Năng",
+      "latitude": 15.400637626375408,
+      "longitude": 107.76180651925868,
+      "phone": "0977440405"
+    }
+  },
+  {
+    "old_commune_ward": "Phước Sơn",
+    "new_commune_ward": "Phước Chánh",
+    "merged_communes_wards": "Xã Phước Công, Xã Phước Chánh",
+    "area_km2": 107.56,
+    "population": 4466.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 3, xã Phước Chánh",
+      "latitude": 15.3671015451681,
+      "longitude": 107.81909252911731,
+      "phone": "0905234313"
+    }
+  },
+  {
+    "old_commune_ward": "Phước Sơn",
+    "new_commune_ward": "Phước Thành",
+    "merged_communes_wards": "Xã Phước Lộc, Xã Phước Kim, Xã Phước Thành",
+    "area_km2": 286.65,
+    "population": 4651.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 2, xã Phước Thành",
+      "latitude": 15.286059621395788,
+      "longitude": 107.89138346049837,
+      "phone": "0914009933"
+    }
+  },
+  {
+    "old_commune_ward": "Phước Sơn",
+    "new_commune_ward": "Phước Hiệp",
+    "merged_communes_wards": "Xã Phước Hòa, Xã Phước Hiệp",
+    "area_km2": 340.05,
+    "population": 4529.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn 1, xã Phước Hiệp",
+      "latitude": 15.462765065945758,
+      "longitude": 107.9382401314879,
+      "phone": "0905495229"
+    }
+  },
+  {
+    "old_commune_ward": "Hoàng Sa",
+    "new_commune_ward": "Đặc khu Hoàng Sa",
+    "merged_communes_wards": "Toàn bộ huyện Hoàng Sa",
+    "area_km2": 350.0,
+    "population": 0,
+    "is_commune": false,
+    "location": {
+      "address": "Đường Hoàng Sa",
+      "latitude": 16.3,
+      "longitude": 111.8,
+      "phone": ""
+    }
+  },
+  {
+    "old_commune_ward": "Tam Kỳ",
+    "new_commune_ward": "Tam Hải",
+    "merged_communes_wards": "Xã Tam Hải",
+    "area_km2": 13.32,
+    "population": 10312.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Tân Lập, Xã Tam Hải",
+      "latitude": 15.485983420110013,
+      "longitude": 108.66955497147902,
+      "phone": "0966604455"
+    }
+  },
+  {
+    "old_commune_ward": "Hội An",
+    "new_commune_ward": "Tân Hiệp",
+    "merged_communes_wards": "Xã Tân Hiệp",
+    "area_km2": 16.43,
+    "population": 2614.0,
+    "is_commune": true,
+    "location": {
+      "address": "Thôn Bãi Làng, Xã Tân Hiệp",
+      "latitude": 15.958202558482517,
+      "longitude": 108.5061879830367,
+      "phone": "0981922029"
+    }
+  }
+]
