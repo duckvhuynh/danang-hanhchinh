@@ -178,12 +178,35 @@ export function calculateDistance(
 export function isLayerBWithinLayerA(
   layerBOffice: AdministrativeOffice,
   layerAOffices: AdministrativeOffice[],
-  useManagementRadius: boolean = false
+  useManagementRadius: boolean = false,
+  radiusOverrides?: {
+    urbanReceptionRadius?: number;
+    suburbanReceptionRadius?: number;
+    urbanManagementRadius?: number;
+    suburbanManagementRadius?: number;
+  }
 ): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
   for (const layerAOffice of layerAOffices) {
-    const radius = useManagementRadius 
-      ? (layerAOffice.managementRadius || 15) 
-      : (layerAOffice.receptionRadius || 5);
+    let radius: number;
+    
+    if (radiusOverrides) {
+      // Use dynamic radius parameters based on office type
+      const officeType = layerAOffice.type || 'urban';
+      if (useManagementRadius) {
+        radius = officeType === 'urban' 
+          ? (radiusOverrides.urbanManagementRadius || 8)
+          : (radiusOverrides.suburbanManagementRadius || 15);
+      } else {
+        radius = officeType === 'urban'
+          ? (radiusOverrides.urbanReceptionRadius || 3) 
+          : (radiusOverrides.suburbanReceptionRadius || 5);
+      }
+    } else {
+      // Fallback to office's built-in radius properties
+      radius = useManagementRadius 
+        ? (layerAOffice.managementRadius || 15) 
+        : (layerAOffice.receptionRadius || 5);
+    }
     
     const distance = calculateDistance(
       layerBOffice.location.lat,
@@ -208,7 +231,13 @@ export function isLayerBWithinLayerA(
 export function categorizeLayerBOffices(
   layerBOffices: AdministrativeOffice[],
   layerAOffices: AdministrativeOffice[],
-  useManagementRadius: boolean = false
+  useManagementRadius: boolean = false,
+  radiusOverrides?: {
+    urbanReceptionRadius?: number;
+    suburbanReceptionRadius?: number;
+    urbanManagementRadius?: number;
+    suburbanManagementRadius?: number;
+  }
 ): {
   withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number }>;
   outsideLayerA: AdministrativeOffice[];
@@ -217,7 +246,7 @@ export function categorizeLayerBOffices(
   const outsideLayerA: AdministrativeOffice[] = [];
   
   for (const layerBOffice of layerBOffices) {
-    const result = isLayerBWithinLayerA(layerBOffice, layerAOffices, useManagementRadius);
+    const result = isLayerBWithinLayerA(layerBOffice, layerAOffices, useManagementRadius, radiusOverrides);
     
     if (result.isWithin && result.containingOffice && result.distance !== undefined) {
       withinLayerA.push({
@@ -237,12 +266,35 @@ export function categorizeLayerBOffices(
 export function isLayerCWithinLayerA(
   layerCOffice: AdministrativeOffice,
   layerAOffices: AdministrativeOffice[],
-  useManagementRadius: boolean = false
+  useManagementRadius: boolean = false,
+  radiusOverrides?: {
+    urbanReceptionRadius?: number;
+    suburbanReceptionRadius?: number;
+    urbanManagementRadius?: number;
+    suburbanManagementRadius?: number;
+  }
 ): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
   for (const layerAOffice of layerAOffices) {
-    const radius = useManagementRadius 
-      ? (layerAOffice.managementRadius || 15) 
-      : (layerAOffice.receptionRadius || 5);
+    let radius: number;
+    
+    if (radiusOverrides) {
+      // Use dynamic radius parameters based on office type
+      const officeType = layerAOffice.type || 'urban';
+      if (useManagementRadius) {
+        radius = officeType === 'urban' 
+          ? (radiusOverrides.urbanManagementRadius || 8)
+          : (radiusOverrides.suburbanManagementRadius || 15);
+      } else {
+        radius = officeType === 'urban'
+          ? (radiusOverrides.urbanReceptionRadius || 3) 
+          : (radiusOverrides.suburbanReceptionRadius || 5);
+      }
+    } else {
+      // Fallback to office's built-in radius properties
+      radius = useManagementRadius 
+        ? (layerAOffice.managementRadius || 15) 
+        : (layerAOffice.receptionRadius || 5);
+    }
     
     const distance = calculateDistance(
       layerCOffice.location.lat,
@@ -266,10 +318,11 @@ export function isLayerCWithinLayerA(
 // Utility function to check if a Layer C office is within any Layer B circle
 export function isLayerCWithinLayerB(
   layerCOffice: AdministrativeOffice,
-  layerBOffices: AdministrativeOffice[]
+  layerBOffices: AdministrativeOffice[],
+  layerBRadius?: number
 ): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
   for (const layerBOffice of layerBOffices) {
-    const radius = layerBOffice.radius || 5; // Layer B uses single radius
+    const radius = layerBRadius || layerBOffice.radius || 5; // Use dynamic radius or fallback
     
     const distance = calculateDistance(
       layerCOffice.location.lat,
@@ -295,7 +348,14 @@ export function categorizeLayerCOffices(
   layerCOffices: AdministrativeOffice[],
   layerAOffices: AdministrativeOffice[],
   layerBOffices: AdministrativeOffice[],
-  useManagementRadiusForA: boolean = false
+  useManagementRadiusForA: boolean = false,
+  radiusOverrides?: {
+    urbanReceptionRadius?: number;
+    suburbanReceptionRadius?: number;
+    urbanManagementRadius?: number;
+    suburbanManagementRadius?: number;
+  },
+  layerBRadius?: number
 ): {
   withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'A' }>;
   withinLayerB: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'B' }>;
@@ -307,7 +367,12 @@ export function categorizeLayerCOffices(
   
   for (const layerCOffice of layerCOffices) {
     // First check if within Layer A (higher priority)
-    const resultA = isLayerCWithinLayerA(layerCOffice, layerAOffices, useManagementRadiusForA);
+    const resultA = isLayerCWithinLayerA(
+      layerCOffice, 
+      layerAOffices, 
+      useManagementRadiusForA,
+      radiusOverrides
+    );
     
     if (resultA.isWithin && resultA.containingOffice && resultA.distance !== undefined) {
       withinLayerA.push({
@@ -318,7 +383,7 @@ export function categorizeLayerCOffices(
       });
     } else {
       // If not in Layer A, check Layer B
-      const resultB = isLayerCWithinLayerB(layerCOffice, layerBOffices);
+      const resultB = isLayerCWithinLayerB(layerCOffice, layerBOffices, layerBRadius);
       
       if (resultB.isWithin && resultB.containingOffice && resultB.distance !== undefined) {
         withinLayerB.push({
@@ -358,7 +423,6 @@ export function processAdministrativeReorganization(
     layerAUrbanManagementRadius?: number;
     layerASuburbanManagementRadius?: number;
     layerBRadius?: number;
-    layerCRadius?: number;
   } = {}
 ): {
   // Final results after overlap removal
@@ -401,8 +465,7 @@ export function processAdministrativeReorganization(
     layerASuburbanReceptionRadius = 5,
     layerAUrbanManagementRadius = 8,
     layerASuburbanManagementRadius = 15,
-    layerBRadius = 5,
-    layerCRadius = 5
+    layerBRadius = 5
   } = options;
 
   // ============================
@@ -411,7 +474,13 @@ export function processAdministrativeReorganization(
   const layerBAnalysis = categorizeLayerBOffices(
     layerBOffices, 
     layerAOffices, 
-    useManagementRadiusForA
+    useManagementRadiusForA,
+    {
+      urbanReceptionRadius: layerAUrbanReceptionRadius,
+      suburbanReceptionRadius: layerASuburbanReceptionRadius,
+      urbanManagementRadius: layerAUrbanManagementRadius,
+      suburbanManagementRadius: layerASuburbanManagementRadius
+    }
   );
   
   const finalLayerB = layerBAnalysis.outsideLayerA; // Only keep Layer B points outside Layer A coverage
@@ -425,7 +494,17 @@ export function processAdministrativeReorganization(
   
   for (const layerCOffice of layerCOffices) {
     // Check against Layer A first (higher priority)
-    const resultA = isLayerCWithinLayerA(layerCOffice, layerAOffices, useManagementRadiusForA);
+    const resultA = isLayerCWithinLayerA(
+      layerCOffice, 
+      layerAOffices, 
+      useManagementRadiusForA,
+      {
+        urbanReceptionRadius: layerAUrbanReceptionRadius,
+        suburbanReceptionRadius: layerASuburbanReceptionRadius,
+        urbanManagementRadius: layerAUrbanManagementRadius,
+        suburbanManagementRadius: layerASuburbanManagementRadius
+      }
+    );
     
     if (resultA.isWithin && resultA.containingOffice && resultA.distance !== undefined) {
       layerCAnalysisVsA.push({
@@ -437,7 +516,7 @@ export function processAdministrativeReorganization(
     }
     
     // Check against remaining Layer B points
-    const resultB = isLayerCWithinLayerB(layerCOffice, finalLayerB);
+    const resultB = isLayerCWithinLayerB(layerCOffice, finalLayerB, layerBRadius);
     
     if (resultB.isWithin && resultB.containingOffice && resultB.distance !== undefined) {
       layerCAnalysisVsB.push({
@@ -607,7 +686,6 @@ export function generateAdministrativePlanningReport(
     layerAUrbanManagementRadius?: number;
     layerASuburbanManagementRadius?: number;
     layerBRadius?: number;
-    layerCRadius?: number;
   } = {}
 ): {
   // Executive Summary for Leadership
@@ -839,7 +917,6 @@ export function generateExecutiveReport(
     layerAUrbanManagementRadius?: number;
     layerASuburbanManagementRadius?: number;
     layerBRadius?: number;
-    layerCRadius?: number;
   } = {}
 ): {
   reportText: string;
