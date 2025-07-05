@@ -26,6 +26,7 @@ import { getWholeDanangPolygon, getWholeDanangBounds } from "../data/whole-danan
 import { 
   getOfficesByLayer, 
   categorizeLayerBOffices,
+  categorizeLayerCOffices,
   type AdministrativeOffice 
 } from "../data/administrative-offices";
 import { 
@@ -82,6 +83,11 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   // Layer B within Layer A control state
   const [hideLayerBWithinA, setHideLayerBWithinA] = useState(false); // Option to hide/dim Layer B within Layer A
   const [useManagementRadiusForHiding, setUseManagementRadiusForHiding] = useState(true); // Use management vs reception radius
+
+  // Layer C within Layer A/B control state
+  const [hideLayerCWithinA, setHideLayerCWithinA] = useState(false); // Option to hide/dim Layer C within Layer A
+  const [hideLayerCWithinB, setHideLayerCWithinB] = useState(false); // Option to hide/dim Layer C within Layer B
+  const [useManagementRadiusForLayerC, setUseManagementRadiusForLayerC] = useState(true); // Use management vs reception radius for Layer C vs A check
 
   // Polygon color mode state
   const [neutralPolygonMode, setNeutralPolygonMode] = useState(false);
@@ -436,6 +442,80 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
       outsideOffices: result.outsideLayerA
     };
   }, [showLayerA, showLayerB, layerBRadius, deletedOfficeIds, editedOffices, useManagementRadiusForHiding, getLayerAReceptionRadius, getLayerAManagementRadius]);
+
+  // Calculate Layer C offices within Layer A and B circles
+  const getLayerCWithinABInfo = useCallback(() => {
+    if (!showLayerC) {
+      return { 
+        countA: 0, 
+        countB: 0, 
+        withinAOffices: [], 
+        withinBOffices: [], 
+        outsideBothOffices: [] 
+      };
+    }
+
+    const layerAOffices = showLayerA ? getOfficesByLayer('A')
+      .filter(office => !deletedOfficeIds.has(office.id))
+      .map(office => {
+        const editedOffice = editedOffices.get(office.id);
+        if (editedOffice) {
+          return editedOffice;
+        }
+        
+        // Apply radius based on office type for Layer A
+        const receptionRadius = getLayerAReceptionRadius(office);
+        const managementRadius = getLayerAManagementRadius(office);
+        
+        return {
+          ...office,
+          receptionRadius,
+          managementRadius,
+          radius: receptionRadius,
+        };
+      }) : [];
+
+    const layerBOffices = showLayerB ? getOfficesByLayer('B')
+      .filter(office => !deletedOfficeIds.has(office.id))
+      .map(office => {
+        const editedOffice = editedOffices.get(office.id);
+        if (editedOffice) {
+          return editedOffice;
+        }
+        
+        // Layer B now uses fixed radius (no type-based logic)
+        return {
+          ...office,
+          radius: layerBRadius,
+        };
+      }) : [];
+
+    const layerCOffices = getOfficesByLayer('C')
+      .filter(office => !deletedOfficeIds.has(office.id))
+      .map(office => {
+        const editedOffice = editedOffices.get(office.id);
+        return editedOffice || {
+          ...office,
+          radius: layerCRadius
+        };
+      });
+
+    // Import the categorization function
+    const result = categorizeLayerCOffices(
+      layerCOffices, 
+      layerAOffices, 
+      layerBOffices, 
+      useManagementRadiusForLayerC
+    );
+    
+    return {
+      countA: result.withinLayerA.length,
+      countB: result.withinLayerB.length,
+      withinAOffices: result.withinLayerA,
+      withinBOffices: result.withinLayerB,
+      outsideBothOffices: result.outsideBoth
+    };
+  }, [showLayerA, showLayerB, showLayerC, layerBRadius, layerCRadius, deletedOfficeIds, editedOffices, useManagementRadiusForLayerC, getLayerAReceptionRadius, getLayerAManagementRadius]);
 
   // Direction mode functions
   
@@ -840,6 +920,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                   onOfficeEdit={handleOfficeEdit}
                   hideLayerBWithinA={hideLayerBWithinA}
                   useManagementRadiusForHiding={useManagementRadiusForHiding}
+                  hideLayerCWithinA={hideLayerCWithinA}
+                  hideLayerCWithinB={hideLayerCWithinB}
+                  useManagementRadiusForLayerC={useManagementRadiusForLayerC}
                   fillOpacity={fillOpacity}
                 />
 
@@ -935,6 +1018,14 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 useManagementRadiusForHiding={useManagementRadiusForHiding}
                 onToggleUseManagementRadiusForHiding={setUseManagementRadiusForHiding}
                 layerBWithinACount={getLayerBWithinAInfo().count}
+                hideLayerCWithinA={hideLayerCWithinA}
+                onToggleHideLayerCWithinA={setHideLayerCWithinA}
+                hideLayerCWithinB={hideLayerCWithinB}
+                onToggleHideLayerCWithinB={setHideLayerCWithinB}
+                useManagementRadiusForLayerC={useManagementRadiusForLayerC}
+                onToggleUseManagementRadiusForLayerC={setUseManagementRadiusForLayerC}
+                layerCWithinACount={getLayerCWithinABInfo().countA}
+                layerCWithinBCount={getLayerCWithinABInfo().countB}
                 neutralPolygonMode={neutralPolygonMode}
                 onToggleNeutralPolygonMode={setNeutralPolygonMode}
                 mapType={mapType}

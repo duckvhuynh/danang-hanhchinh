@@ -232,3 +232,106 @@ export function categorizeLayerBOffices(
   
   return { withinLayerA, outsideLayerA };
 }
+
+// Utility function to check if a Layer C office is within any Layer A circle
+export function isLayerCWithinLayerA(
+  layerCOffice: AdministrativeOffice,
+  layerAOffices: AdministrativeOffice[],
+  useManagementRadius: boolean = false
+): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
+  for (const layerAOffice of layerAOffices) {
+    const radius = useManagementRadius 
+      ? (layerAOffice.managementRadius || 15) 
+      : (layerAOffice.receptionRadius || 5);
+    
+    const distance = calculateDistance(
+      layerCOffice.location.lat,
+      layerCOffice.location.lng,
+      layerAOffice.location.lat,
+      layerAOffice.location.lng
+    );
+    
+    if (distance <= radius) {
+      return { 
+        isWithin: true, 
+        containingOffice: layerAOffice, 
+        distance 
+      };
+    }
+  }
+  
+  return { isWithin: false };
+}
+
+// Utility function to check if a Layer C office is within any Layer B circle
+export function isLayerCWithinLayerB(
+  layerCOffice: AdministrativeOffice,
+  layerBOffices: AdministrativeOffice[]
+): { isWithin: boolean; containingOffice?: AdministrativeOffice; distance?: number } {
+  for (const layerBOffice of layerBOffices) {
+    const radius = layerBOffice.radius || 5; // Layer B uses single radius
+    
+    const distance = calculateDistance(
+      layerCOffice.location.lat,
+      layerCOffice.location.lng,
+      layerBOffice.location.lat,
+      layerBOffice.location.lng
+    );
+    
+    if (distance <= radius) {
+      return { 
+        isWithin: true, 
+        containingOffice: layerBOffice, 
+        distance 
+      };
+    }
+  }
+  
+  return { isWithin: false };
+}
+
+// Utility function to get Layer C offices categorized by their relationship to Layer A and B
+export function categorizeLayerCOffices(
+  layerCOffices: AdministrativeOffice[],
+  layerAOffices: AdministrativeOffice[],
+  layerBOffices: AdministrativeOffice[],
+  useManagementRadiusForA: boolean = false
+): {
+  withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'A' }>;
+  withinLayerB: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'B' }>;
+  outsideBoth: AdministrativeOffice[];
+} {
+  const withinLayerA: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'A' }> = [];
+  const withinLayerB: Array<AdministrativeOffice & { containingOffice: AdministrativeOffice; distance: number; layer: 'B' }> = [];
+  const outsideBoth: AdministrativeOffice[] = [];
+  
+  for (const layerCOffice of layerCOffices) {
+    // First check if within Layer A (higher priority)
+    const resultA = isLayerCWithinLayerA(layerCOffice, layerAOffices, useManagementRadiusForA);
+    
+    if (resultA.isWithin && resultA.containingOffice && resultA.distance !== undefined) {
+      withinLayerA.push({
+        ...layerCOffice,
+        containingOffice: resultA.containingOffice,
+        distance: resultA.distance,
+        layer: 'A'
+      });
+    } else {
+      // If not in Layer A, check Layer B
+      const resultB = isLayerCWithinLayerB(layerCOffice, layerBOffices);
+      
+      if (resultB.isWithin && resultB.containingOffice && resultB.distance !== undefined) {
+        withinLayerB.push({
+          ...layerCOffice,
+          containingOffice: resultB.containingOffice,
+          distance: resultB.distance,
+          layer: 'B'
+        });
+      } else {
+        outsideBoth.push(layerCOffice);
+      }
+    }
+  }
+  
+  return { withinLayerA, withinLayerB, outsideBoth };
+}

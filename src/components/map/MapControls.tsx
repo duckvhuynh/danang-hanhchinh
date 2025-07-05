@@ -70,6 +70,15 @@ interface MapControlsProps {
   useManagementRadiusForHiding?: boolean;
   onToggleUseManagementRadiusForHiding?: (enabled: boolean) => void;
   layerBWithinACount?: number;
+  // Layer C within Layer A/B controls
+  hideLayerCWithinA?: boolean;
+  onToggleHideLayerCWithinA?: (enabled: boolean) => void;
+  hideLayerCWithinB?: boolean;
+  onToggleHideLayerCWithinB?: (enabled: boolean) => void;
+  useManagementRadiusForLayerC?: boolean;
+  onToggleUseManagementRadiusForLayerC?: (enabled: boolean) => void;
+  layerCWithinACount?: number;
+  layerCWithinBCount?: number;
   // Neutral polygon mode
   neutralPolygonMode: boolean;
   onToggleNeutralPolygonMode: (enabled: boolean) => void;
@@ -151,6 +160,14 @@ export function MapControls({
   onFillOpacityChange,
   onToggleAboutDialog,
   showAboutDialog = false,
+  hideLayerCWithinA,
+  onToggleHideLayerCWithinA,
+  hideLayerCWithinB,
+  onToggleHideLayerCWithinB,
+  useManagementRadiusForLayerC,
+  onToggleUseManagementRadiusForLayerC,
+  layerCWithinACount,
+  layerCWithinBCount,
 }: MapControlsProps) {
   const [expanded, setExpanded] = useState(true);
   const isMobile = useIsMobile();
@@ -644,6 +661,75 @@ export function MapControls({
                               className="w-16 h-7 text-xs"
                             />
                             <span className="text-xs text-yellow-600">km</span>
+                          </div>
+                        </div>
+
+                        {/* Layer C Overlap Controls */}
+                        <div className="mt-3 p-2 bg-yellow-100 rounded border border-yellow-200">
+                          <Label className="text-xs font-medium text-yellow-800 mb-2 block">
+                            Kiểm tra trùng lặp với Lớp A và B
+                          </Label>
+                          
+                          {/* Show counts */}
+                          <div className="space-y-1 mb-2">
+                            {layerCWithinACount !== undefined && (
+                              <div className="text-xs text-red-600">
+                                {layerCWithinACount} điểm trong vùng Lớp A
+                              </div>
+                            )}
+                            {layerCWithinBCount !== undefined && (
+                              <div className="text-xs text-blue-600">
+                                {layerCWithinBCount} điểm trong vùng Lớp B
+                              </div>
+                            )}
+                          </div>
+                          
+                          {/* Hide/Dim toggles */}
+                          <div className="space-y-2">
+                            {/* Hide within Layer A */}
+                            <div className="flex items-center justify-between">
+                              <Label htmlFor="hide-layer-c-within-a" className="text-xs text-yellow-700">
+                                Ẩn/Mờ điểm trong vùng Lớp A
+                              </Label>
+                              <Switch
+                                id="hide-layer-c-within-a"
+                                checked={hideLayerCWithinA || false}
+                                onCheckedChange={onToggleHideLayerCWithinA}
+                                className="data-[state=checked]:bg-red-600"
+                              />
+                            </div>
+                            
+                            {/* Hide within Layer B */}
+                            <div className="flex items-center justify-between">
+                              <Label htmlFor="hide-layer-c-within-b" className="text-xs text-yellow-700">
+                                Ẩn/Mờ điểm trong vùng Lớp B
+                              </Label>
+                              <Switch
+                                id="hide-layer-c-within-b"
+                                checked={hideLayerCWithinB || false}
+                                onCheckedChange={onToggleHideLayerCWithinB}
+                                className="data-[state=checked]:bg-blue-600"
+                              />
+                            </div>
+                          </div>
+                          
+                          {/* Radius selection for Layer C overlap logic */}
+                          <div className="mt-2">
+                            <Label className="text-xs text-yellow-700 mb-2 block">
+                              Bán kính để kiểm tra Lớp A
+                            </Label>
+                            <Select 
+                              value={useManagementRadiusForLayerC ? 'management' : 'reception'} 
+                              onValueChange={(value) => onToggleUseManagementRadiusForLayerC?.(value === 'management')}
+                            >
+                              <SelectTrigger className="w-full h-8 text-xs">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="reception">Tiếp nhận (Đô thị: {layerAUrbanReceptionRadius}km, Ngoại ô: {layerASuburbanReceptionRadius}km)</SelectItem>
+                                <SelectItem value="management">Quản lý (Đô thị: {layerAUrbanManagementRadius}km, Ngoại ô: {layerASuburbanManagementRadius}km)</SelectItem>
+                              </SelectContent>
+                            </Select>
                           </div>
                         </div>
                       </div>

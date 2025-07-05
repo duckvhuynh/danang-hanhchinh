@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { MapPin, Phone, Navigation, Building2, FileText, Trash2, Edit } from "lucide-react";
 import { Circle } from "../geometry/circle";
 import type { AdministrativeOffice } from "../../data/administrative-offices";
-import { isLayerBWithinLayerA } from "../../data/administrative-offices";
+import { isLayerBWithinLayerA, isLayerCWithinLayerA, isLayerCWithinLayerB } from "../../data/administrative-offices";
 import { EditOfficeModal } from "./EditOfficeModal";
 
 interface AdministrativeOfficesProps {
@@ -24,6 +24,10 @@ interface AdministrativeOfficesProps {
     // Layer B within Layer A controls
     hideLayerBWithinA?: boolean;
     useManagementRadiusForHiding?: boolean;
+    // Layer C within Layer A/B controls
+    hideLayerCWithinA?: boolean;
+    hideLayerCWithinB?: boolean;
+    useManagementRadiusForLayerC?: boolean;
     // Fill opacity control
     fillOpacity?: number;
 }
@@ -44,13 +48,16 @@ export function AdministrativeOffices({
     onOfficeEdit,
     hideLayerBWithinA = false,
     useManagementRadiusForHiding = false,
+    hideLayerCWithinA = false,
+    hideLayerCWithinB = false,
+    useManagementRadiusForLayerC = false,
     fillOpacity = 0.3,
 }: AdministrativeOfficesProps) {
     const [selectedOffice, setSelectedOffice] = useState<AdministrativeOffice | null>(null);
     const [editingOffice, setEditingOffice] = useState<AdministrativeOffice | null>(null);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
-    // Process offices to determine which Layer B offices are within Layer A circles
+    // Process offices to determine which Layer B offices are within Layer A circles and Layer C offices within A/B
     const processedOffices = useMemo(() => {
         const layerAOffices = offices.filter(office => office.layer === 'A');
         const layerBOffices = offices.filter(office => office.layer === 'B');
@@ -69,9 +76,32 @@ export function AdministrativeOffices({
             }
         }
         
-        // Determine which offices to show
-        const visibleOffices = [...layerAOffices, ...layerCOffices];
+        // Check which Layer C offices are within Layer A and B circles
+        const layerCWithinA: AdministrativeOffice[] = [];
+        const layerCWithinB: AdministrativeOffice[] = [];
+        const layerCOutsideAB: AdministrativeOffice[] = [];
         
+        for (const layerCOffice of layerCOffices) {
+            // Check if within Layer A first
+            const resultA = isLayerCWithinLayerA(layerCOffice, layerAOffices, useManagementRadiusForLayerC);
+            if (resultA.isWithin) {
+                layerCWithinA.push(layerCOffice);
+                continue; // Skip checking B if already within A
+            }
+            
+            // Check if within Layer B (only if not within A)
+            const resultB = isLayerCWithinLayerB(layerCOffice, layerBOffices);
+            if (resultB.isWithin) {
+                layerCWithinB.push(layerCOffice);
+            } else {
+                layerCOutsideAB.push(layerCOffice);
+            }
+        }
+        
+        // Determine which offices to show
+        const visibleOffices = [...layerAOffices];
+        
+        // Add Layer B offices based on hiding settings
         if (hideLayerBWithinA) {
             // Show only Layer B offices outside Layer A circles
             visibleOffices.push(...layerBOutsideA);
@@ -80,12 +110,30 @@ export function AdministrativeOffices({
             visibleOffices.push(...layerBOffices);
         }
         
+        // Add Layer C offices based on hiding settings
+        if (hideLayerCWithinA && hideLayerCWithinB) {
+            // Hide Layer C within both A and B - show only outside both
+            visibleOffices.push(...layerCOutsideAB);
+        } else if (hideLayerCWithinA) {
+            // Hide Layer C within A - show those within B and outside both
+            visibleOffices.push(...layerCWithinB, ...layerCOutsideAB);
+        } else if (hideLayerCWithinB) {
+            // Hide Layer C within B - show those within A and outside both
+            visibleOffices.push(...layerCWithinA, ...layerCOutsideAB);
+        } else {
+            // Show all Layer C offices
+            visibleOffices.push(...layerCOffices);
+        }
+        
         return {
             visibleOffices,
             layerBWithinA,
             layerBOutsideA,
+            layerCWithinA,
+            layerCWithinB,
+            layerCOutsideAB,
         };
-    }, [offices, hideLayerBWithinA, useManagementRadiusForHiding]);
+    }, [offices, hideLayerBWithinA, useManagementRadiusForHiding, hideLayerCWithinA, hideLayerCWithinB, useManagementRadiusForLayerC]);
 
     // Helper function to check if a Layer B office should be dimmed
     const isLayerBDimmed = (office: AdministrativeOffice): boolean => {
@@ -94,6 +142,28 @@ export function AdministrativeOffices({
         const layerAOffices = offices.filter(o => o.layer === 'A');
         const result = isLayerBWithinLayerA(office, layerAOffices, useManagementRadiusForHiding);
         return result.isWithin;
+    };
+
+    // Helper function to check if a Layer C office should be dimmed
+    const isLayerCDimmed = (office: AdministrativeOffice): boolean => {
+        if (office.layer !== 'C') return false;
+        
+        const layerAOffices = offices.filter(o => o.layer === 'A');
+        const layerBOffices = offices.filter(o => o.layer === 'B');
+        
+        // Check if should be dimmed due to being within Layer A
+        if (!hideLayerCWithinA) {
+            const resultA = isLayerCWithinLayerA(office, layerAOffices, useManagementRadiusForLayerC);
+            if (resultA.isWithin) return true;
+        }
+        
+        // Check if should be dimmed due to being within Layer B (only if not hidden)
+        if (!hideLayerCWithinB) {
+            const resultB = isLayerCWithinLayerB(office, layerBOffices);
+            if (resultB.isWithin) return true;
+        }
+        
+        return false;
     };
 
     // Helper function to create Google Maps directions URL
@@ -177,7 +247,9 @@ export function AdministrativeOffices({
 
     // Get marker appearance based on direction mode selection
     const getMarkerAppearance = (office: AdministrativeOffice) => {
-        const isDimmed = isLayerBDimmed(office);
+        const isLayerBDim = isLayerBDimmed(office);
+        const isLayerCDim = isLayerCDimmed(office);
+        const isDimmed = isLayerBDim || isLayerCDim;
         
         if (directionMode) {
             if (selectedStartOffice?.id === office.id) {
@@ -302,7 +374,9 @@ export function AdministrativeOffices({
             {/* Office markers */}
             {processedOffices.visibleOffices.map((office) => {
                 const appearance = getMarkerAppearance(office);
-                const isDimmed = isLayerBDimmed(office);
+                const isLayerBDim = isLayerBDimmed(office);
+                const isLayerCDim = isLayerCDimmed(office);
+                const isDimmed = isLayerBDim || isLayerCDim;
                 
                 return (
                     <AdvancedMarker
