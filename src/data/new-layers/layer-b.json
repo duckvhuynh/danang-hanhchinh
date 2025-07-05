@@ -1,20 +1,6 @@
 [
   {
     "old_commune_ward": "Hải Châu",
-    "new_commune_ward": "Hải Châu",
-    "merged_communes_wards": "Phường Thanh Bình, Phường Thuận Phước, Phường Thạch Thang, Phường Phước Ninh, Phường Hải Châu",
-    "area_km2": 7.58,
-    "population": 131427,
-    "is_commune": false,
-    "location": {
-      "address": "Số 15 đường Lê Hồng Phong, phường Hải Châu",
-      "latitude": 16.06372834024789,
-      "longitude": 108.22247219553093,
-      "phone": "0903570134"
-    }
-  },
-  {
-    "old_commune_ward": "Hải Châu",
     "new_commune_ward": "Hòa Cường",
     "merged_communes_wards": "Phường Bình Thuận, Phường Hòa Thuận Tây, Phường Hòa Cường Bắc, Phường Hòa Cường Nam",
     "area_km2": 15.72,
@@ -963,20 +949,6 @@
       "latitude": 15.462765065945758,
       "longitude": 107.9382401314879,
       "phone": "0905495229"
-    }
-  },
-  {
-    "old_commune_ward": "Hoàng Sa",
-    "new_commune_ward": "Đặc khu Hoàng Sa",
-    "merged_communes_wards": "Toàn bộ huyện Hoàng Sa",
-    "area_km2": 350.0,
-    "population": 0,
-    "is_commune": false,
-    "location": {
-      "address": "Đường Hoàng Sa",
-      "latitude": 16.3,
-      "longitude": 111.8,
-      "phone": ""
     }
   },
   {
