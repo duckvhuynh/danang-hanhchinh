@@ -605,31 +605,31 @@ export function MapControls({
                   </div>
 
                   {/* Layer C Controls */}
-                  <div className="p-2 bg-green-50 rounded-lg border border-green-100">
+                  <div className="p-2 bg-yellow-50 rounded-lg border border-yellow-100">
                     <div className="flex items-center justify-between">
                       <Label
                         htmlFor="show-layer-c"
                         className="flex items-center gap-2 cursor-pointer flex-1"
                       >
-                        <div className="w-6 h-6 flex items-center justify-center bg-green-100 rounded-full">
-                          <Building2 className="w-3 h-3 text-green-700" />
+                        <div className="w-6 h-6 flex items-center justify-center bg-yellow-100 rounded-full">
+                          <Building2 className="w-3 h-3 text-yellow-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-green-900">Lớp C - {layerCRadius}km</p>
-                          <p className="text-xs text-green-700">{layerConfigurations.C.count} {layerConfigurations.C.description}</p>
+                          <p className="text-sm font-medium text-yellow-900">Lớp C - {layerCRadius}km</p>
+                          <p className="text-xs text-yellow-700">{layerConfigurations.C.count} {layerConfigurations.C.description}</p>
                         </div>
                       </Label>
                       <Switch
                         id="show-layer-c"
                         checked={showLayerC}
                         onCheckedChange={onToggleLayerC}
-                        className="data-[state=checked]:bg-green-600"
+                        className="data-[state=checked]:bg-yellow-600"
                       />
                     </div>
                     {showLayerC && (
                       <div className="mt-2 px-2">
                         <div className="flex items-center justify-between">
-                          <Label htmlFor="layer-c-radius" className="text-xs text-green-700">
+                          <Label htmlFor="layer-c-radius" className="text-xs text-yellow-700">
                             Bán kính phục vụ:
                           </Label>
                           <div className="flex items-center gap-2">
@@ -643,7 +643,7 @@ export function MapControls({
                               onChange={(e) => onLayerCRadiusChange(Number(e.target.value))}
                               className="w-16 h-7 text-xs"
                             />
-                            <span className="text-xs text-green-600">km</span>
+                            <span className="text-xs text-yellow-600">km</span>
                           </div>
                         </div>
                       </div>
@@ -807,7 +807,7 @@ export function MapControls({
                             </SelectItem>
                             <SelectItem value="C">
                               <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                                 <span>Lớp C - Điểm tăng cường (bưu điện)</span>
                               </div>
                             </SelectItem>
@@ -938,14 +938,14 @@ export function MapControls({
                             {/* Layer C Downloads */}
                             <div className="space-y-1">
                               <div className="flex items-center gap-1">
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                                 <span className="text-xs text-gray-600">Lớp C:</span>
                               </div>
                               <div className="grid grid-cols-2 gap-1 pl-3">
                                 <Button
                                   size="sm"
                                   variant="outline"
-                                  className="h-6 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                  className="h-6 text-xs bg-white hover:bg-yellow-50 border-yellow-200 text-yellow-700"
                                   onClick={() => onDownloadLayerAsJSON('C')}
                                 >
                                   <FileText className="w-2.5 h-2.5 mr-1" />
@@ -954,7 +954,7 @@ export function MapControls({
                                 <Button
                                   size="sm"
                                   variant="outline"
-                                  className="h-6 text-xs bg-white hover:bg-green-50 border-green-200 text-green-700"
+                                  className="h-6 text-xs bg-white hover:bg-yellow-50 border-yellow-200 text-yellow-700"
                                   onClick={() => onDownloadLayerAsExcel('C')}
                                 >
                                   <FileSpreadsheet className="w-2.5 h-2.5 mr-1" />

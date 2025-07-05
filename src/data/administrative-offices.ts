@@ -130,9 +130,9 @@ export const layerConfigurations = {
     name: 'Các Điểm Tiếp Nhận Do Bưu Điện Quản Lý',
     description: 'Điểm tiếp nhận do bưu điện quản lý',
     radius: 5, // Default radius
-    color: '#059669', // Green
-    fillColor: '#D1FAE5',
-    strokeColor: '#059669',
+    color: '#EAB308', // Yellow
+    fillColor: '#FEF3C7',
+    strokeColor: '#EAB308',
     count: layerCOffices.length,
   },
 };

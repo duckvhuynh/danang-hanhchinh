@@ -116,7 +116,7 @@ export function AdministrativeOffices({
             case 'B':
                 return '#2563EB'; // Blue
             case 'C':
-                return '#059669'; // Green
+                return '#EAB308'; // Yellow
             default:
                 return '#6B7280'; // Gray
         }
@@ -140,8 +140,8 @@ export function AdministrativeOffices({
                 strokeColor: '#1D4ED8', // deep blue
             },
             'C': {
-                fillColor: '#10B981',   // bright green
-                strokeColor: '#047857', // dark green
+                fillColor: '#FBBF24',   // bright yellow
+                strokeColor: '#D97706', // dark yellow/amber
             },
         };
 
@@ -182,7 +182,7 @@ export function AdministrativeOffices({
         if (directionMode) {
             if (selectedStartOffice?.id === office.id) {
                 return {
-                    background: "#10B981", // Green for start
+                    background: "#FBBF24", // Yellow for start
                     borderColor: "#FFFFFF",
                     glyphColor: "#FFFFFF",
                     scale: 1.4, // Larger for better visibility
@@ -397,15 +397,15 @@ export function AdministrativeOffices({
                                             </div>
                                         )}
                                         {selectedOffice.procedures_6months_2025 && (
-                                            <div className="bg-green-50 rounded-lg p-2">
+                                            <div className="bg-yellow-50 rounded-lg p-2">
                                                 <div className="flex items-center gap-1 mb-1">
-                                                    <FileText className="w-3 h-3 text-green-600" />
-                                                    <span className="text-xs text-green-600 font-medium">6 tháng đầu 2025</span>
+                                                    <FileText className="w-3 h-3 text-yellow-600" />
+                                                    <span className="text-xs text-yellow-600 font-medium">6 tháng đầu 2025</span>
                                                 </div>
-                                                <div className="text-sm font-semibold text-green-900">
+                                                <div className="text-sm font-semibold text-yellow-900">
                                                     {selectedOffice.procedures_6months_2025.toLocaleString()}
                                                 </div>
-                                                <div className="text-xs text-green-600">hồ sơ</div>
+                                                <div className="text-xs text-yellow-600">hồ sơ</div>
                                             </div>
                                         )}
                                     </div>
@@ -488,7 +488,7 @@ export function AdministrativeOffices({
                                     {selectedOffice.phone && (
                                         <Button
                                             size="sm"
-                                            className="flex-1 bg-white hover:bg-green-50 border-green-200 hover:border-green-300 text-green-700"
+                                            className="flex-1 bg-white hover:bg-yellow-50 border-yellow-200 hover:border-yellow-300 text-yellow-700"
                                             variant="outline"
                                             onClick={(e) => {
                                                 e.stopPropagation();

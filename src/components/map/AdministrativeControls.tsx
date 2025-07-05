@@ -299,20 +299,20 @@ export function AdministrativeControls({
             </div>
 
             {/* Layer C Controls */}
-            <div className="p-2 bg-green-50 rounded-lg border border-green-100">
+            <div className="p-2 bg-yellow-50 rounded-lg border border-yellow-100">
               <div className="flex items-center justify-between">
                 <Label
                   htmlFor="show-layer-c"
                   className="flex items-center gap-2 cursor-pointer"
                 >
-                  <div className="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
-                    <Building2 className="w-4 h-4 text-green-700" />
+                  <div className="w-7 h-7 flex items-center justify-center bg-yellow-100 rounded-full">
+                    <Building2 className="w-4 h-4 text-yellow-700" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-green-900">
+                    <p className="text-sm font-medium text-yellow-900">
                       Lớp C - {layerCRadius}km
                     </p>
-                    <p className="text-xs text-green-700">
+                    <p className="text-xs text-yellow-700">
                       {layerConfigurations.C.count} Phường/Xã cũ
                     </p>
                   </div>
@@ -321,7 +321,7 @@ export function AdministrativeControls({
                   id="show-layer-c"
                   checked={showLayerC}
                   onCheckedChange={onToggleLayerC}
-                  className="data-[state=checked]:bg-green-600"
+                  className="data-[state=checked]:bg-yellow-600"
                 />
               </div>
               
