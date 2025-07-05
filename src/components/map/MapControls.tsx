@@ -380,7 +380,7 @@ export function MapControls({
                           <Building2 className="w-3 h-3 text-red-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-red-900">Lớp A - Tiếp nhận: {layerAReceptionRadius}km, Quán lý: {layerAManagementRadius}km</p>
+                          <p className="text-sm font-medium text-red-900">Lớp A - Tiếp nhận: {layerAReceptionRadius}km, Quản lý: {layerAManagementRadius}km</p>
                           <p className="text-xs text-red-700">{layerConfigurations.A.count} {layerConfigurations.A.description}</p>
                         </div>
                       </Label>
