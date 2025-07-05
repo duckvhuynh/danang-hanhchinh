@@ -32,7 +32,7 @@ export function EditOfficeModal({
         radius: office.radius,
         receptionRadius: office.receptionRadius,
         managementRadius: office.managementRadius,
-        type: office.type,
+        type: office.type || (office.layer === 'A' ? 'urban' : undefined), // Default to urban for Layer A
         postid: office.postid,
         procedures_2024: office.procedures_2024 || 0,
         procedures_6months_2025: office.procedures_6months_2025 || 0,
@@ -125,19 +125,19 @@ export function EditOfficeModal({
                 <SelectItem value="A">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span>Lớp A - Chi nhánh (2 bán kính)</span>
+                    <span>Lớp A - Chi nhánh (2 bán kính theo loại vùng)</span>
                   </div>
                 </SelectItem>
                 <SelectItem value="B">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span>Lớp B - Điểm tiếp nhận (theo loại vùng)</span>
+                    <span>Lớp B - Trung tâm hành chính (bán kính cố định)</span>
                   </div>
                 </SelectItem>
                 <SelectItem value="C">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span>Lớp C - Điểm tăng cường (bưu điện)</span>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <span>Lớp C - Điểm tiếp nhận bưu điện</span>
                   </div>
                 </SelectItem>
               </SelectContent>
@@ -147,6 +147,33 @@ export function EditOfficeModal({
           {/* Radius Controls - Conditional based on layer */}
           {formData.layer === 'A' && (
             <div className="space-y-3">
+              {/* Type selection for Layer A */}
+              <div className="space-y-2">
+                <Label htmlFor="type">Loại vùng *</Label>
+                <Select
+                  value={formData.type || 'urban'}
+                  onValueChange={(value: 'urban' | 'suburban') => {
+                    const receptionRadius = value === 'urban' ? 2.5 : 5;
+                    const managementRadius = value === 'urban' ? 5 : 10;
+                    setFormData(prev => ({ 
+                      ...prev, 
+                      type: value,
+                      receptionRadius,
+                      managementRadius,
+                      radius: receptionRadius // Main radius follows reception radius
+                    }));
+                  }}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Chọn loại vùng" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="urban">Đô thị (Tiếp nhận: 2.5km, Quản lý: 5km)</SelectItem>
+                    <SelectItem value="suburban">Ngoại ô (Tiếp nhận: 5km, Quản lý: 10km)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
               <Label className="text-sm font-medium">Bán kính Lớp A (km)</Label>
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1">
@@ -157,7 +184,7 @@ export function EditOfficeModal({
                     min="1"
                     max="20"
                     step="0.5"
-                    value={formData.receptionRadius || 5}
+                    value={formData.receptionRadius || (formData.type === 'urban' ? 2.5 : 5)}
                     onChange={(e) => setFormData(prev => ({ 
                       ...prev, 
                       receptionRadius: Number(e.target.value),
@@ -174,7 +201,7 @@ export function EditOfficeModal({
                     min="1"
                     max="30"
                     step="0.5"
-                    value={formData.managementRadius || 15}
+                    value={formData.managementRadius || (formData.type === 'urban' ? 5 : 10)}
                     onChange={(e) => setFormData(prev => ({ 
                       ...prev, 
                       managementRadius: Number(e.target.value)
@@ -189,25 +216,6 @@ export function EditOfficeModal({
           {formData.layer === 'B' && (
             <div className="space-y-3">
               <div className="space-y-2">
-                <Label htmlFor="type">Loại vùng *</Label>
-                <Select
-                  value={formData.type || 'urban'}
-                  onValueChange={(value: 'urban' | 'suburban') => setFormData(prev => ({ 
-                    ...prev, 
-                    type: value,
-                    radius: value === 'urban' ? 3 : 8 // Update radius based on type
-                  }))}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Chọn loại vùng" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="urban">Đô thị (3km)</SelectItem>
-                    <SelectItem value="suburban">Ngoại ô (8km)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
                 <Label htmlFor="radius">Bán kính phục vụ (km) *</Label>
                 <Input
                   id="radius"
@@ -215,10 +223,13 @@ export function EditOfficeModal({
                   min="1"
                   max="20"
                   step="0.5"
-                  value={formData.radius || (formData.type === 'urban' ? 3 : 8)}
+                  value={formData.radius || 5}
                   onChange={(e) => setFormData(prev => ({ ...prev, radius: Number(e.target.value) }))}
                   required
                 />
+                <p className="text-xs text-muted-foreground">
+                  Lớp B sử dụng bán kính cố định cho tất cả các trung tâm
+                </p>
               </div>
             </div>
           )}
@@ -246,6 +257,9 @@ export function EditOfficeModal({
                   onChange={(e) => setFormData(prev => ({ ...prev, radius: Number(e.target.value) }))}
                   required
                 />
+                <p className="text-xs text-muted-foreground">
+                  Bán kính mặc định cho các điểm tiếp nhận bưu điện
+                </p>
               </div>
             </div>
           )}
