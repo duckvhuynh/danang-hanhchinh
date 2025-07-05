@@ -27,6 +27,8 @@ import {
   getOfficesByLayer, 
   categorizeLayerBOffices,
   categorizeLayerCOffices,
+  generateAdministrativePlanningReport,
+  generateExecutiveReport,
   type AdministrativeOffice 
 } from "../data/administrative-offices";
 import { 
@@ -37,6 +39,14 @@ import {
   DialogHeader, 
   DialogTitle 
 } from "./ui/dialog";
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableHead,
+  TableRow,
+  TableCell,
+} from "./ui/table";
 import { Button } from "./ui/button";
 import {
   downloadAsJSON,
@@ -55,6 +65,9 @@ interface MainInterfaceProps {
 }
 
 export function MainInterface({ apiKey }: MainInterfaceProps) {
+  // Initialize polygon and bounds
+  const wholeDanangPolygon = getWholeDanangPolygon();
+  const danangBounds = getWholeDanangBounds();
 
   // Keep selectedWard state for map interactions (polygon highlighting, click handling)
   // even though it's no longer passed to AppSidebar after removing the "Thông tin" tab
@@ -112,19 +125,32 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [editedOffices, setEditedOffices] = useState<Map<string, AdministrativeOffice>>(new Map());
   const [deletedOfficeIds, setDeletedOfficeIds] = useState<Set<string>>(new Set());
   
+  // Map state
+  const [zoomLevel, setZoomLevel] = useState(8);
+  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [isLocating, setIsLocating] = useState(false);
+  const [isMapLoading, setIsMapLoading] = useState(true);
+
+  // About dialog state
+  const [showAboutDialog, setShowAboutDialog] = useState(false);
+
   // Confirmation dialog state
   const [deleteConfirmDialog, setDeleteConfirmDialog] = useState<{
     isOpen: boolean;
     office: AdministrativeOffice | null;
   }>({ isOpen: false, office: null });
-
-  // New state for zoom level and city boundary
-  const [zoomLevel, setZoomLevel] = useState<number>(11); // Start with a zoom level to show all administrative boundaries
-  const [wholeDanangPolygon] = useState<PolygonData>(getWholeDanangPolygon());
-  const [danangBounds] = useState(getWholeDanangBounds());
   
-  // About dialog state
-  const [showAboutDialog, setShowAboutDialog] = useState(false);
+  // Administrative Planning Report Dialog state
+  const [showPlanningReportDialog, setShowPlanningReportDialog] = useState(false);
+  const [planningReportData, setPlanningReportData] = useState<ReturnType<typeof generateAdministrativePlanningReport> | null>(null);
+
+  // Executive Summary Dialog state
+  const [showExecutiveSummaryDialog, setShowExecutiveSummaryDialog] = useState(false);
+  const [executiveSummaryData, setExecutiveSummaryData] = useState<ReturnType<typeof generateExecutiveReport> | null>(null);
+
+  // Detailed Planning Report Dialog state (for download handlers) 
+  const [showDetailedPlanningDialog, setShowDetailedPlanningDialog] = useState(false);
+  const [detailedPlanningData, setDetailedPlanningData] = useState<ReturnType<typeof generateAdministrativePlanningReport> | null>(null);
 
   // Helper functions to get radius based on office type for Layer A
   const getLayerAReceptionRadius = useCallback((office?: AdministrativeOffice) => {
@@ -141,10 +167,6 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   useEffect(() => {
     console.log("Selected ward updated:", selectedWard?.ward || "None");
   }, [selectedWard]);
-
-  const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
-  const [isLocating, setIsLocating] = useState(false);
-  const [isMapLoading, setIsMapLoading] = useState(true);
 
   // Handle map load
   useEffect(() => {
@@ -728,84 +750,203 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     }
   }, [directionMode]);
 
-  // Download handlers for edit mode
+  // Function to show administrative planning report in dialog
+  const handleShowPlanningReport = useCallback(() => {
+    try {
+      const options = {
+        useManagementRadiusForA: useManagementRadiusForHiding,
+        layerAUrbanReceptionRadius,
+        layerASuburbanReceptionRadius,
+        layerAUrbanManagementRadius,
+        layerASuburbanManagementRadius,
+        layerBRadius,
+        layerCRadius
+      };
+
+      const planningReport = generateAdministrativePlanningReport(options);
+      setPlanningReportData(planningReport);
+      setShowPlanningReportDialog(true);
+    } catch (error) {
+      console.error('Error generating planning report:', error);
+      toast.error('Lỗi khi tạo báo cáo quy hoạch');
+    }
+  }, [
+    useManagementRadiusForHiding,
+    layerAUrbanReceptionRadius,
+    layerASuburbanReceptionRadius,
+    layerAUrbanManagementRadius,
+    layerASuburbanManagementRadius,
+    layerBRadius,
+    layerCRadius
+  ]);
+
+  // Function to download planning report as Excel from dialog
+  const handleDownloadPlanningReportExcel = useCallback(() => {
+    if (!planningReportData) return;
+
+    try {
+      // Use the exportData from the planning report which contains the actual office arrays
+      const layerAData = planningReportData.exportData.finalLayerA;
+      const layerBData = planningReportData.exportData.finalLayerB;
+      const layerCData = planningReportData.exportData.finalLayerC;
+
+      downloadAllLayersAsExcel(
+        layerAData,
+        layerBData, 
+        layerCData,
+        customOffices,
+        editedOffices,
+        deletedOfficeIds,
+        generateFilename('danang-administrative-planning-report')
+      );
+      
+      toast.success('Tải xuống báo cáo Excel thành công');
+    } catch (error) {
+      console.error('Error downloading planning report as Excel:', error);
+      toast.error('Lỗi khi tải xuống báo cáo Excel');
+    }
+  }, [
+    planningReportData,
+    customOffices,
+    editedOffices,
+    deletedOfficeIds
+  ]);
+
+  // Download handlers for planning and executive reports
+  const handleDownloadAdministrativePlanningReport = useCallback(() => {
+    try {
+      const options = {
+        useManagementRadiusForA: useManagementRadiusForHiding,
+        layerAUrbanReceptionRadius,
+        layerASuburbanReceptionRadius,
+        layerAUrbanManagementRadius,
+        layerASuburbanManagementRadius,
+        layerBRadius,
+        layerCRadius
+      };
+
+      const planningReport = generateAdministrativePlanningReport(options);
+      setDetailedPlanningData(planningReport);
+      setShowDetailedPlanningDialog(true);
+    } catch (error) {
+      console.error('Error generating detailed planning report:', error);
+      toast.error('Lỗi khi tạo báo cáo quy hoạch chi tiết');
+    }
+  }, [
+    useManagementRadiusForHiding,
+    layerAUrbanReceptionRadius,
+    layerASuburbanReceptionRadius,
+    layerAUrbanManagementRadius,
+    layerASuburbanManagementRadius,
+    layerBRadius,
+    layerCRadius
+  ]);
+
+  const handleDownloadExecutiveSummary = useCallback(() => {
+    try {
+      const options = {
+        useManagementRadiusForA: useManagementRadiusForHiding,
+        layerAUrbanReceptionRadius,
+        layerASuburbanReceptionRadius,
+        layerAUrbanManagementRadius,
+        layerASuburbanManagementRadius,
+        layerBRadius,
+        layerCRadius
+      };
+
+      const executiveReport = generateExecutiveReport(options);
+      setExecutiveSummaryData(executiveReport);
+      setShowExecutiveSummaryDialog(true);
+    } catch (error) {
+      console.error('Error generating executive summary:', error);
+      toast.error('Lỗi khi tạo báo cáo tóm tắt');
+    }
+  }, [
+    useManagementRadiusForHiding,
+    layerAUrbanReceptionRadius,
+    layerASuburbanReceptionRadius,
+    layerAUrbanManagementRadius,
+    layerASuburbanManagementRadius,
+    layerBRadius,
+    layerCRadius
+  ]);
+
+  // Download handlers for layer data
   const handleDownloadLayerAsJSON = useCallback((layer: 'A' | 'B' | 'C') => {
-    const layerData = getVisibleAdministrativeOffices().filter(office => office.layer === layer);
-    const filename = generateFilename(`danang_tru_so_lop_${layer}`);
-    downloadAsJSON(layerData, filename);
-    
-    toast.success(`Đã xuất dữ liệu lớp ${layer}`, {
-      description: `Đã tải xuống ${layerData.length} trụ sở định dạng JSON`
-    });
+    try {
+      const layerData = getVisibleAdministrativeOffices()
+        .filter((office: AdministrativeOffice) => office.layer === layer);
+      
+      downloadAsJSON(layerData, generateFilename(`danang-layer-${layer.toLowerCase()}`));
+      toast.success(`Tải xuống dữ liệu Lớp ${layer} thành công`);
+    } catch (error) {
+      console.error(`Error downloading Layer ${layer} as JSON:`, error);
+      toast.error(`Lỗi khi tải xuống dữ liệu Lớp ${layer}`);
+    }
   }, [getVisibleAdministrativeOffices]);
 
   const handleDownloadLayerAsExcel = useCallback((layer: 'A' | 'B' | 'C') => {
-    const layerData = getVisibleAdministrativeOffices().filter(office => office.layer === layer);
-    const filename = generateFilename(`danang_tru_so_lop_${layer}`);
-    const sheetName = `Lớp ${layer}`;
-    downloadAsExcel(layerData, filename, sheetName);
-    
-    toast.success(`Đã xuất dữ liệu lớp ${layer}`, {
-      description: `Đã tải xuống ${layerData.length} trụ sở định dạng Excel`
-    });
+    try {
+      const layerData = getVisibleAdministrativeOffices()
+        .filter((office: AdministrativeOffice) => office.layer === layer);
+      
+      downloadAsExcel(layerData, generateFilename(`danang-layer-${layer.toLowerCase()}`), `Lớp ${layer}`);
+      toast.success(`Tải xuống Excel Lớp ${layer} thành công`);
+    } catch (error) {
+      console.error(`Error downloading Layer ${layer} as Excel:`, error);
+      toast.error(`Lỗi khi tải xuống Excel Lớp ${layer}`);
+    }
   }, [getVisibleAdministrativeOffices]);
 
-  const handleDownloadAllLayersAsExcel = useCallback(() => {
-    const allVisibleOffices = getVisibleAdministrativeOffices();
-    const layerAData = allVisibleOffices.filter(office => office.layer === 'A');
-    const layerBData = allVisibleOffices.filter(office => office.layer === 'B');
-    const layerCData = allVisibleOffices.filter(office => office.layer === 'C');
-    
-    const filename = generateFilename('danang_tat_ca_tru_so');
-    downloadAllLayersAsExcel(
-      layerAData,
-      layerBData,
-      layerCData,
-      customOffices,
-      editedOffices,
-      deletedOfficeIds,
-      filename
-    );
-    
-    const totalCount = layerAData.length + layerBData.length + layerCData.length + customOffices.length;
-    toast.success('Đã xuất tất cả dữ liệu', {
-      description: `Đã tải xuống ${totalCount} trụ sở từ tất cả các lớp`
-    });
-  }, [getVisibleAdministrativeOffices, customOffices, editedOffices, deletedOfficeIds]);
-
   const handleDownloadAllLayersAsJSON = useCallback(() => {
-    const allVisibleOffices = getVisibleAdministrativeOffices();
-    const exportData = {
-      metadata: {
-        exportDate: new Date().toISOString(),
-        totalOffices: allVisibleOffices.length,
-        layers: {
-          A: allVisibleOffices.filter(office => office.layer === 'A').length,
-          B: allVisibleOffices.filter(office => office.layer === 'B').length,
-          C: allVisibleOffices.filter(office => office.layer === 'C').length,
-        },
-        customOffices: customOffices.length,
-        editedOffices: editedOffices.size,
-        deletedOffices: deletedOfficeIds.size,
-      },
-      data: {
-        layerA: allVisibleOffices.filter(office => office.layer === 'A'),
-        layerB: allVisibleOffices.filter(office => office.layer === 'B'),
-        layerC: allVisibleOffices.filter(office => office.layer === 'C'),
+    try {
+      const allData = {
+        layerA: getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'A'),
+        layerB: getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'B'),
+        layerC: getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'C'),
         customOffices: customOffices,
-        editedOfficeIds: Array.from(editedOffices.keys()),
-        deletedOfficeIds: Array.from(deletedOfficeIds),
-      },
-    };
-    
-    const filename = generateFilename('danang_tat_ca_tru_so');
-    downloadAsJSON(exportData, filename);
-    
-    toast.success('Đã xuất tất cả dữ liệu', {
-      description: `Đã tải xuống ${allVisibleOffices.length} trụ sở định dạng JSON`
-    });
+        metadata: {
+          exportDate: new Date().toISOString(),
+          totalOffices: getVisibleAdministrativeOffices().length,
+          editedOffices: editedOffices.size,
+          deletedOffices: deletedOfficeIds.size
+        }
+      };
+      
+      downloadAsJSON(allData, generateFilename('danang-all-administrative-layers'));
+      toast.success('Tải xuống tất cả dữ liệu thành công');
+    } catch (error) {
+      console.error('Error downloading all layers as JSON:', error);
+      toast.error('Lỗi khi tải xuống tất cả dữ liệu');
+    }
   }, [getVisibleAdministrativeOffices, customOffices, editedOffices, deletedOfficeIds]);
 
+  const handleDownloadAllLayersAsExcel = useCallback(() => {
+    try {
+      const layerAData = getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'A');
+      const layerBData = getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'B');
+      const layerCData = getVisibleAdministrativeOffices().filter((office: AdministrativeOffice) => office.layer === 'C');
+      
+      downloadAllLayersAsExcel(
+        layerAData,
+        layerBData,
+        layerCData,
+        customOffices,
+        editedOffices,
+        deletedOfficeIds,
+        generateFilename('danang-all-administrative-layers')
+      );
+      
+      toast.success('Tải xuống Excel tất cả lớp thành công');
+    } catch (error) {
+      console.error('Error downloading all layers as Excel:', error);
+      toast.error('Lỗi khi tải xuống Excel tất cả lớp');
+    }
+  }, [getVisibleAdministrativeOffices, customOffices, editedOffices, deletedOfficeIds]);
+
+  // ================================
+  // END DOWNLOAD HANDLERS
+  // ================================
   if (isMapLoading) {
     return <LoadingScreen message="Đang tải dữ liệu bản đồ..." />;
   }
@@ -1043,6 +1184,9 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onDownloadLayerAsExcel={handleDownloadLayerAsExcel}
                 onDownloadAllLayersAsJSON={handleDownloadAllLayersAsJSON}
                 onDownloadAllLayersAsExcel={handleDownloadAllLayersAsExcel}
+                onDownloadAdministrativePlanningReport={handleDownloadAdministrativePlanningReport}
+                onDownloadExecutiveSummary={handleDownloadExecutiveSummary}
+                onShowPlanningReport={handleShowPlanningReport}
                 fillOpacity={fillOpacity}
                 onFillOpacityChange={setFillOpacity}
                 showAboutDialog={showAboutDialog}
@@ -1083,6 +1227,864 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
               onClick={() => deleteConfirmDialog.office && handleConfirmDeleteOriginalOffice(deleteConfirmDialog.office)}
             >
               Ẩn trụ sở
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Administrative Planning Report Dialog */}
+      <Dialog open={showPlanningReportDialog} onOpenChange={setShowPlanningReportDialog}>
+        <DialogContent className="max-w-[98vw] max-h-[98vh] overflow-y-auto w-full min-w-[1200px]">
+          <DialogHeader>
+            <DialogTitle>Báo cáo Quy hoạch Hành chính Đà Nẵng</DialogTitle>
+            <DialogDescription>
+              Báo cáo chi tiết về việc tối ưu hóa mạng lưới điểm phục vụ hành chính trên địa bàn thành phố Đà Nẵng
+            </DialogDescription>
+          </DialogHeader>
+          
+          {planningReportData && (
+            <div className="space-y-6">
+              {/* Executive Summary */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Tóm tắt điều hành</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-medium text-blue-900">Điểm ban đầu</h4>
+                    <p className="text-2xl font-bold text-blue-700">{planningReportData.executiveSummary.totalOriginalPoints}</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-medium text-green-900">Điểm cuối cùng</h4>
+                    <p className="text-2xl font-bold text-green-700">{planningReportData.executiveSummary.totalFinalPoints}</p>
+                  </div>
+                  <div className="bg-orange-50 p-4 rounded-lg">
+                    <h4 className="font-medium text-orange-900">Tỷ lệ giảm</h4>
+                    <p className="text-2xl font-bold text-orange-700">{planningReportData.executiveSummary.reductionPercentage.toFixed(1)}%</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Layer Summary Table */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Tóm tắt theo lớp</h3>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Lớp</TableHead>
+                      <TableHead>Số lượng</TableHead>
+                      <TableHead>Trạng thái</TableHead>
+                      <TableHead>Mô tả</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Lớp A</TableCell>
+                      <TableCell>{planningReportData.executiveSummary.layerSummary.layerA.count}</TableCell>
+                      <TableCell>{planningReportData.executiveSummary.layerSummary.layerA.status}</TableCell>
+                      <TableCell>{planningReportData.executiveSummary.layerSummary.layerA.description}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Lớp B</TableCell>
+                      <TableCell>
+                        {planningReportData.executiveSummary.layerSummary.layerB.remaining} 
+                        (từ {planningReportData.executiveSummary.layerSummary.layerB.original})
+                      </TableCell>
+                      <TableCell>
+                        Giảm {planningReportData.executiveSummary.layerSummary.layerB.reductionPercentage.toFixed(1)}%
+                      </TableCell>
+                      <TableCell>{planningReportData.executiveSummary.layerSummary.layerB.description}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Lớp C</TableCell>
+                      <TableCell>
+                        {planningReportData.executiveSummary.layerSummary.layerC.remaining} 
+                        (từ {planningReportData.executiveSummary.layerSummary.layerC.original})
+                      </TableCell>
+                      <TableCell>
+                        Giảm {planningReportData.executiveSummary.layerSummary.layerC.reductionPercentage.toFixed(1)}%
+                      </TableCell>
+                      <TableCell>{planningReportData.executiveSummary.layerSummary.layerC.description}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+
+              {/* Action Items */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Kế hoạch hành động</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-red-700">Ngay lập tức</h4>
+                    <ul className="text-sm space-y-1">
+                      {planningReportData.actionItems.immediate.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-red-500 mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-orange-700">Ngắn hạn</h4>
+                    <ul className="text-sm space-y-1">
+                      {planningReportData.actionItems.shortTerm.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-orange-500 mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-green-700">Dài hạn</h4>
+                    <ul className="text-sm space-y-1">
+                      {planningReportData.actionItems.longTerm.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <span className="text-green-500 mt-1">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <DialogFooter className="gap-2 sm:gap-0">
+            <Button
+              variant="outline"
+              onClick={() => setShowPlanningReportDialog(false)}
+            >
+              Đóng
+            </Button>
+            <Button
+              onClick={handleDownloadPlanningReportExcel}
+              disabled={!planningReportData}
+            >
+              Tải xuống Excel
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Executive Summary Dialog */}
+      <Dialog open={showExecutiveSummaryDialog} onOpenChange={setShowExecutiveSummaryDialog}>
+        <DialogContent className="max-w-[98vw] max-h-[98vh] overflow-y-auto w-full min-w-[1200px]">
+          <DialogHeader>
+            <DialogTitle>Tóm tắt Điều hành - Quy hoạch Hành chính Đà Nẵng</DialogTitle>
+            <DialogDescription>
+              Báo cáo tóm tắt cho lãnh đạo về việc tối ưu hóa mạng lưới điểm phục vụ hành chính
+            </DialogDescription>
+          </DialogHeader>
+          
+          {executiveSummaryData && (
+            <div className="space-y-8">
+              {/* Key Metrics Cards */}
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-900 text-lg">Tổng điểm ban đầu</h4>
+                  <p className="text-3xl font-bold text-blue-700 mt-2">
+                    {executiveSummaryData.reportText.match(/Tổng điểm ban đầu: (\d+)/)?.[1] || 'N/A'}
+                  </p>
+                  <p className="text-sm text-blue-600 mt-1">Trước khi tối ưu hóa</p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                  <h4 className="font-semibold text-green-900 text-lg">Tổng điểm sau tối ưu</h4>
+                  <p className="text-3xl font-bold text-green-700 mt-2">
+                    {executiveSummaryData.reportText.match(/Tổng điểm sau tối ưu: (\d+)/)?.[1] || 'N/A'}
+                  </p>
+                  <p className="text-sm text-green-600 mt-1">Sau loại bỏ trùng lặp</p>
+                </div>
+                <div className="bg-orange-50 p-6 rounded-lg border border-orange-200">
+                  <h4 className="font-semibold text-orange-900 text-lg">Tỷ lệ giảm</h4>
+                  <p className="text-3xl font-bold text-orange-700 mt-2">
+                    {executiveSummaryData.reportText.match(/Giảm thiểu: ([\d.]+)%/)?.[1] || 'N/A'}%
+                  </p>
+                  <p className="text-sm text-orange-600 mt-1">Loại bỏ trùng lặp</p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                  <h4 className="font-semibold text-purple-900 text-lg">Điểm tiết kiệm</h4>
+                  <p className="text-3xl font-bold text-purple-700 mt-2">
+                    {(() => {
+                      const initial = parseInt(executiveSummaryData.reportText.match(/Tổng điểm ban đầu: (\d+)/)?.[1] || '0');
+                      const final = parseInt(executiveSummaryData.reportText.match(/Tổng điểm sau tối ưu: (\d+)/)?.[1] || '0');
+                      return initial - final;
+                    })()}
+                  </p>
+                  <p className="text-sm text-purple-600 mt-1">Số điểm loại bỏ</p>
+                </div>
+              </div>
+
+              {/* Layer Summary Table */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-800">Thống kê chi tiết theo lớp dịch vụ</h3>
+                <div className="overflow-x-auto bg-white rounded-lg border shadow-sm">
+                  <Table>
+                    <TableHeader>
+                      <TableRow className="bg-gray-50">
+                        <TableHead className="min-w-[140px] font-semibold text-gray-900">Lớp dịch vụ</TableHead>
+                        <TableHead className="min-w-[120px] text-center font-semibold text-gray-900">Ban đầu</TableHead>
+                        <TableHead className="min-w-[120px] text-center font-semibold text-gray-900">Loại bỏ</TableHead>
+                        <TableHead className="min-w-[120px] text-center font-semibold text-gray-900">Còn lại</TableHead>
+                        <TableHead className="min-w-[140px] text-center font-semibold text-gray-900">Tỷ lệ giảm</TableHead>
+                        <TableHead className="min-w-[350px] font-semibold text-gray-900">Mô tả chi tiết</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                  <TableBody>
+                    {/* Parse the statistics table and create rows */}
+                    <TableRow className="hover:bg-gray-50">
+                      <TableCell className="font-medium bg-red-50 border-l-4 border-red-500">
+                        <div className="flex items-center gap-3">
+                          <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+                          <span className="font-semibold text-red-800">Lớp A</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-center font-medium">{executiveSummaryData.reportText.match(/Lớp A - Chi Nhánh Cấp Quận\/Huyện \((\d+) điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium">0</TableCell>
+                      <TableCell className="text-center font-semibold text-green-600">{executiveSummaryData.reportText.match(/Lớp A - Chi Nhánh Cấp Quận\/Huyện \((\d+) điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium text-green-600">0%</TableCell>
+                      <TableCell className="text-gray-700">Chi nhánh cấp Quận/Huyện (cố định - không thay đổi)</TableCell>
+                    </TableRow>
+                    <TableRow className="hover:bg-gray-50">
+                      <TableCell className="font-medium bg-blue-50 border-l-4 border-blue-500">
+                        <div className="flex items-center gap-3">
+                          <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
+                          <span className="font-semibold text-blue-800">Lớp B</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-center font-medium">{executiveSummaryData.reportText.match(/Lớp B - Trung Tâm Cấp Xã\/Phường \(\d+\/(\d+) điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium text-red-600">{executiveSummaryData.reportText.match(/Loại bỏ: (\d+) điểm/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-semibold text-green-600">{executiveSummaryData.reportText.match(/Lớp B - Trung Tâm Cấp Xã\/Phường \((\d+)\/\d+ điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium text-orange-600">{executiveSummaryData.reportText.match(/\((\d+\.?\d*)%\)/)?.[1] || 'N/A'}%</TableCell>
+                      <TableCell className="text-gray-700">Trung tâm cấp Xã/Phường (sau loại trừ trùng lặp với Lớp A)</TableCell>
+                    </TableRow>
+                    <TableRow className="hover:bg-gray-50">
+                      <TableCell className="font-medium bg-yellow-50 border-l-4 border-yellow-500">
+                        <div className="flex items-center gap-3">
+                          <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                          <span className="font-semibold text-yellow-800">Lớp C</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-center font-medium">{executiveSummaryData.reportText.match(/Lớp C - Điểm Bưu Cục \(\d+\/(\d+) điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium text-red-600">{(() => {
+                        const removedA = executiveSummaryData.reportText.match(/Loại bỏ do trùng Lớp A: (\d+) điểm/)?.[1] || '0';
+                        const removedB = executiveSummaryData.reportText.match(/Loại bỏ do trùng Lớp B: (\d+) điểm/)?.[1] || '0';
+                        return parseInt(removedA) + parseInt(removedB);
+                      })()}</TableCell>
+                      <TableCell className="text-center font-semibold text-green-600">{executiveSummaryData.reportText.match(/Lớp C - Điểm Bưu Cục \((\d+)\/\d+ điểm\)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-medium text-orange-600">{executiveSummaryData.reportText.match(/Lớp C.*?\((\d+\.?\d*)%\)/)?.[1] || 'N/A'}%</TableCell>
+                      <TableCell className="text-gray-700">Điểm Bưu cục (chỉ vùng chưa được phủ bởi Lớp A và B)</TableCell>
+                    </TableRow>
+                    {/* Total Row */}
+                    <TableRow className="bg-gray-100 font-semibold border-t-2">
+                      <TableCell className="font-bold text-gray-900 border-l-4 border-gray-500">
+                        <div className="flex items-center gap-3">
+                          <div className="w-4 h-4 bg-gray-500 rounded-full"></div>
+                          <span>Tổng cộng</span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-center font-bold text-gray-900">{executiveSummaryData.reportText.match(/Tổng điểm ban đầu: (\d+)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-bold text-red-700">{(() => {
+                        const initial = parseInt(executiveSummaryData.reportText.match(/Tổng điểm ban đầu: (\d+)/)?.[1] || '0');
+                        const final = parseInt(executiveSummaryData.reportText.match(/Tổng điểm sau tối ưu: (\d+)/)?.[1] || '0');
+                        return initial - final;
+                      })()}</TableCell>
+                      <TableCell className="text-center font-bold text-green-700">{executiveSummaryData.reportText.match(/Tổng điểm sau tối ưu: (\d+)/)?.[1] || 'N/A'}</TableCell>
+                      <TableCell className="text-center font-bold text-orange-700">{executiveSummaryData.reportText.match(/Giảm thiểu: ([\d.]+)%/)?.[1] || 'N/A'}%</TableCell>
+                      <TableCell className="font-bold text-gray-900">Toàn hệ thống sau tối ưu hóa</TableCell>
+                    </TableRow>
+                  </TableBody>
+                  </Table>
+                </div>
+              </div>
+
+              {/* Action Items */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-800">Kế hoạch triển khai chi tiết</h3>
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                  {/* Immediate Actions */}
+                  <div className="bg-red-50 p-6 rounded-lg border border-red-200 shadow-sm">
+                    <h4 className="font-semibold text-red-800 mb-4 flex items-center gap-3 text-lg">
+                      <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+                      Việc cần làm ngay lập tức
+                    </h4>
+                    <div className="space-y-3">
+                      {executiveSummaryData.implementationGuide.match(/## VIỆC CẦN LÀM NGAY\n\n(.*?)\n\n## VIỆC CẦN LÀM TRONG 3-6 THÁNG/s)?.[1]?.split('\n').filter(item => item.trim()).map((item, index) => (
+                        <div key={index} className="flex items-start gap-3 text-sm text-red-700 bg-white p-3 rounded border-l-4 border-red-400">
+                          <span className="text-red-500 mt-1 font-bold text-lg">•</span>
+                          <span className="font-medium leading-relaxed">{item.replace(/^\d+\.\s*/, '')}</span>
+                        </div>
+                      )) || []}
+                    </div>
+                  </div>
+
+                  {/* Short-term Actions */}
+                  <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 shadow-sm">
+                    <h4 className="font-semibold text-orange-800 mb-4 flex items-center gap-3 text-lg">
+                      <div className="w-4 h-4 bg-orange-500 rounded-full"></div>
+                      Việc cần làm trong 3-6 tháng
+                    </h4>
+                    <div className="space-y-3">
+                      {executiveSummaryData.implementationGuide.match(/## VIỆC CẦN LÀM TRONG 3-6 THÁNG\n\n(.*?)\n\n## VIỆC CẦN LÀM TRONG 6-12 THÁNG/s)?.[1]?.split('\n').filter(item => item.trim()).map((item, index) => (
+                        <div key={index} className="flex items-start gap-3 text-sm text-orange-700 bg-white p-3 rounded border-l-4 border-orange-400">
+                          <span className="text-orange-500 mt-1 font-bold text-lg">•</span>
+                          <span className="font-medium leading-relaxed">{item.replace(/^\d+\.\s*/, '')}</span>
+                        </div>
+                      )) || []}
+                    </div>
+                  </div>
+
+                  {/* Long-term Actions */}
+                  <div className="bg-green-50 p-6 rounded-lg border border-green-200 shadow-sm">
+                    <h4 className="font-semibold text-green-800 mb-4 flex items-center gap-3 text-lg">
+                      <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                      Việc cần làm trong 6-12 tháng
+                    </h4>
+                    <div className="space-y-3">
+                      {executiveSummaryData.implementationGuide.match(/## VIỆC CẦN LÀM TRONG 6-12 THÁNG\n\n(.*?)\n\n## DANH SÁCH CHI TIẾT CẦN XUẤT RA EXCEL/s)?.[1]?.split('\n').filter(item => item.trim()).map((item, index) => (
+                        <div key={index} className="flex items-start gap-3 text-sm text-green-700 bg-white p-3 rounded border-l-4 border-green-400">
+                          <span className="text-green-500 mt-1 font-bold text-lg">•</span>
+                          <span className="font-medium leading-relaxed">{item.replace(/^\d+\.\s*/, '')}</span>
+                        </div>
+                      )) || []}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Key Notes */}
+              <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
+                <h4 className="font-semibold text-blue-800 mb-4 text-xl flex items-center gap-3">
+                  <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">!</span>
+                  </div>
+                  Ghi chú quan trọng
+                </h4>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                  <div className="bg-white p-4 rounded-lg border border-blue-100">
+                    <div className="flex items-start gap-3">
+                      <span className="text-blue-500 text-xl">📍</span>
+                      <div>
+                        <span className="font-semibold text-blue-800 block mb-1">Vị trí đặt Chi nhánh:</span>
+                        <span className="text-blue-700 text-sm">Phải thuộc phường mới, nằm trong phạm vi quận/huyện cũ</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-blue-100">
+                    <div className="flex items-start gap-3">
+                      <span className="text-blue-500 text-xl">🚫</span>
+                      <div>
+                        <span className="font-semibold text-blue-800 block mb-1">Tránh trùng lặp:</span>
+                        <span className="text-blue-700 text-sm">Một địa điểm không thể vừa là Lớp A, vừa là Lớp B hoặc C</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-blue-100">
+                    <div className="flex items-start gap-3">
+                      <span className="text-blue-500 text-xl">🎯</span>
+                      <div>
+                        <span className="font-semibold text-blue-800 block mb-1">Mục đích:</span>
+                        <span className="text-blue-700 text-sm">Đảm bảo người dân không phải đi quá xa để làm thủ tục hành chính</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <DialogFooter className="gap-3 sm:gap-3 pt-6 border-t">
+            <Button
+              variant="outline"
+              onClick={() => setShowExecutiveSummaryDialog(false)}
+              className="min-w-[100px]"
+            >
+              Đóng
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                if (executiveSummaryData) {
+                  const reportData = {
+                    metadata: {
+                      reportType: "Báo cáo Tóm tắt Điều hành - Hành chính Đà Nẵng",
+                      generatedAt: new Date().toISOString(),
+                    },
+                    executiveSummary: executiveSummaryData
+                  };
+
+                  const blob = new Blob([JSON.stringify(reportData, null, 2)], { 
+                    type: 'application/json;charset=utf-8' 
+                  });
+                  
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = `${generateFilename('danang-executive-summary')}.json`;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+
+                  toast.success('Tải xuống JSON thành công');
+                }
+              }}
+              disabled={!executiveSummaryData}
+              className="min-w-[140px]"
+            >
+              📊 Tải xuống JSON
+            </Button>
+            <Button
+              onClick={() => {
+                if (executiveSummaryData) {
+                  const reportContent = `BÁNH CÁO TÓM TẮT - QUY HOẠCH HÀNH CHÍNH ĐÀ NẴNG
+Generated: ${new Date().toLocaleString('vi-VN')}
+
+${executiveSummaryData.reportText}
+
+---
+
+${executiveSummaryData.statisticsTable}
+
+---
+
+${executiveSummaryData.implementationGuide}
+`;
+                  const blob = new Blob([reportContent], { 
+                    type: 'text/plain;charset=utf-8' 
+                  });
+                  
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = `${generateFilename('danang-executive-summary')}.txt`;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+
+                  toast.success('Tải xuống TXT thành công');
+                }
+              }}
+              disabled={!executiveSummaryData}
+              className="min-w-[140px]"
+            >
+              📄 Tải xuống TXT
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Detailed Planning Report Dialog (for the Báo cáo quy hoạch chi tiết button) */}
+      <Dialog open={showDetailedPlanningDialog} onOpenChange={setShowDetailedPlanningDialog}>
+        <DialogContent className="max-w-[98vw] max-h-[98vh] overflow-y-auto w-full min-w-[87vw]">
+          <DialogHeader>
+            <DialogTitle>Báo cáo Quy hoạch Chi tiết - Hành chính Đà Nẵng</DialogTitle>
+            <DialogDescription>
+              Báo cáo kỹ thuật chi tiết cho đội ngũ quy hoạch và phân tích, bao gồm dữ liệu thống kê và phân tích sâu
+            </DialogDescription>
+          </DialogHeader>
+          
+          {detailedPlanningData && (
+            <div className="space-y-8">
+              {/* Executive Summary Section */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-800">Tóm tắt điều hành</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                  <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
+                    <h4 className="font-semibold text-blue-900 text-lg">Điểm ban đầu</h4>
+                    <p className="text-3xl font-bold text-blue-700 mt-2">{detailedPlanningData.executiveSummary.totalOriginalPoints}</p>
+                    <p className="text-sm text-blue-600 mt-1">Tổng điểm trước tối ưu</p>
+                  </div>
+                  <div className="bg-green-50 p-6 rounded-lg border border-green-200 shadow-sm">
+                    <h4 className="font-semibold text-green-900 text-lg">Điểm cuối cùng</h4>
+                    <p className="text-3xl font-bold text-green-700 mt-2">{detailedPlanningData.executiveSummary.totalFinalPoints}</p>
+                    <p className="text-sm text-green-600 mt-1">Sau loại bỏ trùng lặp</p>
+                  </div>
+                  <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 shadow-sm">
+                    <h4 className="font-semibold text-orange-900 text-lg">Tỷ lệ giảm</h4>
+                    <p className="text-3xl font-bold text-orange-700 mt-2">{detailedPlanningData.executiveSummary.reductionPercentage.toFixed(1)}%</p>
+                    <p className="text-sm text-orange-600 mt-1">Tỷ lệ tối ưu hóa</p>
+                  </div>
+                  <div className="bg-purple-50 p-6 rounded-lg border border-purple-200 shadow-sm">
+                    <h4 className="font-semibold text-purple-900 text-lg">Điểm tiết kiệm</h4>
+                    <p className="text-3xl font-bold text-purple-700 mt-2">
+                      {detailedPlanningData.executiveSummary.totalOriginalPoints - detailedPlanningData.executiveSummary.totalFinalPoints}
+                    </p>
+                    <p className="text-sm text-purple-600 mt-1">Số điểm loại bỏ</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Detailed Analysis Section */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-800">Phân tích chi tiết theo từng lớp</h3>
+                
+                {/* Layer A Details */}
+                <div className="bg-red-50 p-6 rounded-lg border border-red-200 shadow-sm">
+                  <h4 className="font-semibold text-red-900 mb-4 text-lg flex items-center gap-3">
+                    <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+                    Chi tiết Lớp A - Chi nhánh cấp Quận/Huyện
+                  </h4>
+                  <p className="text-sm text-red-700 mb-4 bg-white p-3 rounded border-l-4 border-red-400">
+                    <strong>Tổng số:</strong> {detailedPlanningData.detailedAnalysis.layerADetails.totalBranches} chi nhánh
+                  </p>
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {detailedPlanningData.detailedAnalysis.layerADetails.districtBreakdown.map((district, index) => (
+                      <div key={index} className="bg-white p-4 rounded-lg border border-red-100 shadow-sm">
+                        <h5 className="font-semibold text-red-800 mb-3 flex items-center gap-2">
+                          <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                          {district.region} ({district.count} chi nhánh)
+                        </h5>
+                        <div className="space-y-2">
+                          {district.branches.map((branch, branchIndex) => (
+                            <div key={branchIndex} className="text-sm text-red-600 bg-red-25 p-2 rounded border-l-2 border-red-300">
+                              <div className="font-medium">{branch.name}</div>
+                              <div className="text-xs text-red-500 mt-1">
+                                {branch.type} • {branch.address}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Layer B Deduplication */}
+                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
+                  <h4 className="font-semibold text-blue-900 mb-4 text-lg flex items-center gap-3">
+                    <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
+                    Loại trừ Lớp B - Trung tâm cấp Xã/Phường
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-white p-4 rounded-lg border border-blue-100">
+                      <h5 className="font-semibold text-blue-800">Ban đầu</h5>
+                      <p className="text-2xl font-bold text-blue-700">{detailedPlanningData.detailedAnalysis.layerBDeduplication.originalCount}</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-blue-100">
+                      <h5 className="font-semibold text-blue-800">Loại bỏ</h5>
+                      <p className="text-2xl font-bold text-red-600">{detailedPlanningData.detailedAnalysis.layerBDeduplication.removedPoints.length}</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-blue-100">
+                      <h5 className="font-semibold text-blue-800">Còn lại</h5>
+                      <p className="text-2xl font-bold text-green-600">{detailedPlanningData.detailedAnalysis.layerBDeduplication.remainingPoints.length}</p>
+                    </div>
+                  </div>
+                  
+                  {detailedPlanningData.detailedAnalysis.layerBDeduplication.removedPoints.length > 0 && (
+                    <div className="mb-6">
+                      <h5 className="font-semibold text-blue-800 mb-3 text-lg">Điểm bị loại bỏ:</h5>
+                      <div className="overflow-x-auto bg-white rounded-lg border shadow-sm">
+                        <Table>
+                          <TableHeader>
+                            <TableRow className="bg-gray-50">
+                              <TableHead className="font-semibold text-gray-900">Tên trung tâm</TableHead>
+                              <TableHead className="font-semibold text-gray-900">Lý do loại bỏ</TableHead>
+                              <TableHead className="font-semibold text-gray-900">Chi nhánh chứa</TableHead>
+                              <TableHead className="font-semibold text-gray-900 text-center">Khoảng cách (km)</TableHead>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                            {detailedPlanningData.detailedAnalysis.layerBDeduplication.removedPoints.map((point, index) => (
+                              <TableRow key={index} className="hover:bg-gray-50">
+                                <TableCell className="font-medium">{point.name}</TableCell>
+                                <TableCell className="text-orange-600">{point.reason}</TableCell>
+                                <TableCell className="text-blue-600">{point.containingBranch}</TableCell>
+                                <TableCell className="text-center font-mono text-red-600">{point.distance.toFixed(1)}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div>
+                    <h5 className="font-semibold text-blue-800 mb-3 text-lg">Điểm được giữ lại:</h5>
+                    <div className="overflow-x-auto bg-white rounded-lg border shadow-sm">
+                      <Table>
+                        <TableHeader>
+                          <TableRow className="bg-gray-50">
+                            <TableHead className="font-semibold text-gray-900">Tên trung tâm</TableHead>
+                            <TableHead className="font-semibold text-gray-900">Địa chỉ</TableHead>
+                            <TableHead className="font-semibold text-gray-900">Khu vực</TableHead>
+                            <TableHead className="font-semibold text-gray-900">Phạm vi phủ</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {detailedPlanningData.detailedAnalysis.layerBDeduplication.remainingPoints.map((point, index) => (
+                            <TableRow key={index} className="hover:bg-gray-50">
+                              <TableCell className="font-medium text-green-700">{point.name}</TableCell>
+                              <TableCell className="text-gray-600">{point.address}</TableCell>
+                              <TableCell className="text-gray-600">{point.region}</TableCell>
+                              <TableCell className="text-blue-600 font-medium">{point.coverage}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Layer C Optimization */}
+                <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200 shadow-sm">
+                  <h4 className="font-semibold text-yellow-900 mb-4 text-lg flex items-center gap-3">
+                    <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                    Tối ưu Lớp C - Điểm Bưu cục
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <div className="bg-white p-4 rounded-lg border border-yellow-100">
+                      <h5 className="font-semibold text-yellow-800">Ban đầu</h5>
+                      <p className="text-2xl font-bold text-yellow-700">{detailedPlanningData.detailedAnalysis.layerCOptimization.originalCount}</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-yellow-100">
+                      <h5 className="font-semibold text-yellow-800">Loại do Lớp A</h5>
+                      <p className="text-2xl font-bold text-red-600">{detailedPlanningData.detailedAnalysis.layerCOptimization.removedDueToLayerA.length}</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-yellow-100">
+                      <h5 className="font-semibold text-yellow-800">Loại do Lớp B</h5>
+                      <p className="text-2xl font-bold text-orange-600">{detailedPlanningData.detailedAnalysis.layerCOptimization.removedDueToLayerB.length}</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-yellow-100">
+                      <h5 className="font-semibold text-yellow-800">Khuyến nghị</h5>
+                      <p className="text-2xl font-bold text-green-600">{detailedPlanningData.detailedAnalysis.layerCOptimization.recommendedPoints.length}</p>
+                    </div>
+                  </div>
+                  
+                  {detailedPlanningData.detailedAnalysis.layerCOptimization.recommendedPoints.length > 0 && (
+                    <div>
+                      <h5 className="font-semibold text-yellow-800 mb-3 text-lg">Điểm được khuyến nghị giữ lại:</h5>
+                      <div className="overflow-x-auto bg-white rounded-lg border shadow-sm">
+                        <Table>
+                          <TableHeader>
+                            <TableRow className="bg-gray-50">
+                              <TableHead className="font-semibold text-gray-900">Tên điểm Bưu cục</TableHead>
+                              <TableHead className="font-semibold text-gray-900">Địa chỉ</TableHead>
+                              <TableHead className="font-semibold text-gray-900">Lý do khuyến nghị</TableHead>
+                              <TableHead className="font-semibold text-gray-900">Phạm vi phủ</TableHead>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                            {detailedPlanningData.detailedAnalysis.layerCOptimization.recommendedPoints.map((point, index) => (
+                              <TableRow key={index} className="hover:bg-gray-50">
+                                <TableCell className="font-medium text-green-700">{point.name}</TableCell>
+                                <TableCell className="text-gray-600">{point.address}</TableCell>
+                                <TableCell className="text-yellow-700 font-medium">{point.justification}</TableCell>
+                                <TableCell className="text-blue-600 font-medium">{point.coverage}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Action Items */}
+              <div className="space-y-6">
+                <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-3">
+                  <div className="w-5 h-5 bg-indigo-500 rounded-full"></div>
+                  Kế hoạch hành động
+                </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div className="bg-red-50 p-6 rounded-lg border border-red-200 shadow-sm">
+                    <h4 className="font-semibold text-red-800 mb-4 text-lg flex items-center gap-2">
+                      <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                      Ngay lập tức
+                    </h4>
+                    <ul className="space-y-3">
+                      {detailedPlanningData.actionItems.immediate.map((item, index) => (
+                        <li key={index} className="bg-white p-3 rounded-md border border-red-100 shadow-sm">
+                          <div className="flex items-start gap-3">
+                            <span className="text-red-500 font-bold text-lg leading-none">•</span>
+                            <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 shadow-sm">
+                    <h4 className="font-semibold text-orange-800 mb-4 text-lg flex items-center gap-2">
+                      <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                      Ngắn hạn
+                    </h4>
+                    <ul className="space-y-3">
+                      {detailedPlanningData.actionItems.shortTerm.map((item, index) => (
+                        <li key={index} className="bg-white p-3 rounded-md border border-orange-100 shadow-sm">
+                          <div className="flex items-start gap-3">
+                            <span className="text-orange-500 font-bold text-lg leading-none">•</span>
+                            <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-green-50 p-6 rounded-lg border border-green-200 shadow-sm">
+                    <h4 className="font-semibold text-green-800 mb-4 text-lg flex items-center gap-2">
+                      <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                      Dài hạn
+                    </h4>
+                    <ul className="space-y-3">
+                      {detailedPlanningData.actionItems.longTerm.map((item, index) => (
+                        <li key={index} className="bg-white p-3 rounded-md border border-green-100 shadow-sm">
+                          <div className="flex items-start gap-3">
+                            <span className="text-green-500 font-bold text-lg leading-none">•</span>
+                            <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <DialogFooter className="gap-2 sm:gap-0">
+            <Button
+              variant="outline"
+              onClick={() => setShowDetailedPlanningDialog(false)}
+            >
+              Đóng
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                if (detailedPlanningData) {
+                  const txtContent = `BÁOCÁO QUY HOẠCH CHI TIẾT - HÀNH CHÍNH ĐÀ NẴNG
+Thời gian tạo: ${new Date().toLocaleString('vi-VN')}
+
+=== TÓM TẮT ĐIỀU HÀNH ===
+- Tổng điểm ban đầu: ${detailedPlanningData.executiveSummary.totalOriginalPoints}
+- Tổng điểm cuối cùng: ${detailedPlanningData.executiveSummary.totalFinalPoints}
+- Tỷ lệ giảm: ${detailedPlanningData.executiveSummary.reductionPercentage.toFixed(1)}%
+- Điểm tiết kiệm: ${detailedPlanningData.executiveSummary.totalOriginalPoints - detailedPlanningData.executiveSummary.totalFinalPoints}
+
+=== PHÂN TÍCH CHI TIẾT ===
+
+LỚP A - CHI NHÁNH CẤP QUẬN/HUYỆN:
+Tổng số: ${detailedPlanningData.detailedAnalysis.layerADetails.totalBranches} chi nhánh
+
+${detailedPlanningData.detailedAnalysis.layerADetails.districtBreakdown.map(district => 
+  `${district.region} (${district.count} chi nhánh):
+${district.branches.map(branch => `  - ${branch.name} (${branch.type}) - ${branch.address}`).join('\n')}`
+).join('\n\n')}
+
+LỚP B - TRUNG TÂM CẤP XÃ/PHƯỜNG:
+- Ban đầu: ${detailedPlanningData.detailedAnalysis.layerBDeduplication.originalCount}
+- Loại bỏ: ${detailedPlanningData.detailedAnalysis.layerBDeduplication.removedPoints.length}
+- Còn lại: ${detailedPlanningData.detailedAnalysis.layerBDeduplication.remainingPoints.length}
+
+Điểm bị loại bỏ:
+${detailedPlanningData.detailedAnalysis.layerBDeduplication.removedPoints.map(point => 
+  `- ${point.name}: ${point.reason} (${point.distance.toFixed(1)}km từ ${point.containingBranch})`
+).join('\n')}
+
+Điểm được giữ lại:
+${detailedPlanningData.detailedAnalysis.layerBDeduplication.remainingPoints.map(point => 
+  `- ${point.name} - ${point.address} (${point.region})`
+).join('\n')}
+
+LỚP C - ĐIỂM BƯU CỤC:
+- Ban đầu: ${detailedPlanningData.detailedAnalysis.layerCOptimization.originalCount}
+- Loại do Lớp A: ${detailedPlanningData.detailedAnalysis.layerCOptimization.removedDueToLayerA.length}
+- Loại do Lớp B: ${detailedPlanningData.detailedAnalysis.layerCOptimization.removedDueToLayerB.length}
+- Khuyến nghị: ${detailedPlanningData.detailedAnalysis.layerCOptimization.recommendedPoints.length}
+
+Điểm được khuyến nghị:
+${detailedPlanningData.detailedAnalysis.layerCOptimization.recommendedPoints.map(point => 
+  `- ${point.name} - ${point.address}: ${point.justification}`
+).join('\n')}
+
+=== KẾ HOẠCH HÀNH ĐỘNG ===
+
+NGAY LẬP TỨC:
+${detailedPlanningData.actionItems.immediate.map(item => `- ${item}`).join('\n')}
+
+NGẮN HẠN:
+${detailedPlanningData.actionItems.shortTerm.map(item => `- ${item}`).join('\n')}
+
+DÀI HẠN:
+${detailedPlanningData.actionItems.longTerm.map(item => `- ${item}`).join('\n')}
+`;
+
+                  const blob = new Blob([txtContent], { 
+                    type: 'text/plain;charset=utf-8' 
+                  });
+                  
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = `${generateFilename('danang-detailed-planning-report')}.txt`;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+
+                  toast.success('Tải xuống báo cáo TXT thành công');
+                }
+              }}
+              disabled={!detailedPlanningData}
+            >
+              Tải xuống TXT
+            </Button>
+            <Button
+              onClick={() => {
+                if (detailedPlanningData) {
+                  const reportData = {
+                    metadata: {
+                      reportType: "Báo cáo Quy hoạch Chi tiết Hành chính Đà Nẵng",
+                      generatedAt: new Date().toISOString(),
+                    },
+                    ...detailedPlanningData
+                  };
+
+                  const blob = new Blob([JSON.stringify(reportData, null, 2)], { 
+                    type: 'application/json;charset=utf-8' 
+                  });
+                  
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = `${generateFilename('danang-detailed-planning-report')}.json`;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
+
+                  toast.success('Tải xuống báo cáo chi tiết thành công');
+                }
+              }}
+              disabled={!detailedPlanningData}
+            >
+              Tải xuống JSON
+            </Button>
+            <Button
+              onClick={() => {
+                if (detailedPlanningData) {
+                  const layerAData = detailedPlanningData.exportData.finalLayerA;
+                  const layerBData = detailedPlanningData.exportData.finalLayerB;
+                  const layerCData = detailedPlanningData.exportData.finalLayerC;
+
+                  downloadAllLayersAsExcel(
+                    layerAData,
+                    layerBData, 
+                    layerCData,
+                    customOffices,
+                    editedOffices,
+                    deletedOfficeIds,
+                    generateFilename('danang-detailed-planning-report')
+                  );
+                  
+                  toast.success('Tải xuống báo cáo Excel thành công');
+                }
+              }}
+              disabled={!detailedPlanningData}
+            >
+              Tải xuống Excel
             </Button>
           </DialogFooter>
         </DialogContent>

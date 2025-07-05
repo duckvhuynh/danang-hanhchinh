@@ -101,6 +101,9 @@ interface MapControlsProps {
   onDownloadLayerAsExcel?: (layer: 'A' | 'B' | 'C') => void;
   onDownloadAllLayersAsJSON?: () => void;
   onDownloadAllLayersAsExcel?: () => void;
+  onDownloadAdministrativePlanningReport?: () => void;
+  onDownloadExecutiveSummary?: () => void;
+  onShowPlanningReport?: () => void;
   // Fill opacity control
   fillOpacity?: number;
   onFillOpacityChange?: (opacity: number) => void;
@@ -156,6 +159,8 @@ export function MapControls({
   onDownloadLayerAsExcel,
   onDownloadAllLayersAsJSON,
   onDownloadAllLayersAsExcel,
+  onDownloadAdministrativePlanningReport,
+  onDownloadExecutiveSummary,
   fillOpacity = 0.3,
   onFillOpacityChange,
   onToggleAboutDialog,
@@ -1056,6 +1061,68 @@ export function MapControls({
                 )}
               </div>
             </div>
+
+            {/* Planning & Reporting Section - Always Visible */}
+            {onDownloadAdministrativePlanningReport && onDownloadExecutiveSummary && (
+              <div className="space-y-2">
+                {/* Divider */}
+                <div className="h-px bg-gray-200 w-full"></div>
+
+                <h3 className="text-sm font-medium text-gray-900">Báo cáo và Quy hoạch</h3>
+                
+                <div className="p-2 bg-purple-50 rounded-lg border border-purple-100">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 flex items-center justify-center bg-purple-100 rounded-full">
+                        <FileText className="w-2.5 h-2.5 text-purple-700" />
+                      </div>
+                      <p className="text-xs font-medium text-purple-800">Báo cáo hành chính</p>
+                    </div>
+
+                    {/* Planning Report */}
+                    <div className="space-y-1">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full h-8 text-xs bg-white hover:bg-purple-50 border-purple-200 text-purple-700"
+                        onClick={() => onDownloadAdministrativePlanningReport()}
+                      >
+                        <FileText className="w-3 h-3 mr-2" />
+                        Báo cáo quy hoạch chi tiết
+                      </Button>
+                      <p className="text-xs text-purple-600 px-1">
+                        Báo cáo kỹ thuật cho đội ngũ quy hoạch và phân tích
+                      </p>
+                    </div>
+
+                    {/* Executive Summary */}
+                    <div className="space-y-1">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full h-8 text-xs bg-white hover:bg-purple-50 border-purple-200 text-purple-700"
+                        onClick={() => onDownloadExecutiveSummary()}
+                      >
+                        <FileSpreadsheet className="w-3 h-3 mr-2" />
+                        Tóm tắt điều hành
+                      </Button>
+                      <p className="text-xs text-purple-600 px-1">
+                        Báo cáo tóm tắt cho lãnh đạo và ra quyết định
+                      </p>
+                    </div>
+
+                    <div className="pt-1 border-t border-purple-200">
+                      <div className="flex items-center gap-1">
+                        <Info className="w-3 h-3 text-purple-600" />
+                        <p className="text-xs text-purple-600">
+                          Báo cáo loại trừ trùng lặp và tối ưu hóa 3 lớp trụ sở
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
