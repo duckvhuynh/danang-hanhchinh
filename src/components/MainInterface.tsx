@@ -67,11 +67,14 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [showCircles, setShowCircles] = useState(true);
 
   // Radius state for each layer
-  const [layerAReceptionRadius, setLayerAReceptionRadius] = useState(5); // Layer A reception radius (default 5km)
-  const [layerAManagementRadius, setLayerAManagementRadius] = useState(15); // Layer A management radius (default 15km)
-  const [layerBUrbanRadius, setLayerBUrbanRadius] = useState(3); // Layer B urban radius (default 3km)
-  const [layerBSuburbanRadius, setLayerBSuburbanRadius] = useState(8); // Layer B suburban radius (default 8km)
-  const [layerCRadius, setLayerCRadius] = useState(5); // Default 5km
+  // Layer A type-based radius controls
+  const [layerAUrbanReceptionRadius, setLayerAUrbanReceptionRadius] = useState(2.5); // Layer A urban reception radius (2-3km, using 2.5km)
+  const [layerASuburbanReceptionRadius, setLayerASuburbanReceptionRadius] = useState(5); // Layer A suburban reception radius (5km)
+  const [layerAUrbanManagementRadius, setLayerAUrbanManagementRadius] = useState(5); // Layer A urban management radius (5km)
+  const [layerASuburbanManagementRadius, setLayerASuburbanManagementRadius] = useState(10); // Layer A suburban management radius (10km)
+  // Layer B and C have fixed default radius (no type-based logic)
+  const [layerBRadius, setLayerBRadius] = useState(5); // Layer B fixed radius (5km)
+  const [layerCRadius, setLayerCRadius] = useState(5); // Layer C default radius (5km)
 
   // Fill opacity state
   const [fillOpacity, setFillOpacity] = useState(0.3); // Default 30% opacity
@@ -116,6 +119,17 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   
   // About dialog state
   const [showAboutDialog, setShowAboutDialog] = useState(false);
+
+  // Helper functions to get radius based on office type for Layer A
+  const getLayerAReceptionRadius = useCallback((office?: AdministrativeOffice) => {
+    if (!office || office.layer !== 'A') return layerAUrbanReceptionRadius;
+    return office.type === 'suburban' ? layerASuburbanReceptionRadius : layerAUrbanReceptionRadius;
+  }, [layerAUrbanReceptionRadius, layerASuburbanReceptionRadius]);
+
+  const getLayerAManagementRadius = useCallback((office?: AdministrativeOffice) => {
+    if (!office || office.layer !== 'A') return layerAUrbanManagementRadius;
+    return office.type === 'suburban' ? layerASuburbanManagementRadius : layerAUrbanManagementRadius;
+  }, [layerAUrbanManagementRadius, layerASuburbanManagementRadius]);
 
   // This effect ensures the selectedWard variable is used
   useEffect(() => {
@@ -177,18 +191,15 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
           layer: selectedLayerForAdd,
           // Set radius based on layer type and current settings
           radius: selectedLayerForAdd === 'A' 
-            ? layerAReceptionRadius // Default to reception radius for Layer A
+            ? layerAUrbanReceptionRadius // Default to urban reception radius for Layer A
             : selectedLayerForAdd === 'B'
-            ? layerBUrbanRadius // Default to urban radius for Layer B
+            ? layerBRadius // Layer B uses fixed radius
             : layerCRadius, // Layer C uses single radius
-          // Add Layer A specific radii if applicable
+          // Add Layer A specific radii if applicable (default to urban)
           ...(selectedLayerForAdd === 'A' && {
-            receptionRadius: layerAReceptionRadius,
-            managementRadius: layerAManagementRadius,
-          }),
-          // Add Layer B type if applicable (default to urban)
-          ...(selectedLayerForAdd === 'B' && {
-            type: 'urban' as const,
+            receptionRadius: layerAUrbanReceptionRadius,
+            managementRadius: layerAUrbanManagementRadius,
+            type: 'urban' as const, // Default new Layer A offices to urban
           }),
         };
         
@@ -215,7 +226,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
         }
       }
     }
-  }, [zoomLevel, editMode, selectedLayerForAdd, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerCRadius]);
+  }, [zoomLevel, editMode, selectedLayerForAdd, layerAUrbanReceptionRadius, layerAUrbanManagementRadius, layerBRadius, layerCRadius]);
 
   const handleGetUserLocation = () => {
     if (!navigator.geolocation) {
@@ -313,11 +324,19 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
         .map(office => {
           // Check if this office has been edited
           const editedOffice = editedOffices.get(office.id);
-          return editedOffice || {
+          if (editedOffice) {
+            return editedOffice;
+          }
+          
+          // Apply radius based on office type for Layer A
+          const receptionRadius = getLayerAReceptionRadius(office);
+          const managementRadius = getLayerAManagementRadius(office);
+          
+          return {
             ...office,
-            receptionRadius: layerAReceptionRadius,
-            managementRadius: layerAManagementRadius,
-            radius: layerAReceptionRadius, // Primary radius for Layer A is reception radius
+            receptionRadius,
+            managementRadius,
+            radius: receptionRadius, // Primary radius for Layer A is reception radius
           };
         });
       visibleOffices.push(...layerAOffices);
@@ -332,13 +351,10 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
             return editedOffice;
           }
           
-          // Apply radius based on office type
-          const radius = office.type === 'urban' ? layerBUrbanRadius : 
-                        office.type === 'suburban' ? layerBSuburbanRadius : 5;
-          
+          // Layer B now uses fixed radius (no type-based logic)
           return {
             ...office,
-            radius: radius
+            radius: layerBRadius,
           };
         });
       visibleOffices.push(...layerBOffices);
@@ -368,7 +384,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
     visibleOffices.push(...visibleCustomOffices);
     
     return visibleOffices;
-  }, [showLayerA, showLayerB, showLayerC, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerBSuburbanRadius, layerCRadius, customOffices, editedOffices, deletedOfficeIds]);
+  }, [showLayerA, showLayerB, showLayerC, layerBRadius, layerCRadius, customOffices, editedOffices, deletedOfficeIds, getLayerAReceptionRadius, getLayerAManagementRadius]);
 
   // Calculate Layer B offices within Layer A circles
   const getLayerBWithinAInfo = useCallback(() => {
@@ -380,11 +396,19 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
       .filter(office => !deletedOfficeIds.has(office.id))
       .map(office => {
         const editedOffice = editedOffices.get(office.id);
-        return editedOffice || {
+        if (editedOffice) {
+          return editedOffice;
+        }
+        
+        // Apply radius based on office type for Layer A
+        const receptionRadius = getLayerAReceptionRadius(office);
+        const managementRadius = getLayerAManagementRadius(office);
+        
+        return {
           ...office,
-          receptionRadius: layerAReceptionRadius,
-          managementRadius: layerAManagementRadius,
-          radius: layerAReceptionRadius,
+          receptionRadius,
+          managementRadius,
+          radius: receptionRadius,
         };
       });
 
@@ -396,13 +420,10 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
           return editedOffice;
         }
         
-        // Apply radius based on office type
-        const radius = office.type === 'urban' ? layerBUrbanRadius : 
-                      office.type === 'suburban' ? layerBSuburbanRadius : 5;
-        
+        // Layer B now uses fixed radius (no type-based logic)
         return {
           ...office,
-          radius: radius
+          radius: layerBRadius,
         };
       });
 
@@ -414,7 +435,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
       withinOffices: result.withinLayerA,
       outsideOffices: result.outsideLayerA
     };
-  }, [showLayerA, showLayerB, layerAReceptionRadius, layerAManagementRadius, layerBUrbanRadius, layerBSuburbanRadius, deletedOfficeIds, editedOffices, useManagementRadiusForHiding]);
+  }, [showLayerA, showLayerB, layerBRadius, deletedOfficeIds, editedOffices, useManagementRadiusForHiding, getLayerAReceptionRadius, getLayerAManagementRadius]);
 
   // Direction mode functions
   
@@ -897,15 +918,17 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
                 onToggleLayerB={setShowLayerB}
                 onToggleLayerC={setShowLayerC}
                 onToggleCircles={setShowCircles}
-                layerAReceptionRadius={layerAReceptionRadius}
-                layerAManagementRadius={layerAManagementRadius}
-                layerBUrbanRadius={layerBUrbanRadius}
-                layerBSuburbanRadius={layerBSuburbanRadius}
+                layerAUrbanReceptionRadius={layerAUrbanReceptionRadius}
+                layerASuburbanReceptionRadius={layerASuburbanReceptionRadius}
+                layerAUrbanManagementRadius={layerAUrbanManagementRadius}
+                layerASuburbanManagementRadius={layerASuburbanManagementRadius}
+                layerBRadius={layerBRadius}
                 layerCRadius={layerCRadius}
-                onLayerAReceptionRadiusChange={setLayerAReceptionRadius}
-                onLayerAManagementRadiusChange={setLayerAManagementRadius}
-                onLayerBUrbanRadiusChange={setLayerBUrbanRadius}
-                onLayerBSuburbanRadiusChange={setLayerBSuburbanRadius}
+                onLayerAUrbanReceptionRadiusChange={setLayerAUrbanReceptionRadius}
+                onLayerASuburbanReceptionRadiusChange={setLayerASuburbanReceptionRadius}
+                onLayerAUrbanManagementRadiusChange={setLayerAUrbanManagementRadius}
+                onLayerASuburbanManagementRadiusChange={setLayerASuburbanManagementRadius}
+                onLayerBRadiusChange={setLayerBRadius}
                 onLayerCRadiusChange={setLayerCRadius}
                 hideLayerBWithinA={hideLayerBWithinA}
                 onToggleHideLayerBWithinA={setHideLayerBWithinA}

@@ -50,15 +50,19 @@ interface MapControlsProps {
   onToggleLayerC: (show: boolean) => void;
   onToggleCircles: (show: boolean) => void;
   // Radius controls
-  layerAReceptionRadius: number;
-  layerAManagementRadius: number;
-  layerBUrbanRadius: number;
-  layerBSuburbanRadius: number;
+  // Layer A type-based radius controls
+  layerAUrbanReceptionRadius: number;
+  layerASuburbanReceptionRadius: number;
+  layerAUrbanManagementRadius: number;
+  layerASuburbanManagementRadius: number;
+  // Layer B and C have fixed radius (no type-based logic)
+  layerBRadius: number;
   layerCRadius: number;
-  onLayerAReceptionRadiusChange: (radius: number) => void;
-  onLayerAManagementRadiusChange: (radius: number) => void;
-  onLayerBUrbanRadiusChange: (radius: number) => void;
-  onLayerBSuburbanRadiusChange: (radius: number) => void;
+  onLayerAUrbanReceptionRadiusChange: (radius: number) => void;
+  onLayerASuburbanReceptionRadiusChange: (radius: number) => void;
+  onLayerAUrbanManagementRadiusChange: (radius: number) => void;
+  onLayerASuburbanManagementRadiusChange: (radius: number) => void;
+  onLayerBRadiusChange: (radius: number) => void;
   onLayerCRadiusChange: (radius: number) => void;
   // Layer B within Layer A controls
   hideLayerBWithinA?: boolean;
@@ -109,15 +113,17 @@ export function MapControls({
   onToggleLayerB,
   onToggleLayerC,
   onToggleCircles,
-  layerAReceptionRadius,
-  layerAManagementRadius,
-  layerBUrbanRadius,
-  layerBSuburbanRadius,
+  layerAUrbanReceptionRadius,
+  layerASuburbanReceptionRadius,
+  layerAUrbanManagementRadius,
+  layerASuburbanManagementRadius,
+  layerBRadius,
   layerCRadius,
-  onLayerAReceptionRadiusChange,
-  onLayerAManagementRadiusChange,
-  onLayerBUrbanRadiusChange,
-  onLayerBSuburbanRadiusChange,
+  onLayerAUrbanReceptionRadiusChange,
+  onLayerASuburbanReceptionRadiusChange,
+  onLayerAUrbanManagementRadiusChange,
+  onLayerASuburbanManagementRadiusChange,
+  onLayerBRadiusChange,
   onLayerCRadiusChange,
   hideLayerBWithinA,
   onToggleHideLayerBWithinA,
@@ -399,7 +405,7 @@ export function MapControls({
                           <Building2 className="w-3 h-3 text-red-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-red-900">Lớp A - Tiếp nhận: {layerAReceptionRadius}km, Quản lý: {layerAManagementRadius}km</p>
+                          <p className="text-sm font-medium text-red-900">Lớp A - Đô thị: TN {layerAUrbanReceptionRadius}km/QL {layerAUrbanManagementRadius}km, Ngoại ô: TN {layerASuburbanReceptionRadius}km/QL {layerASuburbanManagementRadius}km</p>
                           <p className="text-xs text-red-700">{layerConfigurations.A.count} {layerConfigurations.A.description}</p>
                         </div>
                       </Label>
@@ -411,44 +417,92 @@ export function MapControls({
                       />
                     </div>
                     {showLayerA && (
-                      <div className="mt-2 px-2 space-y-2">
-                        {/* Reception Radius */}
-                        <div className="flex items-center justify-between">
-                          <Label htmlFor="layer-a-reception-radius" className="text-xs text-orange-700">
-                            Bán kính tiếp nhận:
-                          </Label>
-                          <div className="flex items-center gap-2">
-                            <Input
-                              id="layer-a-reception-radius"
-                              type="number"
-                              min="1"
-                              max="20"
-                              step="0.5"
-                              value={layerAReceptionRadius}
-                              onChange={(e) => onLayerAReceptionRadiusChange(Number(e.target.value))}
-                              className="w-16 h-7 text-xs"
-                            />
-                            <span className="text-xs text-orange-600">km</span>
+                      <div className="mt-2 px-2 space-y-3">
+                        {/* Urban Radii */}
+                        <div className="space-y-2">
+                          <h4 className="text-xs font-medium text-red-800">Khu vực Đô thị</h4>
+                          {/* Urban Reception Radius */}
+                          <div className="flex items-center justify-between">
+                            <Label htmlFor="layer-a-urban-reception-radius" className="text-xs text-orange-700">
+                              Bán kính tiếp nhận:
+                            </Label>
+                            <div className="flex items-center gap-2">
+                              <Input
+                                id="layer-a-urban-reception-radius"
+                                type="number"
+                                min="1"
+                                max="10"
+                                step="0.5"
+                                value={layerAUrbanReceptionRadius}
+                                onChange={(e) => onLayerAUrbanReceptionRadiusChange(Number(e.target.value))}
+                                className="w-16 h-7 text-xs"
+                              />
+                              <span className="text-xs text-orange-600">km</span>
+                            </div>
+                          </div>
+                          
+                          {/* Urban Management Radius */}
+                          <div className="flex items-center justify-between">
+                            <Label htmlFor="layer-a-urban-management-radius" className="text-xs text-red-700">
+                              Bán kính quản lý:
+                            </Label>
+                            <div className="flex items-center gap-2">
+                              <Input
+                                id="layer-a-urban-management-radius"
+                                type="number"
+                                min="1"
+                                max="15"
+                                step="0.5"
+                                value={layerAUrbanManagementRadius}
+                                onChange={(e) => onLayerAUrbanManagementRadiusChange(Number(e.target.value))}
+                                className="w-16 h-7 text-xs"
+                              />
+                              <span className="text-xs text-red-600">km</span>
+                            </div>
                           </div>
                         </div>
-                        
-                        {/* Management Radius */}
-                        <div className="flex items-center justify-between">
-                          <Label htmlFor="layer-a-management-radius" className="text-xs text-red-700">
-                            Bán kính quản lý:
-                          </Label>
-                          <div className="flex items-center gap-2">
-                            <Input
-                              id="layer-a-management-radius"
-                              type="number"
-                              min="1"
-                              max="30"
-                              step="0.5"
-                              value={layerAManagementRadius}
-                              onChange={(e) => onLayerAManagementRadiusChange(Number(e.target.value))}
-                              className="w-16 h-7 text-xs"
-                            />
-                            <span className="text-xs text-red-600">km</span>
+
+                        {/* Suburban Radii */}
+                        <div className="space-y-2">
+                          <h4 className="text-xs font-medium text-red-800">Khu vực Ngoại ô</h4>
+                          {/* Suburban Reception Radius */}
+                          <div className="flex items-center justify-between">
+                            <Label htmlFor="layer-a-suburban-reception-radius" className="text-xs text-orange-700">
+                              Bán kính tiếp nhận:
+                            </Label>
+                            <div className="flex items-center gap-2">
+                              <Input
+                                id="layer-a-suburban-reception-radius"
+                                type="number"
+                                min="1"
+                                max="15"
+                                step="0.5"
+                                value={layerASuburbanReceptionRadius}
+                                onChange={(e) => onLayerASuburbanReceptionRadiusChange(Number(e.target.value))}
+                                className="w-16 h-7 text-xs"
+                              />
+                              <span className="text-xs text-orange-600">km</span>
+                            </div>
+                          </div>
+                          
+                          {/* Suburban Management Radius */}
+                          <div className="flex items-center justify-between">
+                            <Label htmlFor="layer-a-suburban-management-radius" className="text-xs text-red-700">
+                              Bán kính quản lý:
+                            </Label>
+                            <div className="flex items-center gap-2">
+                              <Input
+                                id="layer-a-suburban-management-radius"
+                                type="number"
+                                min="1"
+                                max="20"
+                                step="0.5"
+                                value={layerASuburbanManagementRadius}
+                                onChange={(e) => onLayerASuburbanManagementRadiusChange(Number(e.target.value))}
+                                className="w-16 h-7 text-xs"
+                              />
+                              <span className="text-xs text-red-600">km</span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -466,7 +520,7 @@ export function MapControls({
                           <Building2 className="w-3 h-3 text-blue-700" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-blue-900">Lớp B - Đô thị: {layerBUrbanRadius}km, Ngoại ô: {layerBSuburbanRadius}km</p>
+                          <p className="text-sm font-medium text-blue-900">Lớp B - Bán kính cố định: {layerBRadius}km</p>
                           <p className="text-xs text-blue-700">{layerConfigurations.B.count} {layerConfigurations.B.description}</p>
                         </div>
                       </Label>
@@ -479,40 +533,20 @@ export function MapControls({
                     </div>
                     {showLayerB && (
                       <div className="mt-2 px-2 space-y-2">
-                        {/* Urban radius control */}
+                        {/* Fixed radius control */}
                         <div className="flex items-center justify-between">
-                          <Label htmlFor="layer-b-urban-radius" className="text-xs text-blue-700">
-                            Bán kính đô thị:
+                          <Label htmlFor="layer-b-radius" className="text-xs text-blue-700">
+                            Bán kính cố định:
                           </Label>
                           <div className="flex items-center gap-2">
                             <Input
-                              id="layer-b-urban-radius"
+                              id="layer-b-radius"
                               type="number"
                               min="1"
                               max="20"
                               step="0.5"
-                              value={layerBUrbanRadius}
-                              onChange={(e) => onLayerBUrbanRadiusChange(Number(e.target.value))}
-                              className="w-16 h-7 text-xs"
-                            />
-                            <span className="text-xs text-blue-600">km</span>
-                          </div>
-                        </div>
-                        
-                        {/* Suburban radius control */}
-                        <div className="flex items-center justify-between">
-                          <Label htmlFor="layer-b-suburban-radius" className="text-xs text-blue-700">
-                            Bán kính ngoại ô:
-                          </Label>
-                          <div className="flex items-center gap-2">
-                            <Input
-                              id="layer-b-suburban-radius"
-                              type="number"
-                              min="1"
-                              max="20"
-                              step="0.5"
-                              value={layerBSuburbanRadius}
-                              onChange={(e) => onLayerBSuburbanRadiusChange(Number(e.target.value))}
+                              value={layerBRadius}
+                              onChange={(e) => onLayerBRadiusChange(Number(e.target.value))}
                               className="w-16 h-7 text-xs"
                             />
                             <span className="text-xs text-blue-600">km</span>
@@ -559,8 +593,8 @@ export function MapControls({
                                   <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="reception">Tiếp nhận ({layerAReceptionRadius}km)</SelectItem>
-                                  <SelectItem value="management">Quản lý ({layerAManagementRadius}km)</SelectItem>
+                                  <SelectItem value="reception">Tiếp nhận (Đô thị: {layerAUrbanReceptionRadius}km, Ngoại ô: {layerASuburbanReceptionRadius}km)</SelectItem>
+                                  <SelectItem value="management">Quản lý (Đô thị: {layerAUrbanManagementRadius}km, Ngoại ô: {layerASuburbanManagementRadius}km)</SelectItem>
                                 </SelectContent>
                               </Select>
                             </div>
@@ -958,23 +992,19 @@ export function MapControls({
             <h3 className="font-medium text-base">Các lớp điểm hành chính</h3>
             <div className="space-y-2">
               <div>
-                <span className="font-medium">Lớp A - Chi nhánh:</span> Hiển thị bằng màu đỏ, có hai bán kính:
+                <span className="font-medium">Lớp A - Các Chi Nhánh Hành Chính Cấp Quận/Huyện Cũ:</span> Hiển thị bằng màu đỏ, có hai bán kính phụ thuộc vào loại khu vực:
                 <ul className="list-disc pl-5 mt-1">
-                  <li>Bán kính tiếp nhận: Thể hiện phạm vi tiếp nhận hồ sơ của chi nhánh</li>
-                  <li>Bán kính quản lý: Thể hiện phạm vi quản lý hành chính của chi nhánh</li>
+                  <li>Bán kính tiếp nhận hồ sơ: Đô thị (2-3km), Ngoại ô (5km)</li>
+                  <li>Bán kính quản lý của chi nhánh: Đô thị (5km), Ngoại ô (10km)</li>
                 </ul>
               </div>
               
               <div>
-                <span className="font-medium">Lớp B - Điểm tiếp nhận:</span> Hiển thị bằng màu xanh dương, bán kính phụ thuộc vào loại khu vực:
-                <ul className="list-disc pl-5 mt-1">
-                  <li>Khu vực đô thị: Mặc định 3km</li>
-                  <li>Khu vực ngoại thành: Mặc định 8km</li>
-                </ul>
+                <span className="font-medium">Lớp B - Các Trung Tâm Hành Chính Cấp Xã/Phường Mới:</span> Hiển thị bằng màu xanh dương, có bán kính cố định mặc định 5km.
               </div>
               
               <div>
-                <span className="font-medium">Lớp C - Điểm tăng cường:</span> Hiển thị bằng màu xanh lá, có bán kính mặc định 5km.
+                <span className="font-medium">Lớp C - Các Điểm Tiếp Nhận Do Bưu Điện Quản Lý:</span> Hiển thị bằng màu xanh lá, có bán kính mặc định 5km.
               </div>
             </div>
             
