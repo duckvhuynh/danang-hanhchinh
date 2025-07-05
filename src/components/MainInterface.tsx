@@ -126,7 +126,7 @@ export function MainInterface({ apiKey }: MainInterfaceProps) {
   const [deletedOfficeIds, setDeletedOfficeIds] = useState<Set<string>>(new Set());
   
   // Map state
-  const [zoomLevel, setZoomLevel] = useState(8);
+  const [zoomLevel, setZoomLevel] = useState(11);
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [isMapLoading, setIsMapLoading] = useState(true);
